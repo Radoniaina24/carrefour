@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,14 +15,14 @@ type NavItem = {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => setIsScrolled(window.scrollY > 10);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   const navItems: NavItem[] = [
     { name: "Accueil", href: "#", hasDropdown: false },
@@ -56,14 +56,14 @@ const Navbar = () => {
     { name: "Partenaires", href: "#", hasDropdown: false },
   ];
 
+  // ${
+  //       isScrolled
+  //         ? "bg-white/95 backdrop-blur-md shadow-xl border-b border-blue-100"
+  //         : "bg-white/90 backdrop-blur-sm shadow-lg"
+  //     }
+
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-xl border-b border-blue-100"
-          : "bg-white/90 backdrop-blur-sm shadow-lg"
-      }`}
-    >
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 `}>
       <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -74,7 +74,7 @@ const Navbar = () => {
               width={160}
               height={60}
               priority
-              className="h-20 w-auto"
+              className="h-28 w-auto"
             />
           </Link>
 
@@ -109,7 +109,7 @@ const Navbar = () => {
                 ) : (
                   <a
                     href={item.href}
-                    className="px-3 py-2 rounded-md text-sm font-medium text-blue-900 hover:text-orange-600 hover:bg-blue-50 transition-colors duration-200 whitespace-nowrap"
+                    className="px-3 py-2 rounded-md text-sm font-medium text-orange-600 hover:text-orange-600 hover:bg-blue-50 transition-colors duration-200 whitespace-nowrap"
                   >
                     {item.name}
                   </a>
