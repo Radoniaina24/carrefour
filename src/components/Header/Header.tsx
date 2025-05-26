@@ -79,7 +79,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-2">
             {navItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.hasDropdown ? (
