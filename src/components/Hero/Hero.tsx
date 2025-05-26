@@ -75,7 +75,9 @@ const HeroSection = () => {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
               <button className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
-                <Briefcase className="w-5 h-5 mr-3 group-hover:animate-bounce" />
+                <div>
+                  <Briefcase className="w-5 h-5 mr-3 group-hover:animate-bounce" />
+                </div>
                 Je suis recruteur
               </button>
               <button className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
@@ -131,7 +133,9 @@ const HeroSection = () => {
               {/* Event badge */}
               <div className="text-center">
                 <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-3 rounded-full font-bold shadow-lg">
-                  <Calendar className="w-5 h-5 mr-2" />
+                  <div>
+                    <Calendar className="w-5 h-5 mr-2" />
+                  </div>
                   Événement International
                 </div>
               </div>

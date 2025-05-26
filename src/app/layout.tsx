@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Carrefour",
+  title: "Carrefour de l'Emploi",
 };
 
 export default function RootLayout({
