@@ -6,8 +6,6 @@ export default function Home() {
     <div className="">
       <HeroSection />
       <HeroSectionTest />
-      {/* <InscriptionForm /> */}
-      {/* <Signin /> */}
     </div>
   );
 }

@@ -10,7 +10,7 @@ import Link from "next/link";
 const validationSchema = Yup.object({
   nom: Yup.string().required("Ce champ est requis"),
   prenom: Yup.string().required("Ce champ est requis"),
-  adresse: Yup.string().required("Ce champ est requis"),
+  company: Yup.string().required("Ce champ est requis"),
   email: Yup.string().email("Email invalide").required("Ce champ est requis"),
   password: Yup.string()
     .min(6, "Le mot de passe doit contenir au moins 6 caractères")
@@ -20,7 +20,7 @@ const validationSchema = Yup.object({
     .required("Ce champ est requis"),
 });
 
-const InscriptionFormCandidate: React.FC = () => {
+export const InscriptionFormRecruiter: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -29,7 +29,7 @@ const InscriptionFormCandidate: React.FC = () => {
     initialValues: {
       nom: "",
       prenom: "",
-      adresse: "",
+      company: "",
       email: "",
       password: "",
       confirmPassword: "",
@@ -56,7 +56,7 @@ const InscriptionFormCandidate: React.FC = () => {
             <User className="w-8 h-8 text-white" />
           </div>
           <h2 className="text-3xl font-bold text-blue-900 mb-2">
-            Inscription Candidat
+            Inscription Recruteur
           </h2>
           <p className="text-blue-600">
             Rejoignez le Carrefour de l&apos;Emploi Madagascar 2025
@@ -95,10 +95,10 @@ const InscriptionFormCandidate: React.FC = () => {
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <InputField
-              name="adresse"
-              label="Adresse"
+              name="company"
+              label="Entreprise"
               icon={MapPin}
-              placeholder="Votre adresse complète"
+              placeholder="Nom de l'entreprise"
               formik={formik}
             />
             <InputField
@@ -177,5 +177,3 @@ const InscriptionFormCandidate: React.FC = () => {
     </div>
   );
 };
-
-export default InscriptionFormCandidate;

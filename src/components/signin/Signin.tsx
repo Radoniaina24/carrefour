@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { Mail, Lock } from "lucide-react";
 import { FormValues, InputField } from "@/components/Form/InputField";
 import Image from "next/image";
+import Link from "next/link";
 
 const validationSchema = Yup.object({
   email: Yup.string().email("Email invalide").required("Ce champ est requis"),
@@ -93,19 +94,19 @@ const Signin: React.FC = () => {
           <div className="mt-6 text-center">
             <p className="text-sm text-blue-600">
               Vous n&apos;avez pas de compte ? S&apos;inscrire maintenant{" "}
-              <a
-                href="#"
+              <Link
+                href="/inscription/candidat"
                 className="font-medium text-orange-600 hover:text-orange-700"
               >
                 Candidat
-              </a>
+              </Link>
               {" | "}
-              <a
-                href="#"
+              <Link
+                href="/inscription/recruteur"
                 className="font-medium text-orange-600 hover:text-orange-700"
               >
                 Recruteur
-              </a>
+              </Link>
             </p>
           </div>
         </form>
