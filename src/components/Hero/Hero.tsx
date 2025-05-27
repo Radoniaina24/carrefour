@@ -5,7 +5,7 @@ import { Calendar, MapPin } from "lucide-react";
 const HeroSection = () => {
   return (
     <section
-      className="relative min-h-screen md:min-h-[600px] bg-center bg-cover pt-16 overflow-hidden"
+      className="relative min-h-screen flex items-center  bg-center bg-cover pt-16 overflow-hidden"
       style={{
         backgroundImage:
           "url('https://res.cloudinary.com/dbpoyo4gw/image/upload/v1748266907/banni%C3%A8re_vivj4x.jpg')",
