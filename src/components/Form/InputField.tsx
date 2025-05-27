@@ -1,12 +1,12 @@
 import { useFormik } from "formik";
 import { AlertCircle, Eye, EyeOff, LucideIcon } from "lucide-react";
 export interface FormValues {
-  nom: string;
-  prenom: string;
-  adresse: string;
-  email: string;
-  password: string;
-  confirmPassword: string;
+  nom?: string;
+  prenom?: string;
+  adresse?: string;
+  email?: string;
+  password?: string;
+  confirmPassword?: string;
 }
 interface InputFieldProps {
   name: keyof FormValues;

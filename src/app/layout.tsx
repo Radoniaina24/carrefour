@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/Header/Header";
 
 export const metadata: Metadata = {
   title: "Carrefour de l'Emploi",
@@ -19,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${inter.className}`}>{children}</body>
+      <body className={` ${inter.className}`}>
+        {" "}
+        <Header /> {children}
+      </body>
     </html>
   );
 }
