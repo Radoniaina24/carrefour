@@ -4,8 +4,9 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Mail, Lock } from "lucide-react";
 import { FormValues, InputField } from "@/components/Form/InputField";
-import Image from "next/image";
+
 import Link from "next/link";
+import Image from "next/image";
 
 const validationSchema = Yup.object({
   email: Yup.string().email("Email invalide").required("Ce champ est requis"),
@@ -42,14 +43,16 @@ const Signin: React.FC = () => {
 
       <div className="relative max-w-md mx-auto bg-white/80 backdrop-blur-sm  rounded-2xl  shadow-2xl border border-white/50">
         <div className="flex justify-center pt-5">
-          <Image
-            src="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1748260405/carrefour-removebg-preview_pjn3yd.png"
-            alt="Logo"
-            width={160}
-            height={60}
-            priority
-            className="h-28 w-auto"
-          />
+          <Link href={"/"}>
+            <Image
+              src="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1748260405/carrefour-removebg-preview_pjn3yd.png"
+              alt="Logo"
+              width={160}
+              height={60}
+              priority
+              className="h-28 w-auto"
+            />
+          </Link>
         </div>
         <form onSubmit={formik.handleSubmit} className="  p-8 space-y-6">
           <InputField
