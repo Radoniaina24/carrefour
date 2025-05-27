@@ -6,6 +6,7 @@ import * as Yup from "yup";
 import { User, Mail, Lock, MapPin, CheckCircle } from "lucide-react";
 import { FormValues, InputField } from "@/components/Form/InputField";
 import Link from "next/link";
+import Image from "next/image";
 
 const validationSchema = Yup.object({
   nom: Yup.string().required("Ce champ est requis"),
@@ -52,8 +53,17 @@ export const InscriptionFormRecruiter: React.FC = () => {
 
       <div className="relative max-w-2xl mx-auto">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-orange-500 rounded-full mb-4">
-            <User className="w-8 h-8 text-white" />
+          <div className="flex justify-center pt-5">
+            <Link href={"/"}>
+              <Image
+                src="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1748260405/carrefour-removebg-preview_pjn3yd.png"
+                alt="Logo"
+                width={160}
+                height={60}
+                priority
+                className="h-28 w-auto"
+              />
+            </Link>
           </div>
           <h2 className="text-3xl font-bold text-blue-900 mb-2">
             Inscription Recruteur
