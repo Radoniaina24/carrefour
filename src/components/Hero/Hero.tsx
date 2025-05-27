@@ -1,26 +1,45 @@
 "use client";
 import { motion } from "framer-motion";
 import { Calendar, MapPin } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const HeroSection = () => {
-  // Variants pour le mot complet
-  const wordContainer = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.04,
-      },
-    },
-  };
+  const [displayedText, setDisplayedText] = useState("");
+  const [currentLineIndex, setCurrentLineIndex] = useState(0);
+  const [currentCharIndex, setCurrentCharIndex] = useState(0);
 
-  // Variants pour chaque lettre
-  const letterVariant = {
-    hidden: { opacity: 0, y: 8 },
-    visible: { opacity: 1, y: 0 },
-  };
+  // Diviser le message en lignes
+  const messageLines = [
+    "Vous choisissez.",
+    "Nous préparons.",
+    "Vous repartez avec un collaborateur prêt.",
+  ];
 
-  const message =
-    "Vous choisissez. Nous préparons.\nVous repartez avec un collaborateur prêt.";
+  // Effet typing
+  useEffect(() => {
+    if (currentLineIndex < messageLines.length) {
+      const currentLine = messageLines[currentLineIndex];
+
+      if (currentCharIndex < currentLine.length) {
+        const timer = setTimeout(() => {
+          setDisplayedText((prev) => prev + currentLine[currentCharIndex]);
+          setCurrentCharIndex((prev) => prev + 1);
+        }, 80); // Vitesse de frappe (80ms par caractère)
+
+        return () => clearTimeout(timer);
+      } else {
+        // Ligne terminée, passer à la suivante après une pause
+        const timer = setTimeout(() => {
+          setDisplayedText((prev) => prev + "\n");
+          setCurrentLineIndex((prev) => prev + 1);
+          setCurrentCharIndex(0);
+        }, 1000); // Pause de 1 seconde entre les lignes
+
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [currentCharIndex, currentLineIndex, messageLines]);
+
   return (
     <section
       className="relative min-h-screen flex items-center bg-center bg-cover pt-16 overflow-hidden"
@@ -94,37 +113,33 @@ const HeroSection = () => {
               </motion.div>
             </motion.div>
 
+            {/* Slogan avec effet typing */}
             <motion.div
               className="text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-orange-400"
-              initial="hidden"
-              animate="visible"
-              variants={{
-                hidden: {},
-                visible: {
-                  transition: {
-                    staggerChildren: 0.15,
-                    delayChildren: 1.2,
-                  },
-                },
-              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.5 }}
             >
-              <p className="text-xl sm:text-2xl md:text-3xl font-semibold leading-relaxed tracking-wide flex flex-wrap max-w-3xl">
-                {message.split(/\s+/).map((word, i) => (
-                  <motion.span
-                    key={i}
-                    className="inline-block mr-2"
-                    variants={wordContainer}
-                  >
-                    {word.split("").map((char, index) => (
-                      <motion.span key={index} variants={letterVariant}>
-                        {char}
-                      </motion.span>
-                    ))}
-                    {/* Gestion du saut de ligne (\n) */}
-                    {message.split(/\s+/)[i + 1]?.startsWith("\n") && <br />}
-                  </motion.span>
+              <div className="text-xl sm:text-2xl md:text-3xl font-semibold leading-relaxed tracking-wide max-w-3xl">
+                {displayedText.split("\n").map((line, index) => (
+                  <div key={index} className="min-h-[1.5em]">
+                    {line}
+                    {/* Curseur clignotant à la fin du texte en cours */}
+                    {index === displayedText.split("\n").length - 1 &&
+                      currentLineIndex < messageLines.length && (
+                        <motion.span
+                          className="inline-block w-0.5 h-6 bg-orange-400 ml-1"
+                          animate={{ opacity: [1, 0] }}
+                          transition={{
+                            duration: 0.8,
+                            repeat: Infinity,
+                            repeatType: "reverse",
+                          }}
+                        />
+                      )}
+                  </div>
                 ))}
-              </p>
+              </div>
             </motion.div>
           </motion.div>
         </div>

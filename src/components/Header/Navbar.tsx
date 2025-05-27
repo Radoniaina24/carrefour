@@ -25,7 +25,7 @@ const Navbar = () => {
   }, []);
 
   const navItems: NavItem[] = [
-    { name: "Accueil", href: "#", hasDropdown: false },
+    { name: "Accueil", href: "/", hasDropdown: false },
     { name: "À propos", href: "#", hasDropdown: false },
     { name: "Pourquoi Madagascar ?", href: "#", hasDropdown: false },
     // {
@@ -107,14 +107,14 @@ const Navbar = () => {
                     )}
                   </div>
                 ) : (
-                  <a
+                  <Link
                     href={item.href}
                     className={`px-3 py-2 ${
                       isScrolled ? "text-blue-700" : "text-white "
                     } rounded-md text-sm font-medium   hover:text-orange-600 hover:bg-blue-50 transition-colors duration-200 whitespace-nowrap`}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 )}
               </div>
             ))}
