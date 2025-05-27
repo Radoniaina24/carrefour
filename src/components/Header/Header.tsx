@@ -60,8 +60,8 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-xl border-b border-blue-100"
-          : "bg-white/90 backdrop-blur-sm shadow-lg"
+          ? "bg-white/95 backdrop-blur-md shadow-xl  border-blue-100"
+          : "bg-white/95 lg:bg-transparent"
       } w-full z-50 transition-all duration-300 `}
     >
       <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
@@ -109,7 +109,9 @@ const Navbar = () => {
                 ) : (
                   <a
                     href={item.href}
-                    className="px-3 py-2 rounded-md text-sm font-medium text-blue-700 hover:text-orange-600 hover:bg-blue-50 transition-colors duration-200 whitespace-nowrap"
+                    className={`px-3 py-2 ${
+                      isScrolled ? "text-blue-700" : "text-white "
+                    } rounded-md text-sm font-medium   hover:text-orange-600 hover:bg-blue-50 transition-colors duration-200 whitespace-nowrap`}
                   >
                     {item.name}
                   </a>
