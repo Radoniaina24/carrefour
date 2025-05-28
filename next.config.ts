@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       "res.cloudinary.com",
       "via.placeholder.com",
       "source.unsplash.com",
+      "flagcdn.com",
     ],
     remotePatterns: [
       {
