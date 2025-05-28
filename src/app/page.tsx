@@ -7,7 +7,6 @@ export default function Home() {
     <div className="">
       <HeroSection />
       <HeroSectionTest />
-      {/* <ProgramSection /> */}
       <CountdownTimer />
     </div>
   );

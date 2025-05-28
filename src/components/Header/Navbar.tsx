@@ -27,8 +27,8 @@ const Navbar = () => {
 
   const navItems: NavItem[] = [
     { name: "Accueil", href: "/", hasDropdown: false },
-    { name: "À propos", href: "#", hasDropdown: false },
-    { name: "Pourquoi Madagascar ?", href: "#", hasDropdown: false },
+    { name: "À propos", href: "/about", hasDropdown: false },
+    // { name: "Pourquoi Madagascar ?", href: "#", hasDropdown: false },
     // {
     //   name: "Recruteurs",
     //   href: "#",
