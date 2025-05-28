@@ -15,7 +15,7 @@ export default function TargetCountries() {
     },
     { name: "Canada", code: "ca", region: "Amérique" },
     { name: "Allemagne", code: "de", region: "Europe" },
-    { name: "Arabie Saoudite", code: "sa", region: "Moyen-Orient" },
+    { name: "Mayotte", code: "yt", region: "Océan Indien" },
   ];
 
   return (
