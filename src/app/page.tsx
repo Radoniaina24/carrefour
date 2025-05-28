@@ -1,12 +1,14 @@
 import CountdownTimer from "@/components/Date/CountDown";
 import HeroSection from "@/components/Hero/Hero";
 import HeroSectionTest from "@/components/Hero/HeroTest";
+import UniqueFeatures from "@/components/Section/SectionOne";
 
 export default function Home() {
   return (
     <div className="">
       <HeroSection />
       <HeroSectionTest />
+      <UniqueFeatures />
       <CountdownTimer />
     </div>
   );

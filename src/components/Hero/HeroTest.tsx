@@ -60,10 +60,12 @@ const HeroSectionTest = () => {
                 <strong className="text-blue-900">
                   Carrefour de l&apos;Emploi – Madagascar 2025
                 </strong>{" "}
-                est un événement international de recrutement professionnel.
-                Pendant deux jours, des recruteurs étrangers rencontreront des
-                talents malgaches présélectionnés, renforcés et accompagnés
-                jusqu&apos;à leur départ.
+                est un dispositif de recrutement direct, à portée nationale et
+                internationale, conçu pour connecter des entreprises, malgaches
+                et étrangères, en quête de main-d&apos;œuvre fiable avec des
+                talents malgaches qualifiés. Ces talents sont identifiés,
+                renforcés et accompagnés jusqu&apos;à leur intégration durable
+                au sein des organisations partenaires.
               </p>
               <p>
                 Organisé par{" "}
