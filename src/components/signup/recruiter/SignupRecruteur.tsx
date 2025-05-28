@@ -3,15 +3,17 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { User, Mail, Lock, MapPin, CheckCircle } from "lucide-react";
+import { User, Mail, Lock, MapPin, CheckCircle, Globe } from "lucide-react";
 import { FormValues, InputField } from "@/components/Form/InputField";
 import Link from "next/link";
 import Image from "next/image";
+import { SelectCountryField } from "@/components/Form/SelectCountryField";
 
 const validationSchema = Yup.object({
   nom: Yup.string().required("Ce champ est requis"),
   prenom: Yup.string().required("Ce champ est requis"),
   company: Yup.string().required("Ce champ est requis"),
+  country: Yup.string().required("Ce champ est requis"),
   email: Yup.string().email("Email invalide").required("Ce champ est requis"),
   password: Yup.string()
     .min(6, "Le mot de passe doit contenir au moins 6 caractères")
@@ -34,6 +36,7 @@ export const InscriptionFormRecruiter: React.FC = () => {
       email: "",
       password: "",
       confirmPassword: "",
+      country: "",
     },
     validationSchema,
     onSubmit: async (values) => {
@@ -120,31 +123,39 @@ export const InscriptionFormRecruiter: React.FC = () => {
               formik={formik}
             />
           </div>
-
-          <InputField
-            name="password"
-            label="Mot de passe"
-            type="password"
-            icon={Lock}
-            placeholder="Minimum 6 caractères"
+          <SelectCountryField
+            name="country"
+            label="Pays"
+            placeholder="Sélectionnez un pays"
+            icon={Globe}
             formik={formik}
-            showPassword={showPassword}
-            onTogglePassword={() => setShowPassword(!showPassword)}
           />
 
-          <InputField
-            name="confirmPassword"
-            label="Confirmer le mot de passe"
-            type="password"
-            icon={Lock}
-            placeholder="Confirmez votre mot de passe"
-            formik={formik}
-            showPassword={showConfirmPassword}
-            onTogglePassword={() =>
-              setShowConfirmPassword(!showConfirmPassword)
-            }
-          />
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <InputField
+              name="password"
+              label="Mot de passe"
+              type="password"
+              icon={Lock}
+              placeholder="Minimum 6 caractères"
+              formik={formik}
+              showPassword={showPassword}
+              onTogglePassword={() => setShowPassword(!showPassword)}
+            />
 
+            <InputField
+              name="confirmPassword"
+              label="Confirmer le mot de passe"
+              type="password"
+              icon={Lock}
+              placeholder="Confirmez votre mot de passe"
+              formik={formik}
+              showPassword={showConfirmPassword}
+              onTogglePassword={() =>
+                setShowConfirmPassword(!showConfirmPassword)
+              }
+            />
+          </div>
           <button
             type="submit"
             disabled={formik.isSubmitting}
