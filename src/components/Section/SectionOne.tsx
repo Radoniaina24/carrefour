@@ -86,11 +86,11 @@ export default function UniqueFeatures() {
             </span>
           </div>
 
-          <h2 className="text-6xl md:text-8xl font-extrabold text-slate-900 mb-4 tracking-tight leading-none">
+          <h2 className="text-6xl md:text-7xl font-extrabold text-slate-900 mb-4 tracking-tight leading-none">
             Ce qui nous rend
           </h2>
           <div className="relative inline-block">
-            <h3 className="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">
+            <h3 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">
               UNIQUES
             </h3>
             {/* Underline effect */}
