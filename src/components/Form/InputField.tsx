@@ -8,6 +8,7 @@ export interface FormValues {
   password?: string;
   confirmPassword?: string;
   company?: string;
+  message?: string;
 }
 interface InputFieldProps {
   name: keyof FormValues;
