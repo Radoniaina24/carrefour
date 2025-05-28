@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 type NavItem = {
   name: string;
   href: string;
@@ -50,19 +51,20 @@ const Navbar = () => {
     //     { name: "Opportunités", href: "#" },
     //   ],
     // },
-    { name: "Programme", href: "#", hasDropdown: false },
+    { name: "Programme", href: "/program", hasDropdown: false },
     { name: "Pack & Tarifs", href: "#", hasDropdown: false },
     { name: "Contact", href: "#", hasDropdown: false },
     { name: "Partenaires", href: "#", hasDropdown: false },
   ];
+  const pathname = usePathname();
 
   return (
     <nav
-      className={`fixed top-0 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-xl  border-blue-100"
-          : "bg-white/95 lg:bg-transparent"
-      } w-full z-50 transition-all duration-300 `}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        pathname !== "/" || isScrolled
+          ? "bg-white/95 backdrop-blur-md shadow-xl border-blue-100"
+          : "lg:bg-transparent bg-white/95"
+      }`}
     >
       <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -110,7 +112,9 @@ const Navbar = () => {
                   <Link
                     href={item.href}
                     className={`px-3 py-2 ${
-                      isScrolled ? "text-blue-700" : "text-white "
+                      pathname !== "/" || isScrolled
+                        ? "text-blue-700"
+                        : "text-white "
                     } rounded-md text-sm font-medium   hover:text-orange-600 hover:bg-blue-50 transition-colors duration-200 whitespace-nowrap`}
                   >
                     {item.name}
@@ -181,13 +185,13 @@ const Navbar = () => {
                     )}
                   </>
                 ) : (
-                  <a
+                  <Link
                     href={item.href}
                     className="block px-3 py-2 rounded-md text-base font-medium text-blue-900 hover:text-orange-600 hover:bg-blue-50 transition-colors duration-200"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 )}
               </div>
             ))}

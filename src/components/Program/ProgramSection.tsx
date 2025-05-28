@@ -1,5 +1,8 @@
+"use client";
 import React from "react";
 import { Calendar, Clock, Users, Star, MapPin } from "lucide-react";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 const ProgramSection = () => {
   const programData = [
@@ -41,10 +44,22 @@ const ProgramSection = () => {
   ];
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="min-h-screen py-32 px-4 bg-gradient-to-br from-slate-50 to-blue-50"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
             <Calendar className="w-4 h-4" />
             Programme de l&apos;événement
@@ -59,32 +74,53 @@ const ProgramSection = () => {
             Découvrez le programme complet de nos deux journées de recrutement
             intensif
           </p>
-        </div>
+        </motion.div>
 
         {/* Timeline */}
         <div className="relative">
-          {/* Vertical line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-orange-500 rounded-full"></div>
 
           {programData.map((day, dayIndex) => (
-            <div key={dayIndex} className="relative mb-16">
+            <motion.div
+              key={dayIndex}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: dayIndex * 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+              className="relative mb-16"
+            >
               {/* Day Header */}
               <div className="flex justify-center mb-8">
-                <div className="bg-white border-4 border-blue-500 rounded-2xl px-8 py-4 shadow-lg relative z-10">
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  className="bg-white border-4 border-blue-500 rounded-2xl px-8 py-4 shadow-lg relative z-10"
+                >
                   <div className="text-center">
                     <h3 className="text-2xl font-bold text-blue-600">
                       {day.day}
                     </h3>
                     <p className="text-orange-500 font-semibold">{day.date}</p>
                   </div>
-                </div>
+                </motion.div>
               </div>
 
               {/* Events */}
               <div className="space-y-6">
                 {day.events.map((event, eventIndex) => (
-                  <div
+                  <motion.div
                     key={eventIndex}
+                    initial={{
+                      opacity: 0,
+                      scale: 0.9,
+                      x: eventIndex % 2 === 0 ? -50 : 50,
+                    }}
+                    whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                    transition={{
+                      delay: eventIndex * 0.1,
+                      duration: 0.5,
+                      ease: "easeOut",
+                    }}
+                    viewport={{ once: true }}
                     className={`flex items-center ${
                       eventIndex % 2 === 0 ? "justify-start" : "justify-end"
                     }`}
@@ -132,15 +168,21 @@ const ProgramSection = () => {
 
                     {/* Timeline dot */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white border-4 border-blue-500 rounded-full z-10"></div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Call to Action */}
-        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-12 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-12 text-center mt-24"
+        >
           <h3 className="text-3xl font-bold text-gray-900 mb-4">
             Réservez votre place
           </h3>
@@ -149,16 +191,22 @@ const ProgramSection = () => {
             un nouvel élan à votre carrière
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg">
+            <Link
+              href="/inscription/candidat"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg"
+            >
               Inscription candidat
-            </button>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg">
+            </Link>
+            <Link
+              href="/inscription/recruteur"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg"
+            >
               Inscription recruteur
-            </button>
+            </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
