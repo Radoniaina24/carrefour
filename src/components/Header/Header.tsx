@@ -5,16 +5,19 @@ import Navbar from "./Navbar"; // Assure-toi que ce composant existe
 
 export const Header = () => {
   const pathname = usePathname();
-
-  // Liste des chemins à exclure
+  const isAdminPage = pathname.startsWith("/admin");
   const hiddenRoutes = ["/inscription", "/connexion"];
-
-  // Vérifie si le pathname commence par l’un des chemins exclus
   const shouldHideHeader = hiddenRoutes.some((route) =>
     pathname.startsWith(route)
   );
 
-  if (shouldHideHeader) return null;
+  const renderHeader = () => {
+    if (shouldHideHeader) return null;
+    if (isAdminPage) {
+      return;
+    }
+    return <Navbar />;
+  };
 
-  return <Navbar />;
+  return <>{renderHeader()}</>;
 };
