@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header/Header";
+import { ReduxProvider } from "@/redux/provider";
 
 export const metadata: Metadata = {
   title: "Carrefour de l'Emploi",
@@ -22,7 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={` ${inter.className}`}>
         {" "}
-        <Header /> {children}
+        <ReduxProvider>
+          <Header /> {children}
+        </ReduxProvider>
       </body>
     </html>
   );
