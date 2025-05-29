@@ -69,8 +69,14 @@ const HeroSectionTest = () => {
               </p>
               <p>
                 Organisé par{" "}
-                <strong className="text-orange-600">GATE AFRICA GROUP</strong>,
-                ce rendez-vous se distingue par son approche clé-en-main,
+                <Link
+                  href="https://www.gateafricagroup.com"
+                  rel="noopener noreferrer"
+                  target="_blanck"
+                >
+                  <strong className="text-orange-600">GATE AFRICA GROUP</strong>
+                </Link>
+                , ce rendez-vous se distingue par son approche clé-en-main,
                 structurée et orientée résultats.
               </p>
             </div>
