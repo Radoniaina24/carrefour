@@ -112,8 +112,8 @@ export default function AdminSidebar({ sidebarOpen }: SidebarProps) {
         <nav className="flex-1">
           <div className="flex items-center justify-center pt-4">
             <Image
-              src="https://res.cloudinary.com/dx3xhdaym/image/upload/v1746015465/admin_sxfcox.png"
-              width={100}
+              src="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1748260405/carrefour-removebg-preview_pjn3yd.png"
+              width={150}
               height={50}
               alt="logo"
               className="rounded-full px-2"

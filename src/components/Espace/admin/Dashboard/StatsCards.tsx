@@ -50,9 +50,17 @@ export default function StatsCards() {
   const stats = [
     {
       icon: (
-        <PiUsersThree className="text-blue-800 dark:text-blue-200 text-xl" />
+        <PiUsersThree className="text-pink-800 dark:text-blue-200 text-xl" />
       ),
       label: "Candidat inscrit",
+      value: 0,
+      iconBgColor: "bg-pink-100 dark:bg-blue-900",
+    },
+    {
+      icon: (
+        <PiUsersThree className="text-blue-800 dark:text-blue-200 text-xl" />
+      ),
+      label: "Recruteur inscrit",
       value: 0,
       iconBgColor: "bg-blue-100 dark:bg-blue-900",
     },
@@ -75,7 +83,7 @@ export default function StatsCards() {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
       {isLoading
         ? stats.map((_, index) => <StatsCardSkeleton key={index} />)
         : stats.map((stat, index) => <StatsCard key={index} {...stat} />)}

@@ -17,7 +17,7 @@ export const getMenuItems = (userRole: string): MenuItem[] => {
   const items: MenuItem[] = [
     {
       icon: <IoHomeOutline className="text-xl text-blue-500" />,
-      label: "Tableau de bord",
+      label: "Dashboard",
       href: "/admin",
     },
     {
@@ -33,6 +33,22 @@ export const getMenuItems = (userRole: string): MenuItem[] => {
           icon: <FaCalendarCheck className="text-lg text-green-400" />,
           label: "Validés",
           href: "/admin/users",
+        },
+      ],
+    },
+    {
+      icon: <PiUsersThree className="text-xl text-blue-500" />,
+      label: "Recruteurs",
+      children: [
+        {
+          icon: <FaRegAddressBook className="text-lg text-red-400" />,
+          label: "Inscrits",
+          href: "/admin/recruteur",
+        },
+        {
+          icon: <FaCalendarCheck className="text-lg text-green-400" />,
+          label: "Validés",
+          href: "/admin/recruteur",
         },
       ],
     },
