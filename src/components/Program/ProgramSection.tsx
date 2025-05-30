@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Calendar, Clock, Users, Star, MapPin } from "lucide-react";
+import { Calendar, Clock, Users, Star, MapPin, Coffee } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -11,19 +11,38 @@ const ProgramSection = () => {
       date: "22 août 2025",
       events: [
         {
-          time: "08h30",
+          time: "08h00",
           title: "Accueil et installation des recruteurs",
           icon: MapPin,
         },
-        { time: "09h00", title: "Ouverture officielle", icon: Star },
         {
-          time: "10h00 – 17h00",
+          time: "08h30",
+          title: "Ouverture officielle",
+          icon: Star,
+        },
+        {
+          time: "09h00 - 10h30",
           title: "Séances de recrutement & entretiens",
           icon: Users,
         },
         {
-          time: "18h00",
-          title: "Dîner libre ou rencontre informelle",
+          time: "10h30 - 10h45",
+          title: "Pause café",
+          icon: Coffee,
+        },
+        {
+          time: "10h45 – 12h30",
+          title: "Séances de recrutement & entretiens (suite)",
+          icon: Users,
+        },
+        {
+          time: "12h30 - 14h00",
+          title: "Déjeuner buffet gastronomique au Carlton, hôtel 5 étoiles",
+          icon: Star,
+        },
+        {
+          time: "14h00 - 17h00",
+          title: "Séances de recrutement & entretiens (suite)",
           icon: Users,
         },
       ],
@@ -32,7 +51,31 @@ const ProgramSection = () => {
       day: "Jour 2",
       date: "23 août 2025",
       events: [
-        { time: "09h00 – 17h00", title: "Recrutement (suite)", icon: Users },
+        {
+          time: "08h30 - 10h00",
+          title: "Séances de recrutement & entretiens",
+          icon: Users,
+        },
+        {
+          time: "10h00 - 10h15",
+          title: "Pause café",
+          icon: Coffee,
+        },
+        {
+          time: "10h15 - 12h30",
+          title: "Séances de recrutement & entretiens (suite)",
+          icon: Users,
+        },
+        {
+          time: "12h30 - 14h00",
+          title: "Déjeuner buffet gastronomique au Carlton, hôtel 5 étoiles",
+          icon: Star,
+        },
+        {
+          time: "14h00 - 17h00",
+          title: "Séances de recrutement & entretiens (suite)",
+          icon: Users,
+        },
         {
           time: "19h00",
           title:
@@ -165,7 +208,6 @@ const ProgramSection = () => {
                         </div>
                       </div>
                     </div>
-
                     {/* Timeline dot */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white border-4 border-blue-500 rounded-full z-10"></div>
                   </motion.div>

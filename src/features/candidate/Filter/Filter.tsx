@@ -1,6 +1,5 @@
 import React from "react";
 import SearchBar from "./SearchBar";
-import StatusFilter from "./StatusFilter";
 import VisibleColumn from "./VisibleColumn";
 
 export default function Filter() {
