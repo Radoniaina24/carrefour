@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, LogIn, UserPlus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -124,9 +124,18 @@ const Navbar = () => {
             ))}
             <Link
               href={"/connexion"}
-              className="ml-4 bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
+              className="ml-4 bg-gradient-to-r text-sm from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
             >
+              <LogIn className="w-4 h-4" />
               Se connecter
+            </Link>
+            {/* // Bouton S'inscrire (Rouge) */}
+            <Link
+              href={"/inscription"}
+              className="ml-4 bg-gradient-to-r text-sm from-red-600 to-red-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+            >
+              <UserPlus className="w-4 h-4" />
+              S&apos;inscrire
             </Link>
           </div>
 
@@ -198,9 +207,19 @@ const Navbar = () => {
             <div className="pt-4">
               <Link
                 href={"/connexion"}
-                className="w-full bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-orange-600 transition-all duration-200 shadow-lg hover:shadow-blue-500/25"
+                className="ml-4 bg-gradient-to-r text-sm from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
+                <LogIn className="w-4 h-4" />
                 Se connecter
+              </Link>
+            </div>
+            <div className="pt-4">
+              <Link
+                href={"/inscription"}
+                className="ml-4 bg-gradient-to-r text-sm from-red-600 to-red-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+              >
+                <UserPlus className="w-4 h-4" />
+                S&apos;inscrire
               </Link>
             </div>
           </div>
