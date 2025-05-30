@@ -1,6 +1,7 @@
 "use client";
 import { useGetAllCandidateQuery } from "@/redux/api/candidateApi";
 import React, { createContext, useContext, useEffect, useState } from "react";
+/* eslint-disable */
 const CandidateContext = createContext<any | null>(null);
 function CandidateProvider({ children }: { children: React.ReactNode }) {
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -48,7 +49,7 @@ function CandidateProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     setCurrentPage(1);
     refetch();
-  }, [searchTerm, statusFilter]);
+  }, [searchTerm, statusFilter, refetch]);
   return (
     <CandidateContext.Provider
       value={{

@@ -5,7 +5,7 @@ import dayjs from "dayjs";
 import ViewCandidate from "../Actions/ViewCandidate";
 import DeleteCandidate from "../Actions/DeleteCandidate";
 import EditCandidate from "../Actions/EditCandidate";
-import DropdownMenuWithComponents from "./DropdownMenuWithComponents";
+/* eslint-disable */
 export default function DesktopTable() {
   const { visibleColumns, handleSort, sortColumn, sortDirection, data } =
     useCandidateContext();

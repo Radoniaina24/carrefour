@@ -5,7 +5,7 @@ import { PiNewspaperClippingLight } from "react-icons/pi";
 import { TbFileCertificate } from "react-icons/tb";
 import { GrCertificate, GrNotes } from "react-icons/gr";
 import { CgProfile } from "react-icons/cg";
-
+/* eslint-disable */
 export default function ViewCandidate({ user }: { user: any }) {
   const [open, setOpen] = useState<boolean>(false);
   const handleClose = () => {

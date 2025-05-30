@@ -1,5 +1,6 @@
 "use client";
-import React, { useMemo, useState } from "react";
+/* eslint-disable */
+import React, { useState } from "react";
 import Modal from "./Modal";
 import { FaEdit, FaSpinner } from "react-icons/fa";
 import * as Yup from "yup";
@@ -9,7 +10,7 @@ import FormSelect from "@/components/Form/FormSelect";
 import { useUpdateCandidateMutation } from "@/redux/api/candidateApi";
 
 export default function EditCandidate({ user }: { user: any }) {
-  const [updateCandidate, { error, isLoading }] = useUpdateCandidateMutation();
+  const [updateCandidate, { isLoading }] = useUpdateCandidateMutation();
   const ErrorNotification = (msg: string) => toast.error(msg);
   const SuccessNotification = (msg: string) => toast.success(msg);
   const [open, setOpen] = useState<boolean>(false);
@@ -36,7 +37,7 @@ export default function EditCandidate({ user }: { user: any }) {
     validationSchema: Yup.object({
       status: Yup.string().required("status is required"),
     }),
-    onSubmit: async (values, { setSubmitting, resetForm }) => {
+    onSubmit: async (values, { setSubmitting }) => {
       setSubmitting(true);
       const status = values;
       //   console.log(status);

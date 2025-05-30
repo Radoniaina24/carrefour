@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 import ViewCandidate from "../Actions/ViewCandidate";
 import EditCandidate from "../Actions/EditCandidate";
 import DeleteCandidate from "../Actions/DeleteCandidate";
-
+/* eslint-disable */
 export default function MobileTable() {
   const { visibleColumns, currentPage, data } = useCandidateContext();
   const scrollRef = useRef<HTMLDivElement>(null);

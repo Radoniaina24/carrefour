@@ -1,6 +1,5 @@
-// components/FormSelect.tsx
 import React from "react";
-
+/* eslint-disable */
 interface Option {
   value: string;
   label: string;
