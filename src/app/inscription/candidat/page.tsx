@@ -1,4 +1,4 @@
-import InscriptionFormCandidate from "@/components/signup/candidate/signupCandidate";
+import Signup from "@/features/register/candidate/Signup";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Candidat - Carrefour d'emploie",
@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 const SignupPageCandidate = () => {
   return (
     <>
-      <InscriptionFormCandidate />
+      <Signup />
     </>
   );
 };

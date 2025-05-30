@@ -204,24 +204,22 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            <div className="pt-4">
-              <Link
-                href={"/connexion"}
-                className="ml-4 bg-gradient-to-r text-sm from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-              >
-                <LogIn className="w-4 h-4" />
-                Se connecter
-              </Link>
-            </div>
-            <div className="pt-4">
-              <Link
-                href={"/inscription"}
-                className="ml-4 bg-gradient-to-r text-sm from-red-600 to-red-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-              >
-                <UserPlus className="w-4 h-4" />
-                S&apos;inscrire
-              </Link>
-            </div>
+
+            <Link
+              href={"/connexion"}
+              className="ml-4 bg-gradient-to-r text-sm from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+            >
+              <LogIn className="w-4 h-4" />
+              Se connecter
+            </Link>
+
+            <Link
+              href={"/inscription"}
+              className="ml-4 bg-gradient-to-r text-sm from-red-600 to-red-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+            >
+              <UserPlus className="w-4 h-4" />
+              S&apos;inscrire
+            </Link>
           </div>
         </div>
       )}

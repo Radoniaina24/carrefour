@@ -100,7 +100,7 @@ export default function TargetCountries() {
 
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-orange-100 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm border border-white/50">
             <Star className="w-4 h-4 text-slate-600" />
-            <span className="text-slate-700 font-medium">2 pays couverts</span>
+            <span className="text-slate-700 font-medium">8 pays couverts</span>
           </div>
         </div>
       </div>
