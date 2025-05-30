@@ -41,7 +41,7 @@ export default function MobileTable() {
         overflowY: "auto",
       }}
     >
-      {users.length > 0 ? (
+      {users?.length > 0 ? (
         users.map((user: any) => (
           <div key={user._id} className="bg-white p-4 border-b border-gray-200">
             {visibleColumns.photo && (

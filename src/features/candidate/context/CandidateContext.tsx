@@ -15,9 +15,6 @@ function CandidateProvider({ children }: { children: React.ReactNode }) {
     prenom: true,
     email: true,
     dateInscription: true,
-    diplome: false,
-    niveau: true,
-    mention: true,
     actions: true,
     status: true,
   });

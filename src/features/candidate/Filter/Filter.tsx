@@ -11,11 +11,11 @@ export default function Filter() {
           Liste des candidats inscrits
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="flex justify-between gap-4">
         {/* Barre de recherche */}
         <SearchBar />
         {/* Filtre par statut */}
-        <StatusFilter />
+        {/* <StatusFilter /> */}
         {/* Colonnes visibles */}
         <VisibleColumn />
       </div>
