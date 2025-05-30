@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCheck } from "react-icons/fa";
+import { Check } from "lucide-react";
 
 export default function ProgressBar({ currentStep }: { currentStep: number }) {
   return (
@@ -8,21 +8,31 @@ export default function ProgressBar({ currentStep }: { currentStep: number }) {
         {["Informations Personnelles", "Documents"].map((step, index) => (
           <div key={index} className="text-center flex-1">
             <div
-              className={`w-10 h-10 mx-auto rounded-full flex items-center justify-center ${
+              className={`w-12 h-12 mx-auto rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
                 currentStep > index + 1
-                  ? "bg-green-500"
+                  ? "bg-orange-500 border-orange-500 shadow-lg"
                   : currentStep === index + 1
-                  ? "bg-blue-700"
-                  : "bg-gray-300"
-              } text-white font-bold`}
+                  ? "bg-blue-600 border-blue-600 shadow-lg"
+                  : "bg-white border-gray-300"
+              } text-white font-bold text-lg`}
             >
-              {currentStep > index + 1 ? <FaCheck /> : index + 1}
+              {currentStep > index + 1 ? (
+                <Check className="w-5 h-5" />
+              ) : (
+                <span
+                  className={currentStep < index + 1 ? "text-gray-400" : ""}
+                >
+                  {index + 1}
+                </span>
+              )}
             </div>
             <div
-              className={`mt-2 text-xs md:text-sm ${
+              className={`mt-3 text-xs md:text-sm font-medium transition-colors duration-300 ${
                 currentStep === index + 1
-                  ? "text-blue-700 font-bold"
-                  : "text-gray-500"
+                  ? "text-blue-600"
+                  : currentStep > index + 1
+                  ? "text-orange-500"
+                  : "text-gray-400"
               }`}
             >
               {step}
@@ -30,11 +40,11 @@ export default function ProgressBar({ currentStep }: { currentStep: number }) {
           </div>
         ))}
       </div>
-      <div className="relative pt-1">
-        <div className="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200">
+      <div className="relative pt-4">
+        <div className="overflow-hidden h-3 mb-4 text-xs flex rounded-full bg-gray-200 shadow-inner">
           <div
-            style={{ width: `${(currentStep - 1) * 25}%` }}
-            className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-700 transition-all duration-500"
+            style={{ width: `${Math.max(0, (currentStep - 1) * 100)}%` }}
+            className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-blue-500 to-orange-400 transition-all duration-700 ease-out rounded-full"
           ></div>
         </div>
       </div>

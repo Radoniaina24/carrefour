@@ -15,27 +15,13 @@ function FormPassProvider({ children }: { children: React.ReactNode }) {
     city: "",
     postalCode: "",
     country: "",
-    // Parcours académique
-    lastDegree: "",
-    institution: "",
-    graduationYear: "",
-    overallGPA: "",
-    fieldOfStudy: "",
     // Choix du programme
-    program: "",
-    studyPeriod: "",
-    funding: "",
-    // Lettre de motivation
-    coverLetter: "",
+    sector: "",
     // Documents
+    coverLetter: null,
     cv: null,
-    cin: null,
     degree: null,
-    birthCertificate: null,
-    certificateOfResidence: null,
     photo: null,
-    gradeTranscript: null, // Relevé de notes
-    // Confirmation
     acceptConditions: false,
   });
   const nextStep = () => {
