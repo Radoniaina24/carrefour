@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import AdminGuard from "@/components/Auth/Guard/AuthGuardAdmin";
 
 import Admin from "@/components/Espace/admin";
 
@@ -11,5 +12,9 @@ export default function AdminLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <Admin>{children}</Admin>;
+  return (
+    <AdminGuard>
+      <Admin>{children}</Admin>
+    </AdminGuard>
+  );
 }

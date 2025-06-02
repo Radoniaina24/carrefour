@@ -1,12 +1,15 @@
 "use client";
+/* eslint-disable */
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Mail, Lock } from "lucide-react";
 import { FormValues, InputField } from "@/components/Form/InputField";
-
+import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
 import Image from "next/image";
+import { useLoginMutation } from "@/redux/api/authApi";
+import { useRouter } from "next/navigation";
 
 const validationSchema = Yup.object({
   email: Yup.string().email("Email invalide").required("Ce champ est requis"),
@@ -17,7 +20,9 @@ const validationSchema = Yup.object({
 
 const Signin: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
-  //   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [login] = useLoginMutation();
+  const router = useRouter();
+  const ErrorNotification = (msg: string) => toast.error(msg);
 
   const formik = useFormik<FormValues>({
     initialValues: {
@@ -25,12 +30,34 @@ const Signin: React.FC = () => {
       password: "",
     },
     validationSchema,
-    onSubmit: async (values) => {
-      await new Promise((res) => setTimeout(res, 2000));
-      console.log("Form submitted:", values);
-      //   setSubmitSuccess(true);
-      //   setTimeout(() => setSubmitSuccess(false), 3000);
-      console.log(values);
+    onSubmit: async (values, { setSubmitting }) => {
+      setSubmitting(true);
+      try {
+        const response = await login({
+          email: values.email,
+          password: values.password,
+        }).unwrap();
+        const role = response?.role;
+
+        switch (role) {
+          case "admin":
+            router.push("/admin");
+          case "super_admin":
+            router.push("/admin");
+            break;
+          case "student":
+            router.push("/student");
+            break;
+          default:
+            ErrorNotification("Rôle utilisateur non reconnu");
+            break;
+        }
+      } catch (error: any) {
+        const message = error?.data?.message || "Une erreur est survenue";
+        ErrorNotification(message);
+      } finally {
+        setSubmitting(false);
+      }
     },
   });
 
@@ -40,7 +67,7 @@ const Signin: React.FC = () => {
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" />
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" />
       </div>
-
+      <Toaster />
       <div className="relative max-w-md mx-auto bg-white/80 backdrop-blur-sm  rounded-2xl  shadow-2xl border border-white/50">
         <div className="flex justify-center pt-5">
           <Link href={"/"}>

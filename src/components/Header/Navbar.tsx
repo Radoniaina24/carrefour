@@ -1,9 +1,13 @@
 "use client";
+/* eslint-disable */
 import React, { useEffect, useState } from "react";
 import { Menu, X, ChevronDown, LogIn, UserPlus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useSelector } from "react-redux";
+import { selectUser } from "@/redux/features/authSlice";
+import { FaUser } from "react-icons/fa";
 type NavItem = {
   name: string;
   href: string;
@@ -18,7 +22,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
+  const user: any = useSelector(selectUser);
+  const userRole = user?.user?.role || user?.role;
+  const isAdmin = userRole === "admin" || userRole === "super_admin";
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
@@ -122,21 +128,34 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            <Link
-              href={"/connexion"}
-              className="ml-4 bg-gradient-to-r text-sm from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-            >
-              <LogIn className="w-4 h-4" />
-              Se connecter
-            </Link>
-            {/* // Bouton S'inscrire (Rouge) */}
-            <Link
-              href={"/inscription"}
-              className="ml-4 bg-gradient-to-r text-sm from-red-600 to-red-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-            >
-              <UserPlus className="w-4 h-4" />
-              S&apos;inscrire
-            </Link>
+
+            {user ? (
+              <>
+                <Link
+                  href={isAdmin ? "/admin" : "/"}
+                  className="bg-green-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-green-800 transition duration-300 whitespace-nowrap cursor-pointer"
+                >
+                  <FaUser className="mr-1 inline-block" /> Mon Compte
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link
+                  href={"/connexion"}
+                  className="ml-4 bg-gradient-to-r text-sm from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                >
+                  <LogIn className="w-4 h-4" />
+                  Se connecter
+                </Link>
+                <Link
+                  href={"/inscription"}
+                  className="ml-4 bg-gradient-to-r text-sm from-red-600 to-red-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                >
+                  <UserPlus className="w-4 h-4" />
+                  S&apos;inscrire
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -205,21 +224,33 @@ const Navbar = () => {
               </div>
             ))}
 
-            <Link
-              href={"/connexion"}
-              className="ml-4 bg-gradient-to-r text-sm from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-            >
-              <LogIn className="w-4 h-4" />
-              Se connecter
-            </Link>
-
-            <Link
-              href={"/inscription"}
-              className="ml-4 bg-gradient-to-r text-sm from-red-600 to-red-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-            >
-              <UserPlus className="w-4 h-4" />
-              S&apos;inscrire
-            </Link>
+            {user ? (
+              <>
+                <Link
+                  href={isAdmin ? "/admin" : "/"}
+                  className="bg-green-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-green-800 transition duration-300 whitespace-nowrap cursor-pointer"
+                >
+                  <FaUser className="mr-1 inline-block" /> Mon Compte
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link
+                  href={"/connexion"}
+                  className="ml-4 bg-gradient-to-r text-sm from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                >
+                  <LogIn className="w-4 h-4" />
+                  Se connecter
+                </Link>
+                <Link
+                  href={"/inscription"}
+                  className="ml-4 bg-gradient-to-r text-sm from-red-600 to-red-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                >
+                  <UserPlus className="w-4 h-4" />
+                  S&apos;inscrire
+                </Link>
+              </>
+            )}
           </div>
         </div>
       )}

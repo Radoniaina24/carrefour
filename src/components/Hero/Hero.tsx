@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { Calendar, MapPin } from "lucide-react";
 import { useState, useEffect } from "react";

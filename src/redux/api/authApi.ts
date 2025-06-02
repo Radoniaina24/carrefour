@@ -5,7 +5,7 @@ export const authAPI = createApi({
   tagTypes: ["authentication"],
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.NEXT_PUBLIC_BASE_URL,
-    credentials: "include", // S'assurer que les cookies sont envoyés avec la requête
+    credentials: "include",
   }),
   endpoints: (builder) => ({
     getUser: builder.query({
