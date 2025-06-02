@@ -69,7 +69,7 @@ export const candidateAPI = createApi({
     addCandidate: builder.mutation({
       query: (values) => {
         return {
-          url: `candidate/register`,
+          url: `candidate`,
           method: "POST",
           body: values,
         };
@@ -77,11 +77,11 @@ export const candidateAPI = createApi({
       invalidatesTags: ["candidate"],
     }),
     updateCandidate: builder.mutation({
-      query: ({ obj, id }) => {
+      query: ({ status, id }) => {
         return {
-          url: `/candidate/update/${id}`,
+          url: `/candidate/${id}`,
           method: "PUT",
-          body: obj,
+          body: status,
         };
       },
       invalidatesTags: ["candidate"],
@@ -99,7 +99,7 @@ export const candidateAPI = createApi({
     deleteCandidate: builder.mutation({
       query: (id) => {
         return {
-          url: `/candidate/delete/${id}`,
+          url: `/candidate/${id}`,
           method: "DELETE",
           body: id,
         };

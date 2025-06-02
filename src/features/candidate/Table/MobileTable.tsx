@@ -29,7 +29,7 @@ export default function MobileTable() {
         return "bg-blue-100 text-blue-800";
     }
   };
-  const users = data?.applications;
+  const users = data?.candidates;
   return (
     <div
       ref={scrollRef}
@@ -79,20 +79,7 @@ export default function MobileTable() {
                 </li>
               </ul>
             )}
-            {visibleColumns.niveau && (
-              <ul className="mb-2 max-w-md  ">
-                <li className="pb-3 sm:pb-4">
-                  <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                    <div className="min-w-0 flex-1">
-                      <p className="truncate text-gray-500 ">Niveau:</p>
-                    </div>
-                    <div className="inline-flex items-center text-base  text-gray-900 ">
-                      {user.studyPeriod}
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            )}
+
             {visibleColumns.dateInscription && (
               <ul className="mb-2 max-w-md  ">
                 <li className="pb-3 sm:pb-4">

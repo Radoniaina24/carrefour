@@ -47,6 +47,7 @@ function CandidateProvider({ children }: { children: React.ReactNode }) {
     setCurrentPage(1);
     refetch();
   }, [searchTerm, statusFilter, refetch]);
+  // console.log(data);
   return (
     <CandidateContext.Provider
       value={{

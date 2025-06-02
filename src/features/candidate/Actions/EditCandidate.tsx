@@ -40,7 +40,6 @@ export default function EditCandidate({ user }: { user: any }) {
     onSubmit: async (values, { setSubmitting }) => {
       setSubmitting(true);
       const status = values;
-      //   console.log(status);
       try {
         const response = await updateCandidate({
           status,

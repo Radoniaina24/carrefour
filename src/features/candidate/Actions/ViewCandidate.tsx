@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { FaEye, FaPassport, FaPlus } from "react-icons/fa";
+import { FaEye, FaPlus } from "react-icons/fa";
 import ModalDetailsCandidate from "./ModalDetailsCandidate";
-import { PiNewspaperClippingLight } from "react-icons/pi";
-import { TbFileCertificate } from "react-icons/tb";
+
 import { GrCertificate, GrNotes } from "react-icons/gr";
 import { CgProfile } from "react-icons/cg";
 /* eslint-disable */
@@ -87,45 +86,19 @@ export default function ViewCandidate({ user }: { user: any }) {
               </div>
             </div>
           </div>
+
           <div className="border border-gray-200 rounded-lg overflow-hidden">
             <div className="bg-gray-100 px-4 py-2">
-              <h4 className="font-bold text-gray-800">Parcours académique</h4>
+              <h4 className="font-bold text-gray-800">Secteur choisi</h4>
             </div>
             <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
-                <p className="text-gray-500">Dernier diplôme</p>
-                <p className="font-medium">{user.lastDegree || "-"}</p>
+                <p className="text-gray-500">Secteur</p>
+                <p className="font-medium">{user.sector || "-"}</p>
               </div>
               <div>
-                <p className="text-gray-500">Établissement</p>
-                <p className="font-medium">{user.institution || "-"}</p>
-              </div>
-              <div>
-                <p className="text-gray-500">Année d'obtention</p>
-                <p className="font-medium">{user.graduationYear || "-"}</p>
-              </div>
-              <div>
-                <p className="text-gray-500">Domaine d'études</p>
-                <p className="font-medium">{user.fieldOfStudy || "-"}</p>
-              </div>
-            </div>
-          </div>
-          <div className="border border-gray-200 rounded-lg overflow-hidden">
-            <div className="bg-gray-100 px-4 py-2">
-              <h4 className="font-bold text-gray-800">Programme choisi</h4>
-            </div>
-            <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <div>
-                <p className="text-gray-500">Programme</p>
-                <p className="font-medium">{user.program || "-"}</p>
-              </div>
-              <div>
-                <p className="text-gray-500">Niveau</p>
-                <p className="font-medium">{user.studyPeriod || "-"}</p>
-              </div>
-              <div>
-                <p className="text-gray-500">Mention</p>
-                <p className="font-medium">{user.funding || "-"}</p>
+                <p className="text-gray-500">Categorie</p>
+                <p className="font-medium">{user.category || "-"}</p>
               </div>
             </div>
           </div>
@@ -168,42 +141,9 @@ export default function ViewCandidate({ user }: { user: any }) {
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <FaPassport className="w-4 h-4 text-red-500" />
-                <a
-                  href={user.cin.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-red-600 text-sm hover:text-red-800 font-medium transition duration-300"
-                >
-                  CIN
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <PiNewspaperClippingLight className="w-4 h-4 text-red-500" />
-                <a
-                  href={user.birthCertificate.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-red-600 text-sm hover:text-red-800 font-medium transition duration-300"
-                >
-                  Bulletin de naissance
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <TbFileCertificate className="w-4 h-4 text-red-500" />
-                <a
-                  href={user.certificateOfResidence.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-red-600 text-sm hover:text-red-800 font-medium transition duration-300"
-                >
-                  Certificat de résidence
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
                 <GrNotes className="w-4 h-4 text-red-500" />
                 <a
-                  href={user.gradeTranscript.url}
+                  href={user.coverLetter.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-red-600 text-sm hover:text-red-800 font-medium transition duration-300"

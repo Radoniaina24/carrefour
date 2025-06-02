@@ -43,10 +43,6 @@ export default function Confirmation() {
       } finally {
         setSubmitting(false);
       }
-
-      setFormData((prev: any) => ({ ...prev, ...values }));
-      setShowSuccessModal(true);
-      console.log("Formulaire soumis :", formData);
     },
   });
   //   console.log(formik.errors);

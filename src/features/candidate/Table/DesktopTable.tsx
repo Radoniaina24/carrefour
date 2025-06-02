@@ -25,7 +25,8 @@ export default function DesktopTable() {
         return "bg-blue-100 text-blue-800";
     }
   };
-  const users = data?.applications;
+  const users = data?.candidates;
+
   // console.log(users);
   return (
     <table className="min-w-full divide-y divide-gray-200 hidden md:table">

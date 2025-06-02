@@ -2,12 +2,7 @@
 /* eslint-disable */
 import React, { useState } from "react";
 import Modal from "./Modal";
-import {
-  FaExclamationTriangle,
-  FaSpinner,
-  FaTrash,
-  FaTrashAlt,
-} from "react-icons/fa";
+import { FaExclamationTriangle, FaSpinner, FaTrash } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import { useDeleteCandidateMutation } from "@/redux/api/candidateApi";
 

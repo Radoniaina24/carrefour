@@ -23,18 +23,7 @@ export const getMenuItems = (userRole: string): MenuItem[] => {
     {
       icon: <PiUsersThree className="text-xl text-pink-500" />,
       label: "Candidats",
-      children: [
-        {
-          icon: <FaRegAddressBook className="text-lg text-red-400" />,
-          label: "Inscrits",
-          href: "/admin/candidate",
-        },
-        {
-          icon: <FaCalendarCheck className="text-lg text-green-400" />,
-          label: "Validés",
-          href: "/admin/users",
-        },
-      ],
+      href: "/admin/candidate",
     },
     {
       icon: <PiUsersThree className="text-xl text-blue-500" />,
