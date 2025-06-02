@@ -2,10 +2,19 @@ import React from "react";
 import { Check } from "lucide-react";
 
 export default function ProgressBar({ currentStep }: { currentStep: number }) {
+  const steps = [
+    "Informations Personnelles",
+    "Choix du secteur",
+    "Documents",
+    "Confirmation",
+  ];
+  const totalSteps = steps.length;
+  const progressPercent = ((currentStep - 1) / (totalSteps - 1)) * 100;
+
   return (
     <div className="mb-8">
       <div className="flex justify-between mb-2">
-        {["Informations Personnelles", "Documents"].map((step, index) => (
+        {steps.map((step, index) => (
           <div key={index} className="text-center flex-1">
             <div
               className={`w-12 h-12 mx-auto rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
@@ -43,7 +52,7 @@ export default function ProgressBar({ currentStep }: { currentStep: number }) {
       <div className="relative pt-4">
         <div className="overflow-hidden h-3 mb-4 text-xs flex rounded-full bg-gray-200 shadow-inner">
           <div
-            style={{ width: `${Math.max(0, (currentStep - 1) * 100)}%` }}
+            style={{ width: `${progressPercent}%` }}
             className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-blue-500 to-orange-400 transition-all duration-700 ease-out rounded-full"
           ></div>
         </div>

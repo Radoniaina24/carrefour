@@ -4,14 +4,11 @@ import React from "react";
 import { useFormPassContext } from "../context/SignupContext";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import FormStep1 from "./FormStep1";
-import FormStep2 from "./FormStep2";
-
-import FormStep3 from "./FormStep3";
-import FormStep4 from "./FormStep4";
 import FormStep5 from "./FormStep5";
 import Confirmation from "./Confirmation";
 import Link from "next/link";
 import Image from "next/image";
+import FormStep3 from "./FormStep3";
 
 export default function MultiStepForm() {
   const { currentStep } = useFormPassContext();
@@ -20,8 +17,10 @@ export default function MultiStepForm() {
       case 1:
         return <FormStep1 />;
       case 2:
-        return <FormStep5 />;
+        return <FormStep3 />;
       case 3:
+        return <FormStep5 />;
+      case 4:
         return <Confirmation />;
       default:
         return null;

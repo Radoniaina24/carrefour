@@ -9,7 +9,8 @@ import Modal from "../Modal/Modal";
 import { useAddCandidateMutation } from "@/redux/api/candidateApi";
 
 export default function Confirmation() {
-  const { formData, setShowSuccessModal } = useFormPassContext();
+  const { formData, setShowSuccessModal, setFormData } = useFormPassContext();
+  console.log(formData);
   const [registerCandidate] = useAddCandidateMutation();
   const initialvalues = {
     acceptConditions: false,
@@ -43,9 +44,9 @@ export default function Confirmation() {
         setSubmitting(false);
       }
 
-      // setFormData((prev: any) => ({ ...prev, ...values }));
-      // setShowSuccessModal(true);
-      // console.log("Formulaire soumis :", formData);
+      setFormData((prev: any) => ({ ...prev, ...values }));
+      setShowSuccessModal(true);
+      console.log("Formulaire soumis :", formData);
     },
   });
   //   console.log(formik.errors);
@@ -115,45 +116,19 @@ export default function Confirmation() {
               </div>
             </div>
           </div>
+
           <div className="border border-gray-200 rounded-lg overflow-hidden">
             <div className="bg-gray-100 px-4 py-2">
-              <h4 className="font-bold text-gray-800">Parcours académique</h4>
+              <h4 className="font-bold text-gray-800">Secteur choisi</h4>
             </div>
             <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
-                <p className="text-gray-500">Dernier diplôme</p>
-                <p className="font-medium">{formData.lastDegree || "-"}</p>
+                <p className="text-gray-500">Secteur</p>
+                <p className="font-medium">{formData.sector || "-"}</p>
               </div>
               <div>
-                <p className="text-gray-500">Établissement</p>
-                <p className="font-medium">{formData.institution || "-"}</p>
-              </div>
-              <div>
-                <p className="text-gray-500">Année d'obtention</p>
-                <p className="font-medium">{formData.graduationYear || "-"}</p>
-              </div>
-              <div>
-                <p className="text-gray-500">Domaine d'études</p>
-                <p className="font-medium">{formData.fieldOfStudy || "-"}</p>
-              </div>
-            </div>
-          </div>
-          <div className="border border-gray-200 rounded-lg overflow-hidden">
-            <div className="bg-gray-100 px-4 py-2">
-              <h4 className="font-bold text-gray-800">Programme choisi</h4>
-            </div>
-            <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <div>
-                <p className="text-gray-500">Programme</p>
-                <p className="font-medium">{formData.program || "-"}</p>
-              </div>
-              <div>
-                <p className="text-gray-500">Niveau</p>
-                <p className="font-medium">{formData.studyPeriod || "-"}</p>
-              </div>
-              <div>
-                <p className="text-gray-500">Mention</p>
-                <p className="font-medium">{formData.funding || "-"}</p>
+                <p className="text-gray-500">Categorie</p>
+                <p className="font-medium">{formData.category || "-"}</p>
               </div>
             </div>
           </div>
@@ -182,37 +157,14 @@ export default function Confirmation() {
                 />
                 <span>Diplômes</span>
               </div>
-              <div className="flex items-center">
-                <FaCheck
-                  className={` ${formData.cin ? " text-green-500 mr-2" : ""}`}
-                />
-                <span>Pièce d'identité ou passeport</span>
-              </div>
+
               <div className="flex items-center">
                 <FaCheck
                   className={` ${
-                    formData.birthCertificate ? " text-green-500 mr-2" : ""
+                    formData.coverLetter ? " text-green-500 mr-2" : ""
                   }`}
                 />
-                <span>Bulletin de naissance</span>
-              </div>
-              <div className="flex items-center">
-                <FaCheck
-                  className={` ${
-                    formData.certificateOfResidence
-                      ? " text-green-500 mr-2"
-                      : ""
-                  }`}
-                />
-                <span>Certificat de résidence</span>
-              </div>
-              <div className="flex items-center">
-                <FaCheck
-                  className={` ${
-                    formData.gradeTranscript ? " text-green-500 mr-2" : ""
-                  }`}
-                />
-                <span>Relevé de notes</span>
+                <span>Lettre de motivation</span>
               </div>
             </div>
           </div>
@@ -237,7 +189,7 @@ export default function Confirmation() {
               <a href="#" className="text-blue-700 hover:underline">
                 politique de confidentialité
               </a>{" "}
-              de l'AELI Madagascar.
+              de carrefour d'emploie Madagascar.
             </label>
           </div>
           {formik.errors.acceptConditions && (

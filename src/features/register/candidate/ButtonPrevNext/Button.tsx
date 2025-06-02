@@ -9,46 +9,56 @@ export default function ButtonNextPrev({
   isSubmitting?: boolean;
 }) {
   const { prevStep, currentStep } = useFormPassContext();
+
   return (
-    <div className="mt-8 flex flex-col sm:flex-row justify-between items-center">
-      <div>
+    <div className="mt-10 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+      {/* Bouton Précédent */}
+      <div className="w-full sm:w-auto">
         {currentStep > 1 &&
-          (isSubmitting ? (
-            ""
-          ) : (
+          (isSubmitting ? null : (
             <button
               type="button"
               onClick={prevStep}
-              className="bg-gray-200 flex items-center text-sm text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition duration-300 mr-4 whitespace-nowrap cursor-pointer"
+              className="group relative w-full sm:w-auto overflow-hidden bg-gradient-to-r from-slate-100 to-slate-200 border border-slate-300 text-slate-700 px-8 py-3.5 rounded-xl hover:from-slate-200 hover:to-slate-300 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:shadow-md font-medium text-sm flex items-center justify-center gap-3"
             >
-              <FaArrowLeft className="mr-2" />
-              Précédent
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <FaArrowLeft className="transition-transform duration-300 group-hover:-translate-x-1 text-slate-600" />
+              <span className="relative z-10">Précédent</span>
             </button>
           ))}
       </div>
-      <div className="mt-4 sm:mt-0">
-        {currentStep < 6 ? (
+
+      {/* Bouton Suivant/Soumettre */}
+      <div className="w-full sm:w-auto">
+        {currentStep < 4 ? (
           <button
             type="submit"
-            //   onClick={nextStep}
-            className="bg-blue-700 text-sm flex items-center text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition duration-300 whitespace-nowrap cursor-pointer"
+            className="group relative w-full sm:w-auto overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3.5 rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 active:shadow-lg font-medium text-sm flex items-center justify-center gap-3 shadow-lg"
           >
-            Suivant
-            <FaArrowRight className="ml-2" />
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <span className="relative z-10">Suivant</span>
+            <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1 relative z-10" />
           </button>
         ) : (
           <button
             disabled={isSubmitting}
             type="submit"
-            className={`${
-              isSubmitting ? "cursor-not-allowed" : "cursor-pointer"
-            } flex items-center  text-sm  px-6 py-2   bg-green-600 text-white rounded hover:bg-green-700 transition duration-300 whitespace-nowrap `}
+            className={`group relative w-full sm:w-auto overflow-hidden ${
+              isSubmitting
+                ? "bg-gradient-to-r from-slate-400 to-slate-500 cursor-not-allowed"
+                : "bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 cursor-pointer transform hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 active:shadow-lg"
+            } text-white px-8 py-3.5 rounded-xl transition-all duration-300 font-medium text-sm flex items-center justify-center gap-3 shadow-lg`}
           >
-            Soumettre ma candidature
+            <div
+              className={`absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 opacity-0 ${
+                !isSubmitting && "group-hover:opacity-100"
+              } transition-opacity duration-300`}
+            ></div>
+            <span className="relative z-10">Soumettre ma candidature</span>
             {isSubmitting ? (
-              <Loader2 className="h-5 w-5 ml-2  animate-spin " />
+              <Loader2 className="h-5 w-5 animate-spin relative z-10" />
             ) : (
-              <FaPaperPlane className="ml-2 " />
+              <FaPaperPlane className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5 relative z-10" />
             )}
           </button>
         )}

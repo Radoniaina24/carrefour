@@ -15,8 +15,9 @@ function FormPassProvider({ children }: { children: React.ReactNode }) {
     city: "",
     postalCode: "",
     country: "",
-    // Choix du programme
+    // Choix du sector
     sector: "",
+    category: "",
     // Documents
     coverLetter: null,
     cv: null,

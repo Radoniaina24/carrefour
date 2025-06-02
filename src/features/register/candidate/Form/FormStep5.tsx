@@ -61,7 +61,7 @@ export default function FormStep5() {
     }),
 
     onSubmit: (values) => {
-      //   console.log("Form Submitted : ", values);
+      // console.log("Form Submitted : ", values);
       nextStep();
       setFormData((prev: any) => ({ ...prev, ...values }));
     },
@@ -130,7 +130,7 @@ export default function FormStep5() {
         />
       </div>
 
-      {/* <ButtonNextPrev /> */}
+      <ButtonNextPrev />
     </form>
   );
 }

@@ -11,9 +11,16 @@ export default function Modal() {
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
       <div className="bg-white rounded-lg p-8 max-w-2xl w-full mx-4">
         <div className="text-center">
-          <div className="text-green-600 text-6xl mb-4 flex justify-center">
-            <FaCircleCheck />
+          <div className="relative mb-8">
+            <div className=""></div>
+            <div
+              className="relative bg-gradient-to-br from-green-400 to-green-600 text-white text-5xl p-3 rounded-full inline-flex items-center justify-center shadow-lg animate-bounce"
+              style={{ animationDuration: "2s" }}
+            >
+              <FaCircleCheck />
+            </div>
           </div>
+
           <h3 className="text-2xl font-bold text-gray-900 mb-2">
             Candidature envoyée avec succès !
           </h3>
@@ -21,32 +28,21 @@ export default function Modal() {
           <div className="bg-blue-50 p-4 rounded-lg text-start my-5">
             <h4 className="font-bold text-blue-800 mb-2">Prochaines étapes</h4>
             <ol className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
+              <li>Vérification de votre dossier par notre équipe.</li>
               <li>
-                Vérification de votre dossier par notre équipe d'admission (3-5
-                jours ouvrables)
-              </li>
-              <li>
-                Notification par email de la recevabilité de votre candidature
-              </li>
-              <li>
-                Si votre dossier est retenu, invitation à un entretien (en
-                personne ou en ligne)
-              </li>
-              <li>Décision finale d'admission communiquée par email</li>
-              <li>
-                En cas d'admission, paiement des frais d'inscription pour
-                confirmer votre place
+                Notification par email pour la validation de votre candidature
               </li>
             </ol>
           </div>
-          <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
+          <div className="flex justify-center">
             <Link
               href="/"
               data-readdy="true"
-              className="bg-gray-200 text-gray-800 px-6 py-2 rounded flex items-center hover:bg-gray-300 transition duration-300 whitespace-nowrap"
+              className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 text-white px-10 py-4 rounded-2xl font-semibold text-lg flex items-center gap-3 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:shadow-lg shadow-lg"
             >
-              <FaHome className=" mr-2" />
-              Retour à l'accueil
+              <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <FaHome className="text-lg transition-transform duration-300 group-hover:-translate-x-1 relative z-10" />
+              <span className="relative z-10">Retour à l'accueil</span>
             </Link>
           </div>
         </div>

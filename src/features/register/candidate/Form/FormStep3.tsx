@@ -1,129 +1,134 @@
-/* eslint-disable */
 import React, { useEffect } from "react";
 import { useFormPassContext } from "../context/SignupContext";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import ButtonNextPrev from "../ButtonPrevNext/Button";
+import { motion } from "framer-motion";
 import FormSelect from "@/components/Form/FormSelect";
+/* eslint-disable */
 export default function FormStep3() {
-  const programs = [
-    { label: "Licence", value: "Licence" },
-    { label: "Master", value: "Master" },
+  const sectors = [
+    { label: "Technologies & BTP", value: "technologies_btp" },
+    { label: "Tourisme, santé & services", value: "tourisme_sante_services" },
+    { label: "Communication & gestion", value: "communication_gestion" },
+    { label: "Événementiel & artistique", value: "evenementiel_artistique" },
   ];
-  const studyPeriodOptions: any = {
-    Licence: [
-      { label: "L1", value: "L1" },
-      { label: "L2", value: "L2" },
-      { label: "L3", value: "L3" },
+
+  const sectorCategories: Record<string, { label: string; value: string }[]> = {
+    technologies_btp: [
+      {
+        label: "Développeurs web, IA, cybersécurité, robotique",
+        value: "Développeurs web, IA, cybersécurité, robotique",
+      },
+      {
+        label: "Électriciens, techniciens AC, plombiers, soudeurs",
+        value: "Électriciens, techniciens AC, plombiers, soudeurs",
+      },
     ],
-    Master: [
-      { label: "M1", value: "M1" },
-      { label: "M2", value: "M2" },
+    tourisme_sante_services: [
+      {
+        label: "Réception, cuisine, spa, housekeeping",
+        value: "Réception, cuisine, spa, housekeeping",
+      },
+      {
+        label: "Infirmiers, aides-soignants, ambulanciers",
+        value: "Infirmiers, aides-soignants, ambulanciers",
+      },
+      {
+        label: "Chauffeurs, agents logistiques",
+        value: "Chauffeurs, agents logistiques",
+      },
+    ],
+    communication_gestion: [
+      {
+        label: "Accueil client trilingue, call center",
+        value: "Accueil client trilingue, call center",
+      },
+      {
+        label: "Secrétaires, assistants RH, community managers",
+        value: "Secrétaires, assistants RH, community managers",
+      },
+    ],
+    evenementiel_artistique: [
+      {
+        label: "Techniciens lumière/son/vidéo, régisseurs",
+        value: "Techniciens lumière/son/vidéo, régisseurs",
+      },
+      {
+        label: "DJs, musiciens, animateurs, artistes live",
+        value: "DJs, musiciens, animateurs, artistes live",
+      },
     ],
   };
 
-  const course = [
-    {
-      label: "BEL : Business, Entrepreneuriat et Leadership",
-      value: "BEL",
-    },
-
-    {
-      label: "BEN : Energie Renouvelable",
-      value: "BEN",
-    },
-  ];
-  const tuitionFees = [
-    {
-      program: "Droit d'inscription",
-      fee: "300 000 MGA ",
-    },
-    { program: "Frais de formation annuelle (10 mois)", fee: "2 500 000 MGA" },
-  ];
   const { setFormData, nextStep, formData } = useFormPassContext();
-  const initialvalues = {
-    program: formData.program as string,
-    studyPeriod: formData.studyPeriod as string,
-    funding: formData.funding as string,
-  };
-  const formik = useFormik({
-    initialValues: initialvalues,
-    validationSchema: Yup.object({
-      program: Yup.string().required("Le choix du programme est requis"),
-      studyPeriod: Yup.string().required("Le choix du niveau est requis"),
-      funding: Yup.string().required("Le choix du  mention  est requis"),
-    }),
 
+  const formik = useFormik({
+    initialValues: {
+      sector: formData.sector || "",
+      category: formData.category || "",
+    },
+    validationSchema: Yup.object({
+      sector: Yup.string().required("Le choix du secteur est requis"),
+      category: Yup.string().required("Le choix de la catégorie est requis"),
+    }),
     onSubmit: (values) => {
-      // console.log("Form Submitted : ", values);
+      // console.log(values);
       nextStep();
       setFormData((prev: any) => ({ ...prev, ...values }));
     },
   });
-  // Réinitialiser le champ studyPeriod quand le programme change
+
   useEffect(() => {
-    const validOptions = studyPeriodOptions[formik.values.program] || [];
-    const isCurrentValid = validOptions.some(
-      (opt: any) => opt.value === formik.values.studyPeriod
+    const validOptions = sectorCategories[formik.values.sector] || [];
+    const isValidCategory = validOptions.some(
+      (opt) => opt.value === formik.values.category
     );
-    if (!isCurrentValid) {
-      formik.setFieldValue("studyPeriod", "");
+    if (!isValidCategory) {
+      formik.setFieldValue("category", "");
     }
-  }, [formik.values.program]);
-  //   console.log(formik.values);
+  }, [formik.values.sector]);
+
   return (
-    <form onSubmit={formik.handleSubmit} autoComplete="off">
-      <FormSelect
-        id="program"
-        label="Obtenir un diplôme de :"
-        value={formik.values.program}
-        onChange={formik.handleChange}
-        options={programs}
-        error={formik.errors.program}
-        touched={formik.touched.program}
-        placeholder="Sélectionnez un diplôme"
-        required
-      />
-      <FormSelect
-        id="studyPeriod"
-        label="Choix du niveau"
-        value={formik.values.studyPeriod}
-        onChange={formik.handleChange}
-        options={studyPeriodOptions[formik.values.program] || []}
-        error={formik.errors.studyPeriod}
-        touched={formik.touched.studyPeriod}
-        placeholder="Sélectionnez un niveau"
-        required
-      />
-      <FormSelect
-        id="funding"
-        label="Mention"
-        value={formik.values.funding}
-        onChange={formik.handleChange}
-        options={course}
-        error={formik.errors.funding}
-        touched={formik.touched.funding}
-        placeholder="Sélectionnez une mention"
-        required
-      />
-      <div className="bg-blue-50 p-4 rounded-lg">
-        <h4 className="font-bold text-blue-800 mb-2">
-          Frais de scolarité indicatifs
-        </h4>
-        <ul className="space-y-2 text-sm text-gray-700">
-          {tuitionFees.map((item, index) => (
-            <li key={index} className="flex justify-between">
-              <span>{item.program}</span>
-              <span className="font-semibold">{item.fee}</span>
-            </li>
-          ))}
-        </ul>
-        <p className="mt-3 text-xs text-gray-500">
-          * Ces montants sont donnés à titre indicatif et peuvent être sujets à
-          modification.
-        </p>
+    <motion.form
+      onSubmit={formik.handleSubmit}
+      autoComplete="off"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="rounded-2xl"
+    >
+      <div>
+        <FormSelect
+          id="sector"
+          label="Secteur d'activité"
+          value={formik.values.sector}
+          onChange={formik.handleChange}
+          options={sectors}
+          error={formik.errors.sector}
+          touched={formik.touched.sector}
+          placeholder="Sélectionnez un secteur"
+          required
+        />
       </div>
-      <ButtonNextPrev />
-    </form>
+
+      <div>
+        <FormSelect
+          id="category"
+          label="Catégorie"
+          value={formik.values.category}
+          onChange={formik.handleChange}
+          options={sectorCategories[formik.values.sector] || []}
+          error={formik.errors.category}
+          touched={formik.touched.category}
+          placeholder="Sélectionnez une catégorie"
+          required
+        />
+      </div>
+
+      <div className="pt-4">
+        <ButtonNextPrev />
+      </div>
+    </motion.form>
   );
 }
