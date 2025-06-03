@@ -6,6 +6,7 @@ export default function ProgressBar({ currentStep }: { currentStep: number }) {
     "Informations Personnelles",
     "Choix du secteur",
     "Documents",
+    "Mot de passe",
     "Confirmation",
   ];
   const totalSteps = steps.length;

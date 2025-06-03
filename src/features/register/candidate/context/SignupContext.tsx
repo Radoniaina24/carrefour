@@ -24,6 +24,9 @@ function FormPassProvider({ children }: { children: React.ReactNode }) {
     degree: null,
     photo: null,
     acceptConditions: false,
+    //Mot de passe
+    password: "",
+    re_type_password: "",
   });
   const nextStep = () => {
     setCurrentStep(currentStep + 1);

@@ -9,6 +9,7 @@ import Confirmation from "./Confirmation";
 import Link from "next/link";
 import Image from "next/image";
 import FormStep3 from "./FormStep3";
+import FormStep4 from "./FormStep4";
 
 export default function MultiStepForm() {
   const { currentStep } = useFormPassContext();
@@ -21,6 +22,8 @@ export default function MultiStepForm() {
       case 3:
         return <FormStep5 />;
       case 4:
+        return <FormStep4 />;
+      case 5:
         return <Confirmation />;
       default:
         return null;

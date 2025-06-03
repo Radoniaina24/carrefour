@@ -10,7 +10,7 @@ import { useAddCandidateMutation } from "@/redux/api/candidateApi";
 
 export default function Confirmation() {
   const { formData, setShowSuccessModal, setFormData } = useFormPassContext();
-  console.log(formData);
+  // console.log(formData);
   const [registerCandidate] = useAddCandidateMutation();
   const initialvalues = {
     acceptConditions: false,
