@@ -24,7 +24,10 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const user: any = useSelector(selectUser);
   const userRole = user?.user?.role || user?.role;
-  const isAdmin = userRole === "admin" || userRole === "super_admin";
+  const isAdmin =
+    userRole === "admin" ||
+    userRole === "super_admin" ||
+    userRole === "candidate";
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);

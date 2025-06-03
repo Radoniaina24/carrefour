@@ -211,7 +211,7 @@ export default function DesktopTable() {
                         <DeleteCandidate user={user} />
                       </>
                     ) : (
-                      "-"
+                      <ViewCandidate user={user} />
                     )}
                   </div>
                 </td>

@@ -71,9 +71,6 @@ export const InscriptionFormRecruiter: React.FC = () => {
           <h2 className="text-3xl font-bold text-blue-900 mb-2">
             Inscription Recruteur
           </h2>
-          <p className="text-blue-600">
-            Rejoignez le Carrefour de l&apos;Emploi Madagascar 2025
-          </p>
         </div>
 
         {submitSuccess && (

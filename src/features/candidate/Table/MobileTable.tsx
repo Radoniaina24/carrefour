@@ -122,7 +122,7 @@ export default function MobileTable() {
                     <DeleteCandidate user={user} />
                   </>
                 ) : (
-                  ""
+                  <ViewCandidate user={user} />
                 )}
               </div>
             )}
