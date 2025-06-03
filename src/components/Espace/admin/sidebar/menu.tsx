@@ -1,5 +1,5 @@
 import React, { JSX } from "react";
-import { FaCalendarCheck, FaRegAddressBook, FaRegUser } from "react-icons/fa";
+import { FaRegUser } from "react-icons/fa";
 import { IoBookOutline, IoHomeOutline } from "react-icons/io5";
 import { PiUsersThree } from "react-icons/pi";
 export interface MenuItem {
@@ -28,19 +28,24 @@ export const getMenuItems = (userRole: string): MenuItem[] => {
     {
       icon: <PiUsersThree className="text-xl text-blue-500" />,
       label: "Recruteurs",
-      children: [
-        {
-          icon: <FaRegAddressBook className="text-lg text-red-400" />,
-          label: "Inscrits",
-          href: "/admin/recruteur",
-        },
-        {
-          icon: <FaCalendarCheck className="text-lg text-green-400" />,
-          label: "Validés",
-          href: "/admin/recruteur",
-        },
-      ],
+      href: "/admin/recruiter",
     },
+    // {
+    //   icon: <PiUsersThree className="text-xl text-blue-500" />,
+    //   label: "Recruteurs",
+    //   children: [
+    //     {
+    //       icon: <FaRegAddressBook className="text-lg text-red-400" />,
+    //       label: "Inscrits",
+    //       href: "/admin/recruteur",
+    //     },
+    //     {
+    //       icon: <FaCalendarCheck className="text-lg text-green-400" />,
+    //       label: "Validés",
+    //       href: "/admin/recruteur",
+    //     },
+    //   ],
+    // },
   ];
 
   if (userRole === "super_admin") {

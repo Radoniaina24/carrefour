@@ -1,4 +1,7 @@
 "use client";
+import { useGetAllCandidateQuery } from "@/redux/api/candidateApi";
+import { useGetAllRecruiterQuery } from "@/redux/api/recruiterApi";
+import { useGetAllUserQuery } from "@/redux/api/userApi";
 import { JSX } from "react";
 import { FaUsers } from "react-icons/fa";
 import { FaMoneyBillTrendUp } from "react-icons/fa6";
@@ -33,27 +36,23 @@ const StatsCardSkeleton = () => (
 );
 
 export default function StatsCards() {
-  // const {
-  //   data: candidateData,
-  //   isLoading: isLoadindApplication,
-  //   error: errorApplication,
-  // } = useGetAllCandidateQuery("");
+  const { data: candidateData, isLoading: isLoadindCandidate } =
+    useGetAllCandidateQuery("");
 
-  // const {
-  //   data: userData,
-  //   isLoading: isLoadindUser,
-  //   error,
-  // } = useGetAllUserCandidateQuery("");
+  const { data: recruiterData, isLoading: isLoadindRecruiter } =
+    useGetAllRecruiterQuery("");
 
-  // const isLoading = isLoadindApplication || isLoadindUser;
-  const isLoading = false;
+  const { data: userData, isLoading: isLoadindUser } = useGetAllUserQuery("");
+
+  // console.log(userData);
+  const isLoading = isLoadindCandidate || isLoadindRecruiter || isLoadindUser;
   const stats = [
     {
       icon: (
         <PiUsersThree className="text-pink-800 dark:text-blue-200 text-xl" />
       ),
       label: "Candidat inscrit",
-      value: 0,
+      value: candidateData?.totalCandidates || 0,
       iconBgColor: "bg-pink-100 dark:bg-blue-900",
     },
     {
@@ -61,7 +60,7 @@ export default function StatsCards() {
         <PiUsersThree className="text-blue-800 dark:text-blue-200 text-xl" />
       ),
       label: "Recruteur inscrit",
-      value: 0,
+      value: recruiterData?.totalRecruiters || 0,
       iconBgColor: "bg-blue-100 dark:bg-blue-900",
     },
     {
@@ -69,7 +68,7 @@ export default function StatsCards() {
         <FaUsers className="text-yellow-600 dark:text-yellow-400 text-xl" />
       ),
       label: "Utilisateurs",
-      value: 0,
+      value: userData?.totalUsers,
       iconBgColor: "bg-yellow-100 dark:bg-yellow-900",
     },
     {
