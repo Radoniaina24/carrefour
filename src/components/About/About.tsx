@@ -93,15 +93,15 @@ export default function AboutSection() {
   ];
 
   const specialPrograms = [
-    {
-      title: "Programmes de mobilité jeunes et au pair",
-      items: [
-        "Jeunes filles et jeunes hommes au pair pour l'Allemagne",
-        "Accompagnement linguistique (Allemand niveau B1/B2 requis)",
-        "Sélection rigoureuse et accompagnement administratif complet",
-        "Intégration culturelle et suivi en collaboration avec les agences partenaires",
-      ],
-    },
+    // {
+    //   title: "Programmes de mobilité jeunes et au pair",
+    //   items: [
+    //     "Jeunes filles et jeunes hommes au pair pour l'Allemagne",
+    //     "Accompagnement linguistique (Allemand niveau B1/B2 requis)",
+    //     "Sélection rigoureuse et accompagnement administratif complet",
+    //     "Intégration culturelle et suivi en collaboration avec les agences partenaires",
+    //   ],
+    // },
     {
       title: "Mobilité professionnelle – Allemagne",
       items: [
