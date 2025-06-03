@@ -1,0 +1,14 @@
+import PricingPacks from "@/components/Packs/Packs";
+
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Packs & tarifs - Carrefour d'emploie",
+};
+const PackPage = () => {
+  return (
+    <div className="mt-24">
+      <PricingPacks />
+    </div>
+  );
+};
+export default PackPage;

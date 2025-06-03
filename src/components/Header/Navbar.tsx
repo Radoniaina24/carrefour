@@ -63,7 +63,7 @@ const Navbar = () => {
     { name: "Programme", href: "/program", hasDropdown: false },
     // { name: "Pack & Tarifs", href: "#", hasDropdown: false },
     { name: "Contact", href: "/contact", hasDropdown: false },
-    { name: "Partenaires", href: "#", hasDropdown: false },
+    { name: "Pack & Tarifs", href: "/pack", hasDropdown: false },
   ];
   const pathname = usePathname();
 
