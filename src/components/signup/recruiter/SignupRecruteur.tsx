@@ -1,20 +1,25 @@
 "use client";
-
+/* eslint-disable */
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { User, Mail, Lock, MapPin, CheckCircle, Globe } from "lucide-react";
+import { User, Mail, Lock, MapPin, Globe } from "lucide-react";
 import { FormValues, InputField } from "@/components/Form/InputField";
 import Link from "next/link";
 import Image from "next/image";
 import { SelectCountryField } from "@/components/Form/SelectCountryField";
+import toast, { Toaster } from "react-hot-toast";
+import { useAddRecruiterMutation } from "@/redux/api/recruiterApi";
+import { useRouter } from "next/navigation";
 
 const validationSchema = Yup.object({
-  nom: Yup.string().required("Ce champ est requis"),
-  prenom: Yup.string().required("Ce champ est requis"),
+  lastName: Yup.string().required("Ce champ est requis"),
+  firstName: Yup.string().required("Ce champ est requis"),
   company: Yup.string().required("Ce champ est requis"),
   country: Yup.string().required("Ce champ est requis"),
-  email: Yup.string().email("Email invalide").required("Ce champ est requis"),
+  emailAddress: Yup.string()
+    .email("Email invalide")
+    .required("Ce champ est requis"),
   password: Yup.string()
     .min(6, "Le mot de passe doit contenir au moins 6 caractères")
     .required("Ce champ est requis"),
@@ -26,24 +31,35 @@ const validationSchema = Yup.object({
 export const InscriptionFormRecruiter: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
 
+  const ErrorNotification = (msg: string) => toast.error(msg);
+  const SuccessrNotification = (msg: string) => toast.success(msg);
+  const [addRecruiter] = useAddRecruiterMutation();
+  const navigation = useRouter();
   const formik = useFormik<FormValues>({
     initialValues: {
-      nom: "",
-      prenom: "",
+      lastName: "",
+      firstName: "",
       company: "",
-      email: "",
+      emailAddress: "",
       password: "",
       confirmPassword: "",
       country: "",
     },
     validationSchema,
-    onSubmit: async (values) => {
-      await new Promise((res) => setTimeout(res, 2000));
-      console.log("Form submitted:", values);
-      setSubmitSuccess(true);
-      setTimeout(() => setSubmitSuccess(false), 3000);
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
+      setSubmitting(true);
+      try {
+        const response: any = await addRecruiter(values).unwrap();
+
+        SuccessrNotification(response?.message);
+        resetForm();
+      } catch (error: any) {
+        const message = error?.data?.message || "Une erreur est survenue";
+        ErrorNotification(message);
+      } finally {
+        setSubmitting(false);
+      }
     },
   });
 
@@ -53,7 +69,7 @@ export const InscriptionFormRecruiter: React.FC = () => {
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" />
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" />
       </div>
-
+      <Toaster />
       <div className="relative max-w-2xl mx-auto">
         <div className="text-center mb-8">
           <div className="flex justify-center pt-5">
@@ -72,30 +88,20 @@ export const InscriptionFormRecruiter: React.FC = () => {
             Inscription Recruteur
           </h2>
         </div>
-
-        {submitSuccess && (
-          <div className="mb-6 bg-green-50 border border-green-200 rounded-lg p-4 flex items-center space-x-3">
-            <CheckCircle className="h-5 w-5 text-green-600" />
-            <span className="text-green-800 font-medium">
-              Inscription réussie ! Vérifiez votre email.
-            </span>
-          </div>
-        )}
-
         <form
           onSubmit={formik.handleSubmit}
           className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/50 p-8 space-y-6"
         >
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <InputField
-              name="nom"
+              name="lastName"
               label="Nom"
               icon={User}
               placeholder="Votre nom"
               formik={formik}
             />
             <InputField
-              name="prenom"
+              name="firstName"
               label="Prénom"
               icon={User}
               placeholder="Votre prénom"
@@ -112,7 +118,7 @@ export const InscriptionFormRecruiter: React.FC = () => {
               formik={formik}
             />
             <InputField
-              name="email"
+              name="emailAddress"
               label="Email"
               type="email"
               icon={Mail}

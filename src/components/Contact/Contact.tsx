@@ -18,8 +18,8 @@ import * as Yup from "yup";
 import { TextAreaField } from "../Form/TextAreaField";
 
 const validationSchema = Yup.object({
-  nom: Yup.string().required("Ce champ est requis"),
-  prenom: Yup.string().required("Ce champ est requis"),
+  lastName: Yup.string().required("Ce champ est requis"),
+  firstName: Yup.string().required("Ce champ est requis"),
   adresse: Yup.string().required("Ce champ est requis"),
   email: Yup.string().email("Email invalide").required("Ce champ est requis"),
   message: Yup.string().required("Ce champ est requis"),
@@ -30,8 +30,8 @@ const Contact = () => {
 
   const formik = useFormik<FormValues>({
     initialValues: {
-      nom: "",
-      prenom: "",
+      lastName: "",
+      firstName: "",
       adresse: "",
       email: "",
       message: "",
@@ -97,14 +97,14 @@ const Contact = () => {
                     {/* Name Fields */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <InputField
-                        name="nom"
+                        name="lastName"
                         label="Nom"
                         icon={User}
                         placeholder="Votre nom"
                         formik={formik}
                       />
                       <InputField
-                        name="prenom"
+                        name="firstName"
                         label="Prénom"
                         icon={User}
                         placeholder="Votre prénom"
