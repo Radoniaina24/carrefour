@@ -1,28 +1,26 @@
 import React from "react";
-import { useCandidateContext } from "../context/CandidateContext";
+import dayjs from "dayjs";
+/* eslint-disable */
 import {
   ChevronUp,
   ChevronDown,
   User,
   Mail,
-  GraduationCap,
-  BookOpen,
-  Award,
-  Calendar,
   Shield,
+  CreditCard,
   CheckCircle,
   XCircle,
-  Camera,
+  Users,
+  UserCheck,
 } from "lucide-react";
-import dayjs from "dayjs";
-import ViewCandidate from "../Actions/ViewCandidate";
-import DeleteCandidate from "../Actions/DeleteCandidate";
-import EditCandidate from "../Actions/EditCandidate";
 
-/* eslint-disable */
+import { useStaffContext } from "../context/StaffContext";
+import EditUserStaff from "../Actions/EditUserCandidate";
+import DeleteUserStaff from "../Actions/DeleteUserCandidate";
+
 export default function DesktopTable() {
   const { visibleColumns, handleSort, sortColumn, sortDirection, data } =
-    useCandidateContext();
+    useStaffContext();
 
   dayjs.locale("en");
 
@@ -34,17 +32,36 @@ export default function DesktopTable() {
 
   const getStatusClass = (status: string) => {
     switch (status) {
-      case "approved":
-        return "bg-gradient-to-r from-emerald-50 to-emerald-100 text-emerald-700 border border-emerald-200";
-      case "unapproved":
-        return "bg-gradient-to-r from-red-50 to-red-100 text-red-700 border border-red-200";
-      default:
+      case "candidate":
+        return "bg-gradient-to-r from-orange-50 to-orange-100 text-orange-700 border border-orange-200";
+      case "recruiter":
         return "bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 border border-blue-200";
+      default:
+        return "bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 border border-gray-200";
     }
   };
 
-  const getStatusIcon = (status: string) => {
-    return status === "approved" ? (
+  const getStatusPaid = (status: string) => {
+    switch (status) {
+      case "paid":
+        return "bg-gradient-to-r from-emerald-50 to-emerald-100 text-emerald-700 border border-emerald-200";
+      case "unpaid":
+        return "bg-gradient-to-r from-red-50 to-red-100 text-red-700 border border-red-200";
+      default:
+        return "bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 border border-gray-200";
+    }
+  };
+
+  const getRoleIcon = (role: string) => {
+    return role === "candidate" ? (
+      <UserCheck className="w-4 h-4 text-orange-600" />
+    ) : (
+      <Users className="w-4 h-4 text-blue-600" />
+    );
+  };
+
+  const getPaymentIcon = (status: string) => {
+    return status === "paid" ? (
       <CheckCircle className="w-4 h-4 text-emerald-600" />
     ) : (
       <XCircle className="w-4 h-4 text-red-600" />
@@ -64,7 +81,7 @@ export default function DesktopTable() {
     );
   };
 
-  const users = data?.candidates;
+  const users = data?.users;
 
   return (
     <div className="hidden md:block bg-white    overflow-hidden">
@@ -73,18 +90,6 @@ export default function DesktopTable() {
           {/* En-tête du tableau */}
           <thead className="bg-gradient-to-r from-blue-600 to-orange-500 sticky top-0 z-[95]">
             <tr>
-              {visibleColumns.photo && (
-                <th
-                  scope="col"
-                  className="group px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider cursor-pointer hover:bg-white/10 transition-colors"
-                >
-                  <div className="flex items-center space-x-2">
-                    <Camera className="w-4 h-4" />
-                    <span>Photo</span>
-                  </div>
-                </th>
-              )}
-
               {visibleColumns.nom && (
                 <th
                   scope="col"
@@ -127,58 +132,16 @@ export default function DesktopTable() {
                 </th>
               )}
 
-              {visibleColumns.diplome && (
+              {visibleColumns.role && (
                 <th
                   scope="col"
                   className="group px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider cursor-pointer hover:bg-white/10 transition-colors"
-                  onClick={() => handleSort("diplome")}
+                  onClick={() => handleSort("role")}
                 >
                   <div className="flex items-center space-x-2">
-                    <GraduationCap className="w-4 h-4" />
-                    <span>Diplôme</span>
-                    {getSortIcon("diplome")}
-                  </div>
-                </th>
-              )}
-
-              {visibleColumns.niveau && (
-                <th
-                  scope="col"
-                  className="group px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider cursor-pointer hover:bg-white/10 transition-colors"
-                  onClick={() => handleSort("niveau")}
-                >
-                  <div className="flex items-center space-x-2">
-                    <BookOpen className="w-4 h-4" />
-                    <span>Niveau</span>
-                    {getSortIcon("niveau")}
-                  </div>
-                </th>
-              )}
-
-              {visibleColumns.mention && (
-                <th
-                  scope="col"
-                  className="group px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider cursor-pointer hover:bg-white/10 transition-colors"
-                  onClick={() => handleSort("mention")}
-                >
-                  <div className="flex items-center space-x-2">
-                    <Award className="w-4 h-4" />
-                    <span>Mention</span>
-                    {getSortIcon("mention")}
-                  </div>
-                </th>
-              )}
-
-              {visibleColumns.dateInscription && (
-                <th
-                  scope="col"
-                  className="group px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider cursor-pointer hover:bg-white/10 transition-colors"
-                  onClick={() => handleSort("dateInscription")}
-                >
-                  <div className="flex items-center space-x-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>Inscription</span>
-                    {getSortIcon("dateInscription")}
+                    <Shield className="w-4 h-4" />
+                    <span>Rôle</span>
+                    {getSortIcon("role")}
                   </div>
                 </th>
               )}
@@ -190,7 +153,7 @@ export default function DesktopTable() {
                   onClick={() => handleSort("status")}
                 >
                   <div className="flex items-center space-x-2">
-                    <Shield className="w-4 h-4" />
+                    <CreditCard className="w-4 h-4" />
                     <span>Statut</span>
                     {getSortIcon("status")}
                   </div>
@@ -200,7 +163,7 @@ export default function DesktopTable() {
               {visibleColumns.actions && (
                 <th
                   scope="col"
-                  className="px-6 py-4 text-right text-sm font-semibold text-white uppercase tracking-wider"
+                  className="px-6 py-4 text-center text-sm font-semibold text-white uppercase tracking-wider"
                 >
                   Actions
                 </th>
@@ -220,20 +183,6 @@ export default function DesktopTable() {
                       : "bg-gradient-to-r from-gray-50 to-blue-50/30"
                   } hover:bg-gradient-to-r hover:from-blue-50 hover:to-orange-50 transition-all duration-200 group`}
                 >
-                  {visibleColumns.photo && (
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center">
-                        <div className="h-12 w-12 flex-shrink-0">
-                          <img
-                            className="h-12 w-12 rounded-full object-cover border-2 border-gradient-to-r from-blue-200 to-orange-200 shadow-md"
-                            src={user.photo.url}
-                            alt={`Photo de ${user.nom}`}
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  )}
-
                   {visibleColumns.nom && (
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center space-x-3">
@@ -260,85 +209,47 @@ export default function DesktopTable() {
                       <div className="flex items-center space-x-2">
                         <Mail className="w-4 h-4 text-gray-400" />
                         <div className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                          {user.emailAddress}
+                          {user.email}
                         </div>
                       </div>
                     </td>
                   )}
 
-                  {visibleColumns.diplome && (
+                  {visibleColumns.role && (
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center space-x-2">
-                        <GraduationCap className="w-4 h-4 text-purple-500" />
-                        <div className="text-sm font-medium text-gray-700">
-                          {user.program}
-                        </div>
-                      </div>
-                    </td>
-                  )}
-
-                  {visibleColumns.niveau && (
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center space-x-2">
-                        <BookOpen className="w-4 h-4 text-indigo-500" />
-                        <div className="text-sm text-gray-600">
-                          {user.studyPeriod}
-                        </div>
-                      </div>
-                    </td>
-                  )}
-
-                  {visibleColumns.mention && (
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center space-x-2">
-                        <Award className="w-4 h-4 text-yellow-500" />
-                        <div className="text-sm text-gray-600">
-                          {user.funding}
-                        </div>
-                      </div>
-                    </td>
-                  )}
-
-                  {visibleColumns.dateInscription && (
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center space-x-2">
-                        <Calendar className="w-4 h-4 text-green-500" />
-                        <div className="text-sm text-gray-600">
-                          {formatDate(user.createdAt)}
-                        </div>
-                      </div>
+                      <span
+                        className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getStatusClass(
+                          user.role
+                        )}`}
+                      >
+                        {getRoleIcon(user.role)}
+                        <span className="ml-2">
+                          {user.role === "candidate" ? "Candidat" : "Recruteur"}
+                        </span>
+                      </span>
                     </td>
                   )}
 
                   {visibleColumns.status && (
                     <td className="px-6 py-4 whitespace-nowrap">
                       <span
-                        className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getStatusClass(
+                        className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getStatusPaid(
                           user.status
                         )}`}
                       >
-                        {getStatusIcon(user.status)}
+                        {getPaymentIcon(user.status)}
                         <span className="ml-2">
-                          {user.status === "unapproved"
-                            ? "Non validé"
-                            : "Validé"}
+                          {user.status === "paid" ? "Payé" : "Non payé"}
                         </span>
                       </span>
                     </td>
                   )}
 
                   {visibleColumns.actions && (
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <div className="flex justify-end items-center space-x-2">
-                        {user.status === "unapproved" ? (
-                          <>
-                            <ViewCandidate user={user} />
-                            <EditCandidate user={user} />
-                            <DeleteCandidate user={user} />
-                          </>
-                        ) : (
-                          <ViewCandidate user={user} />
-                        )}
+                    <td className="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
+                      <div className="flex justify-center items-center space-x-2">
+                        <EditUserStaff user={user} />
+                        <DeleteUserStaff user={user} />
                       </div>
                     </td>
                   )}
@@ -352,14 +263,14 @@ export default function DesktopTable() {
                 >
                   <div className="flex flex-col items-center space-y-4">
                     <div className="bg-gradient-to-br from-blue-100 to-orange-100 rounded-full p-6">
-                      <GraduationCap className="w-12 h-12 text-gray-400" />
+                      <Users className="w-12 h-12 text-gray-400" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        Aucun candidat trouvé
+                        Aucun utilisateur trouvé
                       </h3>
                       <p className="text-gray-500">
-                        Il n'y a actuellement aucun candidat à afficher.
+                        Il n'y a actuellement aucun utilisateur à afficher.
                       </p>
                     </div>
                   </div>

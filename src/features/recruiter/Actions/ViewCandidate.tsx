@@ -14,18 +14,18 @@ export default function ViewCandidate({ user }: { user: any }) {
       <div className="hidden md:block">
         <button
           onClick={() => setOpen(true)}
-          className=" flex gap-2  items-center text-green-600 text-sm px-1 py-1 rounded-lg cursor-pointer whitespace-nowrap"
+          className="flex gap-2 items-center text-blue-600 text-sm px-1 py-1 rounded-lg cursor-pointer whitespace-nowrap hover:bg-blue-50 transition-colors duration-200"
         >
-          <FaEye className="w-5 h-5 text-green-500 cursor-pointer" />
+          <FaEye className="w-5 h-5 text-orange-500 cursor-pointer hover:text-orange-600 transition-colors duration-200" />
         </button>
       </div>
       <div className="md:hidden">
         <button
           onClick={() => setOpen(true)}
-          className="bg-green-100 flex gap-2 items-center text-green-600 hover:bg-green-200 text-sm px-3 py-1 rounded-lg cursor-pointer whitespace-nowrap"
+          className="bg-gradient-to-r from-blue-100 to-orange-100 flex gap-2 items-center text-blue-700 hover:from-blue-200 hover:to-orange-200 text-sm px-3 py-1 rounded-lg cursor-pointer whitespace-nowrap shadow-sm border border-blue-200 transition-all duration-300 transform hover:scale-105"
         >
-          <FaEye className="w-5 h-5 text-green-500 cursor-pointer" />
-          <span>voir</span>
+          <FaEye className="w-5 h-5 text-orange-500 cursor-pointer" />
+          <span className="font-medium">voir</span>
         </button>
       </div>
 
@@ -34,33 +34,54 @@ export default function ViewCandidate({ user }: { user: any }) {
         title="Détails du recruteur"
         onClose={handleClose}
       >
-        <div className="space-y-4">
-          <div className="border border-gray-200 rounded-lg">
-            <div className="bg-gray-100 px-4 py-2">
-              <h4 className="font-bold text-gray-800">
+        <div className="space-y-6">
+          <div className="border border-blue-200 rounded-xl shadow-lg overflow-hidden bg-white">
+            <div className="bg-gradient-to-r from-blue-600 to-orange-500 px-6 py-4">
+              <h4 className="font-bold text-white text-lg flex items-center gap-2">
+                <div className="w-2 h-2 bg-white rounded-full"></div>
                 Informations personnelles
               </h4>
             </div>
-            <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <div>
-                <p className="text-gray-500">Nom</p>
-                <p className="font-medium">{user.lastName || "-"}</p>
+            <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm bg-gradient-to-br from-blue-50/30 to-orange-50/30">
+              <div className="group">
+                <p className="text-blue-600 font-semibold mb-1 uppercase tracking-wide text-xs">
+                  Nom
+                </p>
+                <p className="font-medium text-gray-800 bg-white px-3 py-2 rounded-lg border border-blue-100 group-hover:border-orange-200 transition-colors duration-200">
+                  {user.lastName || "-"}
+                </p>
               </div>
-              <div>
-                <p className="text-gray-500">Prénom</p>
-                <p className="font-medium">{user.firstName || "-"}</p>
+              <div className="group">
+                <p className="text-blue-600 font-semibold mb-1 uppercase tracking-wide text-xs">
+                  Prénom
+                </p>
+                <p className="font-medium text-gray-800 bg-white px-3 py-2 rounded-lg border border-blue-100 group-hover:border-orange-200 transition-colors duration-200">
+                  {user.firstName || "-"}
+                </p>
               </div>
-              <div>
-                <p className="text-gray-500">Email</p>
-                <p className="font-medium">{user.emailAddress || "-"}</p>
+              <div className="group">
+                <p className="text-blue-600 font-semibold mb-1 uppercase tracking-wide text-xs">
+                  Email
+                </p>
+                <p className="font-medium text-gray-800 bg-white px-3 py-2 rounded-lg border border-blue-100 group-hover:border-orange-200 transition-colors duration-200 break-all">
+                  {user.emailAddress || "-"}
+                </p>
               </div>
-              <div>
-                <p className="text-gray-500">Company</p>
-                <p className="font-medium">{user.company || "-"}</p>
+              <div className="group">
+                <p className="text-blue-600 font-semibold mb-1 uppercase tracking-wide text-xs">
+                  Company
+                </p>
+                <p className="font-medium text-gray-800 bg-white px-3 py-2 rounded-lg border border-blue-100 group-hover:border-orange-200 transition-colors duration-200">
+                  {user.company || "-"}
+                </p>
               </div>
-              <div>
-                <p className="text-gray-500">Pays</p>
-                <p className="font-medium">{user.country || "-"}</p>
+              <div className="group md:col-span-2">
+                <p className="text-blue-600 font-semibold mb-1 uppercase tracking-wide text-xs">
+                  Pays
+                </p>
+                <p className="font-medium text-gray-800 bg-white px-3 py-2 rounded-lg border border-blue-100 group-hover:border-orange-200 transition-colors duration-200 inline-block">
+                  {user.country || "-"}
+                </p>
               </div>
             </div>
           </div>

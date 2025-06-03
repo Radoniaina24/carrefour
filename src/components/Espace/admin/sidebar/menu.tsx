@@ -1,3 +1,4 @@
+import { Users } from "lucide-react";
 import React, { JSX } from "react";
 import { FaRegUser } from "react-icons/fa";
 import { IoBookOutline, IoHomeOutline } from "react-icons/io5";
@@ -19,6 +20,11 @@ export const getMenuItems = (userRole: string): MenuItem[] => {
       icon: <IoHomeOutline className="text-xl text-blue-500" />,
       label: "Dashboard",
       href: "/admin",
+    },
+    {
+      icon: <Users className="text-xl text-orange-400" />,
+      label: "Utilisateurs",
+      href: "/admin/staff",
     },
     {
       icon: <PiUsersThree className="text-xl text-pink-500" />,
