@@ -103,6 +103,17 @@ export default function AboutSection() {
       ],
     },
     {
+      title: "Mobilité professionnelle – Allemagne",
+      items: [
+        "Au Pair (séjour linguistique en famille)",
+        "Volontariat FSJ / BFD (secteurs social, santé, éducation, etc.)",
+        "Ausbildung (formation professionnelle alternée : santé, BTP, IT, hôtellerie, logistique, etc.)",
+        "Stages & Études supérieures (Praktikum, Studium)",
+        "Recrutement direct & reconnaissance de diplômes (infirmiers, IT, métiers techniques, etc.)",
+        "Métiers en tension (soins, numérique, maintenance, logistique, restauration, etc.)",
+      ],
+    },
+    {
       title: "Profils divers et spécialisés selon demande du marché",
       items: [
         "Agents immobiliers",
