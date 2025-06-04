@@ -1,27 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
-export async function POST(req: NextRequest) {
-  try {
-    const body = await req.json();
-    const { name, email, message, address } = body;
-
-    // Configurer le transporteur Nodemailer
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER, // Ton email
-        pass: process.env.EMAIL_PASS, // Ton mot de passe ou App Password
-      },
-    });
-
-    // Contenu de l'email
-    const mailOptions = {
-      from: `"${name}" <${email}>`,
-      to: "andriambolaradoniainamichael@gmail.com",
-      cc: "contact@gateafricagroup.com",
-      subject: `📩 Nouvelle contact - Carrefour de l'emploi Madagascar`,
-      html: `
-  <div
+<div
   style="
     font-family: Arial, sans-serif;
     max-width: 600px;
@@ -222,20 +199,3 @@ export async function POST(req: NextRequest) {
     </p>
   </div>
 </div>
-
-  `,
-    };
-    // Envoyer l'email
-    await transporter.sendMail(mailOptions);
-    return NextResponse.json({
-      success: true,
-      message: "Email sent successfully!",
-    });
-  } catch (error) {
-    console.error("Erreur détaillée:", error);
-    return NextResponse.json(
-      { success: false, message: "Failed to send email." },
-      { status: 500 }
-    );
-  }
-}

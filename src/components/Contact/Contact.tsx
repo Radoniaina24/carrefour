@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import {
   User,
   Mail,
   MapPin,
-  CheckCircle,
   MessageCircle,
   Phone,
   Clock,
@@ -16,6 +15,7 @@ import { useFormik } from "formik";
 import { FormValues, InputField } from "../Form/InputField";
 import * as Yup from "yup";
 import { TextAreaField } from "../Form/TextAreaField";
+import toast, { Toaster } from "react-hot-toast";
 
 const validationSchema = Yup.object({
   lastName: Yup.string().required("Ce champ est requis"),
@@ -26,8 +26,6 @@ const validationSchema = Yup.object({
 });
 
 const Contact = () => {
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-
   const formik = useFormik<FormValues>({
     initialValues: {
       lastName: "",
@@ -37,14 +35,33 @@ const Contact = () => {
       message: "",
     },
     validationSchema,
-    onSubmit: async (values, { resetForm }) => {
-      console.log(values);
-      await new Promise((res) => setTimeout(res, 2000));
-      console.log("Form submitted:", values);
-      setSubmitSuccess(true);
-      setTimeout(() => setSubmitSuccess(false), 3000);
-      console.log(values);
-      resetForm();
+    onSubmit: async (values, { resetForm, setSubmitting }) => {
+      const toastId = toast.loading("Envoi du message...");
+      try {
+        const fullname = values.lastName + " " + values.firstName;
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: fullname,
+            email: values.email,
+            address: values.adresse,
+            message: values.message,
+          }),
+        });
+
+        if (!response.ok) throw new Error("Erreur serveur");
+
+        toast.success("Message envoyé avec succès !", { id: toastId });
+        resetForm();
+      } catch (error) {
+        console.log(error);
+        toast.error("Une erreur est survenue. Veuillez réessayer.", {
+          id: toastId,
+        });
+      } finally {
+        setSubmitting(false);
+      }
     },
   });
 
@@ -56,29 +73,10 @@ const Contact = () => {
         <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-gradient-to-br from-orange-200 to-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-blue-100 to-orange-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
       </div>
-
+      <Toaster position="bottom-center" />
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
-
-          {/* Success Message */}
-          {submitSuccess && (
-            <div className="max-w-4xl mx-auto mb-8">
-              <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-6 flex items-center space-x-4 shadow-lg">
-                <div className="flex-shrink-0">
-                  <CheckCircle className="h-8 w-8 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-green-800">
-                    Message envoyé avec succès !
-                  </h3>
-                  <p className="text-green-700">
-                    Nous vous répondrons dans les plus brefs délais.
-                  </p>
-                </div>
-              </div>
-            </div>
-          )}
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 max-w-7xl mx-auto">
             {/* Contact Form */}
