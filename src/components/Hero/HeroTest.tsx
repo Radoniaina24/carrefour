@@ -100,6 +100,7 @@ const HeroSectionTest = () => {
                 Je suis candidat
               </Link>
               <Link
+                target="_blanck"
                 href="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1749030606/Brochure-carrefour-de-lemploi-modif_iz0hrn.pdf"
                 download
               >
