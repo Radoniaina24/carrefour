@@ -99,10 +99,15 @@ const HeroSectionTest = () => {
                 <Users className="w-5 h-5 mr-3 group-hover:animate-bounce" />
                 Je suis candidat
               </Link>
-              <button className="group bg-white text-blue-900 border-2 border-blue-200 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 flex items-center justify-center">
-                <Download className="w-5 h-5 mr-3 group-hover:animate-bounce" />
-                Télécharger la brochure
-              </button>
+              <Link
+                href="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1749030606/Brochure-carrefour-de-lemploi-modif_iz0hrn.pdf"
+                download
+              >
+                <button className="group bg-white text-blue-900 border-2 border-blue-200 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 flex items-center justify-center">
+                  <Download className="w-5 h-5 mr-3 group-hover:animate-bounce" />
+                  Télécharger la brochure
+                </button>
+              </Link>
             </div>
           </div>
 
