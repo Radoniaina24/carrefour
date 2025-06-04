@@ -201,7 +201,8 @@ const Contact = () => {
                         Téléphone
                       </h4>
                       <p className="text-slate-600 text-sm mt-1">
-                        +33 1 23 45 67 89
+                        +261 37 07 777 07
+                        <br /> +230 5 488-4377
                       </p>
                       <p className="text-slate-500 text-xs mt-1">
                         Lun - Ven : 8h - 17h
@@ -232,11 +233,9 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-800">Adresse</h4>
-                      <p className="text-slate-600 text-sm mt-1">
-                        123 Rue de l&apos;Innovation
-                      </p>
+                      <p className="text-slate-600 text-sm mt-1">Nanisana</p>
                       <p className="text-slate-500 text-xs mt-1">
-                        75001 Paris, France
+                        Antananarivo Madagascar
                       </p>
                     </div>
                   </div>
