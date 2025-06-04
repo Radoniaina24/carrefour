@@ -24,7 +24,7 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const user: any = useSelector(selectUser);
   const userRole = user?.user?.role || user?.role;
-  console.log(userRole);
+  // console.log(userRole);
   const isAdmin =
     userRole === "admin" ||
     userRole === "super_admin" ||

@@ -2,7 +2,7 @@ import Contact from "@/components/Contact/Contact";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Contact - Carrefour d'emploie",
+  title: "Contact - Carrefour d'emploi",
 };
 const ContactPage = () => {
   return (

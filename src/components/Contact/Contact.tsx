@@ -38,6 +38,7 @@ const Contact = () => {
     },
     validationSchema,
     onSubmit: async (values, { resetForm }) => {
+      console.log(values);
       await new Promise((res) => setTimeout(res, 2000));
       console.log("Form submitted:", values);
       setSubmitSuccess(true);

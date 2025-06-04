@@ -2,7 +2,7 @@ import PricingPacks from "@/components/Packs/Packs";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Packs & tarifs - Carrefour d'emploie",
+  title: "Packs & tarifs - Carrefour d'emploi",
 };
 const PackPage = () => {
   return (
