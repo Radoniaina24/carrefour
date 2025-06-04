@@ -20,6 +20,7 @@ import { SectorCard } from "./SectorCard";
 import { SpecialProgramCard } from "./SpecialProgramCard";
 import { ProcessStepCard } from "./ProcessStepCard";
 import { FeatureCardComponent } from "./FeatureCardComponent";
+import LiveSection from "./LiveSection";
 
 // Type pour les icônes Lucide
 type LucideIcon = React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -340,7 +341,7 @@ const AboutSection: React.FC = () => {
           </div>
 
           {/* Note additionnelle */}
-          <div className="mt-8 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 backdrop-blur-xl border border-yellow-300/20 rounded-2xl p-6">
+          {/* <div className="mt-8 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 backdrop-blur-xl border border-yellow-300/20 rounded-2xl p-6">
             <div className="flex items-start space-x-4">
               <Camera className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
               <div>
@@ -356,7 +357,9 @@ const AboutSection: React.FC = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
+
+          <LiveSection />
         </div>
 
         {/* Statistiques/Fonctionnalités en bas */}
