@@ -1,13 +1,14 @@
 "use client";
-
 import { motion } from "framer-motion";
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, User, Building2, ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
 const HeroSection = () => {
   const [displayedText, setDisplayedText] = useState("");
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
+  const router = useRouter();
 
   // Diviser le message en lignes
   const messageLines = [
@@ -143,7 +144,112 @@ const HeroSection = () => {
               </div>
             </motion.div>
           </motion.div>
+
+          {/* Right Column - Buttons */}
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1.5, duration: 1 }}
+          >
+            {/* Call to Action */}
+            <motion.div
+              className="text-center lg:text-left"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.8, duration: 0.6 }}
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                Rejoignez-nous !
+              </h2>
+              <p className="text-blue-100 text-lg">
+                Choisissez votre profil et participez à l&apos;événement
+              </p>
+            </motion.div>
+
+            {/* Buttons */}
+            <div className="space-y-4">
+              {/* Bouton Candidat */}
+              <motion.button
+                className="group w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white p-6 rounded-2xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 border border-blue-500/30"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 2, duration: 0.6 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => router.push("/inscription/candidat")}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-white/20 p-3 rounded-xl group-hover:bg-white/30 transition-colors duration-300">
+                      <User className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <h3 className="text-xl font-bold">
+                        Inscription Candidat
+                      </h3>
+                      <p className="text-blue-100 text-sm">
+                        Trouvez votre emploi idéal
+                      </p>
+                    </div>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
+              </motion.button>
+
+              {/* Bouton Recruteur */}
+              <motion.button
+                className="group w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white p-6 rounded-2xl shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 border border-orange-400/30"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 2.2, duration: 0.6 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => router.push("/inscription/recruteur")}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-white/20 p-3 rounded-xl group-hover:bg-white/30 transition-colors duration-300">
+                      <Building2 className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <h3 className="text-xl font-bold">
+                        Inscription Recruteur
+                      </h3>
+                      <p className="text-orange-100 text-sm">
+                        Recrutez vos talents
+                      </p>
+                    </div>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
+              </motion.button>
+            </div>
+          </motion.div>
         </div>
+      </div>
+
+      {/* Particles d'arrière-plan */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-white/20 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -20, 0],
+              opacity: [0.2, 0.8, 0.2],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+          />
+        ))}
       </div>
     </section>
   );
