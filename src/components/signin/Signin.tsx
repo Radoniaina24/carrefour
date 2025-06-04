@@ -48,6 +48,9 @@ const Signin: React.FC = () => {
           case "candidate":
             router.push("/admin");
             break;
+          case "recruiter":
+            router.push("/admin");
+            break;
           default:
             ErrorNotification("Rôle utilisateur non reconnu");
             break;

@@ -1,8 +1,8 @@
-import { Users } from "lucide-react";
+import { Users, Ticket, Package, DollarSign } from "lucide-react";
 import React, { JSX } from "react";
-import { FaRegUser } from "react-icons/fa";
-import { IoBookOutline, IoHomeOutline } from "react-icons/io5";
+import { IoHomeOutline } from "react-icons/io5";
 import { PiUsersThree } from "react-icons/pi";
+
 export interface MenuItem {
   icon?: JSX.Element;
   label: string;
@@ -10,303 +10,117 @@ export interface MenuItem {
   children?: MenuItem[]; // récursif
 }
 
+export enum UserRole {
+  ADMIN = "admin",
+  CANDIDATE = "candidate",
+  RECRUITER = "recruiter",
+}
+
 /**
  * Génère dynamiquement les éléments de menu en fonction du rôle utilisateur.
- * @param userRole Rôle actuel de l'utilisateur (ex : "super admin", "admin", etc.)
+ * @param userRole Rôle actuel de l'utilisateur
+ * @returns Tableau des éléments de menu autorisés pour ce rôle
  */
-export const getMenuItems = (userRole: string): MenuItem[] => {
-  const items: MenuItem[] = [
+export const getMenuItems = (userRole: UserRole | string): MenuItem[] => {
+  const role = userRole.toLowerCase();
+
+  // Menu commun à tous les rôles
+  const commonItems: MenuItem[] = [
     {
       icon: <IoHomeOutline className="text-xl text-blue-500" />,
       label: "Dashboard",
-      href: "/admin",
+      href: "/dashboard",
     },
-    {
-      icon: <Users className="text-xl text-orange-400" />,
-      label: "Utilisateurs",
-      href: "/admin/staff",
-    },
-    {
-      icon: <PiUsersThree className="text-xl text-pink-500" />,
-      label: "Candidats",
-      href: "/admin/candidate",
-    },
-    {
-      icon: <PiUsersThree className="text-xl text-blue-500" />,
-      label: "Recruteurs",
-      href: "/admin/recruiter",
-    },
-    // {
-    //   icon: <PiUsersThree className="text-xl text-blue-500" />,
-    //   label: "Recruteurs",
-    //   children: [
-    //     {
-    //       icon: <FaRegAddressBook className="text-lg text-red-400" />,
-    //       label: "Inscrits",
-    //       href: "/admin/recruteur",
-    //     },
-    //     {
-    //       icon: <FaCalendarCheck className="text-lg text-green-400" />,
-    //       label: "Validés",
-    //       href: "/admin/recruteur",
-    //     },
-    //   ],
-    // },
   ];
 
-  if (userRole === "super_admin") {
-    items.push({
-      icon: <IoBookOutline className="text-xl text-purple-600" />,
-      label: "Cours",
-      href: "/admin/cours",
-      // children: [
-      //   {
-      //     label: "BEN", //ben
-      //     icon: <FaBusinessTime className="text-xl text-purple-600" />,
-      //     children: [
-      //       {
-      //         label: "Licence",
-      //         icon: <GiDiploma className="text-xl text-red-500" />,
-      //         children: [
-      //           {
-      //             label: "L1",
-      //             icon: <FaLayerGroup className="text-lg text-blue-600" />,
-      //             children: [
-      //               {
-      //                 label: "S1",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/ben/licence/l1/s1",
-      //               },
-      //               {
-      //                 label: "S2",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/ben/licence/l1/s2",
-      //               },
-      //             ],
-      //           },
-      //           {
-      //             label: "L2",
-      //             icon: <FaLayerGroup className="text-lg text-blue-700" />,
-      //             children: [
-      //               {
-      //                 label: "S3",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/ben/licence/l2/s3",
-      //               },
-      //               {
-      //                 label: "S4",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/ben/licence/l2/s4",
-      //               },
-      //             ],
-      //           },
-      //           {
-      //             label: "L3",
-      //             icon: <FaLayerGroup className="text-lg text-blue-800" />,
-      //             children: [
-      //               {
-      //                 label: "S5",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/ben/licence/l3/s5",
-      //               },
-      //               {
-      //                 label: "S6",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/ben/licence/l3/s6",
-      //               },
-      //             ],
-      //           },
-      //         ],
-      //       },
-      //       {
-      //         label: "Master",
-      //         icon: <GiDiploma className="text-xl text-green-600" />,
-      //         children: [
-      //           {
-      //             label: "M1",
-      //             icon: <MdSchool className="text-lg text-green-700" />,
-      //             children: [
-      //               {
-      //                 label: "S1",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/ben/master/m1/s1",
-      //               },
-      //               {
-      //                 label: "S2",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/ben/master/m1/s2",
-      //               },
-      //             ],
-      //           },
-      //           {
-      //             label: "M2",
-      //             icon: <MdSchool className="text-lg text-green-800" />,
-      //             children: [
-      //               {
-      //                 label: "S3",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/ben/master/m2/s3",
-      //               },
-      //               {
-      //                 label: "S4",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/ben/master/m2/s4",
-      //               },
-      //             ],
-      //           },
-      //         ],
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     label: "BEL",
-      //     icon: <FaLeaf className="text-xl text-green-600" />,
-      //     children: [
-      //       {
-      //         label: "Licence",
-      //         icon: <GiDiploma className="text-xl text-red-500" />,
-      //         children: [
-      //           {
-      //             label: "L1",
-      //             icon: <FaLayerGroup className="text-lg text-blue-600" />,
-      //             children: [
-      //               {
-      //                 label: "S1",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/bel/licence/l1/s1",
-      //               },
-      //               {
-      //                 label: "S2",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/bel/licence/l1/s2",
-      //               },
-      //             ],
-      //           },
-      //           {
-      //             label: "L2",
-      //             icon: <FaLayerGroup className="text-lg text-blue-700" />,
-      //             children: [
-      //               {
-      //                 label: "S3",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/bel/licence/l2/s3",
-      //               },
-      //               {
-      //                 label: "S4",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/bel/licence/l2/s4",
-      //               },
-      //             ],
-      //           },
-      //           {
-      //             label: "L3",
-      //             icon: <FaLayerGroup className="text-lg text-blue-800" />,
-      //             children: [
-      //               {
-      //                 label: "S5",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/bel/licence/l3/s5",
-      //               },
-      //               {
-      //                 label: "S6",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/bel/licence/l3/s6",
-      //               },
-      //             ],
-      //           },
-      //         ],
-      //       },
-      //       {
-      //         label: "Master",
-      //         icon: <GiDiploma className="text-xl text-green-600" />,
-      //         children: [
-      //           {
-      //             label: "M1",
-      //             icon: <MdSchool className="text-lg text-green-700" />,
-      //             children: [
-      //               {
-      //                 label: "S1",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/bel/master/m1/s1",
-      //               },
-      //               {
-      //                 label: "S2",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/bel/master/m1/s2",
-      //               },
-      //             ],
-      //           },
-      //           {
-      //             label: "M2",
-      //             icon: <MdSchool className="text-lg text-green-800" />,
-      //             children: [
-      //               {
-      //                 label: "S3",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/master/m2/s3",
-      //               },
-      //               {
-      //                 label: "S4",
-      //                 icon: (
-      //                   <BsJournalBookmark className="text-md text-gray-700" />
-      //                 ),
-      //                 href: "/admin/cours/master/m2/s4",
-      //               },
-      //             ],
-      //           },
-      //         ],
-      //       },
-      //     ],
-      //   },
-      // ],
-    });
-  }
+  // Menus spécifiques selon le rôle
+  switch (role) {
+    case UserRole.ADMIN:
+      return [
+        ...commonItems,
+        {
+          icon: <Ticket className="text-xl text-green-500" />,
+          label: "Tickets",
+          href: "/admin/tickets",
+        },
+        {
+          icon: <Users className="text-xl text-orange-400" />,
+          label: "Utilisateurs",
+          href: "/admin/users",
+        },
+        {
+          icon: <PiUsersThree className="text-xl text-pink-500" />,
+          label: "Candidats",
+          href: "/admin/candidates",
+        },
+        {
+          icon: <PiUsersThree className="text-xl text-blue-500" />,
+          label: "Recruteurs",
+          href: "/admin/recruiters",
+        },
+        {
+          icon: <Package className="text-xl text-purple-500" />,
+          label: "Packs",
+          href: "/admin/packs",
+        },
+        {
+          icon: <DollarSign className="text-xl text-emerald-500" />,
+          label: "Tarifs",
+          href: "/admin/pricing",
+        },
+      ];
 
-  if (userRole === "super_admin") {
-    items.splice(1, 0, {
-      icon: <FaRegUser className="text-xl text-yellow-600" />,
-      label: "Utilisateurs",
-      href: "/admin/staff",
-    });
-  }
+    case UserRole.CANDIDATE:
+      return [
+        ...commonItems,
+        {
+          icon: <Ticket className="text-xl text-green-500" />,
+          label: "Tickets",
+          href: "/candidate/tickets",
+        },
+      ];
 
-  return items;
+    case UserRole.RECRUITER:
+      return [
+        ...commonItems,
+        {
+          icon: <Ticket className="text-xl text-green-500" />,
+          label: "Tickets",
+          href: "/recruiter/tickets",
+        },
+        {
+          icon: <Package className="text-xl text-purple-500" />,
+          label: "Packs & Tarifs",
+          href: "/recruiter/packs",
+        },
+      ];
+
+    default:
+      // Fallback pour les rôles non reconnus
+      return commonItems;
+  }
+};
+
+/**
+ * Vérifie si un utilisateur a accès à un menu spécifique
+ * @param userRole Rôle de l'utilisateur
+ * @param menuHref Lien du menu à vérifier
+ * @returns true si l'utilisateur a accès, false sinon
+ */
+export const hasMenuAccess = (
+  userRole: UserRole | string,
+  menuHref: string
+): boolean => {
+  const userMenus = getMenuItems(userRole);
+  return userMenus.some((item) => item.href === menuHref);
+};
+
+/**
+ * Récupère les permissions d'un rôle sous forme de tableau
+ * @param userRole Rôle de l'utilisateur
+ * @returns Tableau des permissions (labels des menus)
+ */
+export const getUserPermissions = (userRole: UserRole | string): string[] => {
+  const userMenus = getMenuItems(userRole);
+  return userMenus.map((item) => item.label);
 };

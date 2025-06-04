@@ -13,7 +13,7 @@ import PreLoader from "@/components/PreLoader";
 import Loading from "@/components/Loading/Loading";
 import { useGetUserQuery } from "@/redux/api/authApi";
 
-const allowedRoles = ["admin", "super_admin", "candidate"];
+const allowedRoles = ["admin", "super_admin", "candidate", "recruiter"];
 
 export default function AdminGuard({
   children,

@@ -24,10 +24,12 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const user: any = useSelector(selectUser);
   const userRole = user?.user?.role || user?.role;
+  console.log(userRole);
   const isAdmin =
     userRole === "admin" ||
     userRole === "super_admin" ||
-    userRole === "candidate";
+    userRole === "candidate" ||
+    userRole === "recruiter";
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
@@ -37,29 +39,6 @@ const Navbar = () => {
   const navItems: NavItem[] = [
     { name: "Accueil", href: "/", hasDropdown: false },
     { name: "À propos", href: "/about", hasDropdown: false },
-    // { name: "Pourquoi Madagascar ?", href: "#", hasDropdown: false },
-    // {
-    //   name: "Recruteurs",
-    //   href: "#",
-    //   hasDropdown: true,
-    //   dropdownItems: [
-    //     { name: "Services recrutement", href: "#" },
-    //     { name: "Profils disponibles", href: "#" },
-    //     { name: "Processus sélection", href: "#" },
-    //     { name: "Témoignages", href: "#" },
-    //   ],
-    // },
-    // {
-    //   name: "Candidats",
-    //   href: "#",
-    //   hasDropdown: true,
-    //   dropdownItems: [
-    //     { name: "Inscription candidat", href: "#" },
-    //     { name: "Formation", href: "#" },
-    //     { name: "Accompagnement", href: "#" },
-    //     { name: "Opportunités", href: "#" },
-    //   ],
-    // },
     { name: "Programme", href: "/program", hasDropdown: false },
     // { name: "Pack & Tarifs", href: "#", hasDropdown: false },
     { name: "Contact", href: "/contact", hasDropdown: false },
