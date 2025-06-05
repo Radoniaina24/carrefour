@@ -81,7 +81,7 @@ const HeroSection = () => {
               <div className="w-px h-4 bg-blue-200 mx-2"></div>
               <MapPin className="w-5 h-5 text-orange-600 mr-2" />
               <span className="text-orange-700 font-medium">
-                Hôtel Carlton, Antananarivo
+                Hôtel ibis Antananarivo
               </span>
             </motion.div>
 

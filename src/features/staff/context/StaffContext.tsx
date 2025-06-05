@@ -17,7 +17,7 @@ function StaffProvider({ children }: { children: React.ReactNode }) {
     prenom: true,
     email: true,
     role: true,
-    actions: false,
+    actions: true,
     status: true,
   });
   const [currentPage, setCurrentPage] = useState(1);

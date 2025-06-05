@@ -12,7 +12,7 @@ import FormSelect from "@/components/Form/FormSelect";
 import { useUpdateUserMutation } from "@/redux/api/userApi";
 
 export default function EditUserStaff({ user }: { user: any }) {
-  const [updateUser, { error, isLoading }] = useUpdateUserMutation();
+  const [updateUser, { isLoading }] = useUpdateUserMutation();
   const ErrorNotification = (msg: string) => toast.error(msg);
   const SuccessNotification = (msg: string) => toast.success(msg);
   const [open, setOpen] = useState<boolean>(false);
@@ -21,17 +21,17 @@ export default function EditUserStaff({ user }: { user: any }) {
   };
   const role = [
     {
-      label: "Admin",
-      value: "admin",
+      label: "Payé",
+      value: "paid",
     },
 
     {
-      label: "Super admin",
-      value: "super_admin",
+      label: "Non payé",
+      value: "unpaid",
     },
   ];
   const initialValues = {
-    role: user?.role,
+    role: user?.status,
   };
   const formik = useFormik({
     initialValues: initialValues,
@@ -39,12 +39,12 @@ export default function EditUserStaff({ user }: { user: any }) {
     validationSchema: Yup.object({
       role: Yup.string().required("role is required"),
     }),
-    onSubmit: async (values, { setSubmitting, resetForm }) => {
+    onSubmit: async (values, { setSubmitting }) => {
       setSubmitting(true);
       // console.log(values);
       try {
         const response = await updateUser({
-          data: { role: values.role },
+          data: { status: values.role },
           id: user._id,
         }).unwrap();
         SuccessNotification(response?.message);
@@ -90,7 +90,7 @@ export default function EditUserStaff({ user }: { user: any }) {
         <form onSubmit={formik.handleSubmit}>
           <FormSelect
             id="role"
-            label="Rôle"
+            label="Statut"
             value={formik.values.role}
             onChange={formik.handleChange}
             options={role}
