@@ -46,17 +46,17 @@ export const getMenuItems = (userRole: UserRole | string): MenuItem[] => {
         {
           icon: <Users className="text-xl text-orange-400" />,
           label: "Utilisateurs",
-          href: "/admin/users",
+          href: "/admin/staff",
         },
         {
           icon: <PiUsersThree className="text-xl text-pink-500" />,
           label: "Candidats",
-          href: "/admin/candidates",
+          href: "/admin/candidate",
         },
         {
           icon: <PiUsersThree className="text-xl text-blue-500" />,
           label: "Recruteurs",
-          href: "/admin/recruiters",
+          href: "/admin/recruiter",
         },
         {
           icon: <Package className="text-xl text-purple-500" />,

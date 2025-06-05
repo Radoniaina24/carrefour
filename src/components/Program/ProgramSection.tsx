@@ -8,7 +8,7 @@ const ProgramSection = () => {
   const programData = [
     {
       day: "Jour 1",
-      date: "22 août 2025",
+      date: "12 Septembre 2025",
       events: [
         {
           time: "08h00",
@@ -49,7 +49,7 @@ const ProgramSection = () => {
     },
     {
       day: "Jour 2",
-      date: "23 août 2025",
+      date: "12 Septembre 2025",
       events: [
         {
           time: "08h30 - 10h00",

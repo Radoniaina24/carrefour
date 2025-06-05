@@ -77,7 +77,7 @@ const HeroSection = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
             >
               <Calendar className="w-5 h-5 text-blue-600 mr-3" />
-              <span className="font-medium mr-4">22 & 23 août 2025</span>
+              <span className="font-medium mr-4">12 & 13 Septembre 2025</span>
               <div className="w-px h-4 bg-blue-200 mx-2"></div>
               <MapPin className="w-5 h-5 text-orange-600 mr-2" />
               <span className="text-orange-700 font-medium">

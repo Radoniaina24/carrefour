@@ -11,6 +11,7 @@ export default function Home() {
       <HeroSectionTest />
       <UniqueFeatures />
       <TargetCountries />
+      {/* <TicketPurchaseSection /> */}
       <CountdownTimer />
     </div>
   );
