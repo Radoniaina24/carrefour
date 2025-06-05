@@ -31,6 +31,7 @@ export default function Modal() {
               <li>Vérification de votre dossier par notre équipe.</li>
               <li>
                 Notification par email pour la validation de votre candidature
+                (verifier aussi dans le spam)
               </li>
             </ol>
           </div>
