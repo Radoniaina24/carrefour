@@ -1,6 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
-import { Calendar, MapPin, User, Building2, ArrowRight } from "lucide-react";
+import {
+  Calendar,
+  MapPin,
+  User,
+  Building2,
+  ArrowRight,
+  Download,
+} from "lucide-react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -54,7 +62,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/40 z-0"></div>
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12  ">
           {/* Left Column */}
           <motion.div
             className="space-y-8 text-white"
@@ -90,7 +98,7 @@ const HeroSection = () => {
               }}
             >
               <motion.h1
-                className="text-2xl md:text-5xl lg:text-2xl font-bold leading-tight text-white"
+                className="text-2xl md:text-2xl lg:text-4xl font-bold leading-tight text-white"
                 variants={{
                   hidden: { opacity: 0, y: 30 },
                   visible: { opacity: 1, y: 0 },
@@ -122,7 +130,7 @@ const HeroSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2, duration: 0.5 }}
             >
-              <div className="text-xl sm:text-2xl md:text-3xl font-semibold leading-relaxed tracking-wide max-w-3xl">
+              <div className="text-xl sm:text-2xl md:text-4xl font-semibold leading-relaxed tracking-wide max-w-3xl">
                 {displayedText.split("\n").map((line, index) => (
                   <div key={index} className="min-h-[1.5em]">
                     {line}
@@ -224,33 +232,38 @@ const HeroSection = () => {
                   <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform duration-300" />
                 </div>
               </motion.button>
+              {/* Bouton telecharger */}
+              <Link
+                target="_blanck"
+                href="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1749030606/Brochure-carrefour-de-lemploi-modif_iz0hrn.pdf"
+                download
+              >
+                <motion.button
+                  className="group w-full bg-gradient-to-r  from-red-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white p-6 rounded-2xl shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 border border-orange-400/30"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 2.2, duration: 0.6 }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4">
+                      <div className="bg-white/20 p-3 rounded-xl group-hover:bg-white/30 transition-colors duration-300">
+                        <Download className="w-6 h-6 text-white group-hover:animate-bounce" />
+                      </div>
+                      <div className="text-left">
+                        <h3 className="text-xl font-bold">
+                          Télécharger la brochure
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         </div>
       </div>
-
-      {/* Particles d'arrière-plan */}
-      {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-white/20 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.2, 0.8, 0.2],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-      </div> */}
     </section>
   );
 };

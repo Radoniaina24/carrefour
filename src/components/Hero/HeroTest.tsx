@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Calendar, Download, Users, Briefcase } from "lucide-react";
+import { Calendar, Users, Briefcase } from "lucide-react";
 import Link from "next/link";
 
 const HeroSectionTest = () => {
@@ -79,36 +79,6 @@ const HeroSectionTest = () => {
                 , ce rendez-vous se distingue par son approche clé-en-main,
                 structurée et orientée résultats.
               </p>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              <Link
-                href={"/inscription/recruteur"}
-                className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center"
-              >
-                <div>
-                  <Briefcase className="w-5 h-5 mr-3 group-hover:animate-bounce" />
-                </div>
-                Je suis recruteur
-              </Link>
-              <Link
-                href={"/inscription/candidat"}
-                className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center"
-              >
-                <Users className="w-5 h-5 mr-3 group-hover:animate-bounce" />
-                Je suis candidat
-              </Link>
-              <Link
-                target="_blanck"
-                href="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1749030606/Brochure-carrefour-de-lemploi-modif_iz0hrn.pdf"
-                download
-              >
-                <button className="group bg-white text-blue-900 border-2 border-blue-200 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 flex items-center justify-center">
-                  <Download className="w-5 h-5 mr-3 group-hover:animate-bounce" />
-                  Télécharger la brochure
-                </button>
-              </Link>
             </div>
           </div>
 
