@@ -183,10 +183,10 @@ const Contact = () => {
                         Email professionnel
                       </h4>
                       <p className="text-slate-600 text-sm mt-1">
-                        carrefouremploi@gateafricagroup.com
+                        contact@carrefour-emploi.com
                       </p>
                       <p className="text-slate-500 text-xs mt-1">
-                        Réponse sous 24hz
+                        Réponse sous 24h
                       </p>
                     </div>
                   </div>

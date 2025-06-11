@@ -4,22 +4,24 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const { name, email, message, address } = body;
-
+    // console.log(process.env.EMAIL_PASS);
     // Configurer le transporteur Nodemailer
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "mail77.lwspanel.com",
+      port: 465,
+      secure: true,
       auth: {
-        user: process.env.EMAIL_USER, // Ton email
-        pass: process.env.EMAIL_PASS, // Ton mot de passe ou App Password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
     // Contenu de l'email
     const mailOptions = {
-      from: `"${name}" <${email}>`,
-      to: "andriambolaradoniainamichael@gmail.com",
-      cc: "contact@gateafricagroup.com",
-      subject: `📩 Nouvelle contact - Carrefour de l'emploi Madagascar`,
+      from: `"Formulaire site web" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_USER, // Le destinataire : contact@carrefour-emploi.com
+      // cc: "contact@gateafricagroup.com",
+      subject: `Nouveau message de ${name}`,
       html: `
   <div
   style="
