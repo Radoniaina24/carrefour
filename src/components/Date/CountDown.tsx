@@ -178,7 +178,7 @@ export default function CountdownTimer(): JSX.Element {
                 🎉 Jour J Atteint !
               </h2>
               <p className="text-blue-100">
-                Le 22 août 2025 est enfin arrivé !
+                Le 19 Septembre 2025 est enfin arrivé !
               </p>
             </div>
           </div>
