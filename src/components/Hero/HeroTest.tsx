@@ -1,8 +1,16 @@
+"use client";
 import React from "react";
 import { Calendar, Users, Briefcase, MapPin } from "lucide-react";
 import Image from "next/image";
 
 const HeroSectionTest = () => {
+  const handleClick = () => {
+    window.open(
+      "https://www.gateafricagroup.com",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50 pt-16 overflow-hidden">
       {/* Background decorative elements */}
@@ -115,12 +123,39 @@ const HeroSectionTest = () => {
               </p>
               <p>
                 Organisé par{" "}
-                <strong className="text-orange-600 hover:text-orange-700 transition-colors">
+                <strong
+                  onClick={handleClick}
+                  className="text-orange-600 cursor-pointer hover:text-orange-700 transition-colors"
+                >
                   GATE AFRICA GROUP
                 </strong>
                 , ce rendez-vous se distingue par son approche clé-en-main,
                 structurée et orientée résultats.
               </p>
+              <div className="grid">
+                <button
+                  onClick={handleClick}
+                  className="relative cursor-pointer group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-white"
+                >
+                  {/* Overlay sombre pour améliorer la lisibilité */}
+                  <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all duration-300"></div>
+
+                  <div
+                    className="relative px-8 py-9 bg-cover bg-center bg-no-repeat"
+                    style={{
+                      backgroundImage:
+                        "url('https://res.cloudinary.com/dbpoyo4gw/image/upload/v1749549435/logo_gate_group_pktaw2.jpg')",
+                    }}
+                  >
+                    {/* Conteneur avec fond semi-transparent pour le texte */}
+                    <div className="relative z-10  rounded-lg px-6 py-3 ">
+                      <div className="flex items-center justify-center space-x-3  font-bold text-lg">
+                        <div className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 " />
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
 
