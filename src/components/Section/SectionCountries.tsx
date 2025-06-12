@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function TargetCountries() {
   const countries = [
     { name: "Île Maurice", code: "mu", region: "Océan Indien" },
-    { name: "La Réunion", code: "re", region: "Océan Indien" },
+
     { name: "Seychelles", code: "sc", region: "Océan Indien" },
     { name: "Comores", code: "km", region: "Océan Indien" },
     {
@@ -15,7 +15,7 @@ export default function TargetCountries() {
     },
     { name: "Canada", code: "ca", region: "Amérique" },
     { name: "Allemagne", code: "de", region: "Europe" },
-    { name: "Mayotte", code: "yt", region: "Océan Indien" },
+    { name: "Belgique", code: "be", region: "Océan Indien" },
   ];
 
   return (
@@ -43,7 +43,7 @@ export default function TargetCountries() {
         </div>
 
         {/* Countries Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 mb-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 mb-6">
           {countries.map((country, index) => (
             <div
               key={index}
@@ -86,7 +86,7 @@ export default function TargetCountries() {
             <MapPin className="w-4 h-4 text-blue-600" />
             <span className="text-blue-800 font-medium">Océan Indien</span>
             <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
-              6
+              4
             </div>
           </div>
 
@@ -94,13 +94,13 @@ export default function TargetCountries() {
             <Building2 className="w-4 h-4 text-orange-600" />
             <span className="text-orange-800 font-medium">International</span>
             <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
-              2
+              3
             </div>
           </div>
 
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-orange-100 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm border border-white/50">
             <Star className="w-4 h-4 text-slate-600" />
-            <span className="text-slate-700 font-medium">8 pays couverts</span>
+            <span className="text-slate-700 font-medium">7 pays couverts</span>
           </div>
         </div>
       </div>

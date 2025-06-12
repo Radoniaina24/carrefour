@@ -26,7 +26,7 @@ const targetDate: Date = new Date(
     hour: "2-digit",
     minute: "2-digit",
     second: "2-digit",
-  }).format(new Date("2025-09-12T00:00:00"))
+  }).format(new Date("2025-09-19T00:00:00"))
 );
 
 export default function CountdownTimer(): JSX.Element {
@@ -127,13 +127,13 @@ export default function CountdownTimer(): JSX.Element {
             </span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-3 bg-gradient-to-r from-white via-blue-200 to-orange-200 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-4xl font-bold  mb-3 bg-gradient-to-r from-white via-blue-200 to-orange-200 bg-clip-text text-transparent">
             Compte à Rebours
           </h1>
 
           <div className="flex items-center justify-center gap-2 text-lg md:text-xl text-blue-200 font-medium">
             <Calendar className="w-5 h-5" />
-            <span>12 Septembre 2025</span>
+            <span>19 Septembre 2025</span>
           </div>
         </div>
 

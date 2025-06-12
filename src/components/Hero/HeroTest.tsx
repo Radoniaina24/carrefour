@@ -19,8 +19,8 @@ const HeroSectionTest = () => {
             {/* Left Column - Hotel Image */}
             <div className="relative h-96 lg:h-full min-h-[400px]">
               <Image
-                src="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1749121383/ibis_kuwrr3.jpg"
-                alt="Hôtel Ibis Antananarivo"
+                src="https://res.cloudinary.com/dikefxjpd/image/upload/v1749703988/hotel-carlton-madagascar_wn5vxr.jpg" // Remplace avec l'URL réelle si nécessaire
+                alt="Hôtel Carlton Antananarivo"
                 className="absolute inset-0 w-full h-full object-cover"
                 height={1000}
                 width={1000}
@@ -29,10 +29,10 @@ const HeroSectionTest = () => {
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent"></div>
 
-              {/* Ibis Logo Overlay */}
+              {/* Carlton Logo Overlay */}
               <div className="absolute bottom-6 left-6">
-                <div className="bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-xl shadow-lg">
-                  ibis
+                <div className="bg-yellow-600 text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg">
+                  Carlton
                 </div>
               </div>
             </div>
@@ -43,17 +43,17 @@ const HeroSectionTest = () => {
                 {/* Hotel Header */}
                 <div>
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">ibis</span>
+                    <div className="w-10 h-10 bg-yellow-600 rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">C</span>
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-gray-800">
-                        Hôtel Ibis Antananarivo
+                        Hôtel Carlton Antananarivo
                       </h3>
                       <div className="flex items-center text-gray-600 mt-1">
                         <MapPin className="w-4 h-4 mr-1" />
                         <span className="text-sm">
-                          Centre-ville, Antananarivo
+                          Anosy, Antananarivo, Madagascar
                         </span>
                       </div>
                     </div>
@@ -63,24 +63,26 @@ const HeroSectionTest = () => {
                 {/* Description */}
                 <div className="space-y-4">
                   <p className="text-gray-700 leading-relaxed">
-                    L&apos;hôtel Ibis Antananarivo Ankorondrano vous accueille
-                    dans le quartier des affaires, où confort et commodité se
-                    rencontrent. Nos 174 chambres modernes disposent d&apos;un
-                    coin bureau, de la climatisation et d&apos;un accès wifi
-                    haut débit gratuit.
+                    L&apos;Hôtel Carlton Antananarivo Madagascar, situé au bord
+                    du lac Anosy, est une adresse emblématique alliant élégance
+                    et confort dans un cadre paisible en plein cœur de la
+                    capitale.
                   </p>
 
                   <p className="text-gray-700 leading-relaxed">
-                    Profitez de notre salle de fitness, de notre spa avec sauna,
-                    hammam et piscine extérieure. Détendez-vous au bar ouvert
-                    24h/24 et savourez les plats de notre restaurant, avec une
-                    terrasse ensoleillée surplombant un jardin magnifique.
+                    Offrant des chambres raffinées, une piscine extérieure, un
+                    casino, un centre de bien-être, ainsi que plusieurs
+                    restaurants et bars, le Carlton est le lieu idéal pour les
+                    séjours d&apos;affaires comme pour les vacances. Profitez de
+                    l&apos;accueil chaleureux malgache dans un hôtel 5 étoiles
+                    au service irréprochable.
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         {/* Main Event Description */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mt-16">
           {/* Left Column - Content */}
