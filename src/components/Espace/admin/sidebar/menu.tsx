@@ -1,4 +1,4 @@
-import { Users, Ticket, Package, DollarSign } from "lucide-react";
+import { Users, Ticket, Package } from "lucide-react";
 import React, { JSX } from "react";
 import { IoHomeOutline } from "react-icons/io5";
 import { PiUsersThree } from "react-icons/pi";
@@ -11,7 +11,7 @@ export interface MenuItem {
 }
 
 export enum UserRole {
-  ADMIN = "admin",
+  ADMIN = "super_admin",
   CANDIDATE = "candidate",
   RECRUITER = "recruiter",
 }
@@ -29,7 +29,7 @@ export const getMenuItems = (userRole: UserRole | string): MenuItem[] => {
     {
       icon: <IoHomeOutline className="text-xl text-blue-500" />,
       label: "Dashboard",
-      href: "/dashboard",
+      href: "/admin",
     },
   ];
 
@@ -38,11 +38,11 @@ export const getMenuItems = (userRole: UserRole | string): MenuItem[] => {
     case UserRole.ADMIN:
       return [
         ...commonItems,
-        {
-          icon: <Ticket className="text-xl text-green-500" />,
-          label: "Tickets",
-          href: "/admin/tickets",
-        },
+        // {
+        //   icon: <Ticket className="text-xl text-green-500" />,
+        //   label: "Tickets",
+        //   href: "/admin/tickets",
+        // },
         {
           icon: <Users className="text-xl text-orange-400" />,
           label: "Utilisateurs",
@@ -58,16 +58,16 @@ export const getMenuItems = (userRole: UserRole | string): MenuItem[] => {
           label: "Recruteurs",
           href: "/admin/recruiter",
         },
-        {
-          icon: <Package className="text-xl text-purple-500" />,
-          label: "Packs",
-          href: "/admin/packs",
-        },
-        {
-          icon: <DollarSign className="text-xl text-emerald-500" />,
-          label: "Tarifs",
-          href: "/admin/pricing",
-        },
+        // {
+        //   icon: <Package className="text-xl text-purple-500" />,
+        //   label: "Packs",
+        //   href: "/admin/packs",
+        // },
+        // {
+        //   icon: <DollarSign className="text-xl text-emerald-500" />,
+        //   label: "Tarifs",
+        //   href: "/admin/pricing",
+        // },
       ];
 
     case UserRole.CANDIDATE:

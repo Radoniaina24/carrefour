@@ -77,14 +77,14 @@ export default function StatsCards() {
           value: userData?.totalUsers || 0,
           iconBgColor: "bg-yellow-100 dark:bg-yellow-900",
         },
-        {
-          icon: (
-            <FaMoneyBillTrendUp className="text-green-600 dark:text-green-400 text-xl" />
-          ),
-          label: "Revenus",
-          value: "130 000 Ar",
-          iconBgColor: "bg-green-100 dark:bg-green-900",
-        },
+        // {
+        //   icon: (
+        //     <FaMoneyBillTrendUp className="text-green-600 dark:text-green-400 text-xl" />
+        //   ),
+        //   label: "Revenus",
+        //   value: "130 000 Ar",
+        //   iconBgColor: "bg-green-100 dark:bg-green-900",
+        // },
       ],
       candidate: [
         {
@@ -118,7 +118,7 @@ export default function StatsCards() {
       className={`grid gap-4 mb-8 ${
         role === "candidate" || role === "recruiter"
           ? "grid-cols-1 max-w-sm"
-          : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+          : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
       }`}
     >
       {isLoading

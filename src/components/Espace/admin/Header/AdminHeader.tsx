@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { CgProfile } from "react-icons/cg";
 import { FiLogOut } from "react-icons/fi";
-import { TbUserPentagon } from "react-icons/tb";
+
 import { useDispatch, useSelector } from "react-redux";
 import { logout, selectUser } from "@/redux/features/authSlice";
 
@@ -18,7 +18,7 @@ interface StudentHeaderProps {
 }
 
 const menuItems = [
-  { label: "Profil", href: "/student", icon: <TbUserPentagon /> },
+  // { label: "Profil", href: "/student", icon: <TbUserPentagon /> },
   { label: "Allez au site", href: "/", icon: <FaHome /> },
 ];
 

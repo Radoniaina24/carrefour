@@ -6,9 +6,14 @@ import ButtonNextPrev from "../ButtonPrevNext/Button";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Modal from "../Modal/Modal";
+import dayjs from "dayjs";
 import { useAddCandidateMutation } from "@/redux/api/candidateApi";
 
 export default function Confirmation() {
+  dayjs.locale("en");
+  const formatDate = (isoDate: string | Date): string => {
+    return dayjs(isoDate).format(" DD MMMM YYYY");
+  };
   const { formData, setShowSuccessModal, setFormData } = useFormPassContext();
   // console.log(formData);
   const [registerCandidate] = useAddCandidateMutation();
@@ -88,7 +93,9 @@ export default function Confirmation() {
               </div>
               <div>
                 <p className="text-gray-500">Date de naissance</p>
-                <p className="font-medium">{formData.dateOfBirth || "-"}</p>
+                <p className="font-medium">
+                  {formatDate(formData.dateOfBirth) || "-"}{" "}
+                </p>
               </div>
               <div>
                 <p className="text-gray-500">Nationalité</p>

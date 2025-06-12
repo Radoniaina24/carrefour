@@ -61,21 +61,35 @@ const HeroSectionTest = () => {
                 </div>
 
                 {/* Description */}
-                <div className="space-y-4">
-                  <p className="text-gray-700 leading-relaxed">
-                    L&apos;Hôtel Carlton Antananarivo Madagascar, situé au bord
-                    du lac Anosy, est une adresse emblématique alliant élégance
-                    et confort dans un cadre paisible en plein cœur de la
-                    capitale.
+                <div className="space-y-6 text-gray-800 max-w-3xl mx-auto px-4 md:px-6 lg:px-8">
+                  <p className="text-lg leading-relaxed">
+                    <strong>
+                      Un événement d’envergure dans un cadre 5 étoiles
+                    </strong>
                   </p>
 
-                  <p className="text-gray-700 leading-relaxed">
-                    Offrant des chambres raffinées, une piscine extérieure, un
-                    casino, un centre de bien-être, ainsi que plusieurs
-                    restaurants et bars, le Carlton est le lieu idéal pour les
-                    séjours d&apos;affaires comme pour les vacances. Profitez de
-                    l&apos;accueil chaleureux malgache dans un hôtel 5 étoiles
-                    au service irréprochable.
+                  <p className="text-gray-700 leading-relaxed text-base">
+                    Le{" "}
+                    <strong>
+                      Carrefour de l&apos;Emploi – Madagascar 2025
+                    </strong>{" "}
+                    se tiendra au prestigieux{" "}
+                    <strong>Carlton Madagascar</strong>, un hôtel 5 étoiles
+                    emblématique situé au cœur du centre-ville
+                    d&apos;Antananarivo.
+                  </p>
+
+                  <p className="text-gray-700 leading-relaxed text-base">
+                    Bénéficiant d&apos;un emplacement stratégique, en plein cœur
+                    du quartier des affaires et en bordure du lac Anosy, le
+                    Carlton offre un cadre exceptionnel, alliant luxe,
+                    accessibilité et professionnalisme.
+                  </p>
+
+                  <p className="text-gray-700 leading-relaxed text-base">
+                    Ce lieu de référence pour les grands événements accueille
+                    régulièrement des rendez-vous internationaux, diplomatiques
+                    et économiques de haut niveau.
                   </p>
                 </div>
               </div>

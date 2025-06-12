@@ -16,17 +16,26 @@ export default function FormStep4() {
     initialValues: initialvalues,
     validationSchema: Yup.object({
       password: Yup.string()
-        .required("Password is required")
-        .min(6, "Password must be at least 6 characters long"),
+        .required("Le mot de passe est requis")
+        .min(
+          6,
+          "Il est nécessaire d'avoir au moins 6 caractères pour le mot de passe."
+        ),
 
       re_type_password: Yup.string()
-        .required("Confirm Password is required")
-        .oneOf([Yup.ref("password")], "Passwords must match")
-        .min(6, "Confirm Password must be at least 6 characters long"),
+        .required("Il est nécessaire de confirmer le mot de passe.")
+        .oneOf(
+          [Yup.ref("password")],
+          "Il est important que les mots de passe correspondent."
+        )
+        .min(
+          6,
+          "Confirmer que le mot de passe doit comporter au moins 6 caractères."
+        ),
     }),
 
     onSubmit: (values) => {
-      console.log("Form Submitted : ", values);
+      // console.log("Form Submitted : ", values);
       nextStep();
       setFormData((prev: any) => ({ ...prev, ...values }));
     },
