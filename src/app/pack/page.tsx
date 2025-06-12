@@ -1,4 +1,4 @@
-import PricingPacks from "@/components/Packs/Packs";
+import CandidateRecruiterTabs from "@/components/Packs/Tabs";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 const PackPage = () => {
   return (
     <div className="mt-24">
-      <PricingPacks />
+      <CandidateRecruiterTabs />
     </div>
   );
 };
