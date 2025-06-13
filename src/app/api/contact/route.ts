@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
     const mailOptions = {
       from: `"Formulaire site web" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER, // Le destinataire : contact@carrefour-emploi.com
-      // cc: "contact@gateafricagroup.com",
+      cc: "rojoclaudino@gmail.com",
       subject: `Nouveau message de ${name}`,
       html: `
   <div

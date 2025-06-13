@@ -125,7 +125,7 @@ const HeroSectionTest = () => {
                 Organisé par{" "}
                 <strong
                   onClick={handleClick}
-                  className="text-orange-600 cursor-pointer hover:text-orange-700 transition-colors"
+                  className="text-orange-600 underline underline-offset-4 cursor-pointer hover:text-orange-700 transition-colors"
                 >
                   GATE AFRICA GROUP
                 </strong>
@@ -134,7 +134,7 @@ const HeroSectionTest = () => {
               </p>
               <div
                 onClick={handleClick}
-                className="flex justify-center items-center gap-5 cursor-pointer"
+                className="flex font-bold underline underline-offset-3 justify-center items-center gap-5 cursor-pointer"
               >
                 Connaitre le groupe
                 <div className="">
