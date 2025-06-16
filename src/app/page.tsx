@@ -1,3 +1,4 @@
+import ArticlesSection from "@/components/Blog/Post";
 import CountdownTimer from "@/components/Date/CountDown";
 import HeroSection from "@/components/Hero/Hero";
 import HeroSectionTest from "@/components/Hero/HeroTest";
@@ -12,6 +13,7 @@ export default function Home() {
       <UniqueFeatures />
       <TargetCountries />
       {/* <TicketPurchaseSection /> */}
+      <ArticlesSection />
       <CountdownTimer />
     </div>
   );
