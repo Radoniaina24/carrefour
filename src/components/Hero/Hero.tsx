@@ -305,7 +305,7 @@ const HeroSection = () => {
               {/* Bouton télécharger */}
               <Link
                 target="_blank"
-                href="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1749030606/Brochure-carrefour-de-lemploi-modif_iz0hrn.pdf"
+                href="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1750425497/Brochure-carrefour-emploi-19-20-Sept_l1lzda.pdf"
                 download
               >
                 <motion.button
