@@ -9,7 +9,9 @@ export default function Home() {
   return (
     <div className="">
       <HeroSection />
+
       <HeroSectionTest />
+
       <UniqueFeatures />
       <TargetCountries />
       {/* <TicketPurchaseSection /> */}

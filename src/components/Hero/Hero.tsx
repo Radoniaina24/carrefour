@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import SectionPartenariat from "./SectionPartenariat";
 
 const HeroSection = () => {
   const [displayedText, setDisplayedText] = useState("");
@@ -89,6 +90,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <SectionPartenariat />
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column */}
           <motion.div

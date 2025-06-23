@@ -12,7 +12,7 @@ const HeroSectionTest = () => {
     );
   };
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50 pt-16 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
@@ -21,6 +21,7 @@ const HeroSectionTest = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* <SectionPartenariat /> */}
         {/* Hotel Section */}
         <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/50 overflow-hidden">
           <div className="grid lg:grid-cols-2 gap-0">
