@@ -110,13 +110,19 @@ export default function Hero() {
                   <div className="absolute inset-0 bg-gradient-to-tr from-red-600/20 to-transparent z-10 pointer-events-none"></div>
 
                   {/* Image */}
-                  <Image
-                    src="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1749795681/gateAfricaMagazine_tippo2.jpg"
-                    alt="Gate of Africa Magazine - Média National & International"
-                    fill
-                    className="object-cover transition-transform duration-700 scale-[1.05] group-hover:scale-110"
-                    priority
-                  />
+                  <Link
+                    href={"https://gateofafrica.com/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1749795681/gateAfricaMagazine_tippo2.jpg"
+                      alt="Gate of Africa Magazine - Média National & International"
+                      fill
+                      className="object-cover transition-transform duration-700 scale-[1.05] group-hover:scale-110"
+                      priority
+                    />
+                  </Link>
                 </div>
 
                 {/* Decorative Elements */}
