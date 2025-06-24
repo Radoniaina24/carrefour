@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Post } from "@/interface/Post";
 import { ArticleCard } from "./PostCard";
-import { ArticleCardSkeleton } from "./ArticleCardSkeleton";
+import ArticleCardSkeleton from "./ArticleCardSkeleton";
 
 const ArticleCarousel = ({
   posts,
@@ -15,7 +15,7 @@ const ArticleCarousel = ({
   loading?: boolean;
 }) => {
   return (
-    <div className="mb-12">
+    <div className="">
       <button className="swiper-button-prev-custom absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/80 hover:bg-white shadow-lg rounded-full">
         <svg
           className="w-6 h-6 text-gray-700"
@@ -60,10 +60,10 @@ const ArticleCarousel = ({
         slidesPerView={1}
         breakpoints={{
           768: {
-            slidesPerView: 2,
+            slidesPerView: 1,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 1,
           },
         }}
         pagination={{
@@ -85,7 +85,7 @@ const ArticleCarousel = ({
               </SwiperSlide>
             ))}
       </Swiper>
-      <div className="swiper-pagination-custom my-6 flex justify-center gap-2" />
+      {/* <div className="swiper-pagination-custom my-6 flex justify-center gap-2" /> */}
     </div>
   );
 };
