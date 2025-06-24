@@ -23,15 +23,12 @@ export default function Hero() {
     <div className="relative z-10 max-w-7xl mx-auto px-6 pt-12">
       <section className="py-16 px-4">
         {/* Section Title */}
-        <div className="max-w-7xl mx-auto mb-20">
-          <div className="text-center space-y-4">
+        <div className=" mb-20">
+          <div className=" max-w-3xl mx-auto text-center space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-white">
-              National & International
+              Suivez en temps réel l&apos;évolution de l&apos;Afrique
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-red-400 to-red-600 mx-auto rounded-full"></div>
-            <p className="text-xl text-gray-400 font-medium tracking-wide">
-              GATE OF AFRICA MAGAZINE
-            </p>
           </div>
         </div>
 
@@ -46,9 +43,8 @@ export default function Hero() {
             >
               <div className="">
                 <h1 className="text-3xl md:text-3xl font-bold text-white leading-tight">
-                  Suivez en temps réel
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-white mt-2">
-                    l&apos;évolution de l&apos;Afrique
+                    L&apos;Afrique en direct, l&apos;info qui vous propulse.
                   </span>
                 </h1>
               </div>
