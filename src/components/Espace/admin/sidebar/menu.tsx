@@ -1,4 +1,4 @@
-import { Users, Ticket, Package, CircleDollarSignIcon } from "lucide-react";
+import { Users, CircleDollarSignIcon } from "lucide-react";
 import React, { JSX } from "react";
 import { IoHomeOutline } from "react-icons/io5";
 import { PiUsersThree } from "react-icons/pi";
@@ -84,14 +84,9 @@ export const getMenuItems = (userRole: UserRole | string): MenuItem[] => {
       return [
         ...commonItems,
         {
-          icon: <Ticket className="text-xl text-green-500" />,
-          label: "Tickets",
-          href: "/recruiter/tickets",
-        },
-        {
-          icon: <Package className="text-xl text-purple-500" />,
-          label: "Packs & Tarifs",
-          href: "/recruiter/packs",
+          icon: <CircleDollarSignIcon className="text-xl text-green-500" />,
+          label: "Payement",
+          href: "/admin/payement",
         },
       ];
 
