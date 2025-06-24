@@ -15,9 +15,8 @@ export default function Home() {
       <UniqueFeatures />
       <TargetCountries />
       {/* <TicketPurchaseSection /> */}
-      <GateOfAfricaDesign />
-
       <CountdownTimer />
+      <GateOfAfricaDesign />
     </div>
   );
 }
