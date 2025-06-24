@@ -3,7 +3,7 @@ import React from "react";
 
 export default function SectionPartenariat() {
   return (
-    <section className="w-full pb-12">
+    <section className="w-full mb-5 py-12 bg-white rounded-lg">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
           {/* Logo gauche */}
@@ -23,7 +23,7 @@ export default function SectionPartenariat() {
           <div className="flex-1 max-w-2xl text-center">
             <div className="space-y-4">
               {/* Premier paragraphe */}
-              <p className="text-xl   font-semibold text-white leading-relaxed">
+              <p className="text-xl   font-semibold text-gray-800 leading-relaxed">
                 Sous le haut parrainage du Ministère du Travail, de
                 l&apos;Emploi et de la Fonction Publique Madagascar.
               </p>
@@ -34,7 +34,7 @@ export default function SectionPartenariat() {
               </div>
 
               {/* Deuxième paragraphe */}
-              <p className="text-xl  font-semibold text-white leading-relaxed">
+              <p className="text-xl  font-semibold text-gray-800 leading-relaxed">
                 En partenariat avec la Direction de la Migration Professionnelle
                 Madagascar
               </p>
