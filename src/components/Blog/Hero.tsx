@@ -24,11 +24,14 @@ export default function Hero() {
       <section className="py-16 px-4">
         {/* Section Title */}
         <div className=" mb-20">
-          <div className=" max-w-3xl mx-auto text-center space-y-4">
+          <div className=" max-w-5xl mx-auto text-center space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-white">
               Suivez en temps réel l&apos;évolution de l&apos;Afrique
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-red-400 to-red-600 mx-auto rounded-full"></div>
+            <p className="text-xl text-gray-400 font-medium tracking-wide">
+              GATE OF AFRICA MAGAZINE
+            </p>
           </div>
         </div>
 
