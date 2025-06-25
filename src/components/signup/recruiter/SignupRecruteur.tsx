@@ -11,7 +11,7 @@ import { SelectCountryField } from "@/components/Form/SelectCountryField";
 import toast, { Toaster } from "react-hot-toast";
 import { useAddRecruiterMutation } from "@/redux/api/recruiterApi";
 import { useRouter } from "next/navigation";
-
+import ReCAPTCHA from "react-google-recaptcha";
 const validationSchema = Yup.object({
   lastName: Yup.string().required("Ce champ est requis"),
   firstName: Yup.string().required("Ce champ est requis"),
@@ -26,6 +26,7 @@ const validationSchema = Yup.object({
   confirmPassword: Yup.string()
     .oneOf([Yup.ref("password")], "Les mots de passe ne correspondent pas")
     .required("Ce champ est requis"),
+  recaptcha: Yup.string().required("Veuillez valider le reCAPTCHA"),
 });
 
 export const InscriptionFormRecruiter: React.FC = () => {
@@ -45,6 +46,7 @@ export const InscriptionFormRecruiter: React.FC = () => {
       password: "",
       confirmPassword: "",
       country: "",
+      recaptcha: "",
     },
     validationSchema,
     onSubmit: async (values, { setSubmitting, resetForm }) => {
@@ -159,6 +161,19 @@ export const InscriptionFormRecruiter: React.FC = () => {
               }
             />
           </div>
+          <div className="flex justify-center flex-col gap-5">
+            <ReCAPTCHA
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY_SITE!}
+              onChange={(value) => formik.setFieldValue("recaptcha", value)}
+              onExpired={() => formik.setFieldValue("recaptcha", "")}
+            />
+            {formik.errors.recaptcha && formik.touched.recaptcha && (
+              <div className="text-red-500 text-sm">
+                {formik.errors.recaptcha}
+              </div>
+            )}
+          </div>
+
           <button
             type="submit"
             disabled={formik.isSubmitting}
