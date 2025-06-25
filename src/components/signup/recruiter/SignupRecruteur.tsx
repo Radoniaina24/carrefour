@@ -163,7 +163,7 @@ export const InscriptionFormRecruiter: React.FC = () => {
           </div>
           <div className="flex justify-center flex-col gap-5">
             <ReCAPTCHA
-              sitekey={process.env.RECAPTCHA_KEY_SITE!}
+              sitekey={"6LejtWwrAAAAAM-q2rZLldZogcZT5D0aISfZLqNb"}
               onChange={(value) => formik.setFieldValue("recaptcha", value)}
               onExpired={() => formik.setFieldValue("recaptcha", "")}
             />
