@@ -1,0 +1,109 @@
+"use client";
+
+import { Language } from "@/context/LanguageContext";
+import { Link } from "@/i18n/navigation"; // Assure-toi que c'est bien `next-intl`
+import { ChevronDown, Globe } from "lucide-react";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useLocale } from "next-intl";
+import React, { useState } from "react";
+
+const LANGUAGES: Language[] = [
+  { code: "fr", name: "Français", countryCode: "fr" },
+  { code: "en", name: "English", countryCode: "us" },
+  { code: "de", name: "Deutsch", countryCode: "de" },
+];
+
+export default function LanguageSwitcher() {
+  const pathname = usePathname();
+  const locale = useLocale();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const currentLanguage =
+    LANGUAGES.find((l) => l.code === locale) || LANGUAGES[0];
+
+  const getPathWithoutLocale = () => {
+    const segments = pathname.split("/");
+
+    // Si le premier segment est une locale, on la retire
+    const locales = ["fr", "en", "de"];
+    if (locales.includes(segments[1])) {
+      segments.splice(1, 1); // remove the locale
+    }
+
+    return segments.join("/") || "/";
+  };
+
+  const buttonStyle = `flex items-center space-x-2 px-3 py-2 rounded-lg border-2 border-transparent hover:border-blue-200 transition-all duration-200 font-medium ${
+    pathname !== "/"
+      ? "text-blue-700 bg-blue-50/50"
+      : "text-white bg-white/10 backdrop-blur-sm"
+  } hover:bg-blue-50`;
+
+  return (
+    <div className="relative">
+      {/* Bouton du switcher */}
+      <button
+        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+        className={buttonStyle}
+      >
+        <Image
+          width={20}
+          height={20}
+          src={`https://flagcdn.com/w40/${currentLanguage.countryCode}.png`}
+          alt={currentLanguage.code}
+          className="w-5 h-4 object-cover rounded-sm shadow-sm"
+        />
+        <span className="text-sm hidden sm:inline">
+          {currentLanguage.code.toUpperCase()}
+        </span>
+        <ChevronDown
+          className={`w-4 h-4 transition-transform duration-200 ${
+            isDropdownOpen ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+
+      {/* Menu déroulant */}
+      {isDropdownOpen && (
+        <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 z-50 overflow-hidden">
+          <div className="px-3 py-2 border-b border-gray-100">
+            <div className="flex items-center space-x-2 text-gray-500">
+              <Globe className="w-4 h-4" />
+              <span className="text-xs font-medium uppercase tracking-wide">
+                Langue
+              </span>
+            </div>
+          </div>
+          {LANGUAGES.map((lang) => (
+            <Link
+              locale={lang.code}
+              href={getPathWithoutLocale()}
+              key={lang.code}
+              onClick={() => setIsDropdownOpen(false)}
+              className={`w-full flex items-center space-x-3 px-4 py-3 text-left transition-colors duration-200 hover:bg-blue-50 ${
+                lang.code === currentLanguage.code
+                  ? "bg-blue-50 text-blue-700 border-r-2 border-blue-500"
+                  : "text-gray-700"
+              }`}
+            >
+              <img
+                src={`https://flagcdn.com/w40/${lang.countryCode}.png`}
+                alt={lang.name}
+                className="w-6 h-4 object-cover rounded-sm shadow-sm"
+              />
+              <div className="flex-1">
+                <div className="font-medium text-sm">{lang.name}</div>
+                <div className="text-xs text-gray-400 uppercase">
+                  {lang.code}
+                </div>
+              </div>
+              {lang.code === currentLanguage.code && (
+                <div className="w-2 h-2 bg-blue-500 rounded-full" />
+              )}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

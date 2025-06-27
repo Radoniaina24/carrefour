@@ -5,7 +5,7 @@ import TargetCountries from "@/components/Section/SectionCountries";
 import UniqueFeatures from "@/components/Section/SectionOne";
 import GateOfAfricaDesign from "@/features/Blog";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="">
       <HeroSection />

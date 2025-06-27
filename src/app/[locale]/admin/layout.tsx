@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/[locale]/globals.css";
 import AdminGuard from "@/components/Auth/Guard/AuthGuardAdmin";
 
 import Admin from "@/components/Espace/admin";
