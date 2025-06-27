@@ -8,34 +8,15 @@ import { usePathname } from "next/navigation";
 import { useSelector } from "react-redux";
 import { selectUser } from "@/redux/features/authSlice";
 import { FaUser } from "react-icons/fa";
-
-type NavItem = {
-  name: string;
-  href: string;
-  hasDropdown: boolean;
-  dropdownItems?: {
-    name: string;
-    href: string;
-  }[];
-};
-
-type Language = {
-  code: string;
-  name: string;
-  countryCode: string;
-  flag?: string;
-};
+import { Language, useLanguageContext } from "@/context/LanguageContext";
+import { NavItem, navItemsByLanguage } from "./menuData";
 
 const Navbar = () => {
+  const { language, setLanguage } = useLanguageContext();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState<Language>({
-    code: "fr",
-    name: "Français",
-    countryCode: "fr",
-  });
 
   const user: any = useSelector(selectUser);
   const userRole = user?.user?.role || user?.role;
@@ -58,21 +39,14 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems: NavItem[] = [
-    { name: "Accueil", href: "/", hasDropdown: false },
-    { name: "À propos", href: "/about", hasDropdown: false },
-    { name: "Programme", href: "/program", hasDropdown: false },
-    { name: "Contact", href: "/contact", hasDropdown: false },
-    { name: "Pack & Tarifs", href: "/pack", hasDropdown: false },
-  ];
+  const navItems = navItemsByLanguage[language.code as "fr" | "en" | "de"];
 
   const pathname = usePathname();
 
   const handleLanguageChange = (language: Language) => {
-    setCurrentLanguage(language);
+    setLanguage(language);
     setIsLanguageDropdownOpen(false);
-    // Ici vous pouvez ajouter la logique pour changer la langue de l'application
-    console.log("Language changed to:", language.code);
+    // console.log(language.code);
   };
 
   return (
@@ -155,12 +129,12 @@ const Navbar = () => {
                 <Image
                   width={20}
                   height={20}
-                  src={`https://flagcdn.com/w40/${currentLanguage.countryCode}.png`}
-                  alt={currentLanguage.name}
+                  src={`https://flagcdn.com/w40/${language.countryCode}.png`}
+                  alt={language.name}
                   className="w-5 h-4 object-cover rounded-sm shadow-sm"
                 />
                 <span className="text-sm hidden sm:inline">
-                  {currentLanguage.code.toUpperCase()}
+                  {language.code.toUpperCase()}
                 </span>
                 <ChevronDown
                   className={`w-4 h-4 transition-transform duration-200 ${
@@ -184,7 +158,7 @@ const Navbar = () => {
                       key={language.code}
                       onClick={() => handleLanguageChange(language)}
                       className={`w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-blue-50 transition-colors duration-200 ${
-                        currentLanguage.code === language.code
+                        language.code === language.code
                           ? "bg-blue-50 text-blue-700 border-r-2 border-blue-500"
                           : "text-gray-700"
                       }`}
@@ -202,7 +176,7 @@ const Navbar = () => {
                           {language.code}
                         </div>
                       </div>
-                      {currentLanguage.code === language.code && (
+                      {language.code === language.code && (
                         <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                       )}
                     </button>
@@ -244,8 +218,8 @@ const Navbar = () => {
                 className="flex items-center space-x-1 px-2 py-1 rounded-lg text-blue-900 hover:bg-blue-50 transition-colors duration-200"
               >
                 <img
-                  src={`https://flagcdn.com/w40/${currentLanguage.countryCode}.png`}
-                  alt={currentLanguage.name}
+                  src={`https://flagcdn.com/w40/${language.countryCode}.png`}
+                  alt={language.name}
                   className="w-5 h-4 object-cover rounded-sm shadow-sm"
                 />
                 <ChevronDown
@@ -262,7 +236,7 @@ const Navbar = () => {
                       key={language.code}
                       onClick={() => handleLanguageChange(language)}
                       className={`w-full flex items-center space-x-2 px-3 py-2 text-left hover:bg-blue-50 transition-colors duration-200 ${
-                        currentLanguage.code === language.code
+                        language.code === language.code
                           ? "bg-blue-50 text-blue-700"
                           : "text-gray-700"
                       }`}
