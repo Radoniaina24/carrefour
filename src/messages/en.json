@@ -88,5 +88,52 @@
       "description": "Discover how our unique approach can revolutionize your team",
       "button": "Get Started Now"
     }
+  },
+  "targetCountries": {
+    "badge": "International Presence",
+    "title": "Our Priority Target Countries",
+    "regions": {
+      "ocean": "Indian Ocean",
+      "international": "International",
+      "total": "7 countries covered"
+    },
+    "countries": {
+      "mu": "Mauritius",
+      "sc": "Seychelles",
+      "km": "Comoros",
+      "mg": "Madagascar",
+      "ca": "Canada",
+      "de": "Germany",
+      "be": "Belgium"
+    },
+    "subtitle": {
+      "mg": "local companies & subsidiaries"
+    }
+  },
+  "countdown": {
+    "title": "Countdown",
+    "targetDate": "19 September 2025",
+    "location": "Madagascar",
+    "expiredTitle": "🎉 D-Day Has Arrived!",
+    "expiredMessage": "September 19, 2025 has finally arrived!",
+    "units": {
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds"
+    }
+  },
+  "magazine": {
+    "sectionTitle": "Follow Africa’s development in real time",
+    "tagline": "GATE OF AFRICA MAGAZINE",
+    "headline": "Africa live — news that drives you forward.",
+    "description": "Explore the economic, political, and social news of the African continent with the leading online media platform of the Gate Africa Group.",
+    "highlights": [
+      "Followed by millions",
+      "Pan-African coverage",
+      "Real-time news updates"
+    ],
+    "cta": "Visit GateOfAfrica.com",
+    "caption": "Your trusted source for news about Africa"
   }
 }

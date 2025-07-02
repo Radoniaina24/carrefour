@@ -88,5 +88,52 @@
       "description": "Entdecken Sie, wie unser einzigartiger Ansatz Ihr Team revolutionieren kann",
       "button": "Jetzt starten"
     }
+  },
+  "targetCountries": {
+    "badge": "Internationale Präsenz",
+    "title": "Unsere vorrangigen Zielländer",
+    "regions": {
+      "ocean": "Indischer Ozean",
+      "international": "International",
+      "total": "7 abgedeckte Länder"
+    },
+    "countries": {
+      "mu": "Mauritius",
+      "sc": "Seychellen",
+      "km": "Komoren",
+      "mg": "Madagaskar",
+      "ca": "Kanada",
+      "de": "Deutschland",
+      "be": "Belgien"
+    },
+    "subtitle": {
+      "mg": "lokale Unternehmen & Niederlassungen"
+    }
+  },
+  "countdown": {
+    "title": "Countdown",
+    "targetDate": "19. September 2025",
+    "location": "Madagaskar",
+    "expiredTitle": "🎉 Der große Tag ist da!",
+    "expiredMessage": "Der 19. September 2025 ist endlich da!",
+    "units": {
+      "days": "Tage",
+      "hours": "Stunden",
+      "minutes": "Minuten",
+      "seconds": "Sekunden"
+    }
+  },
+  "magazine": {
+    "sectionTitle": "Verfolgen Sie Afrikas Entwicklung in Echtzeit",
+    "tagline": "GATE OF AFRICA MAGAZINE",
+    "headline": "Afrika live – Informationen, die Sie voranbringen.",
+    "description": "Entdecken Sie die wirtschaftlichen, politischen und gesellschaftlichen Nachrichten des afrikanischen Kontinents mit dem führenden Online-Medium der Gate Africa Group.",
+    "highlights": [
+      "Von Millionen Menschen verfolgt",
+      "Panafrikanische Berichterstattung",
+      "Aktuelle Nachrichten in Echtzeit"
+    ],
+    "cta": "Besuchen Sie GateOfAfrica.com",
+    "caption": "Ihre zuverlässige Informationsquelle über Afrika"
   }
 }

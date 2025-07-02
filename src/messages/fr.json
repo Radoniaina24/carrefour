@@ -88,5 +88,52 @@
       "description": "Découvrez comment notre approche unique peut révolutionner votre équipe",
       "button": "Commencer maintenant"
     }
+  },
+  "targetCountries": {
+    "badge": "Présence Internationale",
+    "title": "Nos pays cibles prioritaires",
+    "regions": {
+      "ocean": "Océan Indien",
+      "international": "International",
+      "total": "7 pays couverts"
+    },
+    "countries": {
+      "mu": "Île Maurice",
+      "sc": "Seychelles",
+      "km": "Comores",
+      "mg": "Madagascar",
+      "ca": "Canada",
+      "de": "Allemagne",
+      "be": "Belgique"
+    },
+    "subtitle": {
+      "mg": "entreprises locales & filiales"
+    }
+  },
+  "countdown": {
+    "title": "Compte à Rebours",
+    "targetDate": "19 Septembre 2025",
+    "location": "Madagascar",
+    "expiredTitle": "🎉 Jour J Atteint !",
+    "expiredMessage": "Le 19 Septembre 2025 est enfin arrivé !",
+    "units": {
+      "days": "Jours",
+      "hours": "Heures",
+      "minutes": "Minutes",
+      "seconds": "Secondes"
+    }
+  },
+  "magazine": {
+    "sectionTitle": "Suivez en temps réel l'évolution de l'Afrique",
+    "tagline": "GATE OF AFRICA MAGAZINE",
+    "headline": "L'Afrique en direct, l'info qui vous propulse.",
+    "description": "Découvrez l'actualité économique, politique et sociale du continent africain avec le média en ligne de référence du groupe Gate Africa.",
+    "highlights": [
+      "Suivi par des millions de personnes",
+      "Couverture panafricaine",
+      "Actualités en temps réel"
+    ],
+    "cta": "Visitez GateOfAfrica.com",
+    "caption": "Votre source d'information de référence sur l'Afrique"
   }
 }
