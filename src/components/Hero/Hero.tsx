@@ -12,20 +12,17 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import SectionPartenariat from "./SectionPartenariat";
+import { useTranslations } from "next-intl";
 
 const HeroSection = () => {
+  const t = useTranslations("hero");
   const [displayedText, setDisplayedText] = useState("");
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const router = useRouter();
 
   // Diviser le message en lignes
-  const messageLines = [
-    "Vous choisissez.",
-    "Nous préparons.",
-    "Vous repartez avec un collaborateur prêt.",
-  ];
-
+  const messageLines = t.raw("typing");
   // Effet typing
   useEffect(() => {
     if (currentLineIndex < messageLines.length) {
@@ -110,47 +107,18 @@ const HeroSection = () => {
                 <div className="flex items-center space-x-2">
                   <Calendar className="w-5 h-5 text-blue-600" />
                   <span className="font-semibold text-blue-900">
-                    19 & 20 Septembre 2025
+                    {t("eventBadge.date")}
                   </span>
                 </div>
                 <div className="w-px h-6 bg-blue-200"></div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-5 h-5 text-orange-600" />
                   <span className="text-orange-700 font-semibold">
-                    Hôtel Carlton Antananarivo
+                    {t("eventBadge.location")}
                   </span>
                 </div>
               </div>
             </motion.div>
-
-            {/* Section Hôtel avec image */}
-            {/* <motion.div
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-2xl"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-            >
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-16 h-16 rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1749121383/ibis_kuwrr3.jpg"
-                    alt="Hôtel Ibis Antananarivo"
-                    className="w-full h-full object-cover"
-                    width={100}
-                    height={100}
-                  />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-white flex items-center">
-                    Hôtel Ibis Antananarivo
-                    <Star className="w-4 h-4 text-yellow-400 ml-2 fill-current" />
-                  </h3>
-                  <p className="text-blue-100 text-sm">
-                    Lieu prestigieux au cœur de la capitale
-                  </p>
-                </div>
-              </div>
-            </motion.div> */}
 
             <motion.div
               className="space-y-4"
@@ -171,7 +139,7 @@ const HeroSection = () => {
                   visible: { opacity: 1, y: 0 },
                 }}
               >
-                Carrefour de l&apos;Emploi
+                {t("title")}
               </motion.h1>
 
               <motion.div
@@ -182,14 +150,14 @@ const HeroSection = () => {
                 }}
               >
                 <span className="text-2xl lg:text-3xl font-bold text-orange-400">
-                  Madagascar
+                  {t("country")}
                 </span>
                 <motion.span
                   className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-3 rounded-xl text-xl font-bold shadow-lg"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  2025
+                  {t("year")}
                 </motion.span>
               </motion.div>
             </motion.div>
@@ -258,10 +226,10 @@ const HeroSection = () => {
                     </motion.div>
                     <div className="text-left">
                       <h3 className="text-xl font-bold">
-                        Inscription Candidat
+                        {t("candidate.title")}
                       </h3>
                       <p className="text-blue-100 text-sm">
-                        Trouvez votre emploi idéal
+                        {t("candidate.description")}
                       </p>
                     </div>
                   </div>
@@ -293,10 +261,10 @@ const HeroSection = () => {
                     </motion.div>
                     <div className="text-left">
                       <h3 className="text-xl font-bold">
-                        Inscription Recruteur
+                        {t("recruiter.title")}
                       </h3>
                       <p className="text-orange-100 text-sm">
-                        Recrutez vos talents
+                        {t("recruiter.description")}
                       </p>
                     </div>
                   </div>
@@ -332,10 +300,10 @@ const HeroSection = () => {
                       </motion.div>
                       <div className="text-left">
                         <h3 className="text-xl font-bold">
-                          Télécharger la brochure
+                          {t("brochure.title")}
                         </h3>
                         <p className="text-emerald-100 text-sm">
-                          Guide complet de l&apos;événement
+                          {t("brochure.description")}
                         </p>
                       </div>
                     </div>

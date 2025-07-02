@@ -1,6 +1,43 @@
 {
-  "HomePage": {
-    "title": "Bonjour le monde",
-    "about": "Aller à la page about"
+  "header": {
+    "menu": {
+      "home": "Accueil",
+      "about": "À propos",
+      "program": "Programme",
+      "contact": "Contact",
+      "pricing": "Pack & Tarifs",
+      "account": "Mon Compte",
+      "login": "Se connecter"
+    }
+  },
+  "hero": {
+    "partnership": {
+      "ministrySupport": "Sous le haut parrainage du Ministère du Travail, de l'Emploi et de la Fonction Publique Madagascar.",
+      "partnership": "En partenariat avec la Direction de la Migration Professionnelle Madagascar"
+    },
+    "eventBadge": {
+      "date": "19 & 20 Septembre 2025",
+      "location": "Hôtel Carlton Antananarivo"
+    },
+    "title": "Carrefour de l'Emploi",
+    "country": "Madagascar",
+    "year": "2025",
+    "typing": [
+      "Vous choisissez.",
+      "Nous préparons.",
+      "Vous repartez avec un collaborateur prêt."
+    ],
+    "candidate": {
+      "title": "Inscription Candidat",
+      "description": "Trouvez votre emploi idéal"
+    },
+    "recruiter": {
+      "title": "Inscription Recruteur",
+      "description": "Recrutez vos talents"
+    },
+    "brochure": {
+      "title": "Télécharger la brochure",
+      "description": "Guide complet de l'événement"
+    }
   }
 }

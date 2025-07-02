@@ -1,6 +1,43 @@
 {
-  "HomePage": {
-    "title": "dfsdfsdfdsfdsfdsfsd",
-    "about": "sdfsfdsfsd"
+  "header": {
+    "menu": {
+      "home": "Startseite",
+      "about": "Über uns",
+      "program": "Programm",
+      "contact": "Kontakt",
+      "pricing": "Pakete & Preise",
+      "account": "Mein Konto",
+      "login": "Anmelden"
+    }
+  },
+  "hero": {
+    "partnership": {
+      "ministrySupport": "Unter der Schirmherrschaft des Ministeriums für Arbeit, Beschäftigung und öffentlichen Dienst von Madagaskar.",
+      "partnership": "In Partnerschaft mit der Direktion für berufliche Migration Madagaskars."
+    },
+    "eventBadge": {
+      "date": "19. & 20. September 2025",
+      "location": "Hotel Carlton Antananarivo"
+    },
+    "title": "Karriereforum",
+    "country": "Madagaskar",
+    "year": "2025",
+    "typing": [
+      "Sie wählen aus.",
+      "Wir bereiten vor.",
+      "Sie gehen mit einem einsatzbereiten Mitarbeiter."
+    ],
+    "candidate": {
+      "title": "Bewerberregistrierung",
+      "description": "Finden Sie Ihren idealen Job"
+    },
+    "recruiter": {
+      "title": "Arbeitgeberregistrierung",
+      "description": "Finden Sie passende Talente"
+    },
+    "brochure": {
+      "title": "Broschüre herunterladen",
+      "description": "Vollständiger Veranstaltungsleitfaden"
+    }
   }
 }

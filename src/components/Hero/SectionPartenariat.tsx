@@ -1,7 +1,11 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 export default function SectionPartenariat() {
+  const t = useTranslations("hero.partnership");
+
   return (
     <section className="w-full mb-5 py-12 bg-white rounded-lg">
       <div className="container mx-auto px-4">
@@ -22,21 +26,16 @@ export default function SectionPartenariat() {
           {/* Contenu texte centré */}
           <div className="flex-1 max-w-2xl text-center">
             <div className="space-y-4">
-              {/* Premier paragraphe */}
-              <p className="text-xl   font-semibold text-gray-800 leading-relaxed">
-                Sous le haut parrainage du Ministère du Travail, de
-                l&apos;Emploi et de la Fonction Publique Madagascar.
+              <p className="text-xl font-semibold text-gray-800 leading-relaxed">
+                {t("ministrySupport")}
               </p>
 
-              {/* Séparateur (tiret) */}
               <div className="flex items-center justify-center">
                 <div className="w-16 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
               </div>
 
-              {/* Deuxième paragraphe */}
-              <p className="text-xl  font-semibold text-gray-800 leading-relaxed">
-                En partenariat avec la Direction de la Migration Professionnelle
-                Madagascar
+              <p className="text-xl font-semibold text-gray-800 leading-relaxed">
+                {t("partnership")}
               </p>
             </div>
           </div>

@@ -1,15 +1,17 @@
 "use client";
 /* eslint-disable */
 import React, { useEffect, useState } from "react";
-import { Menu, X, ChevronDown, LogIn, UserPlus, Globe } from "lucide-react";
+import { Menu, X, ChevronDown, LogIn } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSelector } from "react-redux";
 import { selectUser } from "@/redux/features/authSlice";
 import { FaUser } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 import LanguageSwitcher from "../LanguageSwitcher";
+
 export type NavItem = {
   name: string;
   href: string;
@@ -21,6 +23,7 @@ export type NavItem = {
 };
 
 const Navbar = () => {
+  const t = useTranslations("header.menu");
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -41,11 +44,11 @@ const Navbar = () => {
   }, []);
 
   const navItems: NavItem[] = [
-    { name: "Accueil", href: "/", hasDropdown: false },
-    { name: "À propos", href: "/about", hasDropdown: false },
-    { name: "Programme", href: "/program", hasDropdown: false },
-    { name: "Contact", href: "/contact", hasDropdown: false },
-    { name: "Pack & Tarifs", href: "/pack", hasDropdown: false },
+    { name: t("home"), href: "/", hasDropdown: false },
+    { name: t("about"), href: "/about", hasDropdown: false },
+    { name: t("program"), href: "/program", hasDropdown: false },
+    { name: t("contact"), href: "/contact", hasDropdown: false },
+    { name: t("pricing"), href: "/pack", hasDropdown: false },
   ];
 
   const pathname = usePathname();
@@ -60,7 +63,6 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
               src="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1748260405/carrefour-removebg-preview_pjn3yd.png"
@@ -118,34 +120,26 @@ const Navbar = () => {
             <LanguageSwitcher />
 
             {user ? (
-              <>
-                <Link
-                  href={isAdmin ? "/admin" : "/"}
-                  className="bg-green-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-green-800 transition duration-300 whitespace-nowrap cursor-pointer"
-                >
-                  <FaUser className="mr-1 inline-block" /> Mon Compte
-                </Link>
-              </>
+              <Link
+                href={isAdmin ? "/admin" : "/"}
+                className="bg-green-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-green-800 transition duration-300 whitespace-nowrap cursor-pointer"
+              >
+                <FaUser className="mr-1 inline-block" /> {t("account")}
+              </Link>
             ) : (
-              <>
-                <Link
-                  href={"/connexion"}
-                  className="ml-4 bg-gradient-to-r text-sm from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-                >
-                  <LogIn className="w-4 h-4" />
-                  Se connecter
-                </Link>
-              </>
+              <Link
+                href={"/connexion"}
+                className="ml-4 bg-gradient-to-r text-sm from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+              >
+                <LogIn className="w-4 h-4" />
+                {t("login")}
+              </Link>
             )}
           </div>
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center space-x-2">
-            {/* Mobile Language Selector */}
-            <div className="relative">
-              <LanguageSwitcher />
-            </div>
-
+            <LanguageSwitcher />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-md text-blue-900 hover:bg-blue-50 hover:text-orange-600 transition-colors duration-200"
@@ -211,24 +205,20 @@ const Navbar = () => {
             ))}
 
             {user ? (
-              <>
-                <Link
-                  href={isAdmin ? "/admin" : "/"}
-                  className="bg-green-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-green-800 transition duration-300 whitespace-nowrap cursor-pointer"
-                >
-                  <FaUser className="mr-1 inline-block" /> Mon Compte
-                </Link>
-              </>
+              <Link
+                href={isAdmin ? "/admin" : "/"}
+                className="bg-green-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-green-800 transition duration-300 whitespace-nowrap cursor-pointer"
+              >
+                <FaUser className="mr-1 inline-block" /> {t("account")}
+              </Link>
             ) : (
-              <>
-                <Link
-                  href={"/connexion"}
-                  className="ml-4 bg-gradient-to-r text-sm from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-                >
-                  <LogIn className="w-4 h-4" />
-                  Se connecter
-                </Link>
-              </>
+              <Link
+                href={"/connexion"}
+                className="ml-4 bg-gradient-to-r text-sm from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+              >
+                <LogIn className="w-4 h-4" />
+                {t("login")}
+              </Link>
             )}
           </div>
         </div>

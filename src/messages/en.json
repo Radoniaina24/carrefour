@@ -1,6 +1,43 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "header": {
+    "menu": {
+      "home": "Home",
+      "about": "About Us",
+      "program": "Program",
+      "contact": "Contact",
+      "pricing": "Plans & Pricing",
+      "account": "My Account",
+      "login": "Log In"
+    }
+  },
+  "hero": {
+    "partnership": {
+      "ministrySupport": "Under the high patronage of the Ministry of Labour, Employment and Public Service of Madagascar.",
+      "partnership": "In partnership with the Directorate of Professional Migration of Madagascar."
+    },
+    "eventBadge": {
+      "date": "19 & 20 September 2025",
+      "location": "Carlton Hotel Antananarivo"
+    },
+    "title": "Employment Fair",
+    "country": "Madagascar",
+    "year": "2025",
+    "typing": [
+      "You choose.",
+      "We prepare.",
+      "You leave with a ready-to-work collaborator."
+    ],
+    "candidate": {
+      "title": "Candidate Registration",
+      "description": "Find your ideal job"
+    },
+    "recruiter": {
+      "title": "Recruiter Registration",
+      "description": "Hire top talent"
+    },
+    "brochure": {
+      "title": "Download the Brochure",
+      "description": "Complete event guide"
+    }
   }
 }
