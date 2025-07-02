@@ -269,5 +269,134 @@
         "description": "Optimierter Prozess und umfassende Betreuung"
       }
     }
+  },
+  "program": {
+    "label": "Veranstaltungsprogramm",
+    "title": "Programm",
+    "highlight": "Detailliert",
+    "subtitle": "Entdecken Sie das vollständige Programm unserer zwei intensiven Rekrutierungstage",
+    "ctaTitle": "Sichern Sie sich Ihren Platz",
+    "ctaText": "Nehmen Sie an diesem außergewöhnlichen Recruiting-Event teil und bringen Sie Ihre Karriere auf das nächste Level",
+    "ctaCandidat": "Kandidatenregistrierung",
+    "ctaRecruteur": "Arbeitgeberregistrierung",
+    "days": [
+      {
+        "day": "Tag 1",
+        "date": "19. September 2025",
+        "events": [
+          {
+            "time": "08:00",
+            "title": "Empfang und Aufbau der Arbeitgeberstände",
+            "icon": "map"
+          },
+          { "time": "08:30", "title": "Offizielle Eröffnung", "icon": "star" },
+          {
+            "time": "09:00 - 10:30",
+            "title": "Rekrutierungssitzungen & Vorstellungsgespräche",
+            "icon": "users"
+          },
+          { "time": "10:30 - 10:45", "title": "Kaffeepause", "icon": "coffee" },
+          {
+            "time": "10:45 – 12:30",
+            "title": "Rekrutierungssitzungen & Vorstellungsgespräche (Fortsetzung)",
+            "icon": "users"
+          },
+          {
+            "time": "12:30 - 14:00",
+            "title": "Gourmet-Buffet im 5-Sterne-Hotel Carlton",
+            "icon": "star"
+          },
+          {
+            "time": "14:00 - 17:00",
+            "title": "Rekrutierungssitzungen & Vorstellungsgespräche (Fortsetzung)",
+            "icon": "users"
+          }
+        ]
+      },
+      {
+        "day": "Tag 2",
+        "date": "20. September 2025",
+        "events": [
+          {
+            "time": "08:30 - 10:00",
+            "title": "Rekrutierungssitzungen & Vorstellungsgespräche",
+            "icon": "users"
+          },
+          { "time": "10:00 - 10:15", "title": "Kaffeepause", "icon": "coffee" },
+          {
+            "time": "10:15 - 12:30",
+            "title": "Rekrutierungssitzungen & Vorstellungsgespräche (Fortsetzung)",
+            "icon": "users"
+          },
+          {
+            "time": "12:30 - 14:00",
+            "title": "Gourmet-Buffet im 5-Sterne-Hotel Carlton",
+            "icon": "star"
+          },
+          {
+            "time": "14:00 - 17:00",
+            "title": "Rekrutierungssitzungen & Vorstellungsgespräche (Fortsetzung)",
+            "icon": "users"
+          },
+          {
+            "time": "19:00",
+            "title": "VIP-Galaabend – Networking, künstlerische Darbietungen, Showcases, Aufführungen",
+            "icon": "star"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "validation": {
+      "required": "Dieses Feld ist erforderlich",
+      "invalidEmail": "Ungültige E-Mail-Adresse"
+    },
+    "form": {
+      "title": "Schreiben Sie uns",
+      "subtitle": "Füllen Sie das untenstehende Formular aus – wir melden uns schnellstmöglich bei Ihnen.",
+      "fields": {
+        "lastName": "Nachname",
+        "firstName": "Vorname",
+        "email": "E-Mail",
+        "address": "Adresse",
+        "message": "Nachricht"
+      },
+      "placeholders": {
+        "lastName": "Ihr Nachname",
+        "firstName": "Ihr Vorname",
+        "email": "ihre@email.com",
+        "address": "Ihre vollständige Adresse",
+        "message": "Schreiben Sie hier Ihre Nachricht..."
+      },
+      "submit": "Nachricht senden",
+      "submitting": "Wird gesendet...",
+      "sending": "Nachricht wird übermittelt...",
+      "success": "Nachricht erfolgreich gesendet!",
+      "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    },
+    "info": {
+      "title": "Kontaktinformationen",
+      "email": {
+        "title": "Geschäftliche E-Mail",
+        "address": "contact@carrefour-emploi.com",
+        "response": "Antwort innerhalb von 24 Stunden"
+      },
+      "phone": {
+        "title": "Telefon",
+        "numbers": "+261 37 07 777 07\n+230 5 488-4377",
+        "hours": "Mo - Fr: 08:00 - 17:00"
+      },
+      "schedule": {
+        "title": "Öffnungszeiten",
+        "days": "Montag - Freitag",
+        "time": "08:00 - 17:00"
+      },
+      "address": {
+        "title": "Adresse",
+        "street": "Nanisana",
+        "city": "Antananarivo, Madagaskar"
+      }
+    }
   }
 }

@@ -1,90 +1,49 @@
 "use client";
+
 import React from "react";
-import { Calendar, Clock, Users, Star, MapPin, Coffee } from "lucide-react";
-import Link from "next/link";
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Star,
+  Users,
+  Coffee,
+  LucideIcon,
+} from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+
+interface ProgramDay {
+  day: string;
+  date: string;
+  events: {
+    time: string;
+    title: string;
+    icon: keyof typeof iconMap;
+  }[];
+}
+
+// Mapping texte -> icônes
+const iconMap: Record<string, LucideIcon> = {
+  map: MapPin,
+  star: Star,
+  users: Users,
+  coffee: Coffee,
+};
 
 const ProgramSection = () => {
-  const programData = [
-    {
-      day: "Jour 1",
-      date: "19 Septembre 2025",
-      events: [
-        {
-          time: "08h00",
-          title: "Accueil et installation des recruteurs",
-          icon: MapPin,
-        },
-        {
-          time: "08h30",
-          title: "Ouverture officielle",
-          icon: Star,
-        },
-        {
-          time: "09h00 - 10h30",
-          title: "Séances de recrutement & entretiens",
-          icon: Users,
-        },
-        {
-          time: "10h30 - 10h45",
-          title: "Pause café",
-          icon: Coffee,
-        },
-        {
-          time: "10h45 – 12h30",
-          title: "Séances de recrutement & entretiens (suite)",
-          icon: Users,
-        },
-        {
-          time: "12h30 - 14h00",
-          title: "Déjeuner buffet gastronomique au Carlton, hôtel 5 étoiles",
-          icon: Star,
-        },
-        {
-          time: "14h00 - 17h00",
-          title: "Séances de recrutement & entretiens (suite)",
-          icon: Users,
-        },
-      ],
-    },
-    {
-      day: "Jour 2",
-      date: "20 Septembre 2025",
-      events: [
-        {
-          time: "08h30 - 10h00",
-          title: "Séances de recrutement & entretiens",
-          icon: Users,
-        },
-        {
-          time: "10h00 - 10h15",
-          title: "Pause café",
-          icon: Coffee,
-        },
-        {
-          time: "10h15 - 12h30",
-          title: "Séances de recrutement & entretiens (suite)",
-          icon: Users,
-        },
-        {
-          time: "12h30 - 14h00",
-          title: "Déjeuner buffet gastronomique au Carlton, hôtel 5 étoiles",
-          icon: Star,
-        },
-        {
-          time: "14h00 - 17h00",
-          title: "Séances de recrutement & entretiens (suite)",
-          icon: Users,
-        },
-        {
-          time: "19h00",
-          title:
-            "Soirée de gala VIP – networking, démonstrations artistiques, showcase, spectacle",
-          icon: Star,
-        },
-      ],
-    },
-  ];
+  const t = useTranslations("program");
+
+  const rawDays = t.raw("days") as ProgramDay[];
+
+  const programData = rawDays.map((day) => ({
+    ...day,
+    events: day.events.map((event) => ({
+      ...event,
+      icon: iconMap[event.icon] ?? Star,
+    })),
+  }));
 
   return (
     <motion.section
@@ -105,17 +64,16 @@ const ProgramSection = () => {
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
             <Calendar className="w-4 h-4" />
-            Programme de l&apos;événement
+            {t("label")}
           </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Programme{" "}
+            {t("title")}{" "}
             <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
-              Détaillé
+              {t("highlight")}
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Découvrez le programme complet de nos deux journées de recrutement
-            intensif
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -132,7 +90,7 @@ const ProgramSection = () => {
               viewport={{ once: true }}
               className="relative mb-16"
             >
-              {/* Day Header */}
+              {/* Day header */}
               <div className="flex justify-center mb-8">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
@@ -208,7 +166,6 @@ const ProgramSection = () => {
                         </div>
                       </div>
                     </div>
-                    {/* Timeline dot */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white border-4 border-blue-500 rounded-full z-10"></div>
                   </motion.div>
                 ))}
@@ -217,7 +174,7 @@ const ProgramSection = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -226,24 +183,23 @@ const ProgramSection = () => {
           className="bg-white rounded-2xl shadow-lg border border-gray-100 p-12 text-center mt-24"
         >
           <h3 className="text-3xl font-bold text-gray-900 mb-4">
-            Réservez votre place
+            {t("ctaTitle")}
           </h3>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Participez à cet événement de recrutement d&apos;exception et donnez
-            un nouvel élan à votre carrière
+            {t("ctaText")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/inscription/candidat"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg"
             >
-              Inscription candidat
+              {t("ctaCandidat")}
             </Link>
             <Link
               href="/inscription/recruteur"
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg"
             >
-              Inscription recruteur
+              {t("ctaRecruteur")}
             </Link>
           </div>
         </motion.div>

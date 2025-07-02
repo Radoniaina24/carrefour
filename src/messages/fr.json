@@ -270,5 +270,135 @@
         "description": "Processus optimisé et accompagnement complet"
       }
     }
+  },
+  "program": {
+    "label": "Programme de l'événement",
+    "title": "Programme",
+    "highlight": "Détaillé",
+    "subtitle": "Découvrez le programme complet de nos deux journées de recrutement intensif",
+    "ctaTitle": "Réservez votre place",
+    "ctaText": "Participez à cet événement de recrutement d'exception et donnez un nouvel élan à votre carrière",
+    "ctaCandidat": "Inscription candidat",
+    "ctaRecruteur": "Inscription recruteur",
+    "days": [
+      {
+        "day": "Jour 1",
+        "date": "19 Septembre 2025",
+        "events": [
+          {
+            "time": "08h00",
+            "title": "Accueil et installation des recruteurs",
+            "icon": "map"
+          },
+          { "time": "08h30", "title": "Ouverture officielle", "icon": "star" },
+          {
+            "time": "09h00 - 10h30",
+            "title": "Séances de recrutement & entretiens",
+            "icon": "users"
+          },
+          { "time": "10h30 - 10h45", "title": "Pause café", "icon": "coffee" },
+          {
+            "time": "10h45 – 12h30",
+            "title": "Séances de recrutement & entretiens (suite)",
+            "icon": "users"
+          },
+          {
+            "time": "12h30 - 14h00",
+            "title": "Déjeuner buffet gastronomique au Carlton, hôtel 5 étoiles",
+            "icon": "star"
+          },
+          {
+            "time": "14h00 - 17h00",
+            "title": "Séances de recrutement & entretiens (suite)",
+            "icon": "users"
+          }
+        ]
+      },
+      {
+        "day": "Jour 2",
+        "date": "20 Septembre 2025",
+        "events": [
+          {
+            "time": "08h30 - 10h00",
+            "title": "Séances de recrutement & entretiens",
+            "icon": "users"
+          },
+          { "time": "10h00 - 10h15", "title": "Pause café", "icon": "coffee" },
+          {
+            "time": "10h15 - 12h30",
+            "title": "Séances de recrutement & entretiens (suite)",
+            "icon": "users"
+          },
+          {
+            "time": "12h30 - 14h00",
+            "title": "Déjeuner buffet gastronomique au Carlton, hôtel 5 étoiles",
+            "icon": "star"
+          },
+          {
+            "time": "14h00 - 17h00",
+            "title": "Séances de recrutement & entretiens (suite)",
+            "icon": "users"
+          },
+          {
+            "time": "19h00",
+            "title": "Soirée de gala VIP – networking, démonstrations artistiques, showcase, spectacle",
+            "icon": "star"
+          }
+        ]
+      }
+    ]
+  },
+
+  "contact": {
+    "validation": {
+      "required": "Ce champ est requis",
+      "invalidEmail": "Email invalide"
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "subtitle": "Remplissez le formulaire ci-dessous et nous vous recontacterons rapidement.",
+      "fields": {
+        "lastName": "Nom",
+        "firstName": "Prénom",
+        "email": "Email",
+        "address": "Adresse",
+        "message": "Message"
+      },
+      "placeholders": {
+        "lastName": "Votre nom",
+        "firstName": "Votre prénom",
+        "email": "votre@email.com",
+        "address": "Votre adresse complète",
+        "message": "Écrivez votre message ici..."
+      },
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours...",
+      "sending": "Envoi du message...",
+      "success": "Message envoyé avec succès !",
+      "error": "Une erreur est survenue. Veuillez réessayer."
+    },
+    "info": {
+      "title": "Informations de contact",
+      "email": {
+        "title": "Email professionnel",
+        "address": "contact@carrefour-emploi.com",
+        "response": "Réponse sous 24h"
+      },
+      "phone": {
+        "title": "Téléphone",
+        "numbers": "+261 37 07 777 07\n+230 5 488-4377",
+        "hours": "Lun - Ven : 8h - 17h"
+      },
+      "schedule": {
+        "title": "Horaires d'ouverture",
+        "days": "Lundi - Vendredi",
+        "time": "08:00 - 17:00"
+      },
+      "address": {
+        "title": "Adresse",
+        "street": "Nanisana",
+        "city": "Antananarivo Madagascar"
+      }
+    }
   }
 }

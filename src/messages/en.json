@@ -269,5 +269,142 @@
         "description": "Optimized process and comprehensive support"
       }
     }
+  },
+  "program": {
+    "label": "Event Program",
+    "title": "Program",
+    "highlight": "Detailed",
+    "subtitle": "Discover the full agenda of our two days of intensive recruitment",
+    "ctaTitle": "Reserve your spot",
+    "ctaText": "Take part in this exceptional recruitment event and give your career a fresh boost",
+    "ctaCandidat": "Candidate Registration",
+    "ctaRecruteur": "Recruiter Registration",
+    "days": [
+      {
+        "day": "Day 1",
+        "date": "September 19, 2025",
+        "events": [
+          {
+            "time": "08:00",
+            "title": "Welcome and setup of recruiters",
+            "icon": "map"
+          },
+          { "time": "08:30", "title": "Official Opening", "icon": "star" },
+          {
+            "time": "09:00 - 10:30",
+            "title": "Recruitment sessions & interviews",
+            "icon": "users"
+          },
+          {
+            "time": "10:30 - 10:45",
+            "title": "Coffee break",
+            "icon": "coffee"
+          },
+          {
+            "time": "10:45 – 12:30",
+            "title": "Recruitment sessions & interviews (continued)",
+            "icon": "users"
+          },
+          {
+            "time": "12:30 - 14:00",
+            "title": "Gourmet buffet lunch at the 5-star Carlton Hotel",
+            "icon": "star"
+          },
+          {
+            "time": "14:00 - 17:00",
+            "title": "Recruitment sessions & interviews (continued)",
+            "icon": "users"
+          }
+        ]
+      },
+      {
+        "day": "Day 2",
+        "date": "September 20, 2025",
+        "events": [
+          {
+            "time": "08:30 - 10:00",
+            "title": "Recruitment sessions & interviews",
+            "icon": "users"
+          },
+          {
+            "time": "10:00 - 10:15",
+            "title": "Coffee break",
+            "icon": "coffee"
+          },
+          {
+            "time": "10:15 - 12:30",
+            "title": "Recruitment sessions & interviews (continued)",
+            "icon": "users"
+          },
+          {
+            "time": "12:30 - 14:00",
+            "title": "Gourmet buffet lunch at the 5-star Carlton Hotel",
+            "icon": "star"
+          },
+          {
+            "time": "14:00 - 17:00",
+            "title": "Recruitment sessions & interviews (continued)",
+            "icon": "users"
+          },
+          {
+            "time": "19:00",
+            "title": "VIP Gala Evening – networking, artistic showcases, performances",
+            "icon": "star"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "validation": {
+      "required": "This field is required",
+      "invalidEmail": "Invalid email"
+    },
+    "form": {
+      "title": "Send us a message",
+      "subtitle": "Fill out the form below and we'll get back to you quickly.",
+      "fields": {
+        "lastName": "Last Name",
+        "firstName": "First Name",
+        "email": "Email",
+        "address": "Address",
+        "message": "Message"
+      },
+      "placeholders": {
+        "lastName": "Your last name",
+        "firstName": "Your first name",
+        "email": "your@email.com",
+        "address": "Your complete address",
+        "message": "Write your message here..."
+      },
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "sending": "Sending message...",
+      "success": "Message sent successfully!",
+      "error": "An error occurred. Please try again."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": {
+        "title": "Professional Email",
+        "address": "contact@carrefour-emploi.com",
+        "response": "Response within 24h"
+      },
+      "phone": {
+        "title": "Phone",
+        "numbers": "+261 37 07 777 07\n+230 5 488-4377",
+        "hours": "Mon - Fri: 8am - 5pm"
+      },
+      "schedule": {
+        "title": "Opening Hours",
+        "days": "Monday - Friday",
+        "time": "08:00 - 17:00"
+      },
+      "address": {
+        "title": "Address",
+        "street": "Nanisana",
+        "city": "Antananarivo Madagascar"
+      }
+    }
   }
 }

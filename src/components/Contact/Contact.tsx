@@ -16,16 +16,22 @@ import { FormValues, InputField } from "../Form/InputField";
 import * as Yup from "yup";
 import { TextAreaField } from "../Form/TextAreaField";
 import toast, { Toaster } from "react-hot-toast";
-
-const validationSchema = Yup.object({
-  lastName: Yup.string().required("Ce champ est requis"),
-  firstName: Yup.string().required("Ce champ est requis"),
-  adresse: Yup.string().required("Ce champ est requis"),
-  email: Yup.string().email("Email invalide").required("Ce champ est requis"),
-  message: Yup.string().required("Ce champ est requis"),
-});
+import { useTranslations } from "next-intl";
 
 const Contact = () => {
+  const t = useTranslations("contact");
+
+  // Schéma de validation avec traductions
+  const validationSchema = Yup.object({
+    lastName: Yup.string().required(t("validation.required")),
+    firstName: Yup.string().required(t("validation.required")),
+    adresse: Yup.string().required(t("validation.required")),
+    email: Yup.string()
+      .email(t("validation.invalidEmail"))
+      .required(t("validation.required")),
+    message: Yup.string().required(t("validation.required")),
+  });
+
   const formik = useFormik<FormValues>({
     initialValues: {
       lastName: "",
@@ -36,7 +42,7 @@ const Contact = () => {
     },
     validationSchema,
     onSubmit: async (values, { resetForm, setSubmitting }) => {
-      const toastId = toast.loading("Envoi du message...");
+      const toastId = toast.loading(t("form.sending"));
       try {
         const fullname = values.lastName + " " + values.firstName;
         const response = await fetch("/api/contact", {
@@ -50,21 +56,19 @@ const Contact = () => {
           }),
         });
 
-        if (!response.ok) throw new Error("Erreur serveur");
+        if (!response.ok) throw new Error("Server error");
 
-        toast.success("Message envoyé avec succès !", { id: toastId });
+        toast.success(t("form.success"), { id: toastId });
         resetForm();
       } catch (error) {
         console.log(error);
-        toast.error("Une erreur est survenue. Veuillez réessayer.", {
-          id: toastId,
-        });
+        toast.error(t("form.error"), { id: toastId });
       } finally {
         setSubmitting(false);
       }
     },
   });
-
+  console.log(formik.values);
   return (
     <div className="min-h-screen py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-orange-50 relative overflow-hidden">
       {/* Background decorative elements */}
@@ -84,12 +88,9 @@ const Contact = () => {
               <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/50 p-8 sm:p-10">
                 <div className="mb-8">
                   <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-2">
-                    Envoyez-nous un message
+                    {t("form.title")}
                   </h2>
-                  <p className="text-slate-600">
-                    Remplissez le formulaire ci-dessous et nous vous
-                    recontacterons rapidement.
-                  </p>
+                  <p className="text-slate-600">{t("form.subtitle")}</p>
                 </div>
                 <form onSubmit={formik.handleSubmit} autoComplete="off">
                   <div className="space-y-6">
@@ -97,16 +98,16 @@ const Contact = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <InputField
                         name="lastName"
-                        label="Nom"
+                        label={t("form.fields.lastName")}
                         icon={User}
-                        placeholder="Votre nom"
+                        placeholder={t("form.placeholders.lastName")}
                         formik={formik}
                       />
                       <InputField
                         name="firstName"
-                        label="Prénom"
+                        label={t("form.fields.firstName")}
                         icon={User}
-                        placeholder="Votre prénom"
+                        placeholder={t("form.placeholders.firstName")}
                         formik={formik}
                       />
                     </div>
@@ -115,17 +116,17 @@ const Contact = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <InputField
                         name="email"
-                        label="Email"
+                        label={t("form.fields.email")}
                         type="email"
                         icon={Mail}
-                        placeholder="votre@email.com"
+                        placeholder={t("form.placeholders.email")}
                         formik={formik}
                       />
                       <InputField
                         name="adresse"
-                        label="Adresse"
+                        label={t("form.fields.address")}
                         icon={MapPin}
-                        placeholder="Votre adresse complète"
+                        placeholder={t("form.placeholders.address")}
                         formik={formik}
                       />
                     </div>
@@ -133,8 +134,8 @@ const Contact = () => {
                     {/* Message Field */}
                     <TextAreaField
                       name="message"
-                      label="Message"
-                      placeholder="Écrivez votre message ici..."
+                      label={t("form.fields.message")}
+                      placeholder={t("form.placeholders.message")}
                       icon={MessageCircle}
                       formik={formik}
                     />
@@ -152,12 +153,12 @@ const Contact = () => {
                       {formik.isSubmitting ? (
                         <>
                           <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                          <span>Envoi en cours...</span>
+                          <span>{t("form.submitting")}</span>
                         </>
                       ) : (
                         <>
                           <Send className="h-5 w-5" />
-                          <span>Envoyer le message</span>
+                          <span>{t("form.submit")}</span>
                         </>
                       )}
                     </button>
@@ -170,7 +171,7 @@ const Contact = () => {
             <div className="lg:col-span-1">
               <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/50 p-8 h-fit sticky top-8">
                 <h3 className="text-2xl font-bold text-slate-800 mb-8">
-                  Informations de contact
+                  {t("info.title")}
                 </h3>
 
                 <div className="space-y-6">
@@ -180,13 +181,13 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-800">
-                        Email professionnel
+                        {t("info.email.title")}
                       </h4>
                       <p className="text-slate-600 text-sm mt-1">
-                        contact@carrefour-emploi.com
+                        {t("info.email.address")}
                       </p>
                       <p className="text-slate-500 text-xs mt-1">
-                        Réponse sous 24h
+                        {t("info.email.response")}
                       </p>
                     </div>
                   </div>
@@ -197,14 +198,13 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-800">
-                        Téléphone
+                        {t("info.phone.title")}
                       </h4>
                       <p className="text-slate-600 text-sm mt-1">
-                        +261 37 07 777 07
-                        <br /> +230 5 488-4377
+                        {t("info.phone.numbers")}
                       </p>
                       <p className="text-slate-500 text-xs mt-1">
-                        Lun - Ven : 8h - 17h
+                        {t("info.phone.hours")}
                       </p>
                     </div>
                   </div>
@@ -215,13 +215,13 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-800">
-                        Horaires d&apos;ouverture
+                        {t("info.schedule.title")}
                       </h4>
                       <p className="text-slate-600 text-sm mt-1">
-                        Lundi - Vendredi
+                        {t("info.schedule.days")}
                       </p>
                       <p className="text-slate-500 text-xs mt-1">
-                        08:00 - 17:00
+                        {t("info.schedule.time")}
                       </p>
                     </div>
                   </div>
@@ -231,10 +231,14 @@ const Contact = () => {
                       <Building2 className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-800">Adresse</h4>
-                      <p className="text-slate-600 text-sm mt-1">Nanisana</p>
+                      <h4 className="font-semibold text-slate-800">
+                        {t("info.address.title")}
+                      </h4>
+                      <p className="text-slate-600 text-sm mt-1">
+                        {t("info.address.street")}
+                      </p>
                       <p className="text-slate-500 text-xs mt-1">
-                        Antananarivo Madagascar
+                        {t("info.address.city")}
                       </p>
                     </div>
                   </div>
