@@ -39,5 +39,22 @@
       "title": "Télécharger la brochure",
       "description": "Guide complet de l'événement"
     }
+  },
+  "heroTest": {
+    "hotelTitle": "Hôtel Carlton Antananarivo",
+    "hotelAddress": "Anosy, Antananarivo, Madagascar",
+    "highlight": "Un événement d’envergure dans un cadre 5 étoiles",
+    "description1": "Le Carrefour de l'Emploi – Madagascar 2025 se tiendra au prestigieux Carlton Madagascar, un hôtel 5 étoiles emblématique situé au cœur du centre-ville d'Antananarivo.",
+    "description2": "Bénéficiant d’un emplacement stratégique, en plein cœur du quartier des affaires et en bordure du lac Anosy, le Carlton offre un cadre exceptionnel, alliant luxe, accessibilité et professionnalisme.",
+    "description3": "Ce lieu de référence pour les grands événements accueille régulièrement des rendez-vous internationaux, diplomatiques et économiques de haut niveau.",
+    "mainTitle": "Carrefour de l'Emploi – Madagascar 2025",
+    "mainDescription": "est un dispositif de recrutement direct, à portée nationale et internationale, conçu pour connecter des entreprises, malgaches et étrangères, en quête de main-d'œuvre fiable avec des talents malgaches qualifiés. Ces talents sont identifiés, renforcés et accompagnés jusqu'à leur intégration durable au sein des organisations partenaires.",
+    "organizedBy": "Organisé par",
+    "knowGroup": "Connaître le groupe",
+    "eventDays": "Jours d’événement",
+    "turnkey": "Clé en main",
+    "directConnection": "Connexion Directe",
+    "talentRecruiters": "Talents × Recruteurs",
+    "internationalEvent": "Événement International"
   }
 }

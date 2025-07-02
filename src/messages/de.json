@@ -39,5 +39,22 @@
       "title": "Broschüre herunterladen",
       "description": "Vollständiger Veranstaltungsleitfaden"
     }
+  },
+  "heroTest": {
+    "hotelTitle": "Hotel Carlton Antananarivo",
+    "hotelAddress": "Anosy, Antananarivo, Madagaskar",
+    "highlight": "Eine Großveranstaltung in einem 5-Sterne-Ambiente",
+    "description1": "Das Karriereforum – Madagaskar 2025 findet im prestigeträchtigen Carlton Madagaskar statt, einem ikonischen 5-Sterne-Hotel im Herzen der Innenstadt von Antananarivo.",
+    "description2": "Mit seiner strategischen Lage im Geschäftsviertel direkt am Anosy-See bietet das Carlton einen außergewöhnlichen Rahmen, der Luxus, Zugänglichkeit und Professionalität vereint.",
+    "description3": "Dieser renommierte Veranstaltungsort beherbergt regelmäßig internationale, diplomatische und wirtschaftliche Großveranstaltungen auf höchstem Niveau.",
+    "mainTitle": "Karriereforum – Madagaskar 2025",
+    "mainDescription": "ist ein Direktrekrutierungsprogramm mit nationaler und internationaler Reichweite, das darauf abzielt, madagassische und internationale Unternehmen auf der Suche nach zuverlässigen Arbeitskräften mit qualifizierten madagassischen Talenten zu vernetzen. Diese Talente werden identifiziert, gestärkt und bis zu ihrer erfolgreichen Integration in die Partnerorganisationen begleitet.",
+    "organizedBy": "Veranstaltet von",
+    "knowGroup": "Über die Gruppe",
+    "eventDays": "Veranstaltungstage",
+    "turnkey": "Schlüsselfertig",
+    "directConnection": "Direkte Verbindung",
+    "talentRecruiters": "Talente × Arbeitgeber",
+    "internationalEvent": "Internationale Veranstaltung"
   }
 }

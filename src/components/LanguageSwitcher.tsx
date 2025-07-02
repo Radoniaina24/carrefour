@@ -1,12 +1,17 @@
 "use client";
 
-import { Language } from "@/context/LanguageContext";
-import { Link } from "@/i18n/navigation"; // Assure-toi que c'est bien `next-intl`
 import { ChevronDown, Globe } from "lucide-react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 import React, { useState } from "react";
+
+export type Language = {
+  code: "fr" | "en" | "de";
+  name: string;
+  countryCode: string;
+  flag?: string;
+};
 
 const LANGUAGES: Language[] = [
   { code: "fr", name: "Français", countryCode: "fr" },
@@ -16,18 +21,23 @@ const LANGUAGES: Language[] = [
 
 export default function LanguageSwitcher() {
   const pathname = usePathname();
+  const router = useRouter();
   const locale = useLocale();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   const currentLanguage =
     LANGUAGES.find((l) => l.code === locale) || LANGUAGES[0];
+
+  const LOCALES = ["fr", "en", "de"] as const;
+  type Locale = (typeof LOCALES)[number]; // "fr" | "en" | "de"
 
   const getPathWithoutLocale = () => {
     const segments = pathname.split("/");
 
-    // Si le premier segment est une locale, on la retire
-    const locales = ["fr", "en", "de"];
-    if (locales.includes(segments[1])) {
-      segments.splice(1, 1); // remove the locale
+    const maybeLocale = segments[1] as string;
+
+    if (LOCALES.includes(maybeLocale as Locale)) {
+      segments.splice(1, 1);
     }
 
     return segments.join("/") || "/";
@@ -41,7 +51,7 @@ export default function LanguageSwitcher() {
 
   return (
     <div className="relative">
-      {/* Bouton du switcher */}
+      {/* Bouton principal */}
       <button
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         className={buttonStyle}
@@ -75,18 +85,24 @@ export default function LanguageSwitcher() {
             </div>
           </div>
           {LANGUAGES.map((lang) => (
-            <Link
-              locale={lang.code}
-              href={getPathWithoutLocale()}
+            <button
               key={lang.code}
-              onClick={() => setIsDropdownOpen(false)}
+              onClick={() => {
+                setIsDropdownOpen(false);
+                const cleanPath = getPathWithoutLocale();
+                router.replace(`/${lang.code}${cleanPath}`, {
+                  scroll: false,
+                });
+              }}
               className={`w-full flex items-center space-x-3 px-4 py-3 text-left transition-colors duration-200 hover:bg-blue-50 ${
                 lang.code === currentLanguage.code
                   ? "bg-blue-50 text-blue-700 border-r-2 border-blue-500"
                   : "text-gray-700"
               }`}
             >
-              <img
+              <Image
+                width={10}
+                height={10}
                 src={`https://flagcdn.com/w40/${lang.countryCode}.png`}
                 alt={lang.name}
                 className="w-6 h-4 object-cover rounded-sm shadow-sm"
@@ -100,7 +116,7 @@ export default function LanguageSwitcher() {
               {lang.code === currentLanguage.code && (
                 <div className="w-2 h-2 bg-blue-500 rounded-full" />
               )}
-            </Link>
+            </button>
           ))}
         </div>
       )}
