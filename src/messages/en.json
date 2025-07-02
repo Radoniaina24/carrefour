@@ -135,5 +135,139 @@
     ],
     "cta": "Visit GateOfAfrica.com",
     "caption": "Your trusted source for news about Africa"
+  },
+  "about": {
+    "sectionHeader": {
+      "badge": "International Event",
+      "title1": "About",
+      "title2": "the Event"
+    },
+    "heading": "Employment Forum 2025",
+    "intro": {
+      "paragraph": "A <strong>direct recruitment platform</strong> designed to help international companies efficiently select, train, and hire <highlight>qualified Malagasy talent</highlight>.",
+      "tagline": "Comprehensive and innovative solution"
+    },
+    "support": {
+      "title": "Our complete support",
+      "paragraph": "Our teams support the entire process: selection, fast-track training, administrative assistance, and follow-up through final integration."
+    },
+    "process": {
+      "title": "4-Step Process",
+      "steps": [
+        {
+          "title": "Selection",
+          "description": "Identification and assessment of top Malagasy talent"
+        },
+        {
+          "title": "Training",
+          "description": "Accelerated and personalized training program"
+        },
+        {
+          "title": "Administrative Support",
+          "description": "Full management of administrative procedures"
+        },
+        {
+          "title": "Final Integration",
+          "description": "Tailored follow-up until successful integration"
+        }
+      ]
+    },
+    "sectors": {
+      "title": "Our pool of <span>talents</span>",
+      "btp": {
+        "title": "Construction, Building & Maintenance",
+        "description": "Bricklayers, electricians, plumbers, HVAC technicians, welders, carpenters, machine operators, site supervisors, etc."
+      },
+      "tourism": {
+        "title": "Tourism, Hospitality, Catering & Leisure",
+        "description": "Receptionists, waiters, cooks, pizzaiolos, pastry chefs, bartenders, housekeeping staff, tour animators, spa therapists, etc."
+      },
+      "transport": {
+        "title": "Transport & Logistics",
+        "description": "Truck drivers (HGV), delivery personnel, forklift operators, warehouse clerks, logistics planners, customs and freight agents, etc."
+      },
+      "health": {
+        "title": "Healthcare, Social Care & Personal Services",
+        "description": "Doctors, nurses, nursing assistants, midwives, ambulance drivers, stretcher-bearers, medical secretaries, hospital cleaning staff, etc."
+      },
+      "admin": {
+        "title": "Administration, Accounting & Management",
+        "description": "Managers, financial officers, auditors, administrative assistants, accountants, HR officers, inventory managers, secretaries, data entry clerks, invoicing clerks, etc."
+      },
+      "support": {
+        "title": "Customer Service, Support & Call Centers",
+        "description": "Customer service agents (FR/EN), back-office advisors, IT support technicians, intercultural mediators, customer communication trainers, etc."
+      },
+      "it": {
+        "title": "IT, Digital & Technology",
+        "description": "Web and mobile developers, network & systems technicians, data analysts, cybersecurity experts, cloud administrators, AI engineers, etc."
+      },
+      "events": {
+        "title": "Events, Audiovisual & Creative Arts",
+        "description": "Lighting, sound and video technicians, stage managers, event decorators, DJs, musicians, entertainers, photographers, videographers, etc."
+      }
+    },
+    "programs": [
+      {
+        "title": "Professional Mobility – Germany",
+        "items": [
+          "Au Pair (language stay with host family)",
+          "Volunteering FSJ / BFD (social, health, education sectors, etc.)",
+          "Ausbildung (dual vocational training: healthcare, construction, IT, hospitality, logistics, etc.)",
+          "Internships & Higher Education (internships, university studies)",
+          "Direct recruitment & diploma recognition (nurses, IT, technical fields, etc.)",
+          "Shortage occupations (care, digital, maintenance, logistics, food service, etc.)"
+        ]
+      },
+      {
+        "title": "Various and specialized profiles based on market demand",
+        "items": [
+          "Real estate agents",
+          "Security agents & dog handlers",
+          "Industrial cleaning agents",
+          "Pest control and hygiene agents",
+          "Green space maintenance workers",
+          "Veterinary assistants and animal care workers",
+          "Environmental technicians and waste management specialists",
+          "Administrative officers for local governments and public services",
+          "Language teachers and linguistic trainers",
+          "Professional interpreters (FR, EN, DE, AR, etc.)"
+        ]
+      }
+    ],
+    "live": {
+      "cards": [
+        {
+          "title": "Live Casting – Gala Evening on August 23",
+          "description": "A live casting session will be held during the gala evening on August 23 for recruiters interested in professional artists, entertainers, and musicians."
+        },
+        {
+          "title": "Live Musical Performances",
+          "description": "Live demonstrations by professional musicians: jazz, classical, pop, and world music. A unique opportunity for recruiters to discover authentic musical talents in an intimate setting."
+        },
+        {
+          "title": "DJ & Music Production Showcase",
+          "description": "Live presentations by professional DJs and music producers. Real-time mixing, beat creation, and sound design for events, weddings, and corporate parties."
+        },
+        {
+          "title": "Bands & Musical Ensembles",
+          "description": "Presentation of full groups: orchestras, bands, acoustic duos, and specialized ensembles. Live demos tailored to the specific needs of attending recruiters."
+        }
+      ]
+    },
+    "features": {
+      "international": {
+        "title": "International",
+        "description": "Direct connection with foreign companies"
+      },
+      "talents": {
+        "title": "Talents",
+        "description": "Selection of the best Malagasy profiles"
+      },
+      "efficient": {
+        "title": "Efficient",
+        "description": "Optimized process and comprehensive support"
+      }
+    }
   }
 }

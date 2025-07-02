@@ -58,34 +58,6 @@ const HeroSection = () => {
       {/* Overlay avec dégradé amélioré */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/40 to-black/60 z-0"></div>
 
-      {/* Éléments décoratifs flottants */}
-      <div className="absolute inset-0 overflow-hidden z-10">
-        <motion.div
-          className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl"
-          animate={{
-            x: [0, 30, 0],
-            y: [0, -20, 0],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-40 right-20 w-32 h-32 bg-orange-500/15 rounded-full blur-2xl"
-          animate={{
-            x: [0, -25, 0],
-            y: [0, 15, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      </div>
-
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <SectionPartenariat />
         <div className="grid lg:grid-cols-2 gap-12 items-center">

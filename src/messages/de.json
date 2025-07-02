@@ -12,86 +12,86 @@
   },
   "hero": {
     "partnership": {
-      "ministrySupport": "Unter der Schirmherrschaft des Ministeriums für Arbeit, Beschäftigung und öffentlichen Dienst von Madagaskar.",
-      "partnership": "In Partnerschaft mit der Direktion für berufliche Migration Madagaskars."
+      "ministrySupport": "Unter der Schirmherrschaft des Ministeriums für Arbeit, Beschäftigung und öffentlichen Dienst Madagaskar.",
+      "partnership": "In Partnerschaft mit der Direktion für Berufliche Migration Madagaskar"
     },
     "eventBadge": {
       "date": "19. & 20. September 2025",
       "location": "Hotel Carlton Antananarivo"
     },
-    "title": "Karriereforum",
+    "title": "Carrefour de l’Emploi",
     "country": "Madagaskar",
     "year": "2025",
     "typing": [
-      "Sie wählen aus.",
+      "Sie wählen.",
       "Wir bereiten vor.",
-      "Sie gehen mit einem einsatzbereiten Mitarbeiter."
+      "Sie erhalten einen einsatzbereiten Mitarbeiter."
     ],
     "candidate": {
-      "title": "Bewerberregistrierung",
+      "title": "Kandidatenregistrierung",
       "description": "Finden Sie Ihren idealen Job"
     },
     "recruiter": {
-      "title": "Arbeitgeberregistrierung",
-      "description": "Finden Sie passende Talente"
+      "title": "Registrierung für Arbeitgeber",
+      "description": "Rekrutieren Sie Ihre Talente"
     },
     "brochure": {
       "title": "Broschüre herunterladen",
-      "description": "Vollständiger Veranstaltungsleitfaden"
+      "description": "Umfassender Leitfaden zur Veranstaltung"
     }
   },
   "heroTest": {
     "hotelTitle": "Hotel Carlton Antananarivo",
     "hotelAddress": "Anosy, Antananarivo, Madagaskar",
-    "highlight": "Eine Großveranstaltung in einem 5-Sterne-Ambiente",
-    "description1": "Das Karriereforum – Madagaskar 2025 findet im prestigeträchtigen Carlton Madagaskar statt, einem ikonischen 5-Sterne-Hotel im Herzen der Innenstadt von Antananarivo.",
-    "description2": "Mit seiner strategischen Lage im Geschäftsviertel direkt am Anosy-See bietet das Carlton einen außergewöhnlichen Rahmen, der Luxus, Zugänglichkeit und Professionalität vereint.",
-    "description3": "Dieser renommierte Veranstaltungsort beherbergt regelmäßig internationale, diplomatische und wirtschaftliche Großveranstaltungen auf höchstem Niveau.",
-    "mainTitle": "Karriereforum – Madagaskar 2025",
-    "mainDescription": "ist ein Direktrekrutierungsprogramm mit nationaler und internationaler Reichweite, das darauf abzielt, madagassische und internationale Unternehmen auf der Suche nach zuverlässigen Arbeitskräften mit qualifizierten madagassischen Talenten zu vernetzen. Diese Talente werden identifiziert, gestärkt und bis zu ihrer erfolgreichen Integration in die Partnerorganisationen begleitet.",
-    "organizedBy": "Veranstaltet von",
-    "knowGroup": "Über die Gruppe",
+    "highlight": "Eine Großveranstaltung in 5‑Sterne‑Umgebung",
+    "description1": "Das Carrefour de l’Emploi – Madagaskar 2025 findet im prestigeträchtigen Carlton Madagaskar statt, einem historischen 5‑Sterne‑Hotel im Herzen der Innenstadt von Antananarivo.",
+    "description2": "Mit strategischer Lage im Geschäftsviertel und am Ufer des Lac Anosy bietet das Carlton eine außergewöhnliche Kombination aus Luxus, Zugänglichkeit und Professionalität.",
+    "description3": "Dieser Veranstaltungshauptort beherbergt regelmäßig internationale, diplomatische und wirtschaftliche Großveranstaltungen auf höchstem Niveau.",
+    "mainTitle": "Carrefour de l’Emploi – Madagaskar 2025",
+    "mainDescription": "ist ein nationales und internationales Direktrekrutierungsformat, das Unternehmen—lokale und ausländische—mit zuverlässiger Arbeitskraftversorgung und qualifizierten madagassischen Talenten verbindet. Diese Talente werden identifiziert, gestärkt und bis zu ihrer langfristigen Integration in die Partnerorganisationen begleitet.",
+    "organizedBy": "Organisiert von",
+    "knowGroup": "Die Gruppe kennenlernen",
     "eventDays": "Veranstaltungstage",
     "turnkey": "Schlüsselfertig",
-    "directConnection": "Direkte Verbindung",
+    "directConnection": "Direktverbindung",
     "talentRecruiters": "Talente × Arbeitgeber",
     "internationalEvent": "Internationale Veranstaltung"
   },
   "unique": {
     "badge": "Exzellenz",
     "title": "Was uns",
-    "highlight": "EINZIGARTIG MACHT",
+    "highlight": "EINZIGARTIG macht",
     "features": [
       {
-        "title": "Sie wählen die Profile aus",
-        "description": "Wählen Sie Kandidaten, die perfekt zu Ihren Kriterien und Ihrer Unternehmenskultur passen.",
-        "highlight": "Individuelle Auswahl"
+        "title": "Sie wählen die Profile",
+        "description": "Wählen Sie die Kandidaten aus, die perfekt zu Ihren Kriterien und Ihrer Unternehmenskultur passen.",
+        "highlight": "Personalisierte Auswahl"
       },
       {
         "title": "Wir bilden sie aus und bereiten sie vor",
-        "description": "Maßgeschneiderte Schulung nach Ihren spezifischen Anforderungen für eine erfolgreiche Integration.",
-        "highlight": "Maßgeschneiderte Ausbildung"
+        "description": "Individuell zugeschnittene Ausbildung gemäß Ihren spezifischen Anforderungen für eine erfolgreiche Integration.",
+        "highlight": "Maßgeschneiderte Schulung"
       },
       {
-        "title": "Einsatzbereite Mitarbeiter",
-        "description": "Ihre neuen Talente sind sofort einsatzfähig und hochmotiviert.",
+        "title": "Einsatzbereite Fachkräfte",
+        "description": "Ihre neuen Talente kommen einsatzfähig und motiviert, um sofort einen Beitrag zu leisten.",
         "highlight": "Garantierte Leistung"
       },
       {
-        "title": "Lebensläufe nach Maß",
-        "description": "Zufriedenheit garantiert – mit Profilen, die exakt auf Ihre Anforderungen zugeschnitten sind.",
+        "title": "Lebensläufe nach Bedarf garantiert",
+        "description": "Zufriedenheit garantiert mit Profilen, die Ihren speziellen Anforderungen entsprechen.",
         "highlight": "100 % Zufriedenheit"
       }
     ],
     "cta": {
-      "title": "Bereit, Ihre Personalgewinnung zu verändern?",
-      "description": "Entdecken Sie, wie unser einzigartiger Ansatz Ihr Team revolutionieren kann",
+      "title": "Bereit, Ihre Rekrutierung zu transformieren?",
+      "description": "Erfahren Sie, wie unser einzigartiger Ansatz Ihr Team revolutionieren kann",
       "button": "Jetzt starten"
     }
   },
   "targetCountries": {
     "badge": "Internationale Präsenz",
-    "title": "Unsere vorrangigen Zielländer",
+    "title": "Unsere prioritären Zielländer",
     "regions": {
       "ocean": "Indischer Ozean",
       "international": "International",
@@ -107,14 +107,14 @@
       "be": "Belgien"
     },
     "subtitle": {
-      "mg": "lokale Unternehmen & Niederlassungen"
+      "mg": "lokale Unternehmen & Tochtergesellschaften"
     }
   },
   "countdown": {
     "title": "Countdown",
     "targetDate": "19. September 2025",
     "location": "Madagaskar",
-    "expiredTitle": "🎉 Der große Tag ist da!",
+    "expiredTitle": "🎉 Heutiger Tag erreicht!",
     "expiredMessage": "Der 19. September 2025 ist endlich da!",
     "units": {
       "days": "Tage",
@@ -124,16 +124,150 @@
     }
   },
   "magazine": {
-    "sectionTitle": "Verfolgen Sie Afrikas Entwicklung in Echtzeit",
-    "tagline": "GATE OF AFRICA MAGAZINE",
-    "headline": "Afrika live – Informationen, die Sie voranbringen.",
-    "description": "Entdecken Sie die wirtschaftlichen, politischen und gesellschaftlichen Nachrichten des afrikanischen Kontinents mit dem führenden Online-Medium der Gate Africa Group.",
+    "sectionTitle": "Verfolgen Sie in Echtzeit Afrikas Entwicklung",
+    "tagline": "GATE OF AFRICA MAGAZIN",
+    "headline": "Afrika live, Nachrichten die bewegen.",
+    "description": "Entdecken Sie die wirtschaftlichen, politischen und sozialen Entwicklungen des afrikanischen Kontinents mit dem führenden Online‑Medium der Gate Africa‑Gruppe.",
     "highlights": [
-      "Von Millionen Menschen verfolgt",
+      "Verfolgt von Millionen",
       "Panafrikanische Berichterstattung",
-      "Aktuelle Nachrichten in Echtzeit"
+      "Aktuelle News in Echtzeit"
     ],
     "cta": "Besuchen Sie GateOfAfrica.com",
-    "caption": "Ihre zuverlässige Informationsquelle über Afrika"
+    "caption": "Ihre führende Informationsquelle zu Afrika"
+  },
+  "about": {
+    "sectionHeader": {
+      "badge": "Internationale Veranstaltung",
+      "title1": "Über",
+      "title2": "die Veranstaltung"
+    },
+    "heading": "Carrefour de l’Emploi 2025",
+    "intro": {
+      "paragraph": "Eine <strong>Direktrekrutierungsplattform</strong>, die internationalen Unternehmen ermöglicht, <highlight>qualifizierte madagassische Talente</highlight> effizient auszuwählen, auszubilden und einzustellen.",
+      "tagline": "Umfassende und innovative Lösung"
+    },
+    "support": {
+      "title": "Unsere umfassende Begleitung",
+      "paragraph": "Unsere Teams begleiten den gesamten Prozess: Auswahl, beschleunigte Schulung, administrative Unterstützung und Betreuung bis zur endgültigen Integration."
+    },
+    "process": {
+      "title": "4‑Schritte‑Prozess",
+      "steps": [
+        {
+          "title": "Auswahl",
+          "description": "Identifizierung und Bewertung der besten madagassischen Talente"
+        },
+        {
+          "title": "Schulung",
+          "description": "Beschleunigtes und personalisiertes Ausbildungsprogramm"
+        },
+        {
+          "title": "Administrative Unterstützung",
+          "description": "Vollständige Abwicklung der administrativen Verfahren"
+        },
+        {
+          "title": "Endgültige Integration",
+          "description": "Individuelle Begleitung bis zur erfolgreichen Integration"
+        }
+      ]
+    },
+    "sectors": {
+      "title": "Unser Pool an <span>Talenten</span>",
+      "btp": {
+        "title": "Bau, Konstruktion & Instandhaltung",
+        "description": "Maurer, Elektriker, Klempner, Klimatechniker, Schweißer, Tischler, Maschinenfahrer, Bauleiter usw."
+      },
+      "tourism": {
+        "title": "Tourismus, Hotellerie, Gastronomie & Freizeit",
+        "description": "Rezeptionisten, Kellner, Köche, Pizzabäcker, Konditoren, Barkeeper, Housekeeping, Reiseanimateure, Spa‑Therapeuten usw."
+      },
+      "transport": {
+        "title": "Transport & Logistik",
+        "description": "Lkw‑/Kraftfahrer, Auslieferungsfahrer, Gabelstaplerfahrer, Lageristen, Logistikplaner, Transit‑ und Zollagenten usw."
+      },
+      "health": {
+        "title": "Gesundheit, Pflege & persönliche Dienstleistungen",
+        "description": "Ärzte, Krankenpfleger, Pflegeassistenten, Hebammen, Rettungssanitäter, Träger, medizinische Sekretär*innen, Reinigungskräfte im Krankenhaus usw."
+      },
+      "admin": {
+        "title": "Verwaltung, Buchhaltung & Management",
+        "description": "Führungskräfte, Finanzverantwortliche, Prüfer, Verwaltungsassistent*innen, Buchhalter, HR‑Mitarbeitende, Lagerverwalter, Sekretär*innen, Datenerfasser*innen, Rechnungsbearbeiter*innen usw."
+      },
+      "support": {
+        "title": "Kundenservice, Support & Call Center",
+        "description": "Kundenberater FR/EN, Back‑Office‑Mitarbeitende, IT‑Supporttechniker, interkulturelle Mediator*innen, Trainer*innen für Kundenkommunikation usw."
+      },
+      "it": {
+        "title": "IT, Digital & Technologie",
+        "description": "Web‑ und Mobile‑Entwickler, Netzwerk‑ & Systemtechniker, Datenanalyst*innen, Cybersicherheitsexpert*innen, Cloud‑Administrator*innen, KI‑Ingenieur*innen usw."
+      },
+      "events": {
+        "title": "Veranstaltungen, Audiovisuelle Medien & Kunst",
+        "description": "Licht‑, Ton‑ und Videotechniker, Veranstaltungsregisseure, Event‑Dekorateure, DJs, Musiker, Animateur*innen, Fotograf*innen, Videograf*innen usw."
+      }
+    },
+    "programs": [
+      {
+        "title": "Berufliche Mobilität – Deutschland",
+        "items": [
+          "Au-pair (Sprachaufenthalt in Gastfamilie)",
+          "Freiwilligendienst FSJ / BFD (Soziales, Gesundheit, Bildung usw.)",
+          "Ausbildung (duale Berufsausbildung: Gesundheit, Bau, IT, Hotellerie, Logistik usw.)",
+          "Praktika & Hochschulstudium (Praktikum, Studium)",
+          "Direktrekrutierung & Anerkennung von Abschlüssen (Pflegekräfte, IT, technische Berufe usw.)",
+          "Engpassberufe (Pflege, Digitales, Instandhaltung, Logistik, Gastronomie usw.)"
+        ]
+      },
+      {
+        "title": "Vielfältige und spezialisierte Profile nach Marktbedarf",
+        "items": [
+          "Immobilienmakler",
+          "Sicherheitskräfte & Hundeführer",
+          "Industriereinigungskräfte",
+          "Schädlingsbekämpfer und Hygienefachkräfte",
+          "Garten- und Landschaftspfleger",
+          "Tiermedizinische Fachangestellte und Tierpfleger",
+          "Umwelttechniker und Abfallmanagementspezialisten",
+          "Verwaltungsmitarbeiter in Kommunen und öffentlichen Diensten",
+          "Sprachlehrer und Sprachtrainer",
+          "Professionelle Dolmetscher (FR, EN, DE, AR usw.)"
+        ]
+      }
+    ],
+    "live": {
+      "cards": [
+        {
+          "title": "Live-Casting – Galaabend am 23. August",
+          "description": "Ein Live-Casting findet während des Galaabends am 23. August statt – für Recruiter, die an professionellen Künstlern, Entertainern und Musikern interessiert sind."
+        },
+        {
+          "title": "Live-Musikdarbietungen",
+          "description": "Live-Auftritte von professionellen Musikern: Jazz, Klassik, Pop und Weltmusik. Eine einzigartige Gelegenheit für Recruiter, authentische musikalische Talente in einem intimen Rahmen zu entdecken."
+        },
+        {
+          "title": "DJ- & Musikproduktions-Showcase",
+          "description": "Live-Präsentationen von professionellen DJs und Musikproduzenten. Echtzeit-Mixing, Beat-Erstellung und Sounddesign für Events, Hochzeiten und Firmenfeiern."
+        },
+        {
+          "title": "Musikgruppen & Formationen",
+          "description": "Präsentation kompletter Musikgruppen: Orchester, Bands, akustische Duos und spezialisierte Ensembles. Live-Demonstrationen, abgestimmt auf die spezifischen Anforderungen der anwesenden Recruiter."
+        }
+      ]
+    },
+    "features": {
+      "international": {
+        "title": "International",
+        "description": "Direkte Verbindung mit ausländischen Unternehmen"
+      },
+      "talents": {
+        "title": "Talente",
+        "description": "Auswahl der besten madagassischen Profile"
+      },
+      "efficient": {
+        "title": "Effizient",
+        "description": "Optimierter Prozess und umfassende Betreuung"
+      }
+    }
   }
 }

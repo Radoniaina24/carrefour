@@ -135,5 +135,140 @@
     ],
     "cta": "Visitez GateOfAfrica.com",
     "caption": "Votre source d'information de référence sur l'Afrique"
+  },
+  "about": {
+    "sectionHeader": {
+      "badge": "Événement International",
+      "title1": "À propos de",
+      "title2": "l'événement"
+    },
+    "heading": "Carrefour de l'Emploi 2025",
+    "intro": {
+      "paragraph": "Une <strong>plateforme de recrutement direct</strong>, conçue pour permettre aux entreprises étrangères de sélectionner, former et recruter efficacement des <highlight>talents malgaches qualifiés</highlight>.",
+      "tagline": "Solution complète et innovante"
+    },
+    "support": {
+      "title": "Notre accompagnement complet",
+      "paragraph": "Nos équipes accompagnent l'ensemble du processus : sélection, formation accélérée, appui administratif et suivi jusqu'à l'intégration finale."
+    },
+
+    "process": {
+      "title": "Processus en 4 étapes",
+      "steps": [
+        {
+          "title": "Sélection",
+          "description": "Identification et évaluation des meilleurs talents malgaches"
+        },
+        {
+          "title": "Formation",
+          "description": "Programme de formation accélérée et personnalisée"
+        },
+        {
+          "title": "Support administratif",
+          "description": "Gestion complète des démarches administratives"
+        },
+        {
+          "title": "Intégration finale",
+          "description": "Suivi personnalisé jusqu'à l'intégration réussie"
+        }
+      ]
+    },
+    "sectors": {
+      "title": "Notre vivier de <span>talents</span>",
+      "btp": {
+        "title": "BTP, Construction & Maintenance",
+        "description": "Maçons, électriciens, plombiers, techniciens climatisation, soudeurs, menuisiers, conducteurs d'engins, superviseurs de chantier etc."
+      },
+      "tourism": {
+        "title": "Tourisme, Hôtellerie, Restauration & Loisirs",
+        "description": "Réceptionnistes, serveurs, cuisiniers, pizzaiolos, pâtissiers, barmen, housekeeping, animateurs touristiques, spa therapists etc."
+      },
+      "transport": {
+        "title": "Transport & Logistique",
+        "description": "Chauffeurs PL/SPL, livreurs, caristes, magasiniers, agents de planification logistique, transit et douane etc."
+      },
+      "health": {
+        "title": "Santé, Médico-social & Services à la personne",
+        "description": "Médecins, Infirmiers, aides-soignants, sage-femmes, ambulanciers, brancardiers, secrétaires médicales, agents de nettoyage hospitalier etc."
+      },
+      "admin": {
+        "title": "Administratif, Comptabilité & Gestion",
+        "description": "Directeurs, Financiers, Auditeurs, Assistants administratifs, comptables, agents RH, gestionnaires de stock, secrétaires, opérateurs de saisie, invoicing clerks etc."
+      },
+      "support": {
+        "title": "Service Client, Support & Call Centers",
+        "description": "Agents relation client FR/EN, téléconseillers back-office, support technique IT, médiateurs interculturels, formateurs en communication client etc."
+      },
+      "it": {
+        "title": "Informatique, Numérique & Technologique",
+        "description": "Développeurs web et mobile, techniciens réseaux & systèmes, data analysts, cybersécurité, administrateurs cloud, ingénieurs IA etc."
+      },
+      "events": {
+        "title": "Événementiel, Audiovisuel & Artistique",
+        "description": "Techniciens lumière, son et vidéo, régisseurs plateau, décorateurs événementiels, DJs, musiciens, animateurs, photographes, vidéastes etc."
+      }
+    },
+    "programs": [
+      {
+        "title": "Mobilité professionnelle – Allemagne",
+        "items": [
+          "Au Pair (séjour linguistique en famille)",
+          "Volontariat FSJ / BFD (secteurs social, santé, éducation, etc.)",
+          "Ausbildung (formation professionnelle alternée : santé, BTP, IT, hôtellerie, logistique, etc.)",
+          "Stages & Études supérieures (Praktikum, Studium)",
+          "Recrutement direct & reconnaissance de diplômes (infirmiers, IT, métiers techniques, etc.)",
+          "Métiers en tension (soins, numérique, maintenance, logistique, restauration, etc.)"
+        ]
+      },
+      {
+        "title": "Profils divers et spécialisés selon demande du marché",
+        "items": [
+          "Agents immobiliers",
+          "Agents de sécurité & agents cynophiles",
+          "Agents de nettoyage industriel",
+          "Agents de désinsectisation et hygiène",
+          "Agents d'entretien d'espaces verts",
+          "Vétérinaires assistés et auxiliaires animaux",
+          "Techniciens en environnement et gestion de déchets",
+          "Agents administratifs collectivités et services publics",
+          "Professeurs de langues et formateurs linguistiques",
+          "Interprètes professionnels (FR, EN, DE, AR, etc.)"
+        ]
+      }
+    ],
+    "live": {
+      "cards": [
+        {
+          "title": "Casting Live - Soirée de Gala du 23 août",
+          "description": "Un casting en live sera organisé pendant la soirée de gala du 23 août, pour les recruteurs intéressés par des artistes, animateurs et musiciens professionnels."
+        },
+        {
+          "title": "Performances Musicales Live",
+          "description": "Démonstrations en direct de musiciens professionnels : jazz, classique, pop et musique du monde. Opportunité unique pour les recruteurs de découvrir des talents musicaux authentiques dans un cadre intimiste."
+        },
+        {
+          "title": "Showcase DJ & Production",
+          "description": "Présentation live de DJ professionnels et producteurs musicaux. Mixage en temps réel, création beats et ambiances sonores pour événements, mariages et soirées corporatives."
+        },
+        {
+          "title": "Groupes & Formations Musicales",
+          "description": "Présentation de groupes complets : orchestres, bands, duos acoustiques et formations spécialisées. Démonstrations live adaptées aux besoins spécifiques des recruteurs présents."
+        }
+      ]
+    },
+    "features": {
+      "international": {
+        "title": "International",
+        "description": "Connexion directe avec les entreprises étrangères"
+      },
+      "talents": {
+        "title": "Talents",
+        "description": "Sélection des meilleurs profils malgaches"
+      },
+      "efficient": {
+        "title": "Efficace",
+        "description": "Processus optimisé et accompagnement complet"
+      }
+    }
   }
 }
