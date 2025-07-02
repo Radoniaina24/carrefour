@@ -406,5 +406,75 @@
         "city": "Antananarivo Madagascar"
       }
     }
+  },
+  "candidate": {
+    "hero": {
+      "title": "Employment Forum",
+      "subtitle": "Madagascar 2025"
+    },
+    "description": {
+      "question": "Are you a candidate looking for local or international opportunities?",
+      "content": "Take part in the Employment Forum – Madagascar 2025 and access direct interviews with recruiters from various countries and sectors!"
+    },
+    "profiles": {
+      "title": "Sought Profiles",
+      "levels": "All levels of education",
+      "experience": "beginners or experienced professionals, in various fields:",
+      "domains": [
+        "Technology",
+        "Healthcare",
+        "Hospitality",
+        "Construction",
+        "Security",
+        "Communication",
+        "Event Management"
+      ],
+      "more": "and more..."
+    },
+    "advantages": {
+      "title": "Advantages",
+      "list": [
+        "Access to exclusive job offers",
+        "Possibility of being pre-selected before the event",
+        "Coaching and preparation before interviews",
+        "Participation in the gala evening for artistic talents (live castings)"
+      ]
+    },
+    "cta": {
+      "button": "Join the Employment Forum 2025"
+    }
+  },
+  "recruiter": {
+    "hero": {
+      "title": "Recruiter Space",
+      "subtitle": "Employment Fair - Madagascar 2025",
+      "description": "Are you a recruiter? Contact us now to discover {tarifs} and {packs} to meet your {recrutement} needs.",
+      "tarifs": "personalized rates",
+      "packs": "specially designed packages",
+      "recrutement": "local or international recruitment",
+      "cta": "Contact us for your rates",
+      "sendEmail": "Send email"
+    },
+    "benefits": {
+      "qualifiedTalents": "Qualified Talents",
+      "localInternational": "Local & International",
+      "customPacks": "Custom Packages",
+      "premiumService": "Premium Service"
+    },
+    "whyParticipate": {
+      "title": "Why participate in the Employment Fair?",
+      "directAccess": {
+        "title": "Direct Access to Talents",
+        "description": "Meet qualified candidates directly in a professional environment"
+      },
+      "customSolutions": {
+        "title": "Tailored Solutions",
+        "description": "Custom packages adapted to your specific recruitment needs"
+      },
+      "expertSupport": {
+        "title": "Expert Support",
+        "description": "Benefit from our expertise to optimize your recruitment processes"
+      }
+    }
   }
 }

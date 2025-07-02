@@ -400,5 +400,75 @@
         "city": "Antananarivo Madagascar"
       }
     }
+  },
+  "candidate": {
+    "hero": {
+      "title": "Carrefour de l'Emploi",
+      "subtitle": "Madagascar 2025"
+    },
+    "description": {
+      "question": "Vous êtes candidat à la recherche d'opportunités en local ou à l'international ?",
+      "content": "Participez au Carrefour de l'Emploi – Madagascar 2025 et accédez à des entretiens directs avec des recruteurs venus de plusieurs pays et secteurs !"
+    },
+    "profiles": {
+      "title": "Profils recherchés",
+      "levels": "Tous niveaux de formation",
+      "experience": "débutants ou expérimentés, dans des domaines variés :",
+      "domains": [
+        "Technologie",
+        "Santé",
+        "Hôtellerie",
+        "BTP",
+        "Sécurité",
+        "Communication",
+        "Événementiel"
+      ],
+      "more": "et plus..."
+    },
+    "advantages": {
+      "title": "Avantages",
+      "list": [
+        "Accès à des offres d'emploi exclusives",
+        "Possibilité d'être présélectionné avant l'événement",
+        "Coaching et accompagnement avant les entretiens",
+        "Participation à la soirée de gala pour les talents artistiques (castings en live)"
+      ]
+    },
+    "cta": {
+      "button": "Participer au Carrefour de l'Emploi 2025"
+    }
+  },
+  "recruiter": {
+    "hero": {
+      "title": "Espace Recruteur",
+      "subtitle": "Carrefour de l'Emploi - Madagascar 2025",
+      "description": "Vous êtes recruteur ? Contactez-nous dès maintenant pour découvrir les {tarifs} et les {packs} pour répondre à vos besoins de {recrutement}.",
+      "tarifs": "tarifs personnalisés",
+      "packs": "packs spécialement conçus",
+      "recrutement": "recrutement local ou international",
+      "cta": "Contactez-nous pour vos tarifs",
+      "sendEmail": "Envoyer un email"
+    },
+    "benefits": {
+      "qualifiedTalents": "Talents Qualifiés",
+      "localInternational": "Local & International",
+      "customPacks": "Packs Personnalisés",
+      "premiumService": "Service Premium"
+    },
+    "whyParticipate": {
+      "title": "Pourquoi participer au Carrefour de l'Emploi ?",
+      "directAccess": {
+        "title": "Accès Direct aux Talents",
+        "description": "Rencontrez directement les candidats qualifiés dans un environnement professionnel"
+      },
+      "customSolutions": {
+        "title": "Solutions Sur Mesure",
+        "description": "Packs personnalisés adaptés à vos besoins spécifiques de recrutement"
+      },
+      "expertSupport": {
+        "title": "Accompagnement Expert",
+        "description": "Bénéficiez de notre expertise pour optimiser vos processus de recrutement"
+      }
+    }
   }
 }

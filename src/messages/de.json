@@ -398,5 +398,75 @@
         "city": "Antananarivo, Madagaskar"
       }
     }
+  },
+  "candidate": {
+    "hero": {
+      "title": "Jobforum",
+      "subtitle": "Madagaskar 2025"
+    },
+    "description": {
+      "question": "Sind Sie auf der Suche nach lokalen oder internationalen Karrieremöglichkeiten?",
+      "content": "Nehmen Sie am Jobforum – Madagaskar 2025 teil und führen Sie direkte Bewerbungsgespräche mit Recruitern aus verschiedenen Ländern und Branchen!"
+    },
+    "profiles": {
+      "title": "Gesuchte Profile",
+      "levels": "Alle Ausbildungsniveaus",
+      "experience": "Berufsanfänger oder erfahrene Fachkräfte in verschiedenen Bereichen:",
+      "domains": [
+        "Technologie",
+        "Gesundheit",
+        "Hotellerie",
+        "Bauwesen",
+        "Sicherheit",
+        "Kommunikation",
+        "Eventmanagement"
+      ],
+      "more": "und mehr..."
+    },
+    "advantages": {
+      "title": "Vorteile",
+      "list": [
+        "Zugang zu exklusiven Stellenangeboten",
+        "Möglichkeit zur Vorauswahl vor der Veranstaltung",
+        "Coaching und Vorbereitung auf Bewerbungsgespräche",
+        "Teilnahme am Galaabend für künstlerische Talente (Live-Castings)"
+      ]
+    },
+    "cta": {
+      "button": "Am Jobforum 2025 teilnehmen"
+    }
+  },
+  "recruiter": {
+    "hero": {
+      "title": "Recruiter-Bereich",
+      "subtitle": "Jobforum – Madagaskar 2025",
+      "description": "Sind Sie ein Arbeitgeber? Kontaktieren Sie uns jetzt, um mehr über unsere {tarifs} und {packs} zu erfahren – ideal für Ihren Bedarf an {recrutement}.",
+      "tarifs": "individuelle Tarife",
+      "packs": "maßgeschneiderte Pakete",
+      "recrutement": "lokaler oder internationaler Personalbeschaffung",
+      "cta": "Kontaktieren Sie uns für Ihre Konditionen",
+      "sendEmail": "E-Mail senden"
+    },
+    "benefits": {
+      "qualifiedTalents": "Qualifizierte Talente",
+      "localInternational": "Lokal & International",
+      "customPacks": "Individuelle Pakete",
+      "premiumService": "Premium-Service"
+    },
+    "whyParticipate": {
+      "title": "Warum am Jobforum teilnehmen?",
+      "directAccess": {
+        "title": "Direkter Zugang zu Talenten",
+        "description": "Treffen Sie qualifizierte Kandidaten persönlich in einem professionellen Umfeld"
+      },
+      "customSolutions": {
+        "title": "Individuelle Lösungen",
+        "description": "Maßgeschneiderte Pakete, die auf Ihre spezifischen Rekrutierungsbedürfnisse abgestimmt sind"
+      },
+      "expertSupport": {
+        "title": "Fachkundige Unterstützung",
+        "description": "Profitieren Sie von unserer Expertise zur Optimierung Ihrer Einstellungsprozesse"
+      }
+    }
   }
 }
