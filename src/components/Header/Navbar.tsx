@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { Menu, X, ChevronDown, LogIn } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+
 import { usePathname } from "next/navigation";
 import { useSelector } from "react-redux";
 import { selectUser } from "@/redux/features/authSlice";
@@ -11,6 +11,7 @@ import { FaUser } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 
 import LanguageSwitcher from "../LanguageSwitcher";
+import { Link } from "@/i18n/navigation";
 
 export type NavItem = {
   name: string;

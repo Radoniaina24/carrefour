@@ -10,7 +10,6 @@ export type Language = {
   code: "fr" | "en" | "de";
   name: string;
   countryCode: string;
-  flag?: string;
 };
 
 const LANGUAGES: Language[] = [
@@ -29,18 +28,23 @@ export default function LanguageSwitcher() {
     LANGUAGES.find((l) => l.code === locale) || LANGUAGES[0];
 
   const LOCALES = ["fr", "en", "de"] as const;
-  type Locale = (typeof LOCALES)[number]; // "fr" | "en" | "de"
+  type Locale = (typeof LOCALES)[number];
 
   const getPathWithoutLocale = () => {
     const segments = pathname.split("/");
 
-    const maybeLocale = segments[1] as string;
-
-    if (LOCALES.includes(maybeLocale as Locale)) {
-      segments.splice(1, 1);
+    // Supprime le premier segment s’il correspond à une locale
+    if (LOCALES.includes(segments[1] as Locale)) {
+      return "/" + segments.slice(2).join("/");
     }
 
-    return segments.join("/") || "/";
+    return pathname;
+  };
+
+  const handleLanguageChange = (langCode: string) => {
+    setIsDropdownOpen(false);
+    const newPath = `/${langCode}${getPathWithoutLocale()}`;
+    router.replace(newPath, { scroll: false });
   };
 
   const buttonStyle = `flex items-center space-x-2 px-3 py-2 rounded-lg border-2 border-transparent hover:border-blue-200 transition-all duration-200 font-medium ${
@@ -87,13 +91,7 @@ export default function LanguageSwitcher() {
           {LANGUAGES.map((lang) => (
             <button
               key={lang.code}
-              onClick={() => {
-                setIsDropdownOpen(false);
-                const cleanPath = getPathWithoutLocale();
-                router.replace(`/${lang.code}${cleanPath}`, {
-                  scroll: false,
-                });
-              }}
+              onClick={() => handleLanguageChange(lang.code)}
               className={`w-full flex items-center space-x-3 px-4 py-3 text-left transition-colors duration-200 hover:bg-blue-50 ${
                 lang.code === currentLanguage.code
                   ? "bg-blue-50 text-blue-700 border-r-2 border-blue-500"
