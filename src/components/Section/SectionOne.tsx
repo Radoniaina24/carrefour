@@ -8,41 +8,45 @@ import {
   Star,
   Zap,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
-
+type Feature = {
+  icon: React.ElementType;
+  number: string;
+  title: string;
+  description: string;
+  highlight: string;
+};
 export default function UniqueFeatures() {
-  const features = [
+  const t = useTranslations("unique");
+  const features: Feature[] = [
     {
       icon: Users,
       number: "01",
-      title: "Vous choisissez les profils",
-      description:
-        "Sélectionnez les candidats qui correspondent parfaitement à vos critères et à votre culture d'entreprise.",
-      highlight: "Choix personnalisé",
+      title: t("features.0.title"),
+      description: t("features.0.description"),
+      highlight: t("features.0.highlight"),
     },
     {
       icon: BookOpen,
       number: "02",
-      title: "Nous les formons et les préparons",
-      description:
-        "Formation personnalisée selon vos exigences spécifiques pour une intégration réussie.",
-      highlight: "Formation sur mesure",
+      title: t("features.1.title"),
+      description: t("features.1.description"),
+      highlight: t("features.1.highlight"),
     },
     {
       icon: TrendingUp,
       number: "03",
-      title: "Des collaborateurs prêts à performer",
-      description:
-        "Vos nouveaux talents arrivent opérationnels et motivés pour contribuer immédiatement.",
-      highlight: "Performance garantie",
+      title: t("features.2.title"),
+      description: t("features.2.description"),
+      highlight: t("features.2.highlight"),
     },
     {
       icon: Award,
       number: "04",
-      title: "CV garanti selon vos besoins",
-      description:
-        "Satisfaction garantie avec des profils adaptés à vos besoins spécifiques.",
-      highlight: "Satisfaction 100%",
+      title: t("features.3.title"),
+      description: t("features.3.description"),
+      highlight: t("features.3.highlight"),
     },
   ];
 
@@ -82,16 +86,16 @@ export default function UniqueFeatures() {
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-orange-50 px-6 py-2 rounded-full mb-8 border border-blue-100">
             <Star className="w-5 h-5 text-orange-500" />
             <span className="text-slate-700 font-semibold text-sm uppercase tracking-wider">
-              Excellence
+              {t("badge")}
             </span>
           </div>
 
           <h2 className="text-6xl md:text-7xl font-extrabold text-slate-900 mb-4 tracking-tight leading-none">
-            Ce qui nous rend
+            {t("title")}
           </h2>
           <div className="relative inline-block">
             <h3 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">
-              UNIQUES
+              {t("highlight")}
             </h3>
             {/* Underline effect */}
             <div
@@ -155,12 +159,6 @@ export default function UniqueFeatures() {
                       <p className="text-slate-600 text-lg leading-relaxed mb-6 max-w-md mx-auto lg:mx-0">
                         {feature.description}
                       </p>
-
-                      {/* Action indicator */}
-                      {/* <div className="inline-flex items-center text-blue-600 font-semibold group-hover:text-orange-600 transition-colors duration-300">
-                        <span className="mr-2">En savoir plus</span>
-                        <ArrowRight className="w-5 h-5 transform group-hover:translate-x-2 transition-transform duration-300" />
-                      </div> */}
                     </div>
                   </div>
 
@@ -226,17 +224,14 @@ export default function UniqueFeatures() {
               <div className="w-3 h-3 bg-blue-600 rounded-full animate-pulse delay-400"></div>
             </div>
             <h4 className="text-2xl font-bold text-slate-900 mb-2">
-              Prêt à transformer votre recrutement ?
+              {t("cta.title")}
             </h4>
-            <p className="text-slate-600 mb-6">
-              Découvrez comment notre approche unique peut révolutionner votre
-              équipe
-            </p>
+            <p className="text-slate-600 mb-6">{t("cta.description")}</p>
             <Link
               href={"/inscription/recruteur"}
               className="bg-gradient-to-r from-blue-600 to-orange-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center space-x-2"
             >
-              <span>Commencer maintenant</span>
+              <span>{t("cta.button")}</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>

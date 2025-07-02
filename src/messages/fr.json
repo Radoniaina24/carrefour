@@ -56,5 +56,37 @@
     "directConnection": "Connexion Directe",
     "talentRecruiters": "Talents × Recruteurs",
     "internationalEvent": "Événement International"
+  },
+  "unique": {
+    "badge": "Excellence",
+    "title": "Ce qui nous rend",
+    "highlight": "UNIQUES",
+    "features": [
+      {
+        "title": "Vous choisissez les profils",
+        "description": "Sélectionnez les candidats qui correspondent parfaitement à vos critères et à votre culture d'entreprise.",
+        "highlight": "Choix personnalisé"
+      },
+      {
+        "title": "Nous les formons et les préparons",
+        "description": "Formation personnalisée selon vos exigences spécifiques pour une intégration réussie.",
+        "highlight": "Formation sur mesure"
+      },
+      {
+        "title": "Des collaborateurs prêts à performer",
+        "description": "Vos nouveaux talents arrivent opérationnels et motivés pour contribuer immédiatement.",
+        "highlight": "Performance garantie"
+      },
+      {
+        "title": "CV garanti selon vos besoins",
+        "description": "Satisfaction garantie avec des profils adaptés à vos besoins spécifiques.",
+        "highlight": "Satisfaction 100%"
+      }
+    ],
+    "cta": {
+      "title": "Prêt à transformer votre recrutement ?",
+      "description": "Découvrez comment notre approche unique peut révolutionner votre équipe",
+      "button": "Commencer maintenant"
+    }
   }
 }

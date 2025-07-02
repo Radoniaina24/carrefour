@@ -56,5 +56,37 @@
     "directConnection": "Direkte Verbindung",
     "talentRecruiters": "Talente × Arbeitgeber",
     "internationalEvent": "Internationale Veranstaltung"
+  },
+  "unique": {
+    "badge": "Exzellenz",
+    "title": "Was uns",
+    "highlight": "EINZIGARTIG MACHT",
+    "features": [
+      {
+        "title": "Sie wählen die Profile aus",
+        "description": "Wählen Sie Kandidaten, die perfekt zu Ihren Kriterien und Ihrer Unternehmenskultur passen.",
+        "highlight": "Individuelle Auswahl"
+      },
+      {
+        "title": "Wir bilden sie aus und bereiten sie vor",
+        "description": "Maßgeschneiderte Schulung nach Ihren spezifischen Anforderungen für eine erfolgreiche Integration.",
+        "highlight": "Maßgeschneiderte Ausbildung"
+      },
+      {
+        "title": "Einsatzbereite Mitarbeiter",
+        "description": "Ihre neuen Talente sind sofort einsatzfähig und hochmotiviert.",
+        "highlight": "Garantierte Leistung"
+      },
+      {
+        "title": "Lebensläufe nach Maß",
+        "description": "Zufriedenheit garantiert – mit Profilen, die exakt auf Ihre Anforderungen zugeschnitten sind.",
+        "highlight": "100 % Zufriedenheit"
+      }
+    ],
+    "cta": {
+      "title": "Bereit, Ihre Personalgewinnung zu verändern?",
+      "description": "Entdecken Sie, wie unser einzigartiger Ansatz Ihr Team revolutionieren kann",
+      "button": "Jetzt starten"
+    }
   }
 }
