@@ -705,5 +705,27 @@
         "default": "Une erreur est survenue"
       }
     }
+  },
+  "auth": {
+    "form": {
+      "email": "Email",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "loading": "Connexion en cours...",
+      "no_account": "Vous n'avez pas de compte ? S'inscrire maintenant",
+      "candidate": "Candidat",
+      "recruiter": "Recruteur",
+      "placeholders": {
+        "email": "votre@email.com",
+        "password": "Votre mot de passe"
+      },
+      "errors": {
+        "required": "Ce champ est requis",
+        "invalid_email": "Email invalide",
+        "password_min": "Le mot de passe doit contenir au moins 6 caractères",
+        "default": "Une erreur est survenue",
+        "unknown_role": "Rôle utilisateur non reconnu"
+      }
+    }
   }
 }

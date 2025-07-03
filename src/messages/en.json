@@ -711,5 +711,27 @@
         "default": "An error has occurred"
       }
     }
+  },
+  "auth": {
+    "form": {
+      "email": "Email",
+      "password": "Password",
+      "submit": "Log in",
+      "loading": "Logging in...",
+      "no_account": "Don't have an account? Sign up now",
+      "candidate": "Candidate",
+      "recruiter": "Recruiter",
+      "placeholders": {
+        "email": "your@email.com",
+        "password": "Your password"
+      },
+      "errors": {
+        "required": "This field is required",
+        "invalid_email": "Invalid email address",
+        "password_min": "Password must be at least 6 characters",
+        "default": "An error has occurred",
+        "unknown_role": "Unrecognized user role"
+      }
+    }
   }
 }

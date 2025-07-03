@@ -10,19 +10,24 @@ import Link from "next/link";
 import Image from "next/image";
 import { useLoginMutation } from "@/redux/api/authApi";
 import { useRouter } from "next/navigation";
-
-const validationSchema = Yup.object({
-  email: Yup.string().email("Email invalide").required("Ce champ est requis"),
-  password: Yup.string()
-    .min(6, "Le mot de passe doit contenir au moins 6 caractères")
-    .required("Ce champ est requis"),
-});
+import { useTranslations } from "next-intl";
 
 const Signin: React.FC = () => {
+  const t = useTranslations("auth.form");
   const [showPassword, setShowPassword] = useState(false);
   const [login] = useLoginMutation();
   const router = useRouter();
+
   const ErrorNotification = (msg: string) => toast.error(msg);
+
+  const validationSchema = Yup.object({
+    email: Yup.string()
+      .email(t("errors.invalid_email"))
+      .required(t("errors.required")),
+    password: Yup.string()
+      .min(6, t("errors.password_min"))
+      .required(t("errors.required")),
+  });
 
   const formik = useFormik<FormValues>({
     initialValues: {
@@ -41,22 +46,17 @@ const Signin: React.FC = () => {
 
         switch (role) {
           case "admin":
-            router.push("/admin");
           case "super_admin":
-            router.push("/admin");
-            break;
           case "candidate":
-            router.push("/admin");
-            break;
           case "recruiter":
             router.push("/admin");
             break;
           default:
-            ErrorNotification("Rôle utilisateur non reconnu");
+            ErrorNotification(t("errors.unknown_role"));
             break;
         }
       } catch (error: any) {
-        const message = error?.data?.message || "Une erreur est survenue";
+        const message = error?.data?.message || t("errors.default");
         ErrorNotification(message);
       } finally {
         setSubmitting(false);
@@ -71,7 +71,7 @@ const Signin: React.FC = () => {
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" />
       </div>
       <Toaster />
-      <div className="relative max-w-md mx-auto bg-white/80 backdrop-blur-sm  rounded-2xl  shadow-2xl border border-white/50">
+      <div className="relative max-w-md mx-auto bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/50">
         <div className="flex justify-center pt-5">
           <Link href={"/"}>
             <Image
@@ -84,22 +84,22 @@ const Signin: React.FC = () => {
             />
           </Link>
         </div>
-        <form onSubmit={formik.handleSubmit} className="  p-8 space-y-6">
+        <form onSubmit={formik.handleSubmit} className="p-8 space-y-6">
           <InputField
             name="email"
-            label="Email"
+            label={t("email")}
             type="email"
             icon={Mail}
-            placeholder="votre@email.com"
+            placeholder={t("placeholders.email")}
             formik={formik}
           />
 
           <InputField
             name="password"
-            label="Mot de passe"
+            label={t("password")}
             type="password"
             icon={Lock}
-            placeholder="votre mot de passe"
+            placeholder={t("placeholders.password")}
             formik={formik}
             showPassword={showPassword}
             onTogglePassword={() => setShowPassword(!showPassword)}
@@ -117,28 +117,28 @@ const Signin: React.FC = () => {
             {formik.isSubmitting ? (
               <div className="flex items-center justify-center space-x-2">
                 <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                <span>connexion en cours...</span>
+                <span>{t("loading")}</span>
               </div>
             ) : (
-              "Se connecter"
+              t("submit")
             )}
           </button>
 
           <div className="mt-6 text-center">
             <p className="text-sm text-blue-600">
-              Vous n&apos;avez pas de compte ? S&apos;inscrire maintenant{" "}
+              {t("no_account")}{" "}
               <Link
                 href="/inscription/candidat"
                 className="font-medium text-orange-600 hover:text-orange-700"
               >
-                Candidat
-              </Link>
-              {" | "}
+                {t("candidate")}
+              </Link>{" "}
+              |{" "}
               <Link
                 href="/inscription/recruteur"
                 className="font-medium text-orange-600 hover:text-orange-700"
               >
-                Recruteur
+                {t("recruiter")}
               </Link>
             </p>
           </div>

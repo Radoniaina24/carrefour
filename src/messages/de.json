@@ -703,5 +703,27 @@
         "default": "Ein Fehler ist aufgetreten"
       }
     }
+  },
+  "auth": {
+    "form": {
+      "email": "E-Mail",
+      "password": "Passwort",
+      "submit": "Anmelden",
+      "loading": "Anmeldung läuft...",
+      "no_account": "Sie haben noch kein Konto? Jetzt registrieren",
+      "candidate": "Kandidat",
+      "recruiter": "Arbeitgeber",
+      "placeholders": {
+        "email": "ihr@email.com",
+        "password": "Ihr Passwort"
+      },
+      "errors": {
+        "required": "Dieses Feld ist erforderlich",
+        "invalid_email": "Ungültige E-Mail-Adresse",
+        "password_min": "Das Passwort muss mindestens 6 Zeichen lang sein",
+        "default": "Ein Fehler ist aufgetreten",
+        "unknown_role": "Unbekannte Benutzerrolle"
+      }
+    }
   }
 }
