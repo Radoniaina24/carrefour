@@ -1,14 +1,18 @@
+"use client";
 import React from "react";
 import { Check } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function ProgressBar({ currentStep }: { currentStep: number }) {
+  const t = useTranslations("form.progress");
   const steps = [
-    "Informations Personnelles",
-    "Choix du secteur",
-    "Documents",
-    "Mot de passe",
-    "Confirmation",
+    t("personalInfo"),
+    t("sectorChoice"),
+    t("documents"),
+    t("password"),
+    t("confirmation"),
   ];
+
   const totalSteps = steps.length;
   const progressPercent = ((currentStep - 1) / (totalSteps - 1)) * 100;
 

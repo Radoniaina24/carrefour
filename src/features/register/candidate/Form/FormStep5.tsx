@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable */
 import React from "react";
 import { useFormPassContext } from "../context/SignupContext";
@@ -5,8 +6,13 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import ButtonNextPrev from "../ButtonPrevNext/Button";
 import FileUpload from "@/components/Form/FileUpload";
+import { useTranslations } from "next-intl";
+
 export default function FormStep5() {
+  const t = useTranslations("form.form5");
+
   const { setFormData, nextStep, formData } = useFormPassContext();
+
   const initialvalues = {
     cv: formData.cv,
     degree: formData.degree,
@@ -18,35 +24,34 @@ export default function FormStep5() {
     initialValues: initialvalues,
     validationSchema: Yup.object({
       coverLetter: Yup.mixed()
-        .required("La carte d'identité nationnal est requise")
-        .test("fileType", "Le fichier doit être un PDF", (file: any) =>
+        .required(t("validation.coverLetter.required"))
+        .test("fileType", t("validation.pdfType"), (file: any) =>
           file ? file.type === "application/pdf" : false
         )
-        .test("fileSize", "Taille maximale 5MB", (file: any) =>
+        .test("fileSize", t("validation.pdfSize"), (file: any) =>
           file ? file.size <= 5 * 1024 * 1024 : false
         ),
       cv: Yup.mixed()
-        .required("Le CV est requis")
-        .test("fileType", "Le fichier doit être un PDF", (file: any) =>
+        .required(t("validation.cv.required"))
+        .test("fileType", t("validation.pdfType"), (file: any) =>
           file ? file.type === "application/pdf" : false
         )
-        .test("fileSize", "Taille maximale 5MB", (file: any) =>
+        .test("fileSize", t("validation.pdfSize"), (file: any) =>
           file ? file.size <= 5 * 1024 * 1024 : false
         ),
       degree: Yup.mixed()
-        .required("Note ou copies des diplômes obtenus est requis")
-        .test("fileType", "Le fichier doit être un PDF", (file: any) =>
+        .required(t("validation.degree.required"))
+        .test("fileType", t("validation.pdfType"), (file: any) =>
           file ? file.type === "application/pdf" : false
         )
-        .test("fileSize", "Taille maximale 5MB", (file: any) =>
+        .test("fileSize", t("validation.pdfSize"), (file: any) =>
           file ? file.size <= 5 * 1024 * 1024 : false
         ),
-
       photo: Yup.mixed<File>()
-        .required("La photo récente est requise")
+        .required(t("validation.photo.required"))
         .test(
           "fileType",
-          "Le fichier doit être une image (jpg, jpeg, png, webp)",
+          t("validation.imageType"),
           (file) =>
             !!file &&
             ["image/jpeg", "image/png", "image/webp", "image/jpg"].includes(
@@ -55,26 +60,24 @@ export default function FormStep5() {
         )
         .test(
           "fileSize",
-          "La taille maximale est de 5MB",
+          t("validation.imageSize"),
           (file) => !!file && file.size <= 5 * 1024 * 1024
         ),
     }),
-
     onSubmit: (values) => {
-      // console.log("Form Submitted : ", values);
       nextStep();
       setFormData((prev: any) => ({ ...prev, ...values }));
     },
   });
-  //   console.log(formik.errors);
+
   const { setFieldValue } = formik;
-  //   console.log(formik.values);
+
   return (
     <form onSubmit={formik.handleSubmit} autoComplete="off">
       <div className="space-y-6">
         <FileUpload
           name="photo"
-          label="Photo récente"
+          label={t("fields.photo")}
           value={formik.values.photo}
           onChange={(e) => {
             const file = e.currentTarget.files?.[0] || null;
@@ -83,13 +86,13 @@ export default function FormStep5() {
           error={formik.errors.photo}
           touched={formik.touched.photo}
           required
-          helperText="Format image uniquement (jpg, jpeg, png, webp), taille max: 5 MB"
+          helperText={t("helpers.photo")}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <FileUpload
             name="cv"
-            label="CV "
+            label={t("fields.cv")}
             value={formik.values.cv}
             onChange={(e) => {
               const file = e.currentTarget.files?.[0] || null;
@@ -98,11 +101,11 @@ export default function FormStep5() {
             error={formik.errors.cv}
             touched={formik.touched.cv}
             required
-            helperText="Format PDF uniquement, taille max: 5 MB"
+            helperText={t("helpers.pdf")}
           />
           <FileUpload
             name="degree"
-            label="Copies des diplômes obtenus"
+            label={t("fields.degree")}
             value={formik.values.degree}
             onChange={(e) => {
               const file = e.currentTarget.files?.[0] || null;
@@ -111,13 +114,13 @@ export default function FormStep5() {
             error={formik.errors.degree}
             touched={formik.touched.degree}
             required
-            helperText="Format PDF uniquement, taille max: 5 MB"
+            helperText={t("helpers.pdf")}
           />
         </div>
 
         <FileUpload
           name="coverLetter"
-          label="Lettre de motivation"
+          label={t("fields.coverLetter")}
           value={formik.values.coverLetter}
           onChange={(e) => {
             const file = e.currentTarget.files?.[0] || null;
@@ -126,7 +129,7 @@ export default function FormStep5() {
           error={formik.errors.coverLetter}
           touched={formik.touched.coverLetter}
           required
-          helperText="Format PDF uniquement, taille max: 5 MB"
+          helperText={t("helpers.pdf")}
         />
       </div>
 

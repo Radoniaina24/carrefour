@@ -10,6 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import FormStep3 from "./FormStep3";
 import FormStep4 from "./FormStep4";
+import Modal from "../Modal/Modal";
 
 export default function MultiStepForm() {
   const { currentStep } = useFormPassContext();
@@ -47,6 +48,7 @@ export default function MultiStepForm() {
                 />
               </Link>
             </div>
+            <Modal />
             <p className="text-center text-3xl font-bold text-blue-900 mb-2">
               Inscription Candidat
             </p>

@@ -468,5 +468,206 @@
         "description": "Profitieren Sie von unserer Expertise zur Optimierung Ihrer Einstellungsprozesse"
       }
     }
+  },
+  "form": {
+    "form1": {
+      "personal": {
+        "title": "Persönliche Informationen",
+        "lastName": "Nachname",
+        "firstName": "Vorname",
+        "email": "E-Mail",
+        "confirmEmail": "E-Mail bestätigen",
+        "phone": "Telefon",
+        "dateOfBirth": "Geburtsdatum",
+        "nationality": "Nationalität",
+        "address": "Adresse",
+        "city": "Stadt",
+        "postalCode": "Postleitzahl",
+        "country": "Land"
+      },
+      "placeholders": {
+        "lastName": "Ihr Nachname",
+        "firstName": "Ihr Vorname",
+        "email": "ihre.email@beispiel.com",
+        "confirmEmail": "E-Mail bestätigen",
+        "phone": "+261 XX XX XXX XX",
+        "nationality": "Ihre Nationalität",
+        "address": "Ihre Adresse",
+        "city": "Ihre Stadt",
+        "postalCode": "Postleitzahl",
+        "country": "Ihr Land"
+      },
+      "validation": {
+        "required": {
+          "lastName": "Nachname ist erforderlich",
+          "firstName": "Vorname ist erforderlich",
+          "email": "E-Mail ist erforderlich",
+          "confirmEmail": "E-Mail-Bestätigung ist erforderlich",
+          "phone": "Telefonnummer ist erforderlich",
+          "dateOfBirth": "Geburtsdatum ist erforderlich",
+          "nationality": "Nationalität ist erforderlich",
+          "address": "Adresse ist erforderlich",
+          "city": "Stadt ist erforderlich",
+          "postalCode": "Postleitzahl ist erforderlich",
+          "country": "Land ist erforderlich"
+        },
+        "invalid": {
+          "email": "Ungültige E-Mail-Adresse",
+          "emailMismatch": "E-Mail-Adressen müssen übereinstimmen"
+        }
+      }
+    },
+    "form3": {
+      "labels": {
+        "sector": "Branche",
+        "category": "Kategorie"
+      },
+      "placeholders": {
+        "sector": "Wählen Sie eine Branche",
+        "category": "Wählen Sie eine Kategorie"
+      },
+      "validation": {
+        "sectorRequired": "Die Auswahl einer Branche ist erforderlich",
+        "categoryRequired": "Die Auswahl einer Kategorie ist erforderlich"
+      },
+      "sectors": {
+        "technologies_btp": "Technologie & Bauwesen",
+        "tourisme_sante_services": "Tourismus, Gesundheit & Dienstleistungen",
+        "communication_gestion": "Kommunikation & Verwaltung",
+        "evenementiel_artistique": "Event- & Kunstbereich"
+      },
+      "categories": {
+        "tech": {
+          "dev_web_ai": "Webentwickler, KI, Cybersicherheit, Robotik",
+          "techniciens": "Elektriker, Klimatechniker, Klempner, Schweißer"
+        },
+        "tourisme": {
+          "hotel": "Rezeption, Küche, Spa, Zimmerreinigung",
+          "medical": "Krankenpfleger, Pflegehilfen, Sanitäter",
+          "logistique": "Fahrer, Logistikmitarbeiter"
+        },
+        "comm": {
+          "accueil": "Dreisprachiger Kundenservice, Callcenter",
+          "rh": "Sekretärinnen, HR-Assistenten, Community Manager"
+        },
+        "event": {
+          "technique": "Licht-/Ton-/Videotechniker, Bühnenmanager",
+          "artistes": "DJs, Musiker, Moderatoren, Live-Künstler"
+        }
+      }
+    },
+    "form5": {
+      "fields": {
+        "photo": "Aktuelles Foto",
+        "cv": "Lebenslauf (CV)",
+        "degree": "Kopien der erworbenen Abschlüsse",
+        "coverLetter": "Motivationsschreiben"
+      },
+      "helpers": {
+        "photo": "Nur Bildformate (jpg, jpeg, png, webp), maximale Größe: 5 MB",
+        "pdf": "Nur PDF-Format, maximale Größe: 5 MB"
+      },
+      "validation": {
+        "photo": {
+          "required": "Ein aktuelles Foto ist erforderlich"
+        },
+        "cv": {
+          "required": "Der Lebenslauf ist erforderlich"
+        },
+        "degree": {
+          "required": "Abschlussnoten oder -kopien sind erforderlich"
+        },
+        "coverLetter": {
+          "required": "Das Motivationsschreiben ist erforderlich"
+        },
+        "pdfType": "Die Datei muss ein PDF sein",
+        "pdfSize": "Maximale Größe: 5 MB",
+        "imageType": "Die Datei muss ein Bild sein (jpg, jpeg, png, webp)",
+        "imageSize": "Maximale Größe: 5 MB"
+      }
+    },
+    "form4": {
+      "labels": {
+        "password": "Passwort",
+        "retype": "Passwort bestätigen"
+      },
+      "placeholders": {
+        "password": "Ihr Passwort",
+        "retype": "Bestätigen Sie Ihr Passwort"
+      },
+      "validation": {
+        "password": {
+          "required": "Das Passwort ist erforderlich",
+          "min": "Das Passwort muss mindestens 6 Zeichen lang sein."
+        },
+        "retype": {
+          "required": "Die Bestätigung des Passworts ist erforderlich.",
+          "match": "Die Passwörter müssen übereinstimmen.",
+          "min": "Die Bestätigung muss mindestens 6 Zeichen lang sein."
+        }
+      }
+    },
+    "confirmation": {
+      "title": "Zusammenfassung Ihrer Bewerbung",
+      "subtitle": "Bitte überprüfen Sie die folgenden Angaben, bevor Sie Ihre Bewerbung absenden.",
+      "sections": {
+        "personal": "Persönliche Angaben",
+        "sector": "Ausgewählter Sektor",
+        "documents": "Hochgeladene Dokumente"
+      },
+      "fields": {
+        "lastName": "Nachname",
+        "firstName": "Vorname",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "birthdate": "Geburtsdatum",
+        "nationality": "Staatsangehörigkeit",
+        "address": "Adresse",
+        "country": "Land",
+        "city": "Stadt",
+        "postalCode": "Postleitzahl",
+        "sector": "Sektor",
+        "category": "Kategorie"
+      },
+      "documents": {
+        "photo": "Aktuelles Foto",
+        "cv": "Lebenslauf (CV)",
+        "degree": "Abschlüsse",
+        "coverLetter": "Motivationsschreiben"
+      },
+      "consent": {
+        "text": "Ich bestätige die Richtigkeit der angegebenen Informationen und akzeptiere die",
+        "terms": "Allgemeinen Geschäftsbedingungen",
+        "and": "und die",
+        "privacy": "Datenschutzerklärung"
+      },
+      "validation": {
+        "required": "Sie müssen die Bedingungen akzeptieren, um fortzufahren"
+      }
+    },
+    "buttons": {
+      "previous": "Zurück",
+      "next": "Weiter",
+      "submit": "Meine Bewerbung absenden"
+    },
+    "progress": {
+      "personalInfo": "Persönliche Angaben",
+      "sectorChoice": "Sektorauswahl",
+      "documents": "Dokumente",
+      "password": "Passwort",
+      "confirmation": "Bestätigung"
+    },
+    "modal": {
+      "title": "Bewerbung erfolgreich gesendet!",
+      "nextSteps": "Nächste Schritte",
+      "step1": "Ihre Unterlagen werden von unserem Team überprüft.",
+      "step2": "Sie erhalten eine E-Mail-Benachrichtigung, sobald Ihre Bewerbung bestätigt wurde (prüfen Sie auch den Spam-Ordner)",
+      "backHome": "Zur Startseite"
+    }
+  },
+  "upload": {
+    "clickToUpload": "Klicken Sie, um eine Datei auszuwählen (PDF oder Bild)",
+    "maxSize": "Maximale Größe: {size} MB",
+    "tooLarge": "Datei ist zu groß"
   }
 }

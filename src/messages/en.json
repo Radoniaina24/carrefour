@@ -476,5 +476,206 @@
         "description": "Benefit from our expertise to optimize your recruitment processes"
       }
     }
+  },
+  "form": {
+    "form1": {
+      "personal": {
+        "title": "Personal Information",
+        "lastName": "Last Name",
+        "firstName": "First Name",
+        "email": "Email",
+        "confirmEmail": "Confirm Email",
+        "phone": "Phone",
+        "dateOfBirth": "Date of Birth",
+        "nationality": "Nationality",
+        "address": "Address",
+        "city": "City",
+        "postalCode": "Postal Code",
+        "country": "Country"
+      },
+      "placeholders": {
+        "lastName": "Your last name",
+        "firstName": "Your first name",
+        "email": "your.email@example.com",
+        "confirmEmail": "Confirm your email",
+        "phone": "+261 XX XX XXX XX",
+        "nationality": "Your nationality",
+        "address": "Your address",
+        "city": "Your city",
+        "postalCode": "Postal code",
+        "country": "Your country"
+      },
+      "validation": {
+        "required": {
+          "lastName": "Last name is required",
+          "firstName": "First name is required",
+          "email": "Email is required",
+          "confirmEmail": "Email confirmation is required",
+          "phone": "Phone number is required",
+          "dateOfBirth": "Date of birth is required",
+          "nationality": "Nationality is required",
+          "address": "Address is required",
+          "city": "City is required",
+          "postalCode": "Postal code is required",
+          "country": "Country is required"
+        },
+        "invalid": {
+          "email": "Invalid email address",
+          "emailMismatch": "Emails must match"
+        }
+      }
+    },
+    "form3": {
+      "labels": {
+        "sector": "Business Sector",
+        "category": "Category"
+      },
+      "placeholders": {
+        "sector": "Select a sector",
+        "category": "Select a category"
+      },
+      "validation": {
+        "sectorRequired": "Sector selection is required",
+        "categoryRequired": "Category selection is required"
+      },
+      "sectors": {
+        "technologies_btp": "Technology & Construction",
+        "tourisme_sante_services": "Tourism, Healthcare & Services",
+        "communication_gestion": "Communication & Management",
+        "evenementiel_artistique": "Events & Artistic Fields"
+      },
+      "categories": {
+        "tech": {
+          "dev_web_ai": "Web developers, AI, cybersecurity, robotics",
+          "techniciens": "Electricians, AC technicians, plumbers, welders"
+        },
+        "tourisme": {
+          "hotel": "Front desk, kitchen, spa, housekeeping",
+          "medical": "Nurses, caregivers, ambulance drivers",
+          "logistique": "Drivers, logistics agents"
+        },
+        "comm": {
+          "accueil": "Trilingual customer service, call center",
+          "rh": "Secretaries, HR assistants, community managers"
+        },
+        "event": {
+          "technique": "Lighting/sound/video technicians, stage managers",
+          "artistes": "DJs, musicians, hosts, live performers"
+        }
+      }
+    },
+    "form5": {
+      "fields": {
+        "photo": "Recent photo",
+        "cv": "Resume (CV)",
+        "degree": "Copies of obtained degrees",
+        "coverLetter": "Cover letter"
+      },
+      "helpers": {
+        "photo": "Image format only (jpg, jpeg, png, webp), max size: 5 MB",
+        "pdf": "PDF format only, max size: 5 MB"
+      },
+      "validation": {
+        "photo": {
+          "required": "A recent photo is required"
+        },
+        "cv": {
+          "required": "The resume is required"
+        },
+        "degree": {
+          "required": "Degree notes or copies are required"
+        },
+        "coverLetter": {
+          "required": "The cover letter is required"
+        },
+        "pdfType": "The file must be a PDF",
+        "pdfSize": "Maximum size is 5MB",
+        "imageType": "The file must be an image (jpg, jpeg, png, webp)",
+        "imageSize": "Maximum size is 5MB"
+      }
+    },
+    "form4": {
+      "labels": {
+        "password": "Password",
+        "retype": "Confirm Password"
+      },
+      "placeholders": {
+        "password": "Your password",
+        "retype": "Confirm your password"
+      },
+      "validation": {
+        "password": {
+          "required": "Password is required",
+          "min": "The password must be at least 6 characters long."
+        },
+        "retype": {
+          "required": "Password confirmation is required.",
+          "match": "Passwords must match.",
+          "min": "The confirmation must be at least 6 characters long."
+        }
+      }
+    },
+    "confirmation": {
+      "title": "Application Summary",
+      "subtitle": "Please review the information below before submitting your application.",
+      "sections": {
+        "personal": "Personal Information",
+        "sector": "Selected Sector",
+        "documents": "Provided Documents"
+      },
+      "fields": {
+        "lastName": "Last Name",
+        "firstName": "First Name",
+        "email": "Email",
+        "phone": "Phone",
+        "birthdate": "Date of Birth",
+        "nationality": "Nationality",
+        "address": "Address",
+        "country": "Country",
+        "city": "City",
+        "postalCode": "Postal Code",
+        "sector": "Sector",
+        "category": "Category"
+      },
+      "documents": {
+        "photo": "Recent Photo",
+        "cv": "Resume (CV)",
+        "degree": "Degrees",
+        "coverLetter": "Cover Letter"
+      },
+      "consent": {
+        "text": "I certify that the provided information is accurate and I accept the",
+        "terms": "terms and conditions",
+        "and": "and the",
+        "privacy": "privacy policy"
+      },
+      "validation": {
+        "required": "You must accept the terms to continue"
+      }
+    },
+    "buttons": {
+      "previous": "Previous",
+      "next": "Next",
+      "submit": "Submit my application"
+    },
+    "progress": {
+      "personalInfo": "Personal Information",
+      "sectorChoice": "Sector Selection",
+      "documents": "Documents",
+      "password": "Password",
+      "confirmation": "Confirmation"
+    },
+    "modal": {
+      "title": "Application submitted successfully!",
+      "nextSteps": "Next steps",
+      "step1": "Your application will be reviewed by our team.",
+      "step2": "You will receive an email notification once your application is approved (also check your spam folder)",
+      "backHome": "Back to homepage"
+    }
+  },
+  "upload": {
+    "clickToUpload": "Click to select a file (PDF or image)",
+    "maxSize": "Max size: {size} MB",
+    "tooLarge": "File is too large"
   }
 }

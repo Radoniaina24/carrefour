@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import { useFormPassContext } from "../context/SignupContext";
 import { FaArrowLeft, FaArrowRight, FaPaperPlane } from "react-icons/fa";
 import { Loader2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function ButtonNextPrev({
   isSubmitting,
@@ -9,10 +11,11 @@ export default function ButtonNextPrev({
   isSubmitting?: boolean;
 }) {
   const { prevStep, currentStep } = useFormPassContext();
+  const t = useTranslations("form.buttons");
 
   return (
     <div className="mt-10 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
-      {/* Bouton Précédent */}
+      {/* Previous button */}
       <div className="w-full sm:w-auto">
         {currentStep > 1 &&
           (isSubmitting ? null : (
@@ -23,12 +26,12 @@ export default function ButtonNextPrev({
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <FaArrowLeft className="transition-transform duration-300 group-hover:-translate-x-1 text-slate-600" />
-              <span className="relative z-10">Précédent</span>
+              <span className="relative z-10">{t("previous")}</span>
             </button>
           ))}
       </div>
 
-      {/* Bouton Suivant/Soumettre */}
+      {/* Next or Submit button */}
       <div className="w-full sm:w-auto">
         {currentStep < 5 ? (
           <button
@@ -36,7 +39,7 @@ export default function ButtonNextPrev({
             className="group relative w-full sm:w-auto overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3.5 rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 active:shadow-lg font-medium text-sm flex items-center justify-center gap-3 shadow-lg"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <span className="relative z-10">Suivant</span>
+            <span className="relative z-10">{t("next")}</span>
             <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1 relative z-10" />
           </button>
         ) : (
@@ -54,7 +57,7 @@ export default function ButtonNextPrev({
                 !isSubmitting && "group-hover:opacity-100"
               } transition-opacity duration-300`}
             ></div>
-            <span className="relative z-10">Soumettre ma candidature</span>
+            <span className="relative z-10">{t("submit")}</span>
             {isSubmitting ? (
               <Loader2 className="h-5 w-5 animate-spin relative z-10" />
             ) : (

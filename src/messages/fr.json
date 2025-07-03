@@ -470,5 +470,206 @@
         "description": "Bénéficiez de notre expertise pour optimiser vos processus de recrutement"
       }
     }
+  },
+  "form": {
+    "form1": {
+      "personal": {
+        "title": "Informations personnelles",
+        "lastName": "Nom",
+        "firstName": "Prénom",
+        "email": "Email",
+        "confirmEmail": "Confirmation Email",
+        "phone": "Téléphone",
+        "dateOfBirth": "Date de naissance",
+        "nationality": "Nationalité",
+        "address": "Adresse",
+        "city": "Ville",
+        "postalCode": "Code postal",
+        "country": "Pays"
+      },
+      "placeholders": {
+        "lastName": "Votre nom de famille",
+        "firstName": "Votre prénom",
+        "email": "votre.email@exemple.com",
+        "confirmEmail": "Confirmer votre email",
+        "phone": "+261 XX XX XXX XX",
+        "nationality": "Votre nationalité",
+        "address": "Votre adresse",
+        "city": "Votre ville",
+        "postalCode": "Code postal",
+        "country": "Votre pays"
+      },
+      "validation": {
+        "required": {
+          "lastName": "Le nom est requis",
+          "firstName": "Le prénom est requis",
+          "email": "L'email est requis",
+          "confirmEmail": "La confirmation de l'email est requise",
+          "phone": "Le téléphone est requis",
+          "dateOfBirth": "La date de naissance est requise",
+          "nationality": "La nationalité est requise",
+          "address": "L'adresse est requise",
+          "city": "La ville est requise",
+          "postalCode": "Le code postal est requis",
+          "country": "Le pays est requis"
+        },
+        "invalid": {
+          "email": "Email invalide",
+          "emailMismatch": "Les emails doivent être identiques"
+        }
+      }
+    },
+    "form3": {
+      "labels": {
+        "sector": "Secteur d'activité",
+        "category": "Catégorie"
+      },
+      "placeholders": {
+        "sector": "Sélectionnez un secteur",
+        "category": "Sélectionnez une catégorie"
+      },
+      "validation": {
+        "sectorRequired": "Le choix du secteur est requis",
+        "categoryRequired": "Le choix de la catégorie est requis"
+      },
+      "sectors": {
+        "technologies_btp": "Technologies & BTP",
+        "tourisme_sante_services": "Tourisme, santé & services",
+        "communication_gestion": "Communication & gestion",
+        "evenementiel_artistique": "Événementiel & artistique"
+      },
+      "categories": {
+        "tech": {
+          "dev_web_ai": "Développeurs web, IA, cybersécurité, robotique",
+          "techniciens": "Électriciens, techniciens AC, plombiers, soudeurs"
+        },
+        "tourisme": {
+          "hotel": "Réception, cuisine, spa, housekeeping",
+          "medical": "Infirmiers, aides-soignants, ambulanciers",
+          "logistique": "Chauffeurs, agents logistiques"
+        },
+        "comm": {
+          "accueil": "Accueil client trilingue, call center",
+          "rh": "Secrétaires, assistants RH, community managers"
+        },
+        "event": {
+          "technique": "Techniciens lumière/son/vidéo, régisseurs",
+          "artistes": "DJs, musiciens, animateurs, artistes live"
+        }
+      }
+    },
+    "form5": {
+      "fields": {
+        "photo": "Photo récente",
+        "cv": "CV",
+        "degree": "Copies des diplômes obtenus",
+        "coverLetter": "Lettre de motivation"
+      },
+      "helpers": {
+        "photo": "Format image uniquement (jpg, jpeg, png, webp), taille max: 5 MB",
+        "pdf": "Format PDF uniquement, taille max: 5 MB"
+      },
+      "validation": {
+        "photo": {
+          "required": "La photo récente est requise"
+        },
+        "cv": {
+          "required": "Le CV est requis"
+        },
+        "degree": {
+          "required": "Note ou copies des diplômes obtenus est requis"
+        },
+        "coverLetter": {
+          "required": "La lettre de motivation est requise"
+        },
+        "pdfType": "Le fichier doit être un PDF",
+        "pdfSize": "Taille maximale 5MB",
+        "imageType": "Le fichier doit être une image (jpg, jpeg, png, webp)",
+        "imageSize": "La taille maximale est de 5MB"
+      }
+    },
+    "form4": {
+      "labels": {
+        "password": "Mot de passe",
+        "retype": "Confirmation du mot de passe"
+      },
+      "placeholders": {
+        "password": "Votre mot de passe",
+        "retype": "Confirmez votre mot de passe"
+      },
+      "validation": {
+        "password": {
+          "required": "Le mot de passe est requis",
+          "min": "Il est nécessaire d'avoir au moins 6 caractères pour le mot de passe."
+        },
+        "retype": {
+          "required": "Il est nécessaire de confirmer le mot de passe.",
+          "match": "Il est important que les mots de passe correspondent.",
+          "min": "Confirmer que le mot de passe doit comporter au moins 6 caractères."
+        }
+      }
+    },
+    "confirmation": {
+      "title": "Récapitulatif de votre candidature",
+      "subtitle": "Veuillez vérifier les informations ci-dessous avant de soumettre votre candidature.",
+      "sections": {
+        "personal": "Informations personnelles",
+        "sector": "Secteur choisi",
+        "documents": "Documents fournis"
+      },
+      "fields": {
+        "lastName": "Nom",
+        "firstName": "Prénom",
+        "email": "Email",
+        "phone": "Téléphone",
+        "birthdate": "Date de naissance",
+        "nationality": "Nationalité",
+        "address": "Adresse",
+        "country": "Pays",
+        "city": "Ville",
+        "postalCode": "Code postal",
+        "sector": "Secteur",
+        "category": "Catégorie"
+      },
+      "documents": {
+        "photo": "Photo récente",
+        "cv": "CV",
+        "degree": "Diplômes",
+        "coverLetter": "Lettre de motivation"
+      },
+      "consent": {
+        "text": "Je certifie l'exactitude des informations fournies et j'accepte les",
+        "terms": "conditions générales",
+        "and": "et la",
+        "privacy": "politique de confidentialité"
+      },
+      "validation": {
+        "required": "Vous devez accepter les conditions pour continuer"
+      }
+    },
+    "buttons": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "submit": "Soumettre ma candidature"
+    },
+    "progress": {
+      "personalInfo": "Informations personnelles",
+      "sectorChoice": "Choix du secteur",
+      "documents": "Documents",
+      "password": "Mot de passe",
+      "confirmation": "Confirmation"
+    },
+    "modal": {
+      "title": "Candidature envoyée avec succès !",
+      "nextSteps": "Prochaines étapes",
+      "step1": "Vérification de votre dossier par notre équipe.",
+      "step2": "Notification par email pour la validation de votre candidature (vérifiez aussi dans le spam)",
+      "backHome": "Retour à l'accueil"
+    }
+  },
+  "upload": {
+    "clickToUpload": "Cliquez pour sélectionner un fichier (PDF ou image)",
+    "maxSize": "Taille max : {size} Mo",
+    "tooLarge": "fichier trop volumineux"
   }
 }

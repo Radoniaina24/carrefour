@@ -1,3 +1,5 @@
+"use client";
+/* eslint-disable */
 import React, { useEffect } from "react";
 import { useFormPassContext } from "../context/SignupContext";
 import * as Yup from "yup";
@@ -5,57 +7,69 @@ import { useFormik } from "formik";
 import ButtonNextPrev from "../ButtonPrevNext/Button";
 import { motion } from "framer-motion";
 import FormSelect from "@/components/Form/FormSelect";
-/* eslint-disable */
+import { useTranslations } from "next-intl";
+
 export default function FormStep3() {
+  const t = useTranslations("form.form3"); // Namespace, ex: translations/form3.json
+
   const sectors = [
-    { label: "Technologies & BTP", value: "technologies_btp" },
-    { label: "Tourisme, santé & services", value: "tourisme_sante_services" },
-    { label: "Communication & gestion", value: "communication_gestion" },
-    { label: "Événementiel & artistique", value: "evenementiel_artistique" },
+    { label: t("sectors.technologies_btp"), value: "technologies_btp" },
+    {
+      label: t("sectors.tourisme_sante_services"),
+      value: "tourisme_sante_services",
+    },
+    {
+      label: t("sectors.communication_gestion"),
+      value: "communication_gestion",
+    },
+    {
+      label: t("sectors.evenementiel_artistique"),
+      value: "evenementiel_artistique",
+    },
   ];
 
   const sectorCategories: Record<string, { label: string; value: string }[]> = {
     technologies_btp: [
       {
-        label: "Développeurs web, IA, cybersécurité, robotique",
+        label: t("categories.tech.dev_web_ai"),
         value: "Développeurs web, IA, cybersécurité, robotique",
       },
       {
-        label: "Électriciens, techniciens AC, plombiers, soudeurs",
+        label: t("categories.tech.techniciens"),
         value: "Électriciens, techniciens AC, plombiers, soudeurs",
       },
     ],
     tourisme_sante_services: [
       {
-        label: "Réception, cuisine, spa, housekeeping",
+        label: t("categories.tourisme.hotel"),
         value: "Réception, cuisine, spa, housekeeping",
       },
       {
-        label: "Infirmiers, aides-soignants, ambulanciers",
+        label: t("categories.tourisme.medical"),
         value: "Infirmiers, aides-soignants, ambulanciers",
       },
       {
-        label: "Chauffeurs, agents logistiques",
+        label: t("categories.tourisme.logistique"),
         value: "Chauffeurs, agents logistiques",
       },
     ],
     communication_gestion: [
       {
-        label: "Accueil client trilingue, call center",
+        label: t("categories.comm.accueil"),
         value: "Accueil client trilingue, call center",
       },
       {
-        label: "Secrétaires, assistants RH, community managers",
+        label: t("categories.comm.rh"),
         value: "Secrétaires, assistants RH, community managers",
       },
     ],
     evenementiel_artistique: [
       {
-        label: "Techniciens lumière/son/vidéo, régisseurs",
+        label: t("categories.event.technique"),
         value: "Techniciens lumière/son/vidéo, régisseurs",
       },
       {
-        label: "DJs, musiciens, animateurs, artistes live",
+        label: t("categories.event.artistes"),
         value: "DJs, musiciens, animateurs, artistes live",
       },
     ],
@@ -69,11 +83,10 @@ export default function FormStep3() {
       category: formData.category || "",
     },
     validationSchema: Yup.object({
-      sector: Yup.string().required("Le choix du secteur est requis"),
-      category: Yup.string().required("Le choix de la catégorie est requis"),
+      sector: Yup.string().required(t("validation.sectorRequired")),
+      category: Yup.string().required(t("validation.categoryRequired")),
     }),
     onSubmit: (values) => {
-      // console.log(values);
       nextStep();
       setFormData((prev: any) => ({ ...prev, ...values }));
     },
@@ -101,13 +114,13 @@ export default function FormStep3() {
       <div>
         <FormSelect
           id="sector"
-          label="Secteur d'activité"
+          label={t("labels.sector")}
           value={formik.values.sector}
           onChange={formik.handleChange}
           options={sectors}
           error={formik.errors.sector}
           touched={formik.touched.sector}
-          placeholder="Sélectionnez un secteur"
+          placeholder={t("placeholders.sector")}
           required
         />
       </div>
@@ -115,13 +128,13 @@ export default function FormStep3() {
       <div>
         <FormSelect
           id="category"
-          label="Catégorie"
+          label={t("labels.category")}
           value={formik.values.category}
           onChange={formik.handleChange}
           options={sectorCategories[formik.values.sector] || []}
           error={formik.errors.category}
           touched={formik.touched.category}
-          placeholder="Sélectionnez une catégorie"
+          placeholder={t("placeholders.category")}
           required
         />
       </div>

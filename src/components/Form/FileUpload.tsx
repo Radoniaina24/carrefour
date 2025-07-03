@@ -1,6 +1,7 @@
-// components/FileUpload.tsx
+"use client";
 /* eslint-disable */
 import React from "react";
+import { useTranslations } from "next-intl";
 
 interface FileUploadProps {
   name: string;
@@ -27,6 +28,8 @@ const FileUpload: React.FC<FileUploadProps> = ({
   helperText,
   maxSizeMB = 5,
 }) => {
+  const t = useTranslations("upload");
+
   const getFileIcon = (file: File) => {
     const type = file.type;
     if (type.includes("pdf")) return "fa-file-pdf text-red-500";
@@ -61,13 +64,13 @@ const FileUpload: React.FC<FileUploadProps> = ({
         <label htmlFor={name} className="cursor-pointer block">
           <div className="text-center">
             <i className="fas fa-upload text-blue-500 text-3xl mb-2"></i>
-            <p className="text-sm text-gray-700 mb-1">
-              Cliquez pour sélectionner un fichier (PDF ou image)
-            </p>
+            <p className="text-sm text-gray-700 mb-1">{t("clickToUpload")}</p>
             {helperText && (
               <p className="text-xs text-gray-500">{helperText}</p>
             )}
-            <p className="text-xs text-gray-400">Taille max : {maxSizeMB} Mo</p>
+            <p className="text-xs text-gray-400">
+              {t("maxSize", { size: maxSizeMB })}
+            </p>
           </div>
         </label>
 
@@ -79,7 +82,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
                 isFileTooLarge ? "text-red-500" : "text-green-600"
               }`}
             >
-              {value.name} {isFileTooLarge && "(fichier trop volumineux)"}
+              {value.name} {isFileTooLarge && `(${t("tooLarge")})`}
             </span>
           </div>
         )}
