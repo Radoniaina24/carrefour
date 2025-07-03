@@ -669,5 +669,39 @@
     "clickToUpload": "Klicken Sie, um eine Datei auszuwählen (PDF oder Bild)",
     "maxSize": "Maximale Größe: {size} MB",
     "tooLarge": "Datei ist zu groß"
+  },
+  "recruteur": {
+    "form": {
+      "title": "Registrierung für Arbeitgeber",
+      "lastName": "Nachname",
+      "firstName": "Vorname",
+      "company": "Unternehmen",
+      "email": "E-Mail",
+      "country": "Land",
+      "password": "Passwort",
+      "confirmPassword": "Passwort bestätigen",
+      "submit": "Registrieren",
+      "loading": "Registrierung läuft...",
+      "already_registered": "Bereits registriert?",
+      "login": "Anmelden",
+      "terms": "Mit der Registrierung akzeptieren Sie unsere Nutzungsbedingungen und Datenschutzrichtlinie.",
+      "placeholders": {
+        "lastName": "Ihr Nachname",
+        "firstName": "Ihr Vorname",
+        "company": "Name des Unternehmens",
+        "email": "ihr@email.com",
+        "country": "Land auswählen",
+        "password": "Mindestens 6 Zeichen",
+        "confirmPassword": "Bestätigen Sie Ihr Passwort"
+      },
+      "errors": {
+        "required": "Dieses Feld ist erforderlich",
+        "invalid_email": "Ungültige E-Mail-Adresse",
+        "password_min": "Das Passwort muss mindestens 6 Zeichen lang sein",
+        "password_match": "Die Passwörter stimmen nicht überein",
+        "recaptcha_required": "Bitte bestätigen Sie das reCAPTCHA",
+        "default": "Ein Fehler ist aufgetreten"
+      }
+    }
   }
 }

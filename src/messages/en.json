@@ -677,5 +677,39 @@
     "clickToUpload": "Click to select a file (PDF or image)",
     "maxSize": "Max size: {size} MB",
     "tooLarge": "File is too large"
+  },
+  "recruteur": {
+    "form": {
+      "title": "Recruiter Registration",
+      "lastName": "Last Name",
+      "firstName": "First Name",
+      "company": "Company",
+      "email": "Email",
+      "country": "Country",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Register",
+      "loading": "Registering...",
+      "already_registered": "Already registered?",
+      "login": "Log in",
+      "terms": "By registering, you agree to our Terms of Use and Privacy Policy.",
+      "placeholders": {
+        "lastName": "Your last name",
+        "firstName": "Your first name",
+        "company": "Company name",
+        "email": "your@email.com",
+        "country": "Select a country",
+        "password": "Minimum 6 characters",
+        "confirmPassword": "Confirm your password"
+      },
+      "errors": {
+        "required": "This field is required",
+        "invalid_email": "Invalid email address",
+        "password_min": "Password must be at least 6 characters",
+        "password_match": "Passwords do not match",
+        "recaptcha_required": "Please validate the reCAPTCHA",
+        "default": "An error has occurred"
+      }
+    }
   }
 }

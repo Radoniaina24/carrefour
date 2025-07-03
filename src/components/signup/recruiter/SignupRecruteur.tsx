@@ -12,31 +12,36 @@ import toast, { Toaster } from "react-hot-toast";
 import { useAddRecruiterMutation } from "@/redux/api/recruiterApi";
 import { useRouter } from "next/navigation";
 import ReCAPTCHA from "react-google-recaptcha";
-const validationSchema = Yup.object({
-  lastName: Yup.string().required("Ce champ est requis"),
-  firstName: Yup.string().required("Ce champ est requis"),
-  company: Yup.string().required("Ce champ est requis"),
-  country: Yup.string().required("Ce champ est requis"),
-  emailAddress: Yup.string()
-    .email("Email invalide")
-    .required("Ce champ est requis"),
-  password: Yup.string()
-    .min(6, "Le mot de passe doit contenir au moins 6 caractères")
-    .required("Ce champ est requis"),
-  confirmPassword: Yup.string()
-    .oneOf([Yup.ref("password")], "Les mots de passe ne correspondent pas")
-    .required("Ce champ est requis"),
-  recaptcha: Yup.string().required("Veuillez valider le reCAPTCHA"),
-});
+import { useTranslations } from "next-intl";
 
 export const InscriptionFormRecruiter: React.FC = () => {
+  const t = useTranslations("recruteur.form");
+
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const ErrorNotification = (msg: string) => toast.error(msg);
-  const SuccessrNotification = (msg: string) => toast.success(msg);
+  const SuccessNotification = (msg: string) => toast.success(msg);
   const [addRecruiter] = useAddRecruiterMutation();
   const navigation = useRouter();
+
+  const validationSchema = Yup.object({
+    lastName: Yup.string().required(t("errors.required")),
+    firstName: Yup.string().required(t("errors.required")),
+    company: Yup.string().required(t("errors.required")),
+    country: Yup.string().required(t("errors.required")),
+    emailAddress: Yup.string()
+      .email(t("errors.invalid_email"))
+      .required(t("errors.required")),
+    password: Yup.string()
+      .min(6, t("errors.password_min"))
+      .required(t("errors.required")),
+    confirmPassword: Yup.string()
+      .oneOf([Yup.ref("password")], t("errors.password_match"))
+      .required(t("errors.required")),
+    recaptcha: Yup.string().required(t("errors.recaptcha_required")),
+  });
+
   const formik = useFormik<FormValues>({
     initialValues: {
       lastName: "",
@@ -53,11 +58,10 @@ export const InscriptionFormRecruiter: React.FC = () => {
       setSubmitting(true);
       try {
         const response: any = await addRecruiter(values).unwrap();
-
-        SuccessrNotification(response?.message);
+        SuccessNotification(response?.message);
         resetForm();
       } catch (error: any) {
-        const message = error?.data?.message || "Une erreur est survenue";
+        const message = error?.data?.message || t("errors.default");
         ErrorNotification(message);
       } finally {
         setSubmitting(false);
@@ -87,9 +91,10 @@ export const InscriptionFormRecruiter: React.FC = () => {
             </Link>
           </div>
           <h2 className="text-3xl font-bold text-blue-900 mb-2">
-            Inscription Recruteur
+            {t("title")}
           </h2>
         </div>
+
         <form
           onSubmit={formik.handleSubmit}
           className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/50 p-8 space-y-6"
@@ -97,16 +102,16 @@ export const InscriptionFormRecruiter: React.FC = () => {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <InputField
               name="lastName"
-              label="Nom"
+              label={t("lastName")}
               icon={User}
-              placeholder="Votre nom"
+              placeholder={t("placeholders.lastName")}
               formik={formik}
             />
             <InputField
               name="firstName"
-              label="Prénom"
+              label={t("firstName")}
               icon={User}
-              placeholder="Votre prénom"
+              placeholder={t("placeholders.firstName")}
               formik={formik}
             />
           </div>
@@ -114,9 +119,9 @@ export const InscriptionFormRecruiter: React.FC = () => {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <InputField
               name="company"
-              label="Entreprise"
+              label={t("company")}
               icon={MapPin}
-              placeholder="Nom de l'entreprise"
+              placeholder={t("placeholders.company")}
               formik={formik}
             />
             <InputField
@@ -124,14 +129,15 @@ export const InscriptionFormRecruiter: React.FC = () => {
               label="Email"
               type="email"
               icon={Mail}
-              placeholder="votre@email.com"
+              placeholder={t("placeholders.email")}
               formik={formik}
             />
           </div>
+
           <SelectCountryField
             name="country"
-            label="Pays"
-            placeholder="Sélectionnez un pays"
+            label={t("country")}
+            placeholder={t("placeholders.country")}
             icon={Globe}
             formik={formik}
           />
@@ -139,21 +145,20 @@ export const InscriptionFormRecruiter: React.FC = () => {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <InputField
               name="password"
-              label="Mot de passe"
+              label={t("password")}
               type="password"
               icon={Lock}
-              placeholder="Minimum 6 caractères"
+              placeholder={t("placeholders.password")}
               formik={formik}
               showPassword={showPassword}
               onTogglePassword={() => setShowPassword(!showPassword)}
             />
-
             <InputField
               name="confirmPassword"
-              label="Confirmer le mot de passe"
+              label={t("confirmPassword")}
               type="password"
               icon={Lock}
-              placeholder="Confirmez votre mot de passe"
+              placeholder={t("placeholders.confirmPassword")}
               formik={formik}
               showPassword={showConfirmPassword}
               onTogglePassword={() =>
@@ -161,9 +166,10 @@ export const InscriptionFormRecruiter: React.FC = () => {
               }
             />
           </div>
+
           <div className="flex justify-center flex-col gap-5">
             <ReCAPTCHA
-              sitekey={"6LejtWwrAAAAAM-q2rZLldZogcZT5D0aISfZLqNb"}
+              sitekey="6LejtWwrAAAAAM-q2rZLldZogcZT5D0aISfZLqNb"
               onChange={(value) => formik.setFieldValue("recaptcha", value)}
               onExpired={() => formik.setFieldValue("recaptcha", "")}
             />
@@ -186,31 +192,28 @@ export const InscriptionFormRecruiter: React.FC = () => {
             {formik.isSubmitting ? (
               <div className="flex items-center justify-center space-x-2">
                 <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                <span>Inscription en cours...</span>
+                <span>{t("loading")}</span>
               </div>
             ) : (
-              "S'inscrire"
+              t("submit")
             )}
           </button>
 
           <div className="mt-6 text-center">
             <p className="text-sm text-blue-600">
-              Déjà inscrit ?{" "}
+              {t("already_registered")}{" "}
               <Link
                 href="/connexion"
                 className="font-medium text-orange-600 hover:text-orange-700"
               >
-                Se connecter
+                {t("login")}
               </Link>
             </p>
           </div>
         </form>
 
         <div className="mt-6 text-center">
-          <p className="text-xs text-blue-500">
-            En vous inscrivant, vous acceptez nos conditions d&apos;utilisation
-            et notre politique de confidentialité.
-          </p>
+          <p className="text-xs text-blue-500">{t("terms")}</p>
         </div>
       </div>
     </div>
