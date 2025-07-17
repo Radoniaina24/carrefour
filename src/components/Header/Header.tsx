@@ -5,7 +5,10 @@ import Navbar from "./Navbar"; // Assure-toi que ce composant existe
 
 export const Header = () => {
   const pathname = usePathname();
-  const isAdminPage = pathname.startsWith("/admin");
+
+  const adminLocales = ["/fr/admin", "/en/admin", "/de/admin"];
+
+  const isAdminPage = adminLocales.some((path) => pathname.startsWith(path));
   const hiddenRoutes = ["/inscription", "/connexion"];
   const shouldHideHeader = hiddenRoutes.some((route) =>
     pathname.startsWith(route)
