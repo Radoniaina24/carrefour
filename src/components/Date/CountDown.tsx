@@ -27,7 +27,7 @@ const targetDate: Date = new Date(
     hour: "2-digit",
     minute: "2-digit",
     second: "2-digit",
-  }).format(new Date("2025-09-19T00:00:00"))
+  }).format(new Date("2025-11-01T00:00:00"))
 );
 
 export default function CountdownTimer(): JSX.Element {

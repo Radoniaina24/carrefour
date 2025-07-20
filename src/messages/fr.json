@@ -16,7 +16,7 @@
       "partnership": "En partenariat avec la Direction de la Migration Professionnelle Madagascar"
     },
     "eventBadge": {
-      "date": "19 & 20 Septembre 2025",
+      "date": "01 & 02 Novembre 2025",
       "location": "Hôtel Carlton Antananarivo"
     },
     "title": "Carrefour de l'Emploi",
@@ -112,10 +112,10 @@
   },
   "countdown": {
     "title": "Compte à Rebours",
-    "targetDate": "19 Septembre 2025",
+    "targetDate": "01 Novembre 2025",
     "location": "Madagascar",
     "expiredTitle": "🎉 Jour J Atteint !",
-    "expiredMessage": "Le 19 Septembre 2025 est enfin arrivé !",
+    "expiredMessage": "Le 01 Novembre 2025 est enfin arrivé !",
     "units": {
       "days": "Jours",
       "hours": "Heures",

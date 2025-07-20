@@ -16,7 +16,7 @@
       "partnership": "In Partnerschaft mit der Direktion für Berufliche Migration Madagaskar"
     },
     "eventBadge": {
-      "date": "19. & 20. September 2025",
+      "date": "01 & 02 November 2025",
       "location": "Hotel Carlton Antananarivo"
     },
     "title": "Carrefour de l’Emploi",
@@ -112,10 +112,10 @@
   },
   "countdown": {
     "title": "Countdown",
-    "targetDate": "19. September 2025",
+    "targetDate": "01 November 2025",
     "location": "Madagaskar",
     "expiredTitle": "🎉 Heutiger Tag erreicht!",
-    "expiredMessage": "Der 19. September 2025 ist endlich da!",
+    "expiredMessage": "Der 01 November 2025 ist endlich da!",
     "units": {
       "days": "Tage",
       "hours": "Stunden",
