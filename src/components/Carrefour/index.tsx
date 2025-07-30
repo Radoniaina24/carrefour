@@ -352,36 +352,6 @@ const CarrefourEmploi: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-gray-900 to-blue-900">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Prêt à transformer votre avenir ?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Rejoignez-nous les 1er & 2 Novembre 2025 au Carlton Madagascar
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="primary" onClick={handleRegistration}>
-              S&apos;inscrire Maintenant
-            </Button>
-            <Button variant="secondary" onClick={handleLearnMore}>
-              En Savoir Plus
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 py-8">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-gray-400">
-            © 2025 Carrefour International de l&apos;Emploi et des Études -
-            Madagascar
-          </p>
-        </div>
-      </footer>
     </div>
   );
 };
