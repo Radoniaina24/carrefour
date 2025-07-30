@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import {
-  Calendar,
-  MapPin,
   Users,
   GraduationCap,
   Briefcase,
@@ -79,36 +77,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   </div>
 );
 
-const Button: React.FC<{
-  variant: "primary" | "secondary";
-  children: React.ReactNode;
-  onClick?: () => void;
-}> = ({ variant, children, onClick }) => {
-  const baseClasses =
-    "font-bold py-4 px-8 rounded-full text-lg transition-colors duration-300";
-  const variantClasses =
-    variant === "primary"
-      ? "bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:shadow-xl"
-      : "bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900";
-
-  return (
-    <button className={`${baseClasses} ${variantClasses}`} onClick={onClick}>
-      {children}
-    </button>
-  );
-};
-
-// Data
-const heroData = {
-  date: "1er & 2 Novembre 2025",
-  title: "Carrefour International de",
-  subtitle: "l'Emploi et des Études",
-  edition: "Édition Madagascar",
-  location: "Carlton Madagascar",
-  tagline:
-    "Deux jours pour transformer des rencontres en opportunités concrètes",
-};
-
 const features = [
   {
     icon: <Briefcase className="w-12 h-12" />,
@@ -169,16 +137,6 @@ const universityServices = [
 
 // Main Component
 const CarrefourEmploi: React.FC = () => {
-  const handleRegistration = () => {
-    // Registration logic here
-    console.log("Registration clicked");
-  };
-
-  const handleLearnMore = () => {
-    // Learn more logic here
-    console.log("Learn more clicked");
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50">
       {/* Event Description */}
