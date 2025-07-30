@@ -32,14 +32,14 @@ export default function MultiStepForm() {
   };
 
   return (
-    <div className="min-h-screen  bg-gray-50">
+    <div className="min-h-screen  bg-gray-50 mt-16">
       <div className="container mx-auto  px-4 py-10 flex flex-col lg:flex-row gap-8">
         <div className="mx-auto w-full lg:w-2/3 bg-white p-6 md:p-8 rounded-lg shadow-md">
           <div className="mb-8">
             <div className="flex justify-center pt-1">
               <Link href={"/"}>
                 <Image
-                  src="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1748260405/carrefour-removebg-preview_pjn3yd.png"
+                  src="https://res.cloudinary.com/dikefxjpd/image/upload/v1753866569/logo-removebg-preview_1_p8ly7i.png"
                   alt="Logo"
                   width={160}
                   height={60}

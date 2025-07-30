@@ -76,12 +76,12 @@ export const InscriptionFormRecruiter: React.FC = () => {
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" />
       </div>
       <Toaster />
-      <div className="relative max-w-2xl mx-auto">
+      <div className="relative max-w-2xl mx-auto mt-16">
         <div className="text-center mb-8">
           <div className="flex justify-center pt-5">
             <Link href={"/"}>
               <Image
-                src="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1748260405/carrefour-removebg-preview_pjn3yd.png"
+                src="https://res.cloudinary.com/dikefxjpd/image/upload/v1753866569/logo-removebg-preview_1_p8ly7i.png"
                 alt="Logo"
                 width={160}
                 height={60}

@@ -75,7 +75,7 @@ const Signin: React.FC = () => {
         <div className="flex justify-center pt-5">
           <Link href={"/"}>
             <Image
-              src="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1748260405/carrefour-removebg-preview_pjn3yd.png"
+              src="https://res.cloudinary.com/dikefxjpd/image/upload/v1753866569/logo-removebg-preview_1_p8ly7i.png"
               alt="Logo"
               width={160}
               height={60}
