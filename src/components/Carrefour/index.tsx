@@ -181,46 +181,6 @@ const CarrefourEmploi: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-blue-800 to-orange-600">
-        <div className="absolute inset-0 bg-black/20"></div>
-
-        {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
-
-        <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-24">
-          <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">
-              <Calendar className="w-4 h-4 mr-2" />
-              {heroData.date}
-            </div>
-
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              {heroData.title}
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-500">
-                {heroData.subtitle}
-              </span>
-            </h1>
-
-            <p className="text-xl lg:text-2xl text-blue-100 mb-4 font-medium">
-              {heroData.edition}
-            </p>
-
-            <div className="flex items-center justify-center text-white/90 mb-8">
-              <MapPin className="w-5 h-5 mr-2" />
-              <span className="text-lg">{heroData.location}</span>
-            </div>
-
-            <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-6 inline-block">
-              <p className="text-xl text-white font-semibold">
-                {heroData.tagline}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Event Description */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
