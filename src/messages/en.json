@@ -797,5 +797,93 @@
         }
       }
     }
+  },
+  "why": {
+    "services": {
+      "title": "Who Is It For?",
+      "subtitle": "Our services are designed for international companies and higher education institutions",
+      "companies": "Companies",
+      "universities": "Universities"
+    },
+    "companies": {
+      "title": "For International Companies",
+      "subtitle": "Recruit the best Malagasy talents, trained and prepared!",
+      "feature1": {
+        "title": "Guaranteed CVs",
+        "description": "You choose the profiles, we evaluate and train them"
+      },
+      "feature2": {
+        "title": "Ready Collaborators",
+        "description": "Talents prepared to join your teams immediately"
+      },
+      "feature3": {
+        "title": "Satisfaction Guaranteed",
+        "description": "CVs validated, tested and guaranteed according to your criteria"
+      }
+    },
+    "universities": {
+      "title": "For Universities & Institutions",
+      "subtitle": "Access millions of Malagasy high school graduates and students",
+      "feature1": {
+        "title": "Growth Sectors",
+        "description": "Present your international degrees to a targeted audience"
+      },
+      "feature2": {
+        "title": "Scholarship Programs",
+        "description": "Offer your scholarships to motivated and qualified students"
+      },
+      "feature3": {
+        "title": "Supported Students",
+        "description": "Candidates prepared in all their procedures"
+      }
+    },
+    "why": {
+      "title": "Why Participate?",
+      "subtitle": "Madagascar is full of exceptional talents and represents a rapidly expanding market",
+      "companies": {
+        "title": "For Companies",
+        "benefit1": "Tens of thousands of qualified, motivated, trilingual young people available immediately",
+        "benefit2": "Unique opportunity for direct recruitment, on-site, in an organized and secure environment",
+        "benefit3": "Pre-selected, tested and trained candidates according to your criteria",
+        "benefit4": "Ideal for your development, outsourcing or international recruitment projects",
+        "quote": "\"They seek a future. You seek talents. The connection is here.\""
+      },
+      "universities": {
+        "title": "For Universities",
+        "benefit1": "More than 150,000 new high school graduates every year",
+        "benefit2": "Thousands of students seeking guidance, scholarships, and training abroad",
+        "benefit3": "Highlight your study programs, growth sectors and recognized degrees",
+        "benefit4": "Attract serious, motivated students supported in all their procedures",
+        "quote": "\"A pool of future students at your fingertips.\""
+      }
+    },
+    "package": {
+      "title": "Complete \"All Inclusive\" Package",
+      "subtitle": "For comfortable participation without constraints, we have everything planned",
+      "accommodation": {
+        "title": "5-Star Accommodation",
+        "description": "Carlton Madagascar - The height of luxury"
+      },
+      "transfers": {
+        "title": "VIP Transfers",
+        "description": "Welcome and airport-hotel transfer included"
+      },
+      "catering": {
+        "title": "Premium Catering",
+        "description": "Daily buffet lunch in a prestigious setting"
+      },
+      "access": {
+        "title": "Total Access",
+        "description": "To the event and all associated services"
+      },
+      "support": {
+        "title": "VIP Support",
+        "description": "Personalized on-site support"
+      },
+      "experience": {
+        "title": "High-End Experience",
+        "description": "In an exceptional standing venue"
+      }
+    }
   }
 }

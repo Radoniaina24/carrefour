@@ -791,5 +791,93 @@
         }
       }
     }
+  },
+  "why": {
+    "services": {
+      "title": "Pour Qui ?",
+      "subtitle": "Nos services s'adressent aux entreprises internationales et aux établissements d'enseignement supérieur",
+      "companies": "Entreprises",
+      "universities": "Universités"
+    },
+    "companies": {
+      "title": "Pour les Entreprises Internationales",
+      "subtitle": "Recrutez les meilleurs talents malgaches, formés et préparés !",
+      "feature1": {
+        "title": "CV Garanti",
+        "description": "Vous choisissez les profils, nous les évaluons et les formons"
+      },
+      "feature2": {
+        "title": "Collaborateurs Prêts",
+        "description": "Des talents préparés à intégrer vos équipes immédiatement"
+      },
+      "feature3": {
+        "title": "Satisfaction Garantie",
+        "description": "CV validés, testés et garantis selon vos critères"
+      }
+    },
+    "universities": {
+      "title": "Pour les Universités & Établissements",
+      "subtitle": "Accédez à des millions de bacheliers et étudiants malgaches",
+      "feature1": {
+        "title": "Filières Porteuses",
+        "description": "Présentez vos diplômes internationaux à un public ciblé"
+      },
+      "feature2": {
+        "title": "Programmes de Bourses",
+        "description": "Proposez vos bourses à des étudiants motivés et qualifiés"
+      },
+      "feature3": {
+        "title": "Étudiants Accompagnés",
+        "description": "Des candidats préparés dans toutes leurs démarches"
+      }
+    },
+    "why": {
+      "title": "Pourquoi Participer ?",
+      "subtitle": "Madagascar regorge de talents exceptionnels et représente un marché en pleine expansion",
+      "companies": {
+        "title": "Pour les Entreprises",
+        "benefit1": "Des dizaines de milliers de jeunes qualifiés, motivés, trilingues, disponibles immédiatement",
+        "benefit2": "Opportunité unique de recrutement direct, sur place, dans un cadre organisé et sécurisé",
+        "benefit3": "Candidats présélectionnés, testés et formés selon vos critères",
+        "benefit4": "Idéal pour vos projets de développement, d'externalisation ou de recrutement international",
+        "quote": "\"Ils cherchent un avenir. Vous cherchez des talents. Le lien, c'est ici.\""
+      },
+      "universities": {
+        "title": "Pour les Universités",
+        "benefit1": "Plus de 150 000 nouveaux bacheliers chaque année",
+        "benefit2": "Des milliers d'étudiants en quête d'orientation, de bourses, et de formations à l'étranger",
+        "benefit3": "Mettez en avant vos programmes d'études, filières porteuses et diplômes reconnus",
+        "benefit4": "Attirez des étudiants sérieux, motivés et accompagnés dans toutes les démarches",
+        "quote": "\"Un vivier de futurs étudiants à portée de main.\""
+      }
+    },
+    "package": {
+      "title": "Pack Complet \"All Inclusive\"",
+      "subtitle": "Pour une participation confortable et sans contrainte, nous avons tout prévu",
+      "accommodation": {
+        "title": "Hébergement 5 Étoiles",
+        "description": "Carlton Madagascar - Le summum du luxe"
+      },
+      "transfers": {
+        "title": "Transferts VIP",
+        "description": "Accueil et transfert aéroport-hôtel inclus"
+      },
+      "catering": {
+        "title": "Restauration Premium",
+        "description": "Déjeuner buffet quotidien dans un cadre prestigieux"
+      },
+      "access": {
+        "title": "Accès Total",
+        "description": "À l'événement et tous les services associés"
+      },
+      "support": {
+        "title": "Accompagnement VIP",
+        "description": "Support personnalisé sur place"
+      },
+      "experience": {
+        "title": "Expérience Haut de Gamme",
+        "description": "Dans un lieu de standing exceptionnel"
+      }
+    }
   }
 }

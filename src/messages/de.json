@@ -789,5 +789,93 @@
         }
       }
     }
+  },
+  "why": {
+    "services": {
+      "title": "Für wen ist es gedacht?",
+      "subtitle": "Unsere Angebote richten sich an internationale Unternehmen und Hochschulen",
+      "companies": "Unternehmen",
+      "universities": "Hochschulen"
+    },
+    "companies": {
+      "title": "Für internationale Unternehmen",
+      "subtitle": "Rekrutieren Sie die besten malagassischen Talente – ausgebildet und einsatzbereit!",
+      "feature1": {
+        "title": "Garantierte Lebensläufe",
+        "description": "Sie wählen die Profile aus, wir bewerten und schulen sie"
+      },
+      "feature2": {
+        "title": "Einsatzbereite Mitarbeitende",
+        "description": "Talente, die sofort in Ihr Team integriert werden können"
+      },
+      "feature3": {
+        "title": "Zufriedenheitsgarantie",
+        "description": "Geprüfte und garantierte Lebensläufe gemäß Ihren Kriterien"
+      }
+    },
+    "universities": {
+      "title": "Für Hochschulen & Institutionen",
+      "subtitle": "Zugang zu Millionen malagassischer Abiturient:innen und Studierender",
+      "feature1": {
+        "title": "Zukunftsbranchen",
+        "description": "Präsentieren Sie Ihre internationalen Studiengänge einem gezielten Publikum"
+      },
+      "feature2": {
+        "title": "Stipendienprogramme",
+        "description": "Bieten Sie motivierten und qualifizierten Studierenden Ihre Stipendien an"
+      },
+      "feature3": {
+        "title": "Begleitete Studierende",
+        "description": "Kandidaten, die in allen Schritten ihrer Bewerbung unterstützt werden"
+      }
+    },
+    "why": {
+      "title": "Warum teilnehmen?",
+      "subtitle": "Madagaskar ist reich an außergewöhnlichen Talenten und ein aufstrebender Markt",
+      "companies": {
+        "title": "Für Unternehmen",
+        "benefit1": "Zehntausende qualifizierte, motivierte und trilinguale junge Fachkräfte sofort verfügbar",
+        "benefit2": "Einmalige Gelegenheit zur Direktrekrutierung vor Ort in einem organisierten und sicheren Umfeld",
+        "benefit3": "Vorausgewählte, getestete und geschulte Kandidaten gemäß Ihren Anforderungen",
+        "benefit4": "Ideal für Ihre Expansions-, Outsourcing- oder internationalen Rekrutierungsprojekte",
+        "quote": "„Sie suchen Talente. Sie suchen Zukunft. Die Verbindung entsteht hier.“"
+      },
+      "universities": {
+        "title": "Für Hochschulen",
+        "benefit1": "Mehr als 150.000 neue Abiturient:innen jedes Jahr",
+        "benefit2": "Tausende Studierende auf der Suche nach Orientierung, Stipendien und Auslandsstudium",
+        "benefit3": "Stellen Sie Ihre Studienprogramme, Wachstumsbranchen und anerkannten Abschlüsse ins Rampenlicht",
+        "benefit4": "Gewinnen Sie ernsthafte und motivierte Studierende, die in allen Bewerbungsphasen begleitet werden",
+        "quote": "„Ein Pool zukünftiger Studierender zum Greifen nah.“"
+      }
+    },
+    "package": {
+      "title": "Rundum-sorglos-Paket „All Inclusive“",
+      "subtitle": "Für eine entspannte Teilnahme – wir haben an alles gedacht",
+      "accommodation": {
+        "title": "5-Sterne-Unterkunft",
+        "description": "Carlton Madagascar – Luxus in Perfektion"
+      },
+      "transfers": {
+        "title": "VIP-Transfers",
+        "description": "Empfang und Transfer vom Flughafen zum Hotel inklusive"
+      },
+      "catering": {
+        "title": "Premium-Catering",
+        "description": "Tägliches Mittagsbuffet in exklusivem Ambiente"
+      },
+      "access": {
+        "title": "Voller Zugang",
+        "description": "Zum Event und allen dazugehörigen Services"
+      },
+      "support": {
+        "title": "VIP-Betreuung",
+        "description": "Individuelle Betreuung vor Ort"
+      },
+      "experience": {
+        "title": "Exklusive Erfahrung",
+        "description": "In einer Location mit außergewöhnlichem Ambiente"
+      }
+    }
   }
 }
