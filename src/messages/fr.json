@@ -727,5 +727,69 @@
         "unknown_role": "Rôle utilisateur non reconnu"
       }
     }
+  },
+  "carrefourEmploi": {
+    "hero": {
+      "title": "Un événement unique",
+      "description": "Réunissant entreprises internationales, universités étrangères et des milliers de talents malgaches à la recherche d'un emploi durable, d'un stage à l'international ou d'une formation supérieure à l'étranger."
+    },
+    "features": {
+      "employment": {
+        "title": "Emploi & Stage International",
+        "description": "Opportunités d'emploi durable et de stages à l'international pour booster votre carrière."
+      },
+      "education": {
+        "title": "Formation Supérieure",
+        "description": "Programmes de licence, master, MBA dans des universités étrangères prestigieuses."
+      }
+    },
+    "audiences": {
+      "title": "Deux objectifs, deux publics clés",
+      "subtitle": "Des opportunités sur mesure pour chaque profil",
+      "students": {
+        "title": "Étudiants & Jeunes Diplômés",
+        "checklist": {
+          "item1": "Vous rêvez d'étudier à l'étranger ?",
+          "item2": "Vous cherchez un stage international ?"
+        },
+        "description": "Rencontrez des universités partenaires du monde entier, découvrez leurs programmes de bourses et les filières porteuses d'avenir."
+      },
+      "jobSeekers": {
+        "title": "Chercheurs d'Emploi",
+        "checklist": {
+          "item1": "Vous êtes prêt(e) à travailler à l'international ?",
+          "item2": "Participez à notre recrutement express !"
+        },
+        "description": "Déposez votre CV, passez les entretiens et repartez avec des opportunités concrètes."
+      }
+    },
+    "companies": {
+      "title": "Pour les Entreprises Internationales",
+      "guarantee": "RECRUTEZ AVEC UN CV GARANTI",
+      "steps": {
+        "step1": "Choisissez les profils qui vous intéressent",
+        "step2": "Nous les formons, les évaluons et les préparons",
+        "step3": "Vous repartez avec des collaborateurs prêts à travailler",
+        "step4": "Satisfaction 100% garantie"
+      }
+    },
+    "universities": {
+      "title": "Pour les Universités Internationales",
+      "subtitle": "Connectez-vous avec les meilleurs talents malgaches",
+      "services": {
+        "programs": {
+          "title": "Présentez vos Filières",
+          "description": "Filières d'avenir, programmes de bourses et conditions d'admission"
+        },
+        "meetings": {
+          "title": "Rencontres Directes",
+          "description": "Milliers de candidats prêts à partir rencontrés en direct"
+        },
+        "recruitment": {
+          "title": "Recrutez les Talents",
+          "description": "Les talents malgaches les plus motivés pour vos cursus internationaux"
+        }
+      }
+    }
   }
 }

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useTranslations } from "next-intl";
 import {
   Users,
   GraduationCap,
@@ -39,10 +40,12 @@ const FeatureCard: React.FC<FeatureItemProps> = ({
   iconColor,
   textColor,
 }) => (
-  <div className={`${bgColor} rounded-2xl p-8 border border-opacity-20`}>
+  <div
+    className={`${bgColor} rounded-2xl p-8 border border-opacity-20 hover:shadow-lg transition-all duration-300`}
+  >
     <div className={`${iconColor} mb-4`}>{icon}</div>
     <h3 className={`text-2xl font-bold ${textColor} mb-3`}>{title}</h3>
-    <p className={textColor}>{description}</p>
+    <p className={`${textColor} leading-relaxed`}>{description}</p>
   </div>
 );
 
@@ -52,16 +55,16 @@ const ChecklistItem: React.FC<{ text: string; color: string }> = ({
 }) => (
   <div className="flex items-start">
     <CheckCircle className={`w-5 h-5 ${color} mt-1 mr-3 flex-shrink-0`} />
-    <p className="text-gray-700">{text}</p>
+    <p className="text-gray-700 leading-relaxed">{text}</p>
   </div>
 );
 
 const StepCard: React.FC<StepItemProps> = ({ step, text }) => (
-  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-colors duration-300">
-    <div className="bg-orange-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+    <div className="bg-orange-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-lg">
       <span className="text-white font-bold text-lg">{step}</span>
     </div>
-    <p className="text-white font-medium">{text}</p>
+    <p className="text-white font-medium leading-relaxed">{text}</p>
   </div>
 );
 
@@ -70,91 +73,87 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
 }) => (
-  <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/25 transition-colors duration-300">
+  <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/25 transition-all duration-300 transform hover:scale-105">
     <div className="text-orange-200 mx-auto mb-4">{icon}</div>
     <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-    <p className="text-orange-100">{description}</p>
+    <p className="text-orange-100 leading-relaxed">{description}</p>
   </div>
 );
 
-const features = [
-  {
-    icon: <Briefcase className="w-12 h-12" />,
-    title: "Emploi & Stage International",
-    description:
-      "Opportunités d'emploi durable et de stages à l'international pour booster votre carrière.",
-    bgColor: "bg-gradient-to-br from-blue-50 to-blue-100",
-    iconColor: "text-blue-600",
-    textColor: "text-blue-900",
-  },
-  {
-    icon: <GraduationCap className="w-12 h-12" />,
-    title: "Formation Supérieure",
-    description:
-      "Programmes de licence, master, MBA dans des universités étrangères prestigieuses.",
-    bgColor: "bg-gradient-to-br from-orange-50 to-orange-100",
-    iconColor: "text-orange-600",
-    textColor: "text-orange-900",
-  },
-];
-
-const studentChecklistItems = [
-  "Vous rêvez d'étudier à l'étranger ?",
-  "Vous cherchez un stage international ?",
-];
-
-const jobSeekerChecklistItems = [
-  "Vous êtes prêt(e) à travailler à l'international ?",
-  "Participez à notre recrutement express !",
-];
-
-const companySteps = [
-  "Choisissez les profils qui vous intéressent",
-  "Nous les formons, les évaluons et les préparons",
-  "Vous repartez avec des collaborateurs prêts à travailler",
-  "Satisfaction 100% garantie",
-];
-
-const universityServices = [
-  {
-    icon: <GraduationCap className="w-12 h-12" />,
-    title: "Présentez vos Filières",
-    description:
-      "Filières d'avenir, programmes de bourses et conditions d'admission",
-  },
-  {
-    icon: <Users className="w-12 h-12" />,
-    title: "Rencontres Directes",
-    description: "Milliers de candidats prêts à partir rencontrés en direct",
-  },
-  {
-    icon: <Award className="w-12 h-12" />,
-    title: "Recrutez les Talents",
-    description:
-      "Les talents malgaches les plus motivés pour vos cursus internationaux",
-  },
-];
-
 // Main Component
 const CarrefourEmploi: React.FC = () => {
+  const t = useTranslations("carrefourEmploi");
+
+  const features = [
+    {
+      icon: <Briefcase className="w-12 h-12" />,
+      title: t("features.employment.title"),
+      description: t("features.employment.description"),
+      bgColor: "bg-gradient-to-br from-blue-50 to-blue-100",
+      iconColor: "text-blue-600",
+      textColor: "text-blue-900",
+    },
+    {
+      icon: <GraduationCap className="w-12 h-12" />,
+      title: t("features.education.title"),
+      description: t("features.education.description"),
+      bgColor: "bg-gradient-to-br from-orange-50 to-orange-100",
+      iconColor: "text-orange-600",
+      textColor: "text-orange-900",
+    },
+  ];
+
+  const studentChecklistItems = [
+    t("audiences.students.checklist.item1"),
+    t("audiences.students.checklist.item2"),
+  ];
+
+  const jobSeekerChecklistItems = [
+    t("audiences.jobSeekers.checklist.item1"),
+    t("audiences.jobSeekers.checklist.item2"),
+  ];
+
+  const companySteps = [
+    t("companies.steps.step1"),
+    t("companies.steps.step2"),
+    t("companies.steps.step3"),
+    t("companies.steps.step4"),
+  ];
+
+  const universityServices = [
+    {
+      icon: <GraduationCap className="w-12 h-12" />,
+      title: t("universities.services.programs.title"),
+      description: t("universities.services.programs.description"),
+    },
+    {
+      icon: <Users className="w-12 h-12" />,
+      title: t("universities.services.meetings.title"),
+      description: t("universities.services.meetings.description"),
+    },
+    {
+      icon: <Award className="w-12 h-12" />,
+      title: t("universities.services.recruitment.title"),
+      description: t("universities.services.recruitment.description"),
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50">
       {/* Event Description */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Un événement unique
-            </h2>
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 to-orange-50/30"></div>
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              {t("hero.title")}
+            </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Réunissant entreprises internationales, universités étrangères et
-              des milliers de talents malgaches à la recherche d&apos;un emploi
-              durable, d&apos;un stage à l&apos;international ou d&apos;une
-              formation supérieure à l&apos;étranger.
+              {t("hero.description")}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
+          <div className="grid md:grid-cols-2 gap-8 mt-16">
             {features.map((feature, index) => (
               <FeatureCard key={index} {...feature} />
             ))}
@@ -163,23 +162,24 @@ const CarrefourEmploi: React.FC = () => {
       </section>
 
       {/* Target Audiences */}
-      <section className="py-16 bg-gradient-to-r from-gray-50 to-blue-50">
+      <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50 relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Deux objectifs, deux publics clés
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              {t("audiences.title")}
             </h2>
+            <p className="text-lg text-gray-600">{t("audiences.subtitle")}</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Étudiants */}
-            <div className="bg-white rounded-3xl shadow-xl p-8 border-t-4 border-blue-500 hover:shadow-2xl transition-shadow duration-300">
+            {/* Students */}
+            <div className="bg-white rounded-3xl shadow-xl p-8 border-t-4 border-blue-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="flex items-center mb-6">
                 <div className="bg-blue-100 rounded-full p-3 mr-4">
                   <Users className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-blue-900">
-                  Étudiants & Jeunes Diplômés
+                  {t("audiences.students.title")}
                 </h3>
               </div>
 
@@ -191,24 +191,22 @@ const CarrefourEmploi: React.FC = () => {
                     color="text-blue-500"
                   />
                 ))}
-                <div className="bg-blue-50 rounded-xl p-4 mt-6">
-                  <p className="text-blue-800 font-medium">
-                    Rencontrez des universités partenaires du monde entier,
-                    découvrez leurs programmes de bourses et les filières
-                    porteuses d&apos;avenir.
+                <div className="bg-blue-50 rounded-xl p-6 mt-6">
+                  <p className="text-blue-800 font-medium leading-relaxed">
+                    {t("audiences.students.description")}
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Chercheurs d'emploi */}
-            <div className="bg-white rounded-3xl shadow-xl p-8 border-t-4 border-orange-500 hover:shadow-2xl transition-shadow duration-300">
+            {/* Job Seekers */}
+            <div className="bg-white rounded-3xl shadow-xl p-8 border-t-4 border-orange-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="flex items-center mb-6">
                 <div className="bg-orange-100 rounded-full p-3 mr-4">
                   <Briefcase className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-orange-900">
-                  Chercheurs d&apos;Emploi
+                  {t("audiences.jobSeekers.title")}
                 </h3>
               </div>
 
@@ -220,10 +218,9 @@ const CarrefourEmploi: React.FC = () => {
                     color="text-orange-500"
                   />
                 ))}
-                <div className="bg-orange-50 rounded-xl p-4 mt-6">
-                  <p className="text-orange-800 font-medium">
-                    Déposez votre CV, passez les entretiens et repartez avec des
-                    opportunités concrètes.
+                <div className="bg-orange-50 rounded-xl p-6 mt-6">
+                  <p className="text-orange-800 font-medium leading-relaxed">
+                    {t("audiences.jobSeekers.description")}
                   </p>
                 </div>
               </div>
@@ -233,15 +230,16 @@ const CarrefourEmploi: React.FC = () => {
       </section>
 
       {/* For Companies */}
-      <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-800">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <Building className="w-16 h-16 text-blue-300 mx-auto mb-4" />
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Pour les Entreprises Internationales
+      <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-800 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <Building className="w-16 h-16 text-blue-300 mx-auto mb-6" />
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+              {t("companies.title")}
             </h2>
-            <div className="bg-orange-500 text-white text-xl font-bold py-3 px-8 rounded-full inline-block">
-              RECRUTEZ AVEC UN CV GARANTI
+            <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xl font-bold py-4 px-8 rounded-full inline-block shadow-lg">
+              {t("companies.guarantee")}
             </div>
           </div>
 
@@ -254,13 +252,17 @@ const CarrefourEmploi: React.FC = () => {
       </section>
 
       {/* For Universities */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 to-orange-600">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <Award className="w-16 h-16 text-orange-200 mx-auto mb-4" />
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-8">
-              Pour les Universités Internationales
+      <section className="py-20 bg-gradient-to-r from-orange-500 to-orange-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <Award className="w-16 h-16 text-orange-200 mx-auto mb-6" />
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+              {t("universities.title")}
             </h2>
+            <p className="text-xl text-orange-100 max-w-3xl mx-auto">
+              {t("universities.subtitle")}
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">

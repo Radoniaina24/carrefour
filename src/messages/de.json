@@ -725,5 +725,69 @@
         "unknown_role": "Unbekannte Benutzerrolle"
       }
     }
+  },
+  "carrefourEmploi": {
+    "hero": {
+      "title": "Ein einzigartiges Event",
+      "description": "Ein Treffpunkt für internationale Unternehmen, ausländische Universitäten und tausende madagassische Talente, die auf der Suche nach einer nachhaltigen Beschäftigung, einem internationalen Praktikum oder einem weiterführenden Studium im Ausland sind."
+    },
+    "features": {
+      "employment": {
+        "title": "Internationale Beschäftigung & Praktika",
+        "description": "Chancen für nachhaltige Beschäftigung und internationale Praktika, um Ihre Karriere voranzutreiben."
+      },
+      "education": {
+        "title": "Hochschulbildung im Ausland",
+        "description": "Bachelor-, Master- und MBA-Programme an renommierten ausländischen Universitäten."
+      }
+    },
+    "audiences": {
+      "title": "Zwei Ziele, zwei Hauptzielgruppen",
+      "subtitle": "Maßgeschneiderte Chancen für jedes Profil",
+      "students": {
+        "title": "Studierende & Berufseinsteiger",
+        "checklist": {
+          "item1": "Sie träumen davon, im Ausland zu studieren?",
+          "item2": "Sie suchen ein internationales Praktikum?"
+        },
+        "description": "Treffen Sie Partneruniversitäten aus aller Welt, entdecken Sie deren Stipendienprogramme und zukunftsträchtige Studiengänge."
+      },
+      "jobSeekers": {
+        "title": "Arbeitssuchende",
+        "checklist": {
+          "item1": "Sind Sie bereit für einen internationalen Job?",
+          "item2": "Nehmen Sie an unserem Express-Recruiting teil!"
+        },
+        "description": "Hinterlegen Sie Ihren Lebenslauf, führen Sie Bewerbungsgespräche und sichern Sie sich konkrete Chancen."
+      }
+    },
+    "companies": {
+      "title": "Für Internationale Unternehmen",
+      "guarantee": "REKRUTIEREN MIT GARANTIERTER QUALITÄT",
+      "steps": {
+        "step1": "Wählen Sie die für Sie interessanten Profile aus",
+        "step2": "Wir schulen, evaluieren und bereiten sie vor",
+        "step3": "Sie erhalten sofort einsatzbereite Mitarbeitende",
+        "step4": "100 % Zufriedenheitsgarantie"
+      }
+    },
+    "universities": {
+      "title": "Für Internationale Universitäten",
+      "subtitle": "Vernetzen Sie sich mit den besten Talenten Madagaskars",
+      "services": {
+        "programs": {
+          "title": "Stellen Sie Ihre Studiengänge vor",
+          "description": "Zukunftsorientierte Studienrichtungen, Stipendienprogramme und Zulassungsvoraussetzungen"
+        },
+        "meetings": {
+          "title": "Direkte Begegnungen",
+          "description": "Tausende ausreisewillige Bewerber:innen im direkten Austausch"
+        },
+        "recruitment": {
+          "title": "Talente Rekrutieren",
+          "description": "Die motiviertesten madagassischen Talente für Ihre internationalen Programme"
+        }
+      }
+    }
   }
 }

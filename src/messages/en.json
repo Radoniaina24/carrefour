@@ -733,5 +733,69 @@
         "unknown_role": "Unrecognized user role"
       }
     }
+  },
+  "carrefourEmploi": {
+    "hero": {
+      "title": "A Unique Event",
+      "description": "Bringing together international companies, foreign universities and thousands of Malagasy talents seeking sustainable employment, international internships or higher education abroad."
+    },
+    "features": {
+      "employment": {
+        "title": "Employment & International Internship",
+        "description": "Sustainable employment and international internship opportunities to boost your career."
+      },
+      "education": {
+        "title": "Higher Education",
+        "description": "Bachelor's, master's, MBA programs in prestigious foreign universities."
+      }
+    },
+    "audiences": {
+      "title": "Two Objectives, Two Key Audiences",
+      "subtitle": "Tailored opportunities for every profile",
+      "students": {
+        "title": "Students & Recent Graduates",
+        "checklist": {
+          "item1": "Do you dream of studying abroad?",
+          "item2": "Are you looking for an international internship?"
+        },
+        "description": "Meet partner universities from around the world, discover their scholarship programs and promising career paths."
+      },
+      "jobSeekers": {
+        "title": "Job Seekers",
+        "checklist": {
+          "item1": "Are you ready to work internationally?",
+          "item2": "Join our express recruitment!"
+        },
+        "description": "Submit your CV, attend interviews and leave with concrete opportunities."
+      }
+    },
+    "companies": {
+      "title": "For International Companies",
+      "guarantee": "RECRUIT WITH GUARANTEED CV",
+      "steps": {
+        "step1": "Choose the profiles that interest you",
+        "step2": "We train, evaluate and prepare them",
+        "step3": "You leave with collaborators ready to work",
+        "step4": "100% satisfaction guaranteed"
+      }
+    },
+    "universities": {
+      "title": "For International Universities",
+      "subtitle": "Connect with the best Malagasy talents",
+      "services": {
+        "programs": {
+          "title": "Present Your Programs",
+          "description": "Future-oriented programs, scholarship programs and admission requirements"
+        },
+        "meetings": {
+          "title": "Direct Meetings",
+          "description": "Thousands of candidates ready to leave met directly"
+        },
+        "recruitment": {
+          "title": "Recruit Talents",
+          "description": "The most motivated Malagasy talents for your international programs"
+        }
+      }
+    }
   }
 }
