@@ -7,7 +7,6 @@ import {
   MapPin,
   MessageCircle,
   Phone,
-  Clock,
   Send,
   Building2,
 } from "lucide-react";
@@ -68,7 +67,7 @@ const Contact = () => {
       }
     },
   });
-  console.log(formik.values);
+  // console.log(formik.values);
   return (
     <div className="min-h-screen py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-orange-50 relative overflow-hidden">
       {/* Background decorative elements */}
@@ -95,7 +94,7 @@ const Contact = () => {
                 <form onSubmit={formik.handleSubmit} autoComplete="off">
                   <div className="space-y-6">
                     {/* Name Fields */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2  gap-6">
                       <InputField
                         name="lastName"
                         label={t("form.fields.lastName")}
@@ -209,7 +208,7 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4 p-4 rounded-2xl bg-gradient-to-r from-emerald-50 to-emerald-100 border border-emerald-200">
+                  {/* <div className="flex items-start space-x-4 p-4 rounded-2xl bg-gradient-to-r from-emerald-50 to-emerald-100 border border-emerald-200">
                     <div className="flex-shrink-0 w-12 h-12 bg-emerald-500 rounded-2xl flex items-center justify-center">
                       <Clock className="h-6 w-6 text-white" />
                     </div>
@@ -224,7 +223,7 @@ const Contact = () => {
                         {t("info.schedule.time")}
                       </p>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="flex items-start space-x-4 p-4 rounded-2xl bg-gradient-to-r from-purple-50 to-purple-100 border border-purple-200">
                     <div className="flex-shrink-0 w-12 h-12 bg-purple-500 rounded-2xl flex items-center justify-center">
@@ -239,6 +238,22 @@ const Contact = () => {
                       </p>
                       <p className="text-slate-500 text-xs mt-1">
                         {t("info.address.city")}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4 p-4 rounded-2xl bg-gradient-to-r from-purple-50 to-purple-100 border border-purple-200">
+                    <div className="flex-shrink-0 w-12 h-12 bg-purple-500 rounded-2xl flex items-center justify-center">
+                      <Building2 className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-800">
+                        {t("info.address2.title")}
+                      </h4>
+                      <p className="text-slate-600 text-sm mt-1">
+                        {t("info.address2.street")}
+                      </p>
+                      <p className="text-slate-500 text-xs mt-1">
+                        {t("info.address2.city")}
                       </p>
                     </div>
                   </div>

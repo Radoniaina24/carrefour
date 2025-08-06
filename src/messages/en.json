@@ -393,7 +393,7 @@
       },
       "phone": {
         "title": "Phone",
-        "numbers": "+261 37 07 777 07\n+230 5 488-4377",
+        "numbers": "+230 5 782-8567 | +261 32 05 777 47",
         "hours": "Mon - Fri: 8am - 5pm"
       },
       "schedule": {
@@ -402,9 +402,14 @@
         "time": "08:00 - 17:00"
       },
       "address": {
-        "title": "Address",
-        "street": "Nanisana",
-        "city": "Antananarivo Madagascar"
+        "title": "Adresse Maurice",
+        "street": "Villa N°1, Chemin Desvaux.",
+        "city": "Petit Verger, Saint Pierrer"
+      },
+      "address2": {
+        "title": "Adresse Madagascar",
+        "street": "Siege Gate Africa Group Lot II A 105 E Nanisana Iadiambola",
+        "city": "101 Antananarivo"
       }
     }
   },
