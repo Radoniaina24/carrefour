@@ -1,5 +1,5 @@
 import React from "react";
-import { Camera, Headphones, Music, Users, LucideIcon } from "lucide-react";
+import { Headphones, Music, Users, LucideIcon } from "lucide-react";
 import { CSS_CLASSES } from "./About";
 import { useTranslations } from "next-intl";
 
@@ -39,14 +39,14 @@ export default function LiveSection() {
   const t = useTranslations("about.live");
 
   const cards: LiveCardProps[] = [
-    {
-      icon: Camera,
-      title: t("cards.0.title"),
-      description: t("cards.0.description"),
-      gradientClass: "bg-gradient-to-r from-purple-600/10 to-pink-600/10",
-      borderClass: "border border-purple-300/20",
-      iconClass: "text-purple-400",
-    },
+    // {
+    //   icon: Camera,
+    //   title: t("cards.0.title"),
+    //   description: t("cards.0.description"),
+    //   gradientClass: "bg-gradient-to-r from-purple-600/10 to-pink-600/10",
+    //   borderClass: "border border-purple-300/20",
+    //   iconClass: "text-purple-400",
+    // },
     {
       icon: Music,
       title: t("cards.1.title"),

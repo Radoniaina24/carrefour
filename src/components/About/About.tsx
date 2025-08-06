@@ -14,6 +14,7 @@ import {
   Headphones,
   Code,
   Camera,
+  GraduationCap,
 } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 import { SectorCard } from "./SectorCard";
@@ -22,6 +23,7 @@ import { ProcessStepCard } from "./ProcessStepCard";
 import { FeatureCardComponent } from "./FeatureCardComponent";
 import LiveSection from "./LiveSection";
 import { useTranslations } from "next-intl";
+import { FeatureCard } from "../Carrefour";
 
 // Type pour les icônes Lucide
 type LucideIcon = React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -66,6 +68,26 @@ export const CSS_CLASSES = {
 // Composant principal
 const AboutSection: React.FC = () => {
   const t = useTranslations("about");
+  const f = useTranslations("carrefourEmploi");
+
+  const features = [
+    {
+      icon: <Briefcase className="w-12 h-12" />,
+      title: f("features.employment.title"),
+      // description: t("features.employment.description"),
+      bgColor: "bg-gradient-to-br from-blue-50 to-blue-100",
+      iconColor: "text-blue-600",
+      textColor: "text-blue-900",
+    },
+    {
+      icon: <GraduationCap className="w-12 h-12" />,
+      title: f("features.education.title"),
+      // description: t("features.education.description"),
+      bgColor: "bg-gradient-to-br from-orange-50 to-orange-100",
+      iconColor: "text-orange-600",
+      textColor: "text-orange-900",
+    },
+  ];
   const PROCESS_STEPS: readonly ProcessStep[] = Array.from({ length: 4 }).map(
     (_, i) => ({
       step: i + 1,
@@ -180,7 +202,11 @@ const AboutSection: React.FC = () => {
       <div className={CSS_CLASSES.container}>
         {/* En-tête principal */}
         <SectionHeader />
-
+        <div className="grid md:grid-cols-2 gap-8 my-16">
+          {features.map((feature, index) => (
+            <FeatureCard description={""} key={index} {...feature} />
+          ))}
+        </div>
         {/* Grille de contenu principal */}
         <div className="grid lg:grid-cols-12 gap-8 mb-20">
           {/* Colonne gauche - Description principale */}

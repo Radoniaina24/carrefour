@@ -32,7 +32,7 @@ interface ServiceCardProps {
 }
 
 // Components
-const FeatureCard: React.FC<FeatureItemProps> = ({
+export const FeatureCard: React.FC<FeatureItemProps> = ({
   icon,
   title,
   description,
