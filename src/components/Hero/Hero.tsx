@@ -10,42 +10,13 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
 import SectionPartenariat from "./SectionPartenariat";
 import { useTranslations } from "next-intl";
 
 const HeroSection = () => {
   const t = useTranslations("hero");
-  const [displayedText, setDisplayedText] = useState("");
-  const [currentLineIndex, setCurrentLineIndex] = useState(0);
-  const [currentCharIndex, setCurrentCharIndex] = useState(0);
+
   const router = useRouter();
-
-  // Diviser le message en lignes
-  const messageLines = t.raw("typing");
-  // Effet typing
-  useEffect(() => {
-    if (currentLineIndex < messageLines.length) {
-      const currentLine = messageLines[currentLineIndex];
-
-      if (currentCharIndex < currentLine.length) {
-        const timer = setTimeout(() => {
-          setDisplayedText((prev) => prev + currentLine[currentCharIndex]);
-          setCurrentCharIndex((prev) => prev + 1);
-        }, 80);
-
-        return () => clearTimeout(timer);
-      } else {
-        const timer = setTimeout(() => {
-          setDisplayedText((prev) => prev + "\n");
-          setCurrentLineIndex((prev) => prev + 1);
-          setCurrentCharIndex(0);
-        }, 1000);
-
-        return () => clearTimeout(timer);
-      }
-    }
-  }, [currentCharIndex, currentLineIndex, messageLines]);
 
   return (
     <section
@@ -134,8 +105,18 @@ const HeroSection = () => {
               </motion.div>
             </motion.div>
 
+            <motion.h1
+              className="text-3xl  font-bold leading-tight text-white"
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              {t("title2")}
+            </motion.h1>
+
             {/* Slogan avec effet typing amélioré */}
-            <motion.div
+            {/* <motion.div
               className="relative"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -162,7 +143,7 @@ const HeroSection = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Right Column - Buttons améliorés */}
