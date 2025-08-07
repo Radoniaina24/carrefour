@@ -2,17 +2,26 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 export async function POST(req: NextRequest) {
   try {
+    // console.log(usre);
     const body = await req.json();
     const { name, email, message, address } = body;
     // console.log(process.env.EMAIL_PASS);
     // Configurer le transporteur Nodemailer
+    // const transporter = nodemailer.createTransport({
+    //   host: "mail77.lwspanel.com",
+    //   port: 465,
+    //   secure: true,
+    //   auth: {
+    //     user: process.env.EMAIL_USER,
+    //     pass: process.env.EMAIL_PASS,
+    //   },
+    // });
+
     const transporter = nodemailer.createTransport({
-      host: "mail77.lwspanel.com",
-      port: 465,
-      secure: true,
+      service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_APP_PASSWORD,
       },
     });
 
@@ -220,7 +229,7 @@ export async function POST(req: NextRequest) {
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       "
     >
-      🏢 Carrefour de l'emploi Madagascar
+      🏢 Carrefour de l'emploi et des études Madagascar
     </p>
   </div>
 </div>
