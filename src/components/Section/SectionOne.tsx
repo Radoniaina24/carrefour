@@ -93,11 +93,15 @@ export default function UniqueFeatures() {
           <h2 className="text-6xl md:text-7xl font-extrabold text-slate-900 mb-4 tracking-tight leading-none">
             {t("title")}
           </h2>
+
           <div className="relative inline-block">
             <h3 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">
               {t("highlight")}
             </h3>
             {/* Underline effect */}
+            <div className="my-12 text-4xl  font-extrabold bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">
+              {t("ctaRecruitmentSection")}
+            </div>
             <div
               className="absolute -bottom-4 left-0 right-0 h-2 bg-gradient-to-r from-blue-600 to-orange-600 rounded-full transform scale-x-0 animate-pulse"
               style={{ animation: "scaleX 2s ease-in-out infinite alternate" }}

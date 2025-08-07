@@ -193,7 +193,7 @@ const ProgramSection = () => {
               href="/inscription/recruteur"
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg"
             >
-              {t("ctaRecruteur")}
+              {t("ctaUniversity")}
             </Link>
             <Link
               href="/inscription/candidat"

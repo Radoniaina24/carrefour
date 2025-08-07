@@ -62,6 +62,7 @@
     "badge": "Excellence",
     "title": "Ce qui nous rend",
     "highlight": "UNIQUES",
+    "ctaRecruitmentSection": "Volet de recrutement",
     "features": [
       {
         "title": "Vous choisissez les profils",
@@ -281,6 +282,7 @@
     "ctaText": "Participez à cet événement de recrutement d'exception et donnez un nouvel élan à votre carrière",
     "ctaCandidat": "Inscription candidat",
     "ctaRecruteur": "Inscription recruteur",
+    "ctaUniversity": " Inscription Université",
     "days": [
       {
         "day": "Jour 1",
