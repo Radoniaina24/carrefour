@@ -190,7 +190,7 @@ const ProgramSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/inscription/recruteur"
+              href="/inscription/candidat"
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg"
             >
               {t("ctaUniversity")}

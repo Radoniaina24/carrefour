@@ -289,13 +289,13 @@
         "events": [
           {
             "time": "08:00",
-            "title": "Welcome and setup of recruiters",
+            "title": "Welcome and installation of recruiters and universities",
             "icon": "map"
           },
           { "time": "08:30", "title": "Official Opening", "icon": "star" },
           {
             "time": "09:00 - 10:30",
-            "title": "Recruitment sessions & interviews",
+            "title": "Information sessions, student guidance, and pre-registration",
             "icon": "users"
           },
           {

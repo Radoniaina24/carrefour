@@ -290,13 +290,13 @@
         "events": [
           {
             "time": "08h00",
-            "title": "Accueil et installation des recruteurs",
+            "title": "Accueil et installation des recruteurs et des universités",
             "icon": "map"
           },
           { "time": "08h30", "title": "Ouverture officielle", "icon": "star" },
           {
             "time": "09h00 - 10h30",
-            "title": "Séances de recrutement & entretiens",
+            "title": "Séances d'informations, orientations étudiants et préinscriptions",
             "icon": "users"
           },
           { "time": "10h30 - 10h45", "title": "Pause café", "icon": "coffee" },

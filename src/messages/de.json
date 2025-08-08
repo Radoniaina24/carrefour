@@ -289,13 +289,13 @@
         "events": [
           {
             "time": "08:00",
-            "title": "Empfang und Aufbau der Arbeitgeberstände",
+            "title": "Empfang und Einrichtung der Recruiter und Universitäten",
             "icon": "map"
           },
           { "time": "08:30", "title": "Offizielle Eröffnung", "icon": "star" },
           {
             "time": "09:00 - 10:30",
-            "title": "Rekrutierungssitzungen & Vorstellungsgespräche",
+            "title": "Informationsveranstaltungen, Studienberatung und Voranmeldungen",
             "icon": "users"
           },
           { "time": "10:30 - 10:45", "title": "Kaffeepause", "icon": "coffee" },
