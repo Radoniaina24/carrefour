@@ -13,6 +13,7 @@ import {
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import Swal from "sweetalert2";
 
 interface ProgramDay {
   day: string;
@@ -44,7 +45,20 @@ const ProgramSection = () => {
       icon: iconMap[event.icon] ?? Star,
     })),
   }));
+  function handleClick() {
+    // Swal.fire({
+    //   title: "Error!",
+    //   text: t("candidate"),
+    //   icon: "error",
+    //   confirmButtonText: "Cool",
+    // });
 
+    Swal.fire({
+      text: t("candidate"),
+      icon: "warning",
+      showCancelButton: true,
+    });
+  }
   return (
     <motion.section
       initial={{ opacity: 0, y: 40 }}
@@ -196,7 +210,8 @@ const ProgramSection = () => {
               {t("ctaUniversity")}
             </Link>
             <Link
-              href="/inscription/candidat"
+              onClick={handleClick}
+              href="#"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg"
             >
               {t("ctaCandidat")}
