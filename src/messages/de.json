@@ -886,5 +886,9 @@
         "description": "In einer Location mit außergewöhnlichem Ambiente"
       }
     }
+  },
+  "tabs": {
+    "recruiter": "Arbeitgeber",
+    "university": "Universität"
   }
 }

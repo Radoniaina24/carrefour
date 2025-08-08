@@ -888,5 +888,9 @@
         "description": "Dans un lieu de standing exceptionnel"
       }
     }
+  },
+  "tabs": {
+    "recruiter": "Recruteur",
+    "university": "Université"
   }
 }

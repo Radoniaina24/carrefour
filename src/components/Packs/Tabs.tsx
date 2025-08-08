@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import { User, Briefcase } from "lucide-react";
 import CandidateComponent from "./Candidate";
 import RecruiterComponent from "./Recruiter";
+import { useTranslations } from "next-intl";
 
 const CandidateRecruiterTabs = () => {
+  const t = useTranslations("tabs");
   const [activeTab, setActiveTab] = useState("candidate");
 
   return (
@@ -23,7 +25,7 @@ const CandidateRecruiterTabs = () => {
                 }`}
               >
                 <User className="w-5 h-5" />
-                Candidat
+                {t("university")}
               </button>
               <button
                 onClick={() => setActiveTab("recruiter")}
@@ -34,7 +36,7 @@ const CandidateRecruiterTabs = () => {
                 }`}
               >
                 <Briefcase className="w-5 h-5" />
-                Recruteur
+                {t("recruiter")}
               </button>
             </div>
           </div>
