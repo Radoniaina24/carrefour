@@ -2,6 +2,7 @@ import CarrefourEmploi from "@/components/Carrefour";
 import MadagascarTalentsLanding from "@/components/Carrefour/Why";
 import CountdownTimer from "@/components/Date/CountDown";
 import HeroSection from "@/components/Hero/Hero";
+import PopUp from "@/components/Popup/Popup";
 import TargetCountries from "@/components/Section/SectionCountries";
 import UniqueFeatures from "@/components/Section/SectionOne";
 
@@ -20,6 +21,7 @@ export default async function Home() {
       {/* <TicketPurchaseSection /> */}
       <CountdownTimer />
       <GateOfAfricaDesign />
+      <PopUp />
     </div>
   );
 }
