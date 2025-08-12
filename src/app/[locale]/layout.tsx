@@ -7,6 +7,7 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Carrefour de l'Emploi",
@@ -42,6 +43,19 @@ export default async function RootLayout({
             </LanguageProvider>
           </NextIntlClientProvider>
         </ReduxProvider>
+        {/* Script Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );

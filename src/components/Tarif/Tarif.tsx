@@ -29,8 +29,8 @@ interface Package {
 const packages: Package[] = [
   {
     name: "Pack Standard",
-    originalPrice: 1200,
-    earlyBirdPrice: 1080,
+    originalPrice: 1800,
+    earlyBirdPrice: 1620,
     discount: "10%",
     icon: <Users className="w-6 h-6" />,
     features: [
@@ -49,8 +49,8 @@ const packages: Package[] = [
   },
   {
     name: "Pack Premium",
-    originalPrice: 2200,
-    earlyBirdPrice: 1980,
+    originalPrice: 2600,
+    earlyBirdPrice: 2340,
     discount: "10%",
     icon: <Star className="w-6 h-6" />,
     popular: true,
@@ -73,8 +73,8 @@ const packages: Package[] = [
   },
   {
     name: "Partenaire Officiel",
-    originalPrice: 3600,
-    earlyBirdPrice: 3240,
+    originalPrice: 3700,
+    earlyBirdPrice: 3330,
     discount: "10%",
     icon: <Award className="w-6 h-6" />,
     features: [
