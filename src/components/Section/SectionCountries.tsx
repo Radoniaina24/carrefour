@@ -8,16 +8,20 @@ export default function TargetCountries() {
   const countries = [
     { name: t("countries.mu"), code: "mu", region: "OI" },
     { name: t("countries.sc"), code: "sc", region: "OI" },
-    { name: t("countries.km"), code: "km", region: "OI" },
     {
       name: t("countries.mg"),
       code: "mg",
       region: "OI",
       subtitle: t("subtitle.mg"),
     },
+    { name: t("countries.km"), code: "km", region: "OI" },
+
     { name: t("countries.ca"), code: "ca", region: "INT" },
     { name: t("countries.de"), code: "de", region: "INT" },
     { name: t("countries.be"), code: "be", region: "INT" },
+    { name: t("countries.my"), code: "my", region: "AS" },
+    { name: t("countries.au"), code: "au", region: "OC" },
+    { name: t("countries.re"), code: "re", region: "OI" },
   ];
   const oceanIndianCount = countries.filter((c) => c.region === "OI").length;
   const internationalCount = countries.filter((c) => c.region === "INT").length;
@@ -46,7 +50,7 @@ export default function TargetCountries() {
         </div>
 
         {/* Countries Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 mb-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 mb-6">
           {countries.map((country, index) => (
             <div
               key={index}

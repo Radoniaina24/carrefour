@@ -106,7 +106,10 @@
       "mg": "Madagaskar",
       "ca": "Kanada",
       "de": "Deutschland",
-      "be": "Belgien"
+      "be": "Belgien",
+      "au": "Australien",
+      "my": "Malaysia",
+      "re": "Réunion"
     },
     "subtitle": {
       "mg": "lokale Unternehmen & Tochtergesellschaften"
