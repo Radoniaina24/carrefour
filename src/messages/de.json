@@ -97,7 +97,7 @@
     "regions": {
       "ocean": "Indischer Ozean",
       "international": "International",
-      "total": "7 abgedeckte Länder"
+      "total": "10 abgedeckte Länder"
     },
     "countries": {
       "mu": "Mauritius",
@@ -893,5 +893,8 @@
   "tabs": {
     "recruiter": "Arbeitgeber",
     "university": "Universität"
+  },
+  "album": {
+    "view": "Album anzeigen"
   }
 }

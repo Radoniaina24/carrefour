@@ -97,7 +97,7 @@
     "regions": {
       "ocean": "Océan Indien",
       "international": "International",
-      "total": "7 pays couverts"
+      "total": "10 pays couverts"
     },
     "countries": {
       "mu": "Île Maurice",
@@ -109,7 +109,7 @@
       "be": "Belgique",
       "au": "Australie",
       "my": "Malaisie",
-      "re": "Réunion"
+      "re": "La Réunion"
     },
     "subtitle": {
       "mg": "entreprises locales & filiales"
@@ -895,5 +895,8 @@
   "tabs": {
     "recruiter": "Recruteur",
     "university": "Université"
+  },
+  "album": {
+    "view": "Voir l'album"
   }
 }

@@ -19,8 +19,8 @@ export default function TargetCountries() {
     { name: t("countries.ca"), code: "ca", region: "INT" },
     { name: t("countries.de"), code: "de", region: "INT" },
     { name: t("countries.be"), code: "be", region: "INT" },
-    { name: t("countries.my"), code: "my", region: "AS" },
-    { name: t("countries.au"), code: "au", region: "OC" },
+    { name: t("countries.my"), code: "my", region: "INT" },
+    { name: t("countries.au"), code: "au", region: "INT" },
     { name: t("countries.re"), code: "re", region: "OI" },
   ];
   const oceanIndianCount = countries.filter((c) => c.region === "OI").length;

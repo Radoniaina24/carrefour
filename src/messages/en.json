@@ -97,7 +97,7 @@
     "regions": {
       "ocean": "Indian Ocean",
       "international": "International",
-      "total": "7 countries covered"
+      "total": "10 countries covered"
     },
     "countries": {
       "mu": "Mauritius",
@@ -901,5 +901,8 @@
   "tabs": {
     "recruiter": "Recruiter",
     "university": "University"
+  },
+  "album": {
+    "view": "View album"
   }
 }

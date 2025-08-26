@@ -1,3 +1,4 @@
+import GaleriePhotoAlbum from "@/components/Album";
 import CarrefourEmploi from "@/components/Carrefour";
 import MadagascarTalentsLanding from "@/components/Carrefour/Why";
 import CountdownTimer from "@/components/Date/CountDown";
@@ -17,7 +18,9 @@ export default async function Home() {
       <CarrefourEmploi />
       <MadagascarTalentsLanding />
       <UniqueFeatures />
+      <GaleriePhotoAlbum />
       <TargetCountries />
+
       {/* <TicketPurchaseSection /> */}
       <CountdownTimer />
       <GateOfAfricaDesign />
