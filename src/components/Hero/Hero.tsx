@@ -1,17 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
-import {
-  Calendar,
-  MapPin,
-  User,
-  Building2,
-  ArrowRight,
-  Download,
-} from "lucide-react";
+import { User, Building2, ArrowRight, Download } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import SectionPartenariat from "./SectionPartenariat";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const HeroSection = () => {
   const t = useTranslations("hero");
@@ -33,119 +27,15 @@ const HeroSection = () => {
         <SectionPartenariat />
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column */}
-          <motion.div
-            className=" space-y-5 text-white"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            {/* Badge d'événement amélioré */}
-            <motion.div
-              className="inline-flex items-center bg-white/90 backdrop-blur-md rounded-full px-6 py-4 shadow-2xl border border-blue-100/50 text-sm"
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-            >
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center space-x-2">
-                  <Calendar className="w-5 h-5 text-blue-600" />
-                  <span className="font-semibold text-blue-900">
-                    {t("eventBadge.date")}
-                  </span>
-                </div>
-                <div className="w-px h-6 bg-blue-200"></div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="w-5 h-5 text-orange-600" />
-                  <span className="text-orange-700 font-semibold">
-                    {t("eventBadge.location")}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="space-y-4"
-              initial="hidden"
-              animate="visible"
-              variants={{
-                visible: {
-                  transition: {
-                    staggerChildren: 0.3,
-                  },
-                },
-              }}
-            >
-              <motion.h1
-                className="text-3xl md:text-4xl lg:text-4xl font-bold leading-tight text-white"
-                variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-              >
-                {t("title")}
-              </motion.h1>
-
-              <motion.div
-                className="flex items-center space-x-4"
-                variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-              >
-                <span className="text-2xl lg:text-3xl font-bold text-orange-400">
-                  {t("country")}
-                </span>
-                <motion.span
-                  className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-3 rounded-xl text-xl font-bold shadow-lg"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  {t("year")}
-                </motion.span>
-              </motion.div>
-            </motion.div>
-
-            <motion.h1
-              className="text-3xl  font-bold leading-tight text-white"
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              {t("title2")}
-            </motion.h1>
-
-            {/* Slogan avec effet typing amélioré */}
-            {/* <motion.div
-              className="relative"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.2, duration: 0.5 }}
-            >
-              <div className="text-xl sm:text-2xl md:text-4xl font-semibold leading-relaxed tracking-wide max-w-3xl">
-                <div className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-white to-orange-400">
-                  {displayedText.split("\n").map((line, index) => (
-                    <div key={index} className="min-h-[1.5em]">
-                      {line}
-                      {index === displayedText.split("\n").length - 1 &&
-                        currentLineIndex < messageLines.length && (
-                          <motion.span
-                            className="inline-block w-1 h-8 bg-gradient-to-b from-blue-400 to-orange-400 ml-2 rounded-full"
-                            animate={{ opacity: [1, 0] }}
-                            transition={{
-                              duration: 0.8,
-                              repeat: Infinity,
-                              repeatType: "reverse",
-                            }}
-                          />
-                        )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div> */}
-          </motion.div>
-
+          <div>
+            <Image
+              src="https://res.cloudinary.com/dnfdr35vf/image/upload/v1756274456/1_iakye4.jpg"
+              alt="logo-gate-group-africa"
+              width={1000}
+              height={1000}
+              className="rounded-lg"
+            />
+          </div>
           {/* Right Column - Buttons améliorés */}
           <motion.div
             className="space-y-6"
