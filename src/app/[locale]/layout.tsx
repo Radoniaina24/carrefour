@@ -8,6 +8,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Script from "next/script";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Carrefour de l'Emploi",
@@ -39,7 +40,7 @@ export default async function RootLayout({
             {" "}
             <LanguageProvider>
               {" "}
-              <Header /> {children}
+              <Header /> {children} <Footer />
             </LanguageProvider>
           </NextIntlClientProvider>
         </ReduxProvider>
