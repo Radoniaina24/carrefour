@@ -1,6 +1,15 @@
 "use client";
-import { Users, BookOpen, TrendingUp, Award, Star, Zap } from "lucide-react";
+import {
+  Users,
+  BookOpen,
+  TrendingUp,
+  Award,
+  Star,
+  Zap,
+  ArrowRight,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 type Feature = {
   icon: React.ElementType;
@@ -222,16 +231,16 @@ export default function UniqueFeatures() {
             <h4 className="text-2xl font-bold text-slate-900 mb-2">
               {t("cta.title")}
             </h4>
-            <p className="text-slate-600 lowercase mb-6">
+            <p className="text-slate-800 font-bold lowercase mb-6">
               {t("cta.description")}
             </p>
-            {/* <Link
+            <Link
               href={"/inscription/recruteur"}
-              className="bg-gradient-to-r from-blue-600 to-orange-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center space-x-2"
+              className="bg-gradient-to-r from-yellow-600 to-yellow-600 text-white px-8 py-3 rounded-2xl font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center space-x-2"
             >
               <span>{t("cta.button")}</span>
               <ArrowRight className="w-5 h-5" />
-            </Link> */}
+            </Link>
           </div>
         </div>
       </div>

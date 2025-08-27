@@ -85,7 +85,7 @@ export default function GaleriePhotoAlbum() {
       description: t("description.Mahajanga"),
     },
     {
-      title: "Conférence au Conseil Municipal de Port-Louis",
+      title: "Conférence au Conseil Municipal de Port-Louis 2025",
       imageSrc:
         "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756277206/1_jfwnio.jpg",
       altText: "Conférence au Conseil Municipal de Port-Louis",
