@@ -84,6 +84,13 @@ export default function GaleriePhotoAlbum() {
       altText: "Salon des Universités – Édition Majunga 2024",
       description: t("description.Mahajanga"),
     },
+    {
+      title: "Conférence au Conseil Municipal de Port-Louis",
+      imageSrc:
+        "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756277206/1_jfwnio.jpg",
+      altText: "Conférence au Conseil Municipal de Port-Louis",
+      description: t("description.Maurice"),
+    },
   ];
 
   const album = albumFr;
@@ -473,7 +480,48 @@ export default function GaleriePhotoAlbum() {
       src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756222697/2_wphq05.jpg",
     },
   ];
+  const Maurice = [
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756277217/12_vltsbv.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756277215/11_fcoazd.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756277215/10_h1udsr.jpg",
+    },
 
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756277214/9_lkgwce.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756277211/8_nqfgrp.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756277211/5_cnauvn.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756277211/6_dbv1aq.jpg",
+    },
+
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756277210/7_pidjub.jpg",
+    },
+
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756277209/4_xorlkk.jpg",
+    },
+
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756277209/2_wav1ih.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756277208/3_bwfjdc.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756277206/1_jfwnio.jpg",
+    },
+  ];
   return (
     <section className=" pb-16 pt-12  md:py-20 lg:py-12">
       <div className="max-w-6xl mx-auto  ">
@@ -559,6 +607,12 @@ export default function GaleriePhotoAlbum() {
           open={currentAlbum === album[8].title}
           close={() => setCurrentAlbum("")}
           slides={Mahajanga}
+        />
+        <Lightbox
+          plugins={[Counter, Fullscreen, Zoom, Thumbnails]}
+          open={currentAlbum === album[8].title}
+          close={() => setCurrentAlbum("")}
+          slides={Maurice}
         />
       </div>
     </section>
