@@ -1,23 +1,15 @@
 "use client";
 
 import React from "react";
-import { Calendar, Users, Briefcase, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 const HeroSectionTest = () => {
   const t = useTranslations("heroTest");
 
-  const handleClick = () => {
-    window.open(
-      "https://www.gateafricagroup.com",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  };
-
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50 overflow-hidden">
+    <section className="relative  bg-gradient-to-br from-blue-50 via-white to-orange-50 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
@@ -82,7 +74,7 @@ const HeroSectionTest = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mt-16">
+        {/* <div className="grid lg:grid-cols-2 gap-12 items-center mt-16">
           <div className="space-y-8">
             <div className="space-y-4 text-blue-800 text-lg leading-relaxed">
               <p>
@@ -170,7 +162,7 @@ const HeroSectionTest = () => {
             <div className="absolute -top-4 -right-4 w-20 h-20 bg-orange-400 rounded-full opacity-20 animate-bounce"></div>
             <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-blue-400 rounded-full opacity-20 animate-bounce"></div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
