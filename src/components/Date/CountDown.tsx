@@ -113,76 +113,78 @@ export default function CountdownTimer(): JSX.Element {
   );
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center justify-center p-4 py-10">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
-
-      <div className="relative z-10 w-full max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full mb-4 border border-white/20">
-            <MapPin className="w-4 h-4 text-orange-400" />
-            <span className="text-white text-sm font-medium">
-              {t("location")} • {currentTime}
-            </span>
-          </div>
-
-          <h1 className="text-3xl md:text-4xl font-bold  mb-3 bg-gradient-to-r from-white via-blue-200 to-orange-200 bg-clip-text text-transparent">
-            {t("title")}
-          </h1>
-
-          <div className="flex items-center justify-center gap-2 text-lg md:text-xl text-blue-200 font-medium">
-            <Calendar className="w-5 h-5" />
-            <span>{t("targetDate")}</span>
-          </div>
+    <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-4 py-10">
+      <div className=" flex items-center justify-center ">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
-        {/* Countdown Cards */}
-        {!isExpired ? (
-          <div className="flex justify-center items-center gap-2 md:gap-4">
-            <TimeCard
-              value={timeLeft.days}
-              label={t("units.days")}
-              color="from-blue-600 to-blue-700"
-            />
-            <div className="text-white text-2xl md:text-3xl font-bold mx-1">
-              :
+        <div className="relative z-10 w-full max-w-4xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full mb-4 border border-white/20">
+              <MapPin className="w-4 h-4 text-orange-400" />
+              <span className="text-white text-sm font-medium">
+                {t("location")} • {currentTime}
+              </span>
             </div>
-            <TimeCard
-              value={timeLeft.hours}
-              label={t("units.hours")}
-              color="from-orange-500 to-orange-600"
-            />
-            <div className="text-white text-2xl md:text-3xl font-bold mx-1">
-              :
-            </div>
-            <TimeCard
-              value={timeLeft.minutes}
-              label={t("units.minutes")}
-              color="from-blue-500 to-blue-600"
-            />
-            <div className="text-white text-2xl md:text-3xl font-bold mx-1">
-              :
-            </div>
-            <TimeCard
-              value={timeLeft.seconds}
-              label={t("units.seconds")}
-              color="from-orange-600 to-orange-700"
-            />
-          </div>
-        ) : (
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-blue-500 to-orange-500 p-6 rounded-2xl shadow-xl">
-              <Target className="w-12 h-12 text-white mx-auto mb-3" />
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                {t("expiredTitle")}
-              </h2>
-              <p className="text-blue-100">{t("expiredMessage")}</p>
+
+            <h1 className="text-3xl md:text-4xl font-bold  mb-3 bg-gradient-to-r from-white via-blue-200 to-orange-200 bg-clip-text text-transparent">
+              {t("title")}
+            </h1>
+
+            <div className="flex items-center justify-center gap-2 text-lg md:text-xl text-blue-200 font-medium">
+              <Calendar className="w-5 h-5" />
+              <span>{t("targetDate")}</span>
             </div>
           </div>
-        )}
+
+          {/* Countdown Cards */}
+          {!isExpired ? (
+            <div className="flex justify-center items-center gap-2 md:gap-4">
+              <TimeCard
+                value={timeLeft.days}
+                label={t("units.days")}
+                color="from-blue-600 to-blue-700"
+              />
+              <div className="text-white text-2xl md:text-3xl font-bold mx-1">
+                :
+              </div>
+              <TimeCard
+                value={timeLeft.hours}
+                label={t("units.hours")}
+                color="from-orange-500 to-orange-600"
+              />
+              <div className="text-white text-2xl md:text-3xl font-bold mx-1">
+                :
+              </div>
+              <TimeCard
+                value={timeLeft.minutes}
+                label={t("units.minutes")}
+                color="from-blue-500 to-blue-600"
+              />
+              <div className="text-white text-2xl md:text-3xl font-bold mx-1">
+                :
+              </div>
+              <TimeCard
+                value={timeLeft.seconds}
+                label={t("units.seconds")}
+                color="from-orange-600 to-orange-700"
+              />
+            </div>
+          ) : (
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-blue-500 to-orange-500 p-6 rounded-2xl shadow-xl">
+                <Target className="w-12 h-12 text-white mx-auto mb-3" />
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                  {t("expiredTitle")}
+                </h2>
+                <p className="text-blue-100">{t("expiredMessage")}</p>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

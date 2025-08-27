@@ -87,7 +87,7 @@
     ],
     "cta": {
       "title": "Ready to transform your recruitment?",
-      "description": "Discover how our unique approach can revolutionize your team",
+      "description": "OR TO WELCOME THE BEST INTERNATIONAL STUDENTS TO YOUR INSTITUTION?",
       "button": "Get Started Now"
     }
   },
@@ -126,7 +126,8 @@
       "hours": "Hours",
       "minutes": "Minutes",
       "seconds": "Seconds"
-    }
+    },
+    "intro": "Get to know the organizer <link>Gate Africa Group</link>, collaboration opportunities await you. Scan here."
   },
   "magazine": {
     "sectionTitle": "Follow Africa’s development in real time",

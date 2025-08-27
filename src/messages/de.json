@@ -87,7 +87,7 @@
     ],
     "cta": {
       "title": "Bereit, Ihre Rekrutierung zu transformieren?",
-      "description": "Erfahren Sie, wie unser einzigartiger Ansatz Ihr Team revolutionieren kann",
+      "description": "ODER DIE BESTEN INTERNATIONALEN STUDIERENDEN AN IHRER EINRICHTUNG WILLKOMMEN ZU HEISSEN?",
       "button": "Jetzt starten"
     }
   },
@@ -126,7 +126,8 @@
       "hours": "Stunden",
       "minutes": "Minuten",
       "seconds": "Sekunden"
-    }
+    },
+    "intro": "Lernen Sie den Organisator <link>Gate Africa Group</link> kennen, spannende Kooperationsmöglichkeiten warten auf Sie. Scannen Sie hier."
   },
   "magazine": {
     "sectionTitle": "Verfolgen Sie in Echtzeit Afrikas Entwicklung",

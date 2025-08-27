@@ -1,3 +1,4 @@
+import GateAfricaGroupSection from "@/components/AfricaGroup/GateAfricaGroup";
 import GaleriePhotoAlbum from "@/components/Album";
 import CarrefourEmploi from "@/components/Carrefour";
 import MadagascarTalentsLanding from "@/components/Carrefour/Why";
@@ -23,6 +24,7 @@ export default async function Home() {
 
       {/* <TicketPurchaseSection /> */}
       <CountdownTimer />
+      <GateAfricaGroupSection />
       <GateOfAfricaDesign />
       <PopUp />
     </div>
