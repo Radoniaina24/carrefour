@@ -71,7 +71,7 @@ const Signin: React.FC = () => {
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" />
       </div>
       <Toaster />
-      <div className="relative max-w-md mx-auto bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/50">
+      <div className="relative min-w-lg mx-auto bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/50">
         <div className="flex justify-center pt-5">
           <Link href={"/"}>
             <Image
@@ -127,13 +127,13 @@ const Signin: React.FC = () => {
           <div className="mt-6 text-center">
             <p className="text-sm text-blue-600">
               {t("no_account")}{" "}
-              <Link
+              {/* <Link
                 href="/inscription/candidat"
                 className="font-medium text-orange-600 hover:text-orange-700"
               >
                 {t("candidate")}
               </Link>{" "}
-              |{" "}
+              |{" "} */}
               <Link
                 href="/inscription/recruteur"
                 className="font-medium text-orange-600 hover:text-orange-700"
