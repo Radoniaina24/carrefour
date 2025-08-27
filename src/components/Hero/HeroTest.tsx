@@ -39,6 +39,16 @@ const HeroSectionTest = () => {
             <div className="p-8 lg:p-12 flex flex-col justify-center">
               <div className="space-y-6">
                 <div>
+                  <div className="  flex justify-center items-center flex-shrink-0">
+                    <Image
+                      src="https://res.cloudinary.com/dnfdr35vf/image/upload/v1756272950/logo1_idsvaq.jpg"
+                      alt="Logo"
+                      width={160}
+                      height={60}
+                      priority
+                      className="h-20 w-auto rounded-lg "
+                    />
+                  </div>
                   <div className="flex items-center space-x-3 mb-3">
                     <div className="w-10 h-10 bg-yellow-600 rounded-lg flex items-center justify-center">
                       <span className="text-white font-bold text-sm">C</span>

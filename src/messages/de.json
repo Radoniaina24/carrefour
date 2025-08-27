@@ -33,7 +33,7 @@
       "description": "Finden Sie Ihren idealen Job"
     },
     "recruiter": {
-      "title": "Registrierung für Arbeitgeber",
+      "title": "Anmeldung für rekrutierende Unternehmen, Universitäten und Ausbildungszentren",
       "description": "Rekrutieren Sie Ihre Talente"
     },
     "brochure": {
@@ -685,7 +685,7 @@
   },
   "recruteur": {
     "form": {
-      "title": "Registrierung für Arbeitgeber",
+      "title": "Anmeldung für rekrutierende Unternehmen, Universitäten und Ausbildungszentren",
       "lastName": "Nachname",
       "firstName": "Vorname",
       "company": "Unternehmen",

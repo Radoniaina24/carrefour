@@ -33,7 +33,7 @@
       "description": "Find your ideal job"
     },
     "recruiter": {
-      "title": "Recruiter Registration",
+      "title": "Registration for recruiting companies, universities, and training centers",
       "description": "Hire top talent"
     },
     "brochure": {
@@ -693,7 +693,7 @@
   },
   "recruteur": {
     "form": {
-      "title": "Recruiter Registration",
+      "title": "Registration for recruiting companies, universities, and training centers",
       "lastName": "Last Name",
       "firstName": "First Name",
       "company": "Company",

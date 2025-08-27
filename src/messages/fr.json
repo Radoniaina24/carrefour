@@ -33,7 +33,7 @@
       "description": "Trouvez votre emploi idéal"
     },
     "recruiter": {
-      "title": "Inscription Recruteur",
+      "title": "Inscription entreprise recruteur, universités et centre de formation",
       "description": "Recrutez vos talents"
     },
     "brochure": {
@@ -688,7 +688,7 @@
   },
   "recruteur": {
     "form": {
-      "title": "Inscription Recruteur",
+      "title": "Inscription entreprise recruteur, universités et centre de formation",
       "lastName": "Nom",
       "firstName": "Prénom",
       "company": "Entreprise",

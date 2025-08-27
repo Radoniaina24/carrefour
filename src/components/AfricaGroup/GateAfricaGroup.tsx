@@ -30,7 +30,7 @@ const ModernClientSection = () => {
                   href="https://gateafricagroup.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-400 font-semibold hover:text-orange-300 transition-all duration-300 hover:underline decoration-2 underline-offset-4 drop-shadow-lg"
+                  className="text-red-500 font-semibold hover:text-red-600 transition-all duration-300 hover:underline decoration-2 underline-offset-4 drop-shadow-lg"
                 >
                   {chunks}
                 </Link>
