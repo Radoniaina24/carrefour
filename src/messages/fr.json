@@ -897,6 +897,19 @@
     "university": "Université"
   },
   "album": {
-    "view": "Voir l'album"
+    "view": "Voir l'album",
+    "title": "NOS ÉDITIONS PRÉCÉDENTES À ANTANANARIVO ET DANS TOUTES LES GRANDES VILLES DE MADAGASCAR",
+    "subtitle": "L’ÉDITION 2025 SE DÉMARQUE PAR SON OUVERTURE INTERNATIONALE",
+    "description": {
+      "Maurice_Madagascar": "Une rencontre stratégique organisée au siège du Groupe à Antananarivo, réunissant des acteurs clés de Maurice et de Madagascar pour renforcer les partenariats, partager les visions économiques et explorer de nouvelles opportunités de coopération bilatérale.",
+      "Farafangana": " Un événement marquant sur la côte Sud-Est de Madagascar, rassemblant étudiants, professionnels et institutions pour une journée riche en échanges et opportunités.",
+      "Mananjary": "Une édition marquante sur la côte Est de Madagascar avec une conférence et une exposition rassemblant un large public d’étudiants, de professionnels et d’institutions.",
+      "Fianarantsoa": "Au cœur des hauts plateaux malgaches, notre salon universitaire a connu un immense succès, rassemblant des milliers de bacheliers, étudiants et recruteurs dans une salle pleine à craquer.",
+      "NosyBe": "Au cœur de la ville touristique la plus prisée de Madagascar, notre roadshow a marqué les esprits en connectant étudiants, universités et recruteurs dans une ambiance unique",
+      "Mahajanga": "Une salle comble, une affluence record et un succès retentissant dans l’une des plus grandes provinces de Madagascar",
+      "RadissonBlu": "Le plus grand rendez-vous académique, couronné de succès, avec un roadshow inédit dans toute la capitale.",
+      "Ibis": "L’événement incontournable pour découvrir les meilleures opportunités d’études et de formations.",
+      "Bachelier": "Canal Olympia Antananarivo Conférences inspirantes, rencontres universitaires, et performances des artistes locaux les plus célèbres."
+    }
   }
 }

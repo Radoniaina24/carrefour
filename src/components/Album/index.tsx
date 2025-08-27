@@ -14,64 +14,75 @@ import {
   Zoom,
 } from "yet-another-react-lightbox/plugins";
 import CardGalerie from "./CardGalerie";
+import { useTranslations } from "next-intl";
 
 export default function GaleriePhotoAlbum() {
+  const t = useTranslations("album");
   const albumFr = [
     {
       title: "Conférence Maurice–Madagascar 2024",
       imageSrc:
         "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756214568/13_fvckse.jpg",
       altText: "Conférence Maurice–Madagascar 2024",
+      description: t("description.Maurice_Madagascar"),
     },
     {
       title: "Salon des Universités 2023 – La Grande Fête des Bacheliers",
       imageSrc:
         "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756219974/11_uerio7.jpg",
       altText: "Salon des Universités 2023 – La Grande Fête des Bacheliers",
+      description: t("description.Bachelier"),
     },
     {
       title: "Salon des Universités 2022 – Radisson Blu Antananarivo",
       imageSrc:
         "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756220565/17_dv065p.jpg",
       altText: "Salon des Universités 2022 – Radisson Blu Antananarivo",
+      description: t("description.RadissonBlu"),
     },
     {
       title: "Salon des Universités 2021 – IBIS Antananarivo",
       imageSrc:
         "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756220975/2_xzvvgq.jpg",
       altText: "Salon des Universités 2021 – IBIS Antananarivo",
+      description: t("description.Ibis"),
     },
     {
-      title: "Farafangana 2024 – Conférence & Exposition",
+      title: "Farafangana 2022 – Conférence & Exposition",
       imageSrc:
         "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756221419/4_xitkle.jpg",
       altText: "Farafangana 2024 – Conférence & Exposition",
+      description: t("description.Farafangana"),
     },
     {
       title:
-        "Fianarantsoa 2024 – Salle Comble sur les Hauts Plateaux de Madagascar",
+        "Fianarantsoa 2022 – Salle Comble sur les Hauts Plateaux de Madagascar",
       imageSrc:
         "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756221667/11_w40bnd.jpg",
       altText:
         "Fianarantsoa 2024 – Salle Comble sur les Hauts Plateaux de Madagascar",
+      description: t("description.Fianarantsoa"),
     },
     {
       title: "Mananjary 2024 – Grande Conférence",
       imageSrc:
         "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756222092/1_rmlbxz.jpg",
       altText: "Mananjary 2024 – Grande Conférence",
+      description: t("description.Mananjary"),
     },
     {
       title: "Roadshow Universitaire – Nosy Be 2021",
       imageSrc:
         "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756222363/6_sa1lzp.jpg",
       altText: "Roadshow Universitaire – Nosy Be 2021",
+      description: t("description.NosyBe"),
     },
     {
-      title: "Salon des Universités – Édition Majunga 2024",
+      title: "Salon des Universités – Édition Majunga 2022",
       imageSrc:
         "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756222706/12_sf2gnt.jpg",
       altText: "Salon des Universités – Édition Majunga 2024",
+      description: t("description.Mahajanga"),
     },
   ];
 
@@ -466,6 +477,15 @@ export default function GaleriePhotoAlbum() {
   return (
     <section className=" pb-16 pt-12  md:py-20 lg:py-12">
       <div className="max-w-6xl mx-auto  ">
+        <div className="mb-20">
+          <div className="max-w-5xl mx-auto text-center space-y-4">
+            <h2 className="text-3xl md:text-3xl font-bold ">{t("title")}</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-red-400 to-red-600 mx-auto rounded-full"></div>
+            <p className="text-xl text-gray-400 font-medium tracking-wide">
+              {t("subtitle")}
+            </p>
+          </div>
+        </div>
         <Carousel
           infinite
           autoPlay
@@ -480,6 +500,7 @@ export default function GaleriePhotoAlbum() {
               altText={item?.altText}
               title={item?.title}
               onButtonClick={handleAlbumClick}
+              description={item.description}
             />
           ))}
         </Carousel>

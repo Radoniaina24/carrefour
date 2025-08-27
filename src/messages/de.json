@@ -895,6 +895,19 @@
     "university": "Universität"
   },
   "album": {
-    "view": "Album anzeigen"
+    "view": "Album ansehen",
+    "title": "UNSERE FRÜHEREN AUSGABEN IN ANTANANARIVO UND IN ALLEN GROSSEN STÄDTEN MADAGASKARS",
+    "subtitle": "DIE AUSGABE 2025 ZEICHNET SICH DURCH IHRE INTERNATIONALE AUSRICHTUNG AUS",
+    "description": {
+      "Maurice_Madagascar": "Ein strategisches Treffen am Hauptsitz der Gruppe in Antananarivo, das wichtige Akteure aus Mauritius und Madagaskar zusammenbrachte, um Partnerschaften zu stärken, wirtschaftliche Visionen zu teilen und neue Möglichkeiten für bilaterale Zusammenarbeit zu erkunden.",
+      "Farafangana": "Eine bedeutende Veranstaltung an der Südostküste Madagaskars, die Studenten, Fachkräfte und Institutionen zu einem Tag voller Austausch und Chancen versammelte.",
+      "Mananjary": "Eine denkwürdige Ausgabe an der Ostküste Madagaskars mit einer Konferenz und Ausstellung, die ein breites Publikum aus Studenten, Fachleuten und Institutionen zusammenführte.",
+      "Fianarantsoa": "Im Herzen des madagassischen Hochlands war unsere Hochschulmesse ein überwältigender Erfolg, der Tausende von Abiturienten, Studenten und Recruiter in einer voll besetzten Halle vereinte.",
+      "NosyBe": "Im Zentrum des beliebtesten Touristenziels Madagaskars hinterließ unser Roadshow bleibenden Eindruck, indem es Studenten, Universitäten und Recruiter in einer einzigartigen Atmosphäre miteinander verband.",
+      "Mahajanga": "Ein vollbesetzter Saal, Rekordbesucherzahlen und ein durchschlagender Erfolg in einer der größten Provinzen Madagaskars.",
+      "RadissonBlu": "Das größte akademische Treffen, gekrönt von Erfolg, mit einer neuartigen Roadshow in der gesamten Hauptstadt.",
+      "Ibis": "Das unverzichtbare Ereignis, um die besten Studien- und Ausbildungsmöglichkeiten zu entdecken.",
+      "Bachelier": "Canal Olympia Antananarivo – inspirierende Konferenzen, akademische Begegnungen und Auftritte der bekanntesten lokalen Künstler."
+    }
   }
 }

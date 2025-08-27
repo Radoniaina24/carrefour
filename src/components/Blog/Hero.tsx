@@ -77,7 +77,7 @@ export default function Hero() {
                   href={"https://gateofafrica.com/"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-gradient-to-r text-sm from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-5 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center"
+                  className="group bg-gradient-to-r text-sm from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 text-white px-5 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center"
                 >
                   {t("cta")}
                   <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />

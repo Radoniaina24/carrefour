@@ -903,6 +903,19 @@
     "university": "University"
   },
   "album": {
-    "view": "View album"
+    "view": "View album",
+    "title": "OUR PREVIOUS EDITIONS IN ANTANANARIVO AND ACROSS THE MAJOR CITIES OF MADAGASCAR",
+    "subtitle": "THE 2025 EDITION STANDS OUT FOR ITS INTERNATIONAL OUTREACH",
+    "description": {
+      "Maurice_Madagascar": "A strategic meeting held at the Group’s headquarters in Antananarivo, bringing together key stakeholders from Mauritius and Madagascar to strengthen partnerships, share economic visions, and explore new opportunities for bilateral cooperation.",
+      "Farafangana": "A landmark event on the South-East coast of Madagascar, gathering students, professionals, and institutions for a day rich in exchanges and opportunities.",
+      "Mananjary": "A memorable edition on Madagascar’s East Coast featuring a conference and exhibition that brought together a wide audience of students, professionals, and institutions.",
+      "Fianarantsoa": "In the heart of Madagascar’s highlands, our university fair was a tremendous success, bringing together thousands of graduates, students, and recruiters in a packed venue.",
+      "NosyBe": "At the center of Madagascar’s most popular tourist destination, our roadshow made a lasting impression by connecting students, universities, and recruiters in a unique atmosphere.",
+      "Mahajanga": "A packed hall, record attendance, and resounding success in one of Madagascar’s largest provinces.",
+      "RadissonBlu": "The largest academic gathering, crowned with success, featuring an unprecedented roadshow across the capital.",
+      "Ibis": "The unmissable event to discover the best opportunities for studies and training.",
+      "Bachelier": "Canal Olympia Antananarivo – inspiring conferences, university meetings, and performances by the most renowned local artists."
+    }
   }
 }
