@@ -918,5 +918,27 @@
   "footer": {
     "copyright": "Carrefour de l'emploi et des études. Tous droits réservés.",
     "navigation": "Navigation"
+  },
+  "events": {
+    "badge": "Événements à venir",
+    "summit": "sommet International",
+    "title": "Prcochain evenement",
+    "subtitle": "Deux grands sommets africains majeurs se tiendront cette année à Maurice",
+    "one": {
+      "logoUrl": "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756355299/2_gme2if.jpg",
+      "eventName": "AI Meets Africa – Mauritius Summit 2026",
+      "date": "16 – 17 Avril 2026",
+      "address": "Trianon Convention Centre, Île Maurice",
+      "subtitle": "AI for Africa, by Africa, with the World",
+      "description": "AI Meets Africa – Mauritius Summit 2026 est le plus grand sommet international dédié à l’intelligence artificielle sur le continent africain. Cet événement stratégique réunira décideurs, experts, chercheurs, startups, entreprises, institutions internationales et investisseurs venus d’Afrique, d’Asie, d’Europe et du reste du monde."
+    },
+    "two": {
+      "logoUrl": "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756355299/1_lpl13f.jpg",
+      "eventName": "ABGCS SUMMIT – Africa Blue & Green Climate Summit",
+      "date": "17–18 septembre 2026",
+      "address": "Trianon Convention Center, Mauricee",
+      "subtitle": "",
+      "description": "Le Africa Blue & Green Climate Summit (ABGCS) se veut une plateforme stratégique et inclusive consacrée à la résilience climatique, à la transition écologique et au développement durable de l’Afrique et des îles de l’océan Indien.."
+    }
   }
 }

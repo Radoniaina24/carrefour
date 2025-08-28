@@ -3,6 +3,7 @@ import GaleriePhotoAlbum from "@/components/Album";
 import CarrefourEmploi from "@/components/Carrefour";
 import MadagascarTalentsLanding from "@/components/Carrefour/Why";
 import CountdownTimer from "@/components/Date/CountDown";
+import EventsSection from "@/components/Event";
 import HeroSection from "@/components/Hero/Hero";
 import HeroSectionTest from "@/components/Hero/HeroTest";
 import PopUp from "@/components/Popup/Popup";
@@ -27,6 +28,7 @@ export default async function Home() {
       {/* <TicketPurchaseSection /> */}
       <CountdownTimer />
       <GateAfricaGroupSection />
+      <EventsSection />
       <GateOfAfricaDesign />
       <PopUp />
     </div>
