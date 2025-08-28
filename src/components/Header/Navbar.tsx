@@ -56,7 +56,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-[99999] transition-all duration-300 ${
+      className={`fixed top-0 w-full z-[9999] transition-all duration-300 ${
         pathname !== "/" || isScrolled
           ? "bg-white/95 backdrop-blur-md shadow-xl border-blue-100"
           : "lg:bg-transparent bg-white/95"
