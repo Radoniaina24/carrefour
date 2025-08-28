@@ -11,7 +11,7 @@ const EventsSection = () => {
     subtitle: t("subtitle"),
     one: {
       logoUrl:
-        "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756355299/2_gme2if.jpg",
+        "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756380428/ai_knohew.jpg",
       eventName: t("one.eventName"),
       date: t("one.date"),
       address: t("one.address"),
@@ -20,7 +20,7 @@ const EventsSection = () => {
     },
     two: {
       logoUrl:
-        "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756355299/1_lpl13f.jpg",
+        "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756380245/vert_jnnkmc.jpg",
       eventName: t("two.eventName"),
       date: t("two.date"),
       address: t("two.address"),

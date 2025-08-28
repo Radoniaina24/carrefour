@@ -16,14 +16,20 @@ export default function PopUp() {
     return () => clearTimeout(id);
   }, []);
   return (
-    <Modal isOpen={openModal} onClose={onClose}>
+    <Modal
+      maxWidth="max-w-4xl"
+      maxHeight="max-h-[90%]"
+      isOpen={openModal}
+      onClose={onClose}
+    >
       <Image
         src={
-          "https://res.cloudinary.com/dikefxjpd/image/upload/v1754890304/pop-pop_msxp7r.jpg"
+          "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756379786/popup_udembl.jpg"
         }
         alt={"popup"}
         width={1000}
         height={1000}
+        className="w-full h-full"
       />
     </Modal>
   );

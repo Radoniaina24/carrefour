@@ -927,7 +927,7 @@
   "events": {
     "badge": "Upcoming Events",
     "summit": "International Summit",
-    "title": "Upcoming Event",
+    "title": "Upcoming Event - Organized by Gate Africa Group",
     "subtitle": "Two major African summits will be held this year in Mauritius",
     "one": {
       "logoUrl": "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756355299/2_gme2if.jpg",
@@ -940,10 +940,13 @@
     "two": {
       "logoUrl": "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756355299/1_lpl13f.jpg",
       "eventName": "ABGCS SUMMIT – Africa Blue & Green Climate Summit",
-      "date": "17–18 September 2026",
+      "date": "July 16–17, 2026",
       "address": "Trianon Convention Centre, Mauritius",
       "subtitle": "",
       "description": "The Africa Blue & Green Climate Summit (ABGCS) is designed as a strategic and inclusive platform dedicated to climate resilience, ecological transition, and sustainable development for Africa and the islands of the Indian Ocean."
     }
+  },
+  "ceo": {
+    "description": "The CEO Business Forum – Indian Ocean is a major international economic event that brings together business leaders, investors, policymakers, and private sector stakeholders from several countries in the region and around the world."
   }
 }

@@ -18,6 +18,8 @@ import { useTranslations } from "next-intl";
 
 export default function GaleriePhotoAlbum() {
   const t = useTranslations("album");
+  const c = useTranslations("ceo");
+
   const albumFr = [
     {
       title: "Conférence Maurice–Madagascar 2024",
@@ -522,6 +524,102 @@ export default function GaleriePhotoAlbum() {
       src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756277206/1_jfwnio.jpg",
     },
   ];
+
+  const ceo = [
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382271/2_nljuki.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382271/1_k94a36.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382271/5_sjt3dh.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382271/3_mtvqaj.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382272/6_enqmfe.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382271/4_n0xcg9.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382273/13_wspvag.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382272/9_rjepz7.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382273/8_h5uswu.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382274/15_ybqvub.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382273/10_gwicfh.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382273/11_kjey2i.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382272/7_kkxn0r.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382274/16_fyjr0z.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382274/19_bj1su5.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382274/17_tnvusv.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382274/18_b38dsg.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382275/20_cm7x0k.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382275/22_onacl3.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382275/21_eqpb8v.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382273/14_zjzkqe.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382276/23_ddy46r.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382283/25_bzgyte.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382283/27_hsxop5.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382283/29_dtmije.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382283/28_byvsyq.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382284/30_fwwfmf.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382283/24_inyqof.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382284/31_ojc8gi.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382288/32_l4kj2i.jpg",
+    },
+    {
+      src: "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382288/33_xxkdz1.jpg",
+    },
+  ];
   return (
     <section className=" pb-16 pt-12  md:py-20 lg:py-12">
       <div className="max-w-6xl mx-auto  ">
@@ -534,6 +632,18 @@ export default function GaleriePhotoAlbum() {
             </p>
           </div>
         </div>
+        <div className="p-4 max-w-lg mx-auto">
+          <CardGalerie
+            imageSrc={
+              "https://res.cloudinary.com/dnfdr35vf/image/upload/v1756382271/1_k94a36.jpg"
+            }
+            altText={"CEO Business Forum – Indian Ocean"}
+            title={"CEO Business Forum – Indian Ocean"}
+            onButtonClick={() => handleAlbumClick("ceo")}
+            description={c("description")}
+          />
+        </div>
+
         <Carousel
           infinite
           autoPlay
@@ -613,6 +723,12 @@ export default function GaleriePhotoAlbum() {
           open={currentAlbum === album[8].title}
           close={() => setCurrentAlbum("")}
           slides={Maurice}
+        />
+        <Lightbox
+          plugins={[Counter, Fullscreen, Zoom, Thumbnails]}
+          open={currentAlbum === "ceo"}
+          close={() => setCurrentAlbum("")}
+          slides={ceo}
         />
       </div>
     </section>
