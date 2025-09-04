@@ -2,6 +2,7 @@ import GateAfricaGroupSection from "@/components/AfricaGroup/GateAfricaGroup";
 import GaleriePhotoAlbum from "@/components/Album";
 import CarrefourEmploi from "@/components/Carrefour";
 import MadagascarTalentsLanding from "@/components/Carrefour/Why";
+import VideoSection from "@/components/CloudinaryVideo";
 import CountdownTimer from "@/components/Date/CountDown";
 import EventsSection from "@/components/Event";
 import HeroSection from "@/components/Hero/Hero";
@@ -23,6 +24,7 @@ export default async function Home() {
       <MadagascarTalentsLanding />
       <UniqueFeatures />
       <GaleriePhotoAlbum />
+      <VideoSection />
       <TargetCountries />
 
       {/* <TicketPurchaseSection /> */}
