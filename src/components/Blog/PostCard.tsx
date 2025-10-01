@@ -16,7 +16,9 @@ export function ArticleCard({ post }: { post: Post }) {
       return dateString;
     }
   };
-  console.log(post.slug);
+  // console.log(post.slug);
+
+  // sdsdsd
   return (
     <article
       className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden  transition-all duration-300 group shadow-xl hover:shadow-2xl"
