@@ -699,6 +699,7 @@
       "company": "Company",
       "email": "Email",
       "country": "Country",
+      "phoneNumber": "Phone number",
       "password": "Password",
       "confirmPassword": "Confirm Password",
       "submit": "Register",

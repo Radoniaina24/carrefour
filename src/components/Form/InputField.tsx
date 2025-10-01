@@ -12,6 +12,7 @@ export interface FormValues {
   country?: string;
   email?: string;
   recaptcha?: string;
+  phoneNumber?: string;
 }
 interface InputFieldProps {
   name: keyof FormValues;

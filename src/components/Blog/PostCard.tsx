@@ -16,7 +16,7 @@ export function ArticleCard({ post }: { post: Post }) {
       return dateString;
     }
   };
-
+  console.log(post.slug);
   return (
     <article
       className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden  transition-all duration-300 group shadow-xl hover:shadow-2xl"
@@ -108,7 +108,7 @@ export function ArticleCard({ post }: { post: Post }) {
 
         {/* Lien de lecture */}
         <a
-          href={post.link}
+          href={`https://gateofafrica.com/blog/${post.slug}`}
           target="_blanck"
           className="inline-flex items-center text-red-400 hover:text-red-300 text-xs font-medium transition-colors duration-200 group/link"
           aria-label={`Lire l'article complet: ${post.title.rendered}`}

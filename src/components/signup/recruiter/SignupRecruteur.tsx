@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { User, Mail, Lock, MapPin, Globe } from "lucide-react";
+import { User, Mail, Lock, MapPin, Globe, Phone } from "lucide-react";
 import { FormValues, InputField } from "@/components/Form/InputField";
 import Link from "next/link";
 import Image from "next/image";
@@ -30,6 +30,7 @@ export const InscriptionFormRecruiter: React.FC = () => {
     firstName: Yup.string().required(t("errors.required")),
     company: Yup.string().required(t("errors.required")),
     country: Yup.string().required(t("errors.required")),
+    phoneNumber: Yup.string().required(t("errors.required")),
     emailAddress: Yup.string()
       .email(t("errors.invalid_email"))
       .required(t("errors.required")),
@@ -52,11 +53,13 @@ export const InscriptionFormRecruiter: React.FC = () => {
       confirmPassword: "",
       country: "",
       recaptcha: "",
+      phoneNumber: "",
     },
     validationSchema,
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       setSubmitting(true);
       try {
+        // console.log(values);
         const response: any = await addRecruiter(values).unwrap();
         SuccessNotification(response?.message);
         resetForm();
@@ -141,7 +144,14 @@ export const InscriptionFormRecruiter: React.FC = () => {
             icon={Globe}
             formik={formik}
           />
-
+          <InputField
+            name="phoneNumber"
+            label={t("phoneNumber")}
+            type="text"
+            icon={Phone}
+            placeholder={t("placeholders.phoneNumber")}
+            formik={formik}
+          />
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <InputField
               name="password"

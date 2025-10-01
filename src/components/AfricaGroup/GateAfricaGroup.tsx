@@ -27,7 +27,7 @@ const ModernClientSection = () => {
             {t.rich("intro", {
               link: (chunks) => (
                 <Link
-                  href="https://gateafricagroup.com"
+                  href="https://data.gateafricagroup.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-red-500 font-semibold hover:text-red-600 transition-all duration-300 hover:underline decoration-2 underline-offset-4 drop-shadow-lg"
@@ -42,7 +42,7 @@ const ModernClientSection = () => {
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-4 md:space-x-6 lg:space-x-8 mt-8 sm:mt-10 md:mt-12 py-4 sm:py-6 md:py-8">
           {/* Logo avec effet moderne */}
           <Link
-            href="https://gateafricagroup.com"
+            href="https://data.gateafricagroup.com"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative order-1"

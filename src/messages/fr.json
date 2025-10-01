@@ -694,6 +694,7 @@
       "company": "Entreprise",
       "email": "Email",
       "country": "Pays",
+      "phoneNumber": "Téléphone",
       "password": "Mot de passe",
       "confirmPassword": "Confirmer le mot de passe",
       "submit": "S'inscrire",
@@ -708,6 +709,7 @@
         "email": "votre@email.com",
         "country": "Sélectionnez un pays",
         "password": "Minimum 6 caractères",
+        "phoneNumber": "+261 ",
         "confirmPassword": "Confirmez votre mot de passe"
       },
       "errors": {

@@ -75,12 +75,20 @@ export default function ViewCandidate({ user }: { user: any }) {
                   {user.company || "-"}
                 </p>
               </div>
-              <div className="group md:col-span-2">
+              <div className="group md:col-span-1">
                 <p className="text-blue-600 font-semibold mb-1 uppercase tracking-wide text-xs">
                   Pays
                 </p>
                 <p className="font-medium text-gray-800 bg-white px-3 py-2 rounded-lg border border-blue-100 group-hover:border-orange-200 transition-colors duration-200 inline-block">
                   {user.country || "-"}
+                </p>
+              </div>
+              <div className="group md:col-span-1">
+                <p className="text-blue-600 font-semibold mb-1 uppercase tracking-wide text-xs">
+                  Telephone
+                </p>
+                <p className="font-medium text-gray-800 bg-white px-3 py-2 rounded-lg border border-blue-100 group-hover:border-orange-200 transition-colors duration-200 inline-block">
+                  {user.phoneNumber || "-"}
                 </p>
               </div>
             </div>

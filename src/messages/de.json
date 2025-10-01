@@ -691,6 +691,7 @@
       "company": "Unternehmen",
       "email": "E-Mail",
       "country": "Land",
+      "phoneNumber": "Telefonnummer",
       "password": "Passwort",
       "confirmPassword": "Passwort bestätigen",
       "submit": "Registrieren",

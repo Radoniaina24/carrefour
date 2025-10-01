@@ -7,7 +7,7 @@ function ArticlesSection() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("https://gateofafrica.com/wp-json/wp/v2/posts")
+    fetch("https://data.gateofafrica.com/wp-json/wp/v2/posts")
       .then((res) => res.json())
       .then((data) => {
         setPosts(data);
