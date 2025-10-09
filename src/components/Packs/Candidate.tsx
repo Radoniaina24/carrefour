@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { User, Users, Star } from "lucide-react";
 import Link from "next/link";
@@ -80,7 +81,7 @@ const CandidateComponent = () => {
         {/* CTA Button */}
         <div className="text-center">
           <Link
-            href="/inscription/candidat"
+            href="#"
             className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-all transform hover:scale-105 shadow-lg"
           >
             {t("cta.button")}
