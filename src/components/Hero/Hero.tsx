@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { User, Building2, ArrowRight, Download } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+
 import SectionPartenariat from "./SectionPartenariat";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -11,20 +11,12 @@ const HeroSection = () => {
   const t = useTranslations("hero");
   const c = useTranslations("program");
   function handleClick() {
-    // Swal.fire({
-    //   title: "Error!",
-    //   text: t("candidate"),
-    //   icon: "error",
-    //   confirmButtonText: "Cool",
-    // });
-
     Swal.fire({
       text: c("candidate"),
       icon: "warning",
       showCancelButton: true,
     });
   }
-  const router = useRouter();
 
   return (
     <section
@@ -102,7 +94,7 @@ const HeroSection = () => {
                 transition={{ delay: 2.2, duration: 0.6 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() => router.push("/inscription/recruteur")}
+                onClick={handleClick}
               >
                 {/* Effet de brillance */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>

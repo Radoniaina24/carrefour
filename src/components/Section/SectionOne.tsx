@@ -9,7 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import Swal from "sweetalert2";
 
 type Feature = {
   icon: React.ElementType;
@@ -50,7 +50,14 @@ export default function UniqueFeatures() {
       highlight: t("features.3.highlight"),
     },
   ];
-
+  const c = useTranslations("program");
+  function handleClick() {
+    Swal.fire({
+      text: c("candidate"),
+      icon: "warning",
+      showCancelButton: true,
+    });
+  }
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       {/* Geometric background patterns */}
@@ -234,13 +241,13 @@ export default function UniqueFeatures() {
             <p className="text-slate-800 font-bold lowercase mb-6">
               {t("cta.description")}
             </p>
-            <Link
-              href={"/inscription/recruteur"}
+            <button
+              onClick={handleClick}
               className="bg-gradient-to-r from-yellow-600 to-yellow-600 text-white px-8 py-3 rounded-2xl font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center space-x-2"
             >
               <span>{t("cta.button")}</span>
               <ArrowRight className="w-5 h-5" />
-            </Link>
+            </button>
           </div>
         </div>
       </div>
