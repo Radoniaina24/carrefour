@@ -945,5 +945,27 @@
   },
   "ceo": {
     "description": "Le CEO Business Forum – Indian Ocean est un événement économique international majeur qui réunit des chefs d’entreprise, investisseurs, décideurs publics et acteurs du secteur privé provenant de plusieurs pays de la région et du monde."
+  },
+  "event": {
+    "tagline": "Événement International",
+    "title": "Salon de l’Emploi, de l’Éducation et de l’Immigration",
+    "subtitle": "Vous rêvez d’étudier, de travailler ou de vous installer à l’étranger ?",
+    "description": "Participez au Carrefour International de l’Emploi, des Études et de l’Immigration, les 31 octobre, 1er et 2 novembre à l’Hôtel IBIS Ankorondrano.",
+    "sectionTitle": "Une Opportunité Unique",
+    "meetTitle": "Rencontrez :",
+    "meetPoints": {
+      "universities": "Des universités internationales prestigieuses",
+      "companies": "Des entreprises offrant des opportunités à l'étranger",
+      "agencies": "Des agences d'immigration agréées de 8 pays"
+    },
+    "cta": "Réservez vos billets dès maintenant sur Ticketplace !",
+    "closing": "Le monde vous tend les bras… Serez-vous de la partie ?",
+    "comingSoon": "Tickets bientôt disponibles sur Ticketplace",
+    "dates": "31 Oct - 2 Nov 2025",
+    "location": "Hôtel IBIS Ankorondrano, Antananarivo",
+    "sponsorLabel": "Sponsor Officiel",
+    "organizerLabel": "Organisé par",
+    "sponsor": "VR Canada Immigration",
+    "organizer": "Gate Africa Group"
   }
 }

@@ -5,6 +5,7 @@ import MadagascarTalentsLanding from "@/components/Carrefour/Why";
 import VideoSection from "@/components/CloudinaryVideo";
 import CountdownTimer from "@/components/Date/CountDown";
 import EventsSection from "@/components/Event";
+import EventPage from "@/components/Event/NewPageEvent";
 import HeroSection from "@/components/Hero/Hero";
 import HeroSectionTest from "@/components/Hero/HeroTest";
 import PopUp from "@/components/Popup/Popup";
@@ -17,8 +18,9 @@ export default async function Home() {
   return (
     <div className="">
       {/* <Tarif /> */}
-      <HeroSection />
 
+      <HeroSection />
+      <EventPage />
       <CarrefourEmploi />
       <HeroSectionTest />
       <MadagascarTalentsLanding />
@@ -28,11 +30,11 @@ export default async function Home() {
       <TargetCountries />
 
       {/* <TicketPurchaseSection /> */}
-      <CountdownTimer />
+      {/* <CountdownTimer />
       <GateAfricaGroupSection />
       <EventsSection />
       <GateOfAfricaDesign />
-      <PopUp />
+      <PopUp /> */}
     </div>
   );
 }

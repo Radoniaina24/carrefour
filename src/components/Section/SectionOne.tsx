@@ -83,7 +83,7 @@ export default function UniqueFeatures() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Minimalist Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-10">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-orange-50 px-6 py-2 rounded-full mb-8 border border-blue-100">
             <Star className="w-5 h-5 text-orange-500" />
             <span className="text-slate-700 font-semibold text-sm uppercase tracking-wider">
@@ -91,16 +91,16 @@ export default function UniqueFeatures() {
             </span>
           </div>
 
-          <h2 className="text-6xl md:text-7xl font-extrabold text-slate-900 mb-4 tracking-tight leading-none">
+          <h2 className="text-6xl  font-extrabold text-slate-900 mb-4 tracking-tight leading-none">
             {t("title")}
           </h2>
 
           <div className="relative inline-block">
-            <h3 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">
+            <h3 className="text-4xl  font-extrabold bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">
               {t("highlight")}
             </h3>
             {/* Underline effect */}
-            <div className="my-12 text-4xl  font-extrabold bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">
+            <div className="my-5 text-2xl  font-extrabold bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">
               {t("ctaRecruitmentSection")}
             </div>
             <div
@@ -111,7 +111,7 @@ export default function UniqueFeatures() {
         </div>
 
         {/* Timeline-style layout */}
-        <div className="space-y-16">
+        <div className="space-y-10">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             const isEven = index % 2 === 0;
@@ -156,12 +156,12 @@ export default function UniqueFeatures() {
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight group-hover:text-blue-700 transition-colors duration-300">
+                      <h3 className="text-3xl  font-bold text-slate-900 mb-6 leading-tight group-hover:text-blue-700 transition-colors duration-300">
                         {feature.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="text-slate-600 text-lg leading-relaxed mb-6 max-w-md mx-auto lg:mx-0">
+                      <p className="text-slate-600 text-md leading-relaxed mb-6 max-w-md mx-auto lg:mx-0">
                         {feature.description}
                       </p>
                     </div>

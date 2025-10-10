@@ -942,5 +942,27 @@
 
   "ceo": {
     "description": "Das CEO Business Forum – Indischer Ozean ist eine bedeutende internationale Wirtschaftsveranstaltung, die Unternehmensleiter, Investoren, politische Entscheidungsträger und Akteure des Privatsektors aus mehreren Ländern der Region und der ganzen Welt zusammenführt."
+  },
+  "event": {
+    "tagline": "Internationale Veranstaltung",
+    "title": "Job-, Bildungs- und Einwanderungsmesse",
+    "subtitle": "Träumen Sie davon, im Ausland zu studieren, zu arbeiten oder sich dort niederzulassen?",
+    "description": "Besuchen Sie die Internationale Messe für Arbeit, Bildung und Einwanderung am 31. Oktober, 1. und 2. November im IBIS Hotel Ankorondrano.",
+    "sectionTitle": "Eine Einzigartige Gelegenheit",
+    "meetTitle": "Treffen Sie:",
+    "meetPoints": {
+      "universities": "Renommierte internationale Universitäten",
+      "companies": "Unternehmen mit Möglichkeiten im Ausland",
+      "agencies": "Zugelassene Einwanderungsagenturen aus 8 Ländern"
+    },
+    "cta": "Buchen Sie jetzt Ihre Tickets auf Ticketplace!",
+    "closing": "Die Welt steht Ihnen offen – werden Sie die Chance ergreifen?",
+    "comingSoon": "Tickets bald verfügbar auf Ticketplace",
+    "dates": "31. Okt – 2. Nov 2025",
+    "location": "IBIS Hotel Ankorondrano, Antananarivo",
+    "sponsorLabel": "Offizieller Sponsor",
+    "organizerLabel": "Veranstaltet von",
+    "sponsor": "VR Canada Immigration",
+    "organizer": "Gate Africa Group"
   }
 }
