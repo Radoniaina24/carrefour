@@ -84,10 +84,10 @@ const EventPage = () => {
               <Calendar className="w-4 h-4" />
               <span className="text-sm font-medium"> {t("dates")}</span>
             </div>
-            <div className="flex items-center gap-2 text-white bg-white/10 backdrop-blur px-4 py-2 rounded-lg">
+            {/* <div className="flex items-center gap-2 text-white bg-white/10 backdrop-blur px-4 py-2 rounded-lg">
               <MapPin className="w-4 h-4" />
               <span className="text-sm font-medium">{t("location")}</span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
