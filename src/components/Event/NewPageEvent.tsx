@@ -131,7 +131,7 @@ const EventPage = () => {
         {/* CTA Card */}
         <div className="bg-gradient-to-r from-orange-400 to-orange-600 rounded-2xl shadow-xl p-6 sm:p-8 text-center">
           <p className="text-xl sm:text-2xl font-bold text-white mb-3">
-            {event.closing}
+            {t("closing")}
           </p>
           <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 inline-flex items-center gap-2 shadow-lg mb-3">
             <Ticket className="w-5 h-5" />
