@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { useTranslations } from "next-intl";
-import { Users, GraduationCap, Star, Award, Building } from "lucide-react";
+import { GraduationCap, Star, Award, Building } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface BenefitItem {

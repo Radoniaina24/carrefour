@@ -30,11 +30,11 @@ export default async function Home() {
       <TargetCountries />
 
       {/* <TicketPurchaseSection /> */}
-      {/* <CountdownTimer />
+      <CountdownTimer />
       <GateAfricaGroupSection />
       <EventsSection />
       <GateOfAfricaDesign />
-      <PopUp /> */}
+      <PopUp />
     </div>
   );
 }
