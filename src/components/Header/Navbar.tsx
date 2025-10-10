@@ -66,7 +66,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
-              src="https://res.cloudinary.com/dikefxjpd/image/upload/v1753866569/logo-removebg-preview_1_p8ly7i.png"
+              src="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1760083381/loga_vao2_carrefour_edfkpx.png"
               alt="Logo"
               width={160}
               height={60}
