@@ -1,28 +1,10 @@
 import React from "react";
-import { Calendar, MapPin, Globe, Ticket } from "lucide-react";
+import { Calendar, Globe, Ticket } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const EventPage = () => {
   const t = useTranslations("event");
-  const eventData = {
-    event: {
-      title: "Salon de l'Emploi, de l'Éducation et de l'Immigration",
-      subtitle:
-        "Vous rêvez d'étudier, de travailler ou de vous installer à l'étranger ?",
-      description:
-        "Participez au Carrefour International de l'Emploi, des Études et de l'Immigration, les 31 octobre, 1er et 2 novembre à l'Hôtel IBIS Ankorondrano.",
-      details:
-        "Rencontrez des universités, entreprises et agences d'immigration agréées venues du Canada 🇨🇦, de Nouvelle-Zélande 🇳🇿, du Royaume-Uni 🇬🇧, des États-Unis 🇺🇸, d'Allemagne 🇩🇪, de Malaisie 🇲🇾, de l'Île Maurice 🇲🇺 et des Émirats Arabes Unis 🇦🇪.",
-      cta: "Réservez vos billets dès maintenant sur Ticketplace !",
-      closing: "Le monde vous tend les bras… Serez-vous de la partie ?",
-      sponsor: "VR Canada Immigration",
-      organizer: "Gate Africa Group",
-      dates: "31 Oct - 2 Nov 2025",
-      location: "Hôtel IBIS Ankorondrano, Antananarivo",
-    },
-  };
 
-  const { event } = eventData;
   const countries = [
     { flag: "🇨🇦", name: "Canada" },
     { flag: "🇳🇿", name: "Nouvelle-Zélande" },
