@@ -968,5 +968,29 @@
     "organizerLabel": "Organisé par",
     "sponsor": "VR Canada Immigration",
     "organizer": "Gate Africa Group"
+  },
+
+  "event_update": {
+    "highlight": "NOUVEAU LIEU CONFIRMÉ (JOB, LEARNING & IMMIGRATION FAIR - MADAGASCAR)",
+    "announcement": "Le Carrefour International de l’Emploi, des Études & de l’Immigration - Madagascar 2025 se tiendra désormais à l’Hôtel Ibis Antananarivo Ankorondrano, du 31 octobre au 2 novembre 2025 🇲🇬.",
+    "why_change_title": "POURQUOI CETTE AMÉLIORATION ?",
+    "why_change_content": "Suite à une concertation entre les ministères de tutelle et les forces de l’ordre, cette décision a été prise pour garantir un environnement sécurisé, moderne et professionnel, propice aux échanges internationaux.",
+    "location_title": "UN QUARTIER D’AFFAIRES CALME ET STRATÉGIQUE",
+    "location_points": [
+      "À 20 minutes de l’aéroport",
+      "Hébergement sur place à l’hôtel IBIS",
+      "Meilleure accessibilité et confort logistique"
+    ],
+    "duration": "3 jours complets de salon au lieu de 2, pour maximiser les rencontres entre entreprises, universités, agences d’immigration et talents malgaches.",
+    "reassurance": "Les opportunités sont toujours là. Cessez vos inquiétudes.",
+    "safety_title": "LA SITUATION EST SOUS CONTRÔLE DANS LA ZONE OÙ SE DÉROULE L’ÉVÉNEMENT.",
+    "safety_description": "📍 À Ankorondrano, le quartier d’affaires sécurisé d’Antananarivo Madagascar.",
+    "safety_facts": [
+      "Les étudiants étudient,",
+      "Les travailleurs travaillent,",
+      "Les commerçants commercent,",
+      "Et la vie suit son cours normalement."
+    ],
+    "offers": "Profitez de nos remises exceptionnelles (-25% à -75%), toujours valables malgré l’amélioration du lieu et de la durée !"
   }
 }

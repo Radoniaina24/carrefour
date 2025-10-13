@@ -6,6 +6,7 @@ import VideoSection from "@/components/CloudinaryVideo";
 import CountdownTimer from "@/components/Date/CountDown";
 import EventsSection from "@/components/Event";
 import EventPage from "@/components/Event/NewPageEvent";
+import EventAnnouncement from "@/components/Event/OtheEvent";
 import HeroSection from "@/components/Hero/Hero";
 import HeroSectionTest from "@/components/Hero/HeroTest";
 import PopUp from "@/components/Popup/Popup";
@@ -23,6 +24,7 @@ export default async function Home() {
       <EventPage />
       <CarrefourEmploi />
       <HeroSectionTest />
+      <EventAnnouncement />
       <MadagascarTalentsLanding />
       <UniqueFeatures />
       <GaleriePhotoAlbum />

@@ -964,5 +964,28 @@
     "organizerLabel": "Veranstaltet von",
     "sponsor": "VR Canada Immigration",
     "organizer": "Gate Africa Group"
+  },
+  "event_update": {
+    "highlight": "NEUER VERANSTALTUNGSORT BESTÄTIGT (JOB, LEARNING & IMMIGRATION FAIR - MADAGASKAR)",
+    "announcement": "Die Internationale Messe für Arbeit, Studium & Einwanderung – Madagaskar 2025 findet nun im Ibis Hotel Antananarivo Ankorondrano statt, vom 31. Oktober bis 2. November 2025 🇲🇬.",
+    "why_change_title": "WARUM DIESE VERBESSERUNG?",
+    "why_change_content": "Nach Beratungen zwischen den zuständigen Ministerien und den Sicherheitsbehörden wurde diese Entscheidung getroffen, um ein sicheres, modernes und professionelles Umfeld zu gewährleisten, das den internationalen Austausch fördert.",
+    "location_title": "EIN RUHIGES UND STRATEGISCHES GESCHÄFTSVIERTEL",
+    "location_points": [
+      "20 Minuten vom Flughafen entfernt",
+      "Unterkunft direkt im Ibis Hotel",
+      "Bessere Erreichbarkeit und logistischer Komfort"
+    ],
+    "duration": "3 volle Messetage statt 2, um die Begegnungen zwischen Unternehmen, Universitäten, Einwanderungsagenturen und madagassischen Talenten zu maximieren.",
+    "reassurance": "Die Chancen bleiben bestehen. Es besteht kein Grund zur Sorge.",
+    "safety_title": "DIE SITUATION IM VERANSTALTUNGSGEBIET IST UNTER KONTROLLE.",
+    "safety_description": "📍 In Ankorondrano, dem sicheren Geschäftsviertel von Antananarivo, Madagaskar.",
+    "safety_facts": [
+      "Die Studierenden studieren,",
+      "Die Arbeitnehmer arbeiten,",
+      "Die Händler handeln,",
+      "Und das Leben geht seinen normalen Lauf."
+    ],
+    "offers": "Profitieren Sie von unseren außergewöhnlichen Rabatten (-25 % bis -75 %), die trotz des verbesserten Veranstaltungsortes und der verlängerten Dauer weiterhin gültig sind!"
   }
 }
