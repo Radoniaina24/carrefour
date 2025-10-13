@@ -42,12 +42,13 @@
     }
   },
   "heroTest": {
-    "hotelTitle": "Hôtel Carlton Antananarivo",
-    "hotelAddress": "Anosy, Antananarivo, Madagascar",
-    "highlight": "Un événement d’envergure dans un cadre 5 étoiles",
-    "description1": "Le Carrefour de l'Emploi – Madagascar 2025 se tiendra au prestigieux Carlton Madagascar, un hôtel 5 étoiles emblématique situé au cœur du centre-ville d'Antananarivo.",
-    "description2": "Bénéficiant d’un emplacement stratégique, en plein cœur du quartier des affaires et en bordure du lac Anosy, le Carlton offre un cadre exceptionnel, alliant luxe, accessibilité et professionnalisme.",
-    "description3": "Ce lieu de référence pour les grands événements accueille régulièrement des rendez-vous internationaux, diplomatiques et économiques de haut niveau.",
+    "hotelTitle": "Hôtel Ibis Antananarivo",
+    "hotelAddress": "Ankorondrano, Antananarivo, Madagascar",
+    "highlight": "Un événement majeur dans un cadre moderne et professionnel",
+    "description1": "Le Carrefour de l'Emploi – Madagascar 2025 se tiendra à l’Hôtel Ibis Antananarivo Ankorondrano, un établissement moderne reconnu pour son confort et son service de qualité.",
+    "description2": "Situé dans le quartier d’affaires d’Ankorondrano, à proximité des principaux centres économiques et administratifs de la capitale, l’Ibis offre un environnement propice aux rencontres professionnelles et aux échanges constructifs.",
+    "description3": "Habitué à accueillir des conférences, séminaires et événements d’envergure, l’hôtel combine accessibilité, efficacité et convivialité pour garantir une expérience réussie à tous les participants.",
+
     "mainTitle": "Carrefour de l'Emploi – Madagascar 2025",
     "mainDescription": "est un dispositif de recrutement direct, à portée nationale et internationale, conçu pour connecter des entreprises, malgaches et étrangères, en quête de main-d'œuvre fiable avec des talents malgaches qualifiés. Ces talents sont identifiés, renforcés et accompagnés jusqu'à leur intégration durable au sein des organisations partenaires.",
     "organizedBy": "Organisé par",

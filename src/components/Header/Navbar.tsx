@@ -74,7 +74,7 @@ const Navbar = () => {
               className="h-22 w-auto"
             />
           </Link>
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <div className="  flex items-center flex-shrink-0">
               <Image
                 src="https://res.cloudinary.com/dnfdr35vf/image/upload/v1756272950/logo1_idsvaq.jpg"
@@ -85,7 +85,7 @@ const Navbar = () => {
                 className="h-20 w-auto rounded-lg "
               />
             </div>
-          </div>
+          </div> */}
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-2">

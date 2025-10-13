@@ -23,7 +23,7 @@ const HeroSectionTest = () => {
             {/* Image section */}
             <div className="relative h-80 lg:h-full">
               <Image
-                src="https://res.cloudinary.com/dikefxjpd/image/upload/v1749703988/hotel-carlton-madagascar_wn5vxr.jpg"
+                src="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1749121383/ibis_kuwrr3.jpg"
                 alt="Hôtel Carlton Antananarivo"
                 className="absolute inset-0 w-full h-full object-cover"
                 height={800}
@@ -32,8 +32,8 @@ const HeroSectionTest = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
               <div className="absolute bottom-5 left-5">
-                <div className="bg-yellow-600 text-white px-3 py-1.5 rounded-md font-semibold text-xs shadow-md uppercase tracking-wide">
-                  Carlton
+                <div className="bg-red-600 text-white px-3 py-1.5 rounded-md font-semibold text-xs shadow-md uppercase tracking-wide">
+                  Ibis
                 </div>
               </div>
             </div>
@@ -41,21 +41,11 @@ const HeroSectionTest = () => {
             {/* Text section */}
             <div className="p-6 lg:p-10 flex flex-col justify-center">
               <div className="space-y-5">
-                {/* Logo and title */}
-                <div className="flex justify-center mb-4">
-                  <Image
-                    src="https://res.cloudinary.com/dnfdr35vf/image/upload/v1756272950/logo1_idsvaq.jpg"
-                    alt="Logo"
-                    width={140}
-                    height={60}
-                    priority
-                    className="h-16 w-auto rounded-md"
-                  />
-                </div>
+                {/* title */}
 
                 <div className="flex items-start sm:items-center space-x-3 mb-4">
-                  <div className="w-9 h-9 bg-yellow-600 rounded-md flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">C</span>
+                  <div className="w-9 h-9 bg-red-600 rounded-md flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">I</span>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-800">
