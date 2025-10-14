@@ -20,7 +20,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative min-h-screen flex items-center bg-center bg-cover pt-16 overflow-hidden"
+      className="relative  flex items-center bg-center bg-cover pt-16 overflow-hidden"
       style={{
         backgroundImage:
           "url('https://res.cloudinary.com/dbpoyo4gw/image/upload/v1748266907/banni%C3%A8re_vivj4x.jpg')",
@@ -33,7 +33,7 @@ const HeroSection = () => {
         <SectionPartenariat />
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column */}
-          <div>
+          {/* <div>
             <Image
               src="https://res.cloudinary.com/dnfdr35vf/image/upload/v1756274456/1_iakye4.jpg"
               alt="logo-gate-group-africa"
@@ -41,7 +41,7 @@ const HeroSection = () => {
               height={1000}
               className="rounded-lg"
             />
-          </div>
+          </div> */}
           {/* Right Column - Buttons améliorés */}
           <motion.div
             className="space-y-6"
@@ -52,7 +52,7 @@ const HeroSection = () => {
             {/* Buttons avec animations améliorées */}
             <div className="space-y-4">
               {/* Bouton Candidat */}
-              <motion.button
+              {/* <motion.button
                 className="group relative w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white p-6 rounded-2xl shadow-2xl hover:shadow-blue-500/30 transition-all duration-500 transform hover:scale-[1.02] hover:-translate-y-2 border border-blue-400/30 overflow-hidden"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -61,7 +61,6 @@ const HeroSection = () => {
                 whileTap={{ scale: 0.98 }}
                 onClick={handleClick}
               >
-                {/* Effet de brillance */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
 
                 <div className="relative flex items-center justify-between">
@@ -84,10 +83,10 @@ const HeroSection = () => {
                   </div>
                   <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-2 transition-transform duration-300" />
                 </div>
-              </motion.button>
+              </motion.button> */}
 
               {/* Bouton Recruteur */}
-              <motion.button
+              {/* <motion.button
                 className="group relative w-full bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 hover:from-orange-600 hover:via-red-600 hover:to-red-700 text-white p-6 rounded-2xl shadow-2xl hover:shadow-orange-500/30 transition-all duration-500 transform hover:scale-[1.02] hover:-translate-y-2 border border-orange-400/30 overflow-hidden"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -96,7 +95,7 @@ const HeroSection = () => {
                 whileTap={{ scale: 0.98 }}
                 onClick={handleClick}
               >
-                {/* Effet de brillance */}
+                
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
 
                 <div className="relative flex items-center justify-between">
@@ -119,10 +118,10 @@ const HeroSection = () => {
                   </div>
                   <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-2 transition-transform duration-300" />
                 </div>
-              </motion.button>
+              </motion.button> */}
 
               {/* Bouton télécharger */}
-              <Link
+              {/* <Link
                 target="_blank"
                 href="https://res.cloudinary.com/dikefxjpd/image/upload/v1754569183/Brochure_entreprise_et_universite%CC%81_carrefour_emploi_etudes_dt0uuz.pdf"
                 download
@@ -135,7 +134,7 @@ const HeroSection = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  {/* Effet de brillance */}
+                
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
 
                   <div className="relative flex items-center justify-between">
@@ -159,7 +158,7 @@ const HeroSection = () => {
                     <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-2 transition-transform duration-300" />
                   </div>
                 </motion.button>
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
         </div>
