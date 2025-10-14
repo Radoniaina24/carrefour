@@ -1,23 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { User, Building2, ArrowRight, Download } from "lucide-react";
-import Link from "next/link";
-
 import SectionPartenariat from "./SectionPartenariat";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Swal from "sweetalert2";
 const HeroSection = () => {
-  const t = useTranslations("hero");
-  const c = useTranslations("program");
-  function handleClick() {
-    Swal.fire({
-      text: c("candidate"),
-      icon: "warning",
-      showCancelButton: true,
-    });
-  }
-
   return (
     <section
       className="relative  flex items-center bg-center bg-cover pt-16 overflow-hidden"
