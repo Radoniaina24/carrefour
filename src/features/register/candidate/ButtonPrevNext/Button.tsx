@@ -33,7 +33,7 @@ export default function ButtonNextPrev({
 
       {/* Next or Submit button */}
       <div className="w-full sm:w-auto">
-        {currentStep < 5 ? (
+        {currentStep < 4 ? (
           <button
             type="submit"
             className="group relative w-full sm:w-auto overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3.5 rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 active:shadow-lg font-medium text-sm flex items-center justify-center gap-3 shadow-lg"

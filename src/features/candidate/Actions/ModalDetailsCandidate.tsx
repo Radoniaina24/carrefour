@@ -51,7 +51,7 @@ const ModalDetailsCandidate: React.FC<ModalProps> = ({
             style={{ zIndex: 130 }}
           >
             <div
-              className="bg-white max-w-screen max-h-[80vh] sm:rounded-2xl shadow-lg relative  flex flex-col overflow-hidden"
+              className="bg-white min-w-[95%] max-w-screen  max-h-[80vh] sm:rounded-2xl shadow-lg relative  flex flex-col overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}

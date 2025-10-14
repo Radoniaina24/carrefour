@@ -17,20 +17,11 @@ export default function FormStep5() {
     cv: formData.cv,
     degree: formData.degree,
     photo: formData.photo,
-    coverLetter: formData.gradeTranscript,
   };
 
   const formik = useFormik({
     initialValues: initialvalues,
     validationSchema: Yup.object({
-      coverLetter: Yup.mixed()
-        .required(t("validation.coverLetter.required"))
-        .test("fileType", t("validation.pdfType"), (file: any) =>
-          file ? file.type === "application/pdf" : false
-        )
-        .test("fileSize", t("validation.pdfSize"), (file: any) =>
-          file ? file.size <= 5 * 1024 * 1024 : false
-        ),
       cv: Yup.mixed()
         .required(t("validation.cv.required"))
         .test("fileType", t("validation.pdfType"), (file: any) =>
@@ -39,14 +30,7 @@ export default function FormStep5() {
         .test("fileSize", t("validation.pdfSize"), (file: any) =>
           file ? file.size <= 5 * 1024 * 1024 : false
         ),
-      degree: Yup.mixed()
-        .required(t("validation.degree.required"))
-        .test("fileType", t("validation.pdfType"), (file: any) =>
-          file ? file.type === "application/pdf" : false
-        )
-        .test("fileSize", t("validation.pdfSize"), (file: any) =>
-          file ? file.size <= 5 * 1024 * 1024 : false
-        ),
+
       photo: Yup.mixed<File>()
         .required(t("validation.photo.required"))
         .test(
@@ -75,21 +59,20 @@ export default function FormStep5() {
   return (
     <form onSubmit={formik.handleSubmit} autoComplete="off">
       <div className="space-y-6">
-        <FileUpload
-          name="photo"
-          label={t("fields.photo")}
-          value={formik.values.photo}
-          onChange={(e) => {
-            const file = e.currentTarget.files?.[0] || null;
-            setFieldValue("photo", file);
-          }}
-          error={formik.errors.photo}
-          touched={formik.touched.photo}
-          required
-          helperText={t("helpers.photo")}
-        />
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <FileUpload
+            name="photo"
+            label={t("fields.photo")}
+            value={formik.values.photo}
+            onChange={(e) => {
+              const file = e.currentTarget.files?.[0] || null;
+              setFieldValue("photo", file);
+            }}
+            error={formik.errors.photo}
+            touched={formik.touched.photo}
+            required
+            helperText={t("helpers.photo")}
+          />
           <FileUpload
             name="cv"
             label={t("fields.cv")}
@@ -103,34 +86,7 @@ export default function FormStep5() {
             required
             helperText={t("helpers.pdf")}
           />
-          <FileUpload
-            name="degree"
-            label={t("fields.degree")}
-            value={formik.values.degree}
-            onChange={(e) => {
-              const file = e.currentTarget.files?.[0] || null;
-              setFieldValue("degree", file);
-            }}
-            error={formik.errors.degree}
-            touched={formik.touched.degree}
-            required
-            helperText={t("helpers.pdf")}
-          />
         </div>
-
-        <FileUpload
-          name="coverLetter"
-          label={t("fields.coverLetter")}
-          value={formik.values.coverLetter}
-          onChange={(e) => {
-            const file = e.currentTarget.files?.[0] || null;
-            setFieldValue("coverLetter", file);
-          }}
-          error={formik.errors.coverLetter}
-          touched={formik.touched.coverLetter}
-          required
-          helperText={t("helpers.pdf")}
-        />
       </div>
 
       <ButtonNextPrev />

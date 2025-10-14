@@ -1,7 +1,6 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import VisibleColumn from "./VisibleColumn";
-import StatusFilter from "./StatusFilter";
 
 export default function Filter() {
   return (
@@ -11,11 +10,10 @@ export default function Filter() {
           Liste des candidats
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {/* Barre de recherche */}
         <SearchBar />
-        {/* Filtre par statut */}
-        <StatusFilter />
+
         {/* Colonnes visibles */}
         <VisibleColumn />
       </div>

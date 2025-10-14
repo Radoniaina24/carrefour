@@ -29,21 +29,13 @@ export default function Modal() {
             {t("title")}
           </h3>
 
-          <div className="bg-blue-50 p-4 rounded-lg text-start my-5">
-            <h4 className="font-bold text-blue-800 mb-2">{t("nextSteps")}</h4>
-            <ol className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
-              <li>{t("step1")}</li>
-              <li>{t("step2")}</li>
-            </ol>
-          </div>
-
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-5">
             <Link
               href="/"
-              className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 text-white px-10 py-4 rounded-2xl font-semibold text-lg flex items-center gap-3 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:shadow-lg shadow-lg"
+              className="group relative text-sm overflow-hidden bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 text-white px-10 py-4 rounded-2xl font-semibold text-lg flex items-center gap-3 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:shadow-lg shadow-lg"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <FaHome className="text-lg transition-transform duration-300 group-hover:-translate-x-1 relative z-10" />
+              <FaHome className="text-sm transition-transform duration-300 group-hover:-translate-x-1 relative z-10" />
               <span className="relative z-10">{t("backHome")}</span>
             </Link>
           </div>

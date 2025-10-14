@@ -16,7 +16,7 @@ function CandidateProvider({ children }: { children: React.ReactNode }) {
     email: true,
     dateInscription: true,
     actions: true,
-    status: true,
+    sector: true,
   });
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);

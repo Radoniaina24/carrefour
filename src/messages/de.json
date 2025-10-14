@@ -536,7 +536,7 @@
         "category": "Kategorie"
       },
       "placeholders": {
-        "sector": "Wählen Sie eine Branche",
+        "sector": "Wählen Sie ein Profil aus",
         "category": "Wählen Sie eine Kategorie"
       },
       "validation": {
@@ -544,10 +544,9 @@
         "categoryRequired": "Die Auswahl einer Kategorie ist erforderlich"
       },
       "sectors": {
-        "technologies_btp": "Technologie & Bauwesen",
-        "tourisme_sante_services": "Tourismus, Gesundheit & Dienstleistungen",
-        "communication_gestion": "Kommunikation & Verwaltung",
-        "evenementiel_artistique": "Event- & Kunstbereich"
+        "technologies_btp": "Student & Absolvent",
+        "tourisme_sante_services": "Personalvermittler",
+        "communication_gestion": "Bewerber"
       },
       "categories": {
         "tech": {
@@ -625,7 +624,7 @@
       "subtitle": "Bitte überprüfen Sie die folgenden Angaben, bevor Sie Ihre Bewerbung absenden.",
       "sections": {
         "personal": "Persönliche Angaben",
-        "sector": "Ausgewählter Sektor",
+        "sector": "Ausgewähltes Profil",
         "documents": "Hochgeladene Dokumente"
       },
       "fields": {
@@ -639,7 +638,7 @@
         "country": "Land",
         "city": "Stadt",
         "postalCode": "Postleitzahl",
-        "sector": "Sektor",
+        "sector": "Profil",
         "category": "Kategorie"
       },
       "documents": {
@@ -665,7 +664,7 @@
     },
     "progress": {
       "personalInfo": "Persönliche Angaben",
-      "sectorChoice": "Sektorauswahl",
+      "sectorChoice": "Profilwahl",
       "documents": "Dokumente",
       "password": "Passwort",
       "confirmation": "Bestätigung"

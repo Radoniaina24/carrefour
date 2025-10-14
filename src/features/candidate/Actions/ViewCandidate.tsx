@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { FaEye, FaPlus } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 import ModalDetailsCandidate from "./ModalDetailsCandidate";
 
-import { GrCertificate, GrNotes } from "react-icons/gr";
 import { CgProfile } from "react-icons/cg";
+import { LucideHardDriveUpload } from "lucide-react";
 /* eslint-disable */
 export default function ViewCandidate({ user }: { user: any }) {
   const [open, setOpen] = useState<boolean>(false);
@@ -36,7 +36,7 @@ export default function ViewCandidate({ user }: { user: any }) {
         title="Détails du candidat"
         onClose={handleClose}
       >
-        <div className="space-y-6">
+        <div className="space-y-6 w-full">
           <div className="border border-blue-200 rounded-xl shadow-lg overflow-hidden bg-white">
             <div className="bg-gradient-to-r from-blue-600 to-orange-500 px-6 py-4">
               <h4 className="font-bold text-white text-lg flex items-center gap-2">
@@ -132,24 +132,16 @@ export default function ViewCandidate({ user }: { user: any }) {
             <div className="bg-gradient-to-r from-orange-500 to-blue-600 px-6 py-4">
               <h4 className="font-bold text-white text-lg flex items-center gap-2">
                 <div className="w-2 h-2 bg-white rounded-full"></div>
-                Secteur choisi
+                Profil choisi
               </h4>
             </div>
-            <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm bg-gradient-to-br from-orange-50/30 to-blue-50/30">
+            <div className="p-6 grid grid-cols-1 md:grid-cols-1 gap-6 text-sm bg-gradient-to-br from-orange-50/30 to-blue-50/30">
               <div className="group">
                 <p className="text-orange-600 font-semibold mb-1 uppercase tracking-wide text-xs">
-                  Secteur
+                  Profil
                 </p>
                 <p className="font-medium text-gray-800 bg-white px-3 py-2 rounded-lg border border-orange-100 group-hover:border-blue-200 transition-colors duration-200">
                   {user.sector || "-"}
-                </p>
-              </div>
-              <div className="group">
-                <p className="text-orange-600 font-semibold mb-1 uppercase tracking-wide text-xs">
-                  Categorie
-                </p>
-                <p className="font-medium text-gray-800 bg-white px-3 py-2 rounded-lg border border-orange-100 group-hover:border-blue-200 transition-colors duration-200">
-                  {user.category || "-"}
                 </p>
               </div>
             </div>
@@ -178,7 +170,7 @@ export default function ViewCandidate({ user }: { user: any }) {
               </div>
               <div className="flex items-center gap-3 group">
                 <div className="p-2 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors duration-200">
-                  <FaPlus className="w-5 h-5 text-blue-600" />
+                  <LucideHardDriveUpload className="w-5 h-5 text-blue-600" />
                 </div>
                 <a
                   href={user.cv.url}
@@ -187,32 +179,6 @@ export default function ViewCandidate({ user }: { user: any }) {
                   className="text-blue-700 hover:text-orange-600 font-medium transition-colors duration-300 bg-white px-3 py-2 rounded-lg border border-blue-100 hover:border-orange-200 flex-1"
                 >
                   CV
-                </a>
-              </div>
-              <div className="flex items-center gap-3 group">
-                <div className="p-2 bg-orange-100 rounded-lg group-hover:bg-orange-200 transition-colors duration-200">
-                  <GrCertificate className="w-5 h-5 text-orange-600" />
-                </div>
-                <a
-                  href={user.degree.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-700 hover:text-orange-600 font-medium transition-colors duration-300 bg-white px-3 py-2 rounded-lg border border-blue-100 hover:border-orange-200 flex-1"
-                >
-                  Diplôme
-                </a>
-              </div>
-              <div className="flex items-center gap-3 group">
-                <div className="p-2 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors duration-200">
-                  <GrNotes className="w-5 h-5 text-blue-600" />
-                </div>
-                <a
-                  href={user.coverLetter.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-700 hover:text-orange-600 font-medium transition-colors duration-300 bg-white px-3 py-2 rounded-lg border border-blue-100 hover:border-orange-200 flex-1"
-                >
-                  Relevé de notes
                 </a>
               </div>
             </div>

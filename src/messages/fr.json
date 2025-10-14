@@ -536,11 +536,11 @@
     },
     "form3": {
       "labels": {
-        "sector": "Secteur d'activité",
+        "sector": "Profil",
         "category": "Catégorie"
       },
       "placeholders": {
-        "sector": "Sélectionnez un secteur",
+        "sector": "Sélectionnez un profil",
         "category": "Sélectionnez une catégorie"
       },
       "validation": {
@@ -548,10 +548,9 @@
         "categoryRequired": "Le choix de la catégorie est requis"
       },
       "sectors": {
-        "technologies_btp": "Technologies & BTP",
-        "tourisme_sante_services": "Tourisme, santé & services",
-        "communication_gestion": "Communication & gestion",
-        "evenementiel_artistique": "Événementiel & artistique"
+        "technologies_btp": "Étudiant & Jeune diplômé",
+        "tourisme_sante_services": "Recruteur",
+        "communication_gestion": "Candidat"
       },
       "categories": {
         "tech": {
@@ -629,7 +628,7 @@
       "subtitle": "Veuillez vérifier les informations ci-dessous avant de soumettre votre candidature.",
       "sections": {
         "personal": "Informations personnelles",
-        "sector": "Secteur choisi",
+        "sector": "Profil choisi",
         "documents": "Documents fournis"
       },
       "fields": {
@@ -643,7 +642,7 @@
         "country": "Pays",
         "city": "Ville",
         "postalCode": "Code postal",
-        "sector": "Secteur",
+        "sector": "Profil",
         "category": "Catégorie"
       },
       "documents": {
@@ -669,7 +668,7 @@
     },
     "progress": {
       "personalInfo": "Informations personnelles",
-      "sectorChoice": "Choix du secteur",
+      "sectorChoice": "Choix du profil",
       "documents": "Documents",
       "password": "Mot de passe",
       "confirmation": "Confirmation"

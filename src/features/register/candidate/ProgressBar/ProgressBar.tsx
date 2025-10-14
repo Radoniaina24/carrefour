@@ -9,7 +9,7 @@ export default function ProgressBar({ currentStep }: { currentStep: number }) {
     t("personalInfo"),
     t("sectorChoice"),
     t("documents"),
-    t("password"),
+
     t("confirmation"),
   ];
 

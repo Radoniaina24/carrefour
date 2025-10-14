@@ -22,9 +22,8 @@ export default function MultiStepForm() {
         return <FormStep3 />;
       case 3:
         return <FormStep5 />;
+
       case 4:
-        return <FormStep4 />;
-      case 5:
         return <Confirmation />;
       default:
         return null;

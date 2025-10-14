@@ -38,7 +38,7 @@ export default function Confirmation() {
       });
 
       setSubmitting(true);
-      // console.log(formData);
+      console.log(formData);
       try {
         await registerCandidate(data).unwrap();
         setShowSuccessModal(true);
@@ -102,10 +102,6 @@ export default function Confirmation() {
               <p className="text-gray-500">{t("fields.sector")}</p>
               <p className="font-medium">{formData.sector || "-"}</p>
             </div>
-            <div>
-              <p className="text-gray-500">{t("fields.category")}</p>
-              <p className="font-medium">{formData.category || "-"}</p>
-            </div>
           </div>
         </div>
 
@@ -117,7 +113,7 @@ export default function Confirmation() {
             </h4>
           </div>
           <div className="p-4 space-y-2 text-sm">
-            {["photo", "cv", "degree", "coverLetter"].map((key) => (
+            {["photo", "cv"].map((key) => (
               <div className="flex items-center" key={key}>
                 <FaCheck
                   className={` ${formData[key] ? "text-green-500 mr-2" : ""}`}

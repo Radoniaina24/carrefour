@@ -17,16 +17,10 @@ function FormPassProvider({ children }: { children: React.ReactNode }) {
     country: "",
     // Choix du sector
     sector: "",
-    category: "",
     // Documents
-    coverLetter: null,
     cv: null,
-    degree: null,
     photo: null,
     acceptConditions: false,
-    //Mot de passe
-    password: "",
-    re_type_password: "",
   });
   const nextStep = () => {
     setCurrentStep(currentStep + 1);

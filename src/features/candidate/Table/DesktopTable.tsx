@@ -183,7 +183,7 @@ export default function DesktopTable() {
                 </th>
               )}
 
-              {visibleColumns.status && (
+              {visibleColumns.sector && (
                 <th
                   scope="col"
                   className="group px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider cursor-pointer hover:bg-white/10 transition-colors"
@@ -191,7 +191,7 @@ export default function DesktopTable() {
                 >
                   <div className="flex items-center space-x-2">
                     <Shield className="w-4 h-4" />
-                    <span>Statut</span>
+                    <span>Profil</span>
                     {getSortIcon("status")}
                   </div>
                 </th>
@@ -277,28 +277,6 @@ export default function DesktopTable() {
                     </td>
                   )}
 
-                  {visibleColumns.niveau && (
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center space-x-2">
-                        <BookOpen className="w-4 h-4 text-indigo-500" />
-                        <div className="text-sm text-gray-600">
-                          {user.studyPeriod}
-                        </div>
-                      </div>
-                    </td>
-                  )}
-
-                  {visibleColumns.mention && (
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center space-x-2">
-                        <Award className="w-4 h-4 text-yellow-500" />
-                        <div className="text-sm text-gray-600">
-                          {user.funding}
-                        </div>
-                      </div>
-                    </td>
-                  )}
-
                   {visibleColumns.dateInscription && (
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center space-x-2">
@@ -310,19 +288,12 @@ export default function DesktopTable() {
                     </td>
                   )}
 
-                  {visibleColumns.status && (
+                  {visibleColumns.sector && (
                     <td className="px-6 py-4 whitespace-nowrap">
                       <span
-                        className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getStatusClass(
-                          user.status
-                        )}`}
+                        className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium `}
                       >
-                        {getStatusIcon(user.status)}
-                        <span className="ml-2">
-                          {user.status === "unapproved"
-                            ? "Non validé"
-                            : "Validé"}
-                        </span>
+                        {user.sector}
                       </span>
                     </td>
                   )}

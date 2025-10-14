@@ -540,11 +540,11 @@
     },
     "form3": {
       "labels": {
-        "sector": "Business Sector",
+        "sector": "Profile",
         "category": "Category"
       },
       "placeholders": {
-        "sector": "Select a sector",
+        "sector": "Select a profile",
         "category": "Select a category"
       },
       "validation": {
@@ -552,10 +552,9 @@
         "categoryRequired": "Category selection is required"
       },
       "sectors": {
-        "technologies_btp": "Technology & Construction",
-        "tourisme_sante_services": "Tourism, Healthcare & Services",
-        "communication_gestion": "Communication & Management",
-        "evenementiel_artistique": "Events & Artistic Fields"
+        "technologies_btp": "Student & Recent Graduate",
+        "tourisme_sante_services": "Recruteur",
+        "communication_gestion": "Candidate"
       },
       "categories": {
         "tech": {
@@ -633,7 +632,7 @@
       "subtitle": "Please review the information below before submitting your application.",
       "sections": {
         "personal": "Personal Information",
-        "sector": "Selected Sector",
+        "sector": "Selected Profile",
         "documents": "Provided Documents"
       },
       "fields": {
@@ -647,7 +646,7 @@
         "country": "Country",
         "city": "City",
         "postalCode": "Postal Code",
-        "sector": "Sector",
+        "sector": "Profile",
         "category": "Category"
       },
       "documents": {
@@ -673,7 +672,7 @@
     },
     "progress": {
       "personalInfo": "Personal Information",
-      "sectorChoice": "Sector Selection",
+      "sectorChoice": "Profile Selection",
       "documents": "Documents",
       "password": "Password",
       "confirmation": "Confirmation"
