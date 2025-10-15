@@ -1,10 +1,16 @@
+"use client";
 import React from "react";
 import { Calendar, Globe, Ticket } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const EventPage = () => {
   const t = useTranslations("event");
-
+  const handleClick = () => {
+    window.open(
+      "https://www.ticketplace.io/event/btrw2cvl0jraq3exgu1y/items",
+      "_blank"
+    );
+  };
   const countries = [
     { flag: "🇨🇦", name: "Canada" },
     { flag: "🇳🇿", name: "Nouvelle-Zélande" },
@@ -115,7 +121,10 @@ const EventPage = () => {
           <p className="text-xl sm:text-2xl font-bold text-white mb-3">
             {t("closing")}
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 inline-flex items-center gap-2 shadow-lg mb-3">
+          <button
+            onClick={handleClick}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 inline-flex items-center gap-2 shadow-lg mb-3"
+          >
             <Ticket className="w-5 h-5" />
             {t("cta")}
           </button>
