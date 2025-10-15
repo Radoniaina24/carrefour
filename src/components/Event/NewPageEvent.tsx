@@ -119,7 +119,7 @@ const EventPage = () => {
             <Ticket className="w-5 h-5" />
             {t("cta")}
           </button>
-          <p className="text-sm text-white/90 font-medium">{t("comingSoon")}</p>
+          {/* <p className="text-sm text-white/90 font-medium">{t("comingSoon")}</p> */}
         </div>
 
         {/* Footer Info */}
