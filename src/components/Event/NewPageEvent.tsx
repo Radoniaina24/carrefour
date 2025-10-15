@@ -2,6 +2,7 @@
 import React from "react";
 import { Calendar, Globe, Ticket } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const EventPage = () => {
   const t = useTranslations("event");
@@ -132,18 +133,57 @@ const EventPage = () => {
         </div>
 
         {/* Footer Info */}
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-center">
-          <div className="bg-white rounded-xl p-4 shadow">
-            <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">
-              {t("sponsorLabel")}
-            </p>
-            <p className="text-sm font-bold text-gray-900"> {t("sponsor")}</p>
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
+          {/* Sponsor */}
+          <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="flex flex-col items-center space-y-3">
+              {/* Logo du sponsor */}
+              <div className="relative w-20 h-20 rounded-full overflow-hidden shadow-md bg-gray-50 flex items-center justify-center">
+                <Image
+                  src="https://res.cloudinary.com/dikefxjpd/image/upload/v1760526490/vr-canada_1_gvokef.png"
+                  alt={t("sponsor")}
+                  width={80}
+                  height={80}
+                  className="object-contain p-2"
+                  priority
+                />
+              </div>
+
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-1">
+                  {t("sponsorLabel")}
+                </p>
+                <p className="text-base font-bold text-gray-900">
+                  {t("sponsor")}
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="bg-white rounded-xl p-4 shadow">
-            <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">
-              {t("organizerLabel")}
-            </p>
-            <p className="text-sm font-bold text-gray-900">{t("organizer")}</p>
+
+          {/* Organizer */}
+          <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="flex flex-col items-center space-y-3">
+              {/* Logo de l'organisateur */}
+              <div className="relative w-20 h-20 rounded-full overflow-hidden shadow-md bg-gray-50 flex items-center justify-center">
+                <Image
+                  src="https://res.cloudinary.com/dbpoyo4gw/image/upload/v1749549435/logo_gate_group_pktaw2.jpg"
+                  alt={t("organizer")}
+                  width={80}
+                  height={80}
+                  className="object-contain p-2"
+                  priority
+                />
+              </div>
+
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-1">
+                  {t("organizerLabel")}
+                </p>
+                <p className="text-base font-bold text-gray-900">
+                  {t("organizer")}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
