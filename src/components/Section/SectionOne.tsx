@@ -9,7 +9,6 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Swal from "sweetalert2";
 
 type Feature = {
   icon: React.ElementType;
@@ -20,6 +19,7 @@ type Feature = {
 };
 export default function UniqueFeatures() {
   const t = useTranslations("unique");
+
   const features: Feature[] = [
     {
       icon: Users,
@@ -50,13 +50,12 @@ export default function UniqueFeatures() {
       highlight: t("features.3.highlight"),
     },
   ];
-  const c = useTranslations("program");
+
   function handleClick() {
-    Swal.fire({
-      text: c("candidate"),
-      icon: "warning",
-      showCancelButton: true,
-    });
+    window.open(
+      "https://www.ticketplace.io/event/btrw2cvl0jraq3exgu1y/items",
+      "_blank"
+    );
   }
   return (
     <section className="py-24 bg-white relative overflow-hidden">

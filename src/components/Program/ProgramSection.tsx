@@ -13,7 +13,6 @@ import {
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import Swal from "sweetalert2";
 
 interface ProgramDay {
   day: string;
@@ -46,18 +45,10 @@ const ProgramSection = () => {
     })),
   }));
   function handleClick() {
-    // Swal.fire({
-    //   title: "Error!",
-    //   text: t("candidate"),
-    //   icon: "error",
-    //   confirmButtonText: "Cool",
-    // });
-
-    Swal.fire({
-      text: t("candidate"),
-      icon: "warning",
-      showCancelButton: true,
-    });
+    window.open(
+      "https://www.ticketplace.io/event/btrw2cvl0jraq3exgu1y/items",
+      "_blank"
+    );
   }
   return (
     <motion.section

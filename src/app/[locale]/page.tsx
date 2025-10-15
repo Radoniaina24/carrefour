@@ -1,10 +1,8 @@
-import GateAfricaGroupSection from "@/components/AfricaGroup/GateAfricaGroup";
 import GaleriePhotoAlbum from "@/components/Album";
-import CarrefourEmploi from "@/components/Carrefour";
-import MadagascarTalentsLanding from "@/components/Carrefour/Why";
+
 import VideoSection from "@/components/CloudinaryVideo";
 import CountdownTimer from "@/components/Date/CountDown";
-import EventsSection from "@/components/Event";
+
 import EventPage from "@/components/Event/NewPageEvent";
 import EventAnnouncement from "@/components/Event/OtheEvent";
 import HeroSection from "@/components/Hero/Hero";
@@ -13,8 +11,6 @@ import PopUp from "@/components/Popup/Popup";
 import TargetCountries from "@/components/Section/SectionCountries";
 import UniqueFeatures from "@/components/Section/SectionOne";
 
-import GateOfAfricaDesign from "@/features/Blog";
-
 export default async function Home() {
   return (
     <div className="">
@@ -22,10 +18,10 @@ export default async function Home() {
 
       <HeroSection />
       <EventPage />
-      <CarrefourEmploi />
+      {/* <CarrefourEmploi /> */}
       <HeroSectionTest />
       <EventAnnouncement />
-      <MadagascarTalentsLanding />
+      {/* <MadagascarTalentsLanding /> */}
       <UniqueFeatures />
       <GaleriePhotoAlbum />
       <VideoSection />
@@ -33,9 +29,9 @@ export default async function Home() {
 
       {/* <TicketPurchaseSection /> */}
       <CountdownTimer />
-      <GateAfricaGroupSection />
-      <EventsSection />
-      <GateOfAfricaDesign />
+      {/* <GateAfricaGroupSection /> */}
+      {/* <EventsSection /> */}
+      {/* <GateOfAfricaDesign /> */}
       <PopUp />
     </div>
   );

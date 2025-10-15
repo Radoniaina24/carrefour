@@ -8,7 +8,12 @@ import Link from "next/link";
 const RecruiterComponent: React.FC = () => {
   // Hook de traduction avec namespace spécifique
   const t = useTranslations("recruiter");
-
+  const handleClick = () => {
+    window.open(
+      "https://www.ticketplace.io/event/btrw2cvl0jraq3exgu1y/items",
+      "_blank"
+    );
+  };
   // Configuration des avantages avec traductions
   const benefits = [
     {
@@ -115,7 +120,8 @@ const RecruiterComponent: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                href="#"
+                onClick={handleClick}
                 className="flex items-center gap-2 bg-white text-blue-600 border-2 border-blue-200 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors font-medium"
               >
                 <Mail className="w-5 h-5" />

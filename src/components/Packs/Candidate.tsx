@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { User, Users, Star } from "lucide-react";
 import Link from "next/link";
@@ -7,7 +7,12 @@ import { useTranslations } from "next-intl";
 // Composant Candidat
 const CandidateComponent = () => {
   const t = useTranslations("candidate");
-
+  const handleClick = () => {
+    window.open(
+      "https://www.ticketplace.io/event/btrw2cvl0jraq3exgu1y/items",
+      "_blank"
+    );
+  };
   return (
     <div className="space-y-8">
       {/* Hero Section - Carrefour de l'Emploi */}
@@ -82,6 +87,7 @@ const CandidateComponent = () => {
         <div className="text-center">
           <Link
             href="#"
+            onClick={handleClick}
             className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-all transform hover:scale-105 shadow-lg"
           >
             {t("cta.button")}
