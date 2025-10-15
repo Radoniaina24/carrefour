@@ -993,5 +993,70 @@
       "And life goes on as usual."
     ],
     "offers": "Take advantage of our exceptional discounts (-25% to -75%), still valid despite the improved venue and extended duration!"
+  },
+  "carrefourEvent": {
+    "title": "INTERNATIONAL FAIR - EMPLOYMENT, STUDIES & IMMIGRATION | MADAGASCAR 2025",
+    "location": "IBIS Ankorondrano",
+    "dates": "October 31, November 1 & 2, 2025",
+    "time": "9 AM to 5 PM",
+    "description": "3 full days to expand your horizons.",
+    "highlights": [
+      "International universities will present their study programs, dual degrees, and professional pathways.",
+      "Recruiting companies, including those from Mauritius 🇲🇺, will offer direct job opportunities across multiple sectors.",
+      "Accredited immigration agencies will provide expert advice for your legal relocation projects abroad."
+    ],
+    "represented_countries": [
+      "Canada",
+      "New Zealand",
+      "United Kingdom",
+      "United States",
+      "Germany",
+      "Malaysia",
+      "United Arab Emirates",
+      "Mauritius"
+    ],
+    "opportunities": {
+      "title": "Your Opportunities",
+      "job": {
+        "label": "Employment",
+        "description": "Find a local or international job opportunity."
+      },
+      "learning": {
+        "label": "Studies",
+        "description": "Enroll in a recognized university."
+      },
+      "immigration": {
+        "label": "Immigration",
+        "description": "Prepare your relocation project abroad with certified experts."
+      }
+    },
+    "official_sponsor": {
+      "label": "Official Sponsor",
+      "name": "VR CANADA IMMIGRATION",
+      "description": "Immigrate with a licensed, reliable, and trustworthy agency, present throughout the fair to guide you directly."
+    },
+    "partners": {
+      "title": "Partners",
+      "list": [
+        "EBS CONSULTING MAURITIUS",
+        "MALAYSIAN CONSORTIUM for EDUCATION - MADAGASCAR (MCEM)"
+      ]
+    },
+    "tickets": {
+      "title": "Book Your Spot",
+      "platform": "Ticketplace",
+      "button_text": "Buy my tickets on",
+      "link": "https://www.ticketplace.io/event/btrw2cvl0jraq3exgu1y/items"
+    },
+    "additional_info": {
+      "cv_notice": "Bring your CV! On-site recruitment possible.",
+      "closing_message": "The world is opening its doors to you… are you ready?",
+      "organizer": "Gate Africa Group",
+      "organizer_label": "Organized by"
+    },
+    "sections": {
+      "program": "Program",
+      "countries": "Represented Countries"
+    }
   }
 }

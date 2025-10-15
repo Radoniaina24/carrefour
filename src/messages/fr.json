@@ -991,5 +991,71 @@
       "Et la vie suit son cours normalement."
     ],
     "offers": "Profitez de nos remises exceptionnelles (-25% à -75%), toujours valables malgré l’amélioration du lieu et de la durée !"
+  },
+
+  "carrefourEvent": {
+    "title": "CARREFOUR INTERNATIONAL - EMPLOI, ÉTUDES & IMMIGRATION | MADAGASCAR 2025",
+    "location": "IBIS Ankorondrano",
+    "dates": "31 octobre, 1er & 2 novembre 2025",
+    "time": "09h à 17h",
+    "description": "3 jours complets pour élargir vos horizons.",
+    "highlights": [
+      "Des universités internationales vous présenteront leurs programmes d'études, doubles diplômes et passerelles professionnelles.",
+      "Des entreprises recruteuses, notamment à l'Île Maurice 🇲🇺, viendront proposer des emplois directs dans plusieurs secteurs.",
+      "Des agences d'immigration agréées vous conseilleront pour vos projets d'installation légale à l'étranger."
+    ],
+    "represented_countries": [
+      "Canada",
+      "Nouvelle-Zélande",
+      "Royaume-Uni",
+      "États-Unis",
+      "Allemagne",
+      "Malaisie",
+      "Émirats Arabes Unis",
+      "Île Maurice"
+    ],
+    "opportunities": {
+      "title": "Vos Opportunités",
+      "job": {
+        "label": "Emploi",
+        "description": "Trouvez un emploi local ou international."
+      },
+      "learning": {
+        "label": "Études",
+        "description": "Inscrivez-vous dans une université reconnue."
+      },
+      "immigration": {
+        "label": "Immigration",
+        "description": "Préparez votre projet d'installation à l'étranger avec des experts agréés."
+      }
+    },
+    "official_sponsor": {
+      "label": "Sponsor Officiel",
+      "name": "VR CANADA IMMIGRATION",
+      "description": "Immigrez avec une agence agréée, fiable, sérieuse et sûre, présente pendant tout le salon pour vous conseiller directement."
+    },
+    "partners": {
+      "title": "Partenaires",
+      "list": [
+        "EBS CONSULTING MAURICE",
+        "MALAYSIAN CONSORTIUM for EDUCATION - MADAGASCAR (MCEM)"
+      ]
+    },
+    "tickets": {
+      "title": "Réservez Votre Place",
+      "platform": "Ticketplace",
+      "button_text": "Acheter mes billets sur",
+      "link": "https://www.ticketplace.io/event/btrw2cvl0jraq3exgu1y/items"
+    },
+    "additional_info": {
+      "cv_notice": "Venez avec votre CV ! Recrutement sur place possible.",
+      "closing_message": "Le monde vous ouvre ses portes… êtes-vous prêt ?",
+      "organizer": "Gate Africa Group",
+      "organizer_label": "Organisé par"
+    },
+    "sections": {
+      "program": "Au Programme",
+      "countries": "Pays Représentés"
+    }
   }
 }

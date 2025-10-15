@@ -986,5 +986,70 @@
       "Und das Leben geht seinen normalen Lauf."
     ],
     "offers": "Profitieren Sie von unseren außergewöhnlichen Rabatten (-25 % bis -75 %), die trotz des verbesserten Veranstaltungsortes und der verlängerten Dauer weiterhin gültig sind!"
+  },
+  "carrefourEvent": {
+    "title": "INTERNATIONALE MESSE – BESCHÄFTIGUNG, STUDIUM & IMMIGRATION | MADAGASKAR 2025",
+    "location": "IBIS Ankorondrano",
+    "dates": "31. Oktober, 1. & 2. November 2025",
+    "time": "09:00 bis 17:00 Uhr",
+    "description": "Drei volle Tage, um Ihren Horizont zu erweitern.",
+    "highlights": [
+      "Internationale Universitäten stellen ihre Studienprogramme, Doppelabschlüsse und beruflichen Laufbahnwege vor.",
+      "Rekrutierende Unternehmen, darunter auch aus Mauritius 🇲🇺, bieten direkte Arbeitsmöglichkeiten in verschiedenen Branchen an.",
+      "Anerkannte Einwanderungsagenturen beraten Sie bei Ihren Projekten für eine legale Auswanderung ins Ausland."
+    ],
+    "represented_countries": [
+      "Kanada",
+      "Neuseeland",
+      "Vereinigtes Königreich",
+      "Vereinigte Staaten",
+      "Deutschland",
+      "Malaysia",
+      "Vereinigte Arabische Emirate",
+      "Mauritius"
+    ],
+    "opportunities": {
+      "title": "Ihre Chancen",
+      "job": {
+        "label": "Beschäftigung",
+        "description": "Finden Sie eine lokale oder internationale Arbeitsstelle."
+      },
+      "learning": {
+        "label": "Studium",
+        "description": "Schreiben Sie sich an einer anerkannten Universität ein."
+      },
+      "immigration": {
+        "label": "Einwanderung",
+        "description": "Bereiten Sie Ihr Auswanderungsprojekt mit zertifizierten Experten vor."
+      }
+    },
+    "official_sponsor": {
+      "label": "Offizieller Sponsor",
+      "name": "VR CANADA IMMIGRATION",
+      "description": "Wandern Sie mit einer lizenzierten, zuverlässigen und seriösen Agentur aus, die während der gesamten Messe für Sie da ist."
+    },
+    "partners": {
+      "title": "Partner",
+      "list": [
+        "EBS CONSULTING MAURITIUS",
+        "MALAYSIAN CONSORTIUM for EDUCATION - MADAGASKAR (MCEM)"
+      ]
+    },
+    "tickets": {
+      "title": "Reservieren Sie Ihren Platz",
+      "platform": "Ticketplace",
+      "button_text": "Meine Tickets kaufen auf",
+      "link": "https://www.ticketplace.io/event/btrw2cvl0jraq3exgu1y/items"
+    },
+    "additional_info": {
+      "cv_notice": "Bringen Sie Ihren Lebenslauf mit! Vor-Ort-Rekrutierung möglich.",
+      "closing_message": "Die Welt öffnet Ihnen ihre Türen… sind Sie bereit?",
+      "organizer": "Gate Africa Group",
+      "organizer_label": "Organisiert von"
+    },
+    "sections": {
+      "program": "Programm",
+      "countries": "Vertretene Länder"
+    }
   }
 }

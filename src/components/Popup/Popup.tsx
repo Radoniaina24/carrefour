@@ -24,7 +24,7 @@ export default function PopUp() {
     >
       <Image
         src={
-          "https://res.cloudinary.com/dbpoyo4gw/image/upload/v1760350116/WhatsApp_Image_2025-10-13_%C3%A0_07.35.24_e8667921_tokez2.jpg"
+          "https://res.cloudinary.com/dikefxjpd/image/upload/v1760531409/WhatsApp_Image_2025-10-15_%C3%A0_15.25.31_c85f3f91_lwcmb2.jpg"
         }
         alt={"popup"}
         width={1000}

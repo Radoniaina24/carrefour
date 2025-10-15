@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
       "flagcdn.com",
       "data.gateofafrica.com",
       "gateofafrica.com",
+      "images.unsplash.com",
     ],
     remotePatterns: [
       {
