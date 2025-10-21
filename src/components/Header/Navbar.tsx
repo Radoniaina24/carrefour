@@ -47,7 +47,7 @@ const Navbar = () => {
   const navItems: NavItem[] = [
     { name: t("home"), href: "/", hasDropdown: false },
     { name: t("about"), href: "/about", hasDropdown: false },
-    { name: t("program"), href: "/program", hasDropdown: false },
+
     { name: t("contact"), href: "/contact", hasDropdown: false },
     { name: t("pricing"), href: "/pack", hasDropdown: false },
   ];
